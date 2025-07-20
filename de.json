@@ -13,7 +13,7 @@
 			"rename": {
 				"usage": "FeelsDankMan ➜ Bitte schreibe {usage} rename <EmoteName> <NewEmoteName>",
 				"noEmote": "⚠️ ➜ Emote mit dem Namen ` {emotename} ` nicht in diesem Emote-Set gefunden",
-				"success": "FeelsOkayMan 👍 Emote ` {oldname} ` wurde erfolgreich in ` {newname} ` umgebannt"
+				"success": "FeelsOkayMan 👍 Emote ` {oldname} ` wurde erfolgreich in ` {newname} ` umbenannt"
 			},
 			"remove": {
 				"usage": "FeelsDankMan ➜ Bitte schreibe {usage} remove <EmoteName> [Weiter Emotes...]",
@@ -40,7 +40,8 @@
 				"token": "⚠️ ➜ Tut mir leid, aber mein 7TV Token ist abgelaufen, ich hab den Bot Owner informiert",
 				"noPerms": "⚠️ ➜ Ich habe keine 7TV-Rechte. Bitte füge {bot} als Editor: {link} (Emote-Set & Emotes verwalten) hinzu, versuche es dann bitte 2x mal damit ich akzeptieren kann",
 				"fullCapacity": "⚠️ ➜ Das Emote Set ist voll. Bitte entferne ein anderes Emote • Emote-Set: {link}",
-				"notFound": "⚠️ ➜ Emote ` {emote} ` wurde nicht im Emote Set gefunden",
+				"notFoundinSet": "⚠️ ➜ Emote ` {emote} ` wurde nicht im Emote Set gefunden",
+				"notFound": "⚠️ ➜ Emote Mit der ID ` {emoteId} ` nicht gefunden",
 				"unknown": "⚠️ ➜ Unbekannter Fehler Keine Case für: {error}"
 			},
 			"cosmetics": {
@@ -199,34 +200,45 @@
 		},
 		"duhu": "{user} • {message}",
 		"followage": {
-			"self": "⚠️ ➜ Man kann sich nicht Selber folgen",
+			"self": "⚠️ ➜ Man kann sich nicht selber folgen",
 			"notFollowed": "peepoSad ➜ {user} folgt {channel} nicht",
 			"since": "peepoHappy ➜ {user} folgt {channel} seit {duration}"
 		},
 		"gamba": {
 			"isNan": "⚠️ ➜ Schreibe eine gültige Zahl Beispiel: {prefix}{trigger} 100",
-			"noNotis": "⚠️ ➜ Du hast keine Notis. Nutz {prefix}notis um Welche zu farmen",
-			"notEnough": "⚠️ ➜ Du hast nicht genug Notis zum Setzen Saj Du hast {notis} Aktuell",
+			"noNotis": "⚠️ ➜ Du hast keine Notis. Nutze {prefix}notis um welche zu farmen",
+			"notEnough": "⚠️ ➜ Du hast nicht genug Notis zum Setzen Saj Du hast aktuell {notis} Notis",
 			"set": "{user} setzt {notis} Notis [⬇️|⬇️|⬇️] ...",
 			"win": {
 				"1": "[🍕|🍕|🍕] Gewonnen OOOO",
-				"2": "[🥥|🥥|🥥] heCrazy das glück war auf deiner Seite",
+				"2": "[🥥|🥥|🥥] heCrazy das Glück war auf deiner Seite",
 				"3": "[🍌|🍌|🍌] EZ Clap Win",
-				"4": "[🍉|🍉|🍉] Chaosflo44 hat gelivt",
-				"5": "[🍆|🍆|🍆] uuh Also Gewonnen ist gewonnen",
-				"6": "[🍞|🍞|🍞] Arbeits Lohn Verdoppelt Pag"
+				"4": "[🍉|🍉|🍉] Chaosflo44 hat gesupportet",
+				"5": "[🍆|🍆|🍆] uuh Also Gewonnen ist Gewonnen",
+				"6": "[🍞|🍞|🍞] Arbeitslohn Verdoppelt Pag"
 			},
 			"lose": {
 				"1": "[🍋|🍍|🍇] Saj du hast Verloren",
 				"2": "[🍌|🍈|🍏] Das war wohl nichts",
-				"3": "[🍋|🍍|🍇] ohno Das glück hat nicht geklappt",
-				"4": "[🍕|🍔|🍕] Schade da ist das geld weg",
-				"5": "[🍩|🍣|🍜] ...man warum wo geld?",
-				"6": "[🍌|🍎|🥐] Da ist der Arbeits lohn weg"
+				"3": "[🍋|🍍|🍇] ohno Das Glück hat nicht geklappt",
+				"4": "[🍕|🍔|🍕] Schade da ist das Geld weg",
+				"5": "[🍩|🍣|🍜] ...man warum wo Geld?",
+				"6": "[🍌|🍎|🥐] Da ist der Arbeitslohn weg"
 			},
 			"now": "• Du hast jetzt {notis} Notis"
 		},
 		"gpt": "🤖 WineTime ➜ {message}",
+		"give": {
+			"your": "⚠️ ➜ Du kannst dir Selber keine Notis geben",
+			"bot": "FeelsOkayMan 👍 ich bin die Bank ich brauche keine Notis",
+			"noNotis": "⚠️ ➜ Du hast keine Notis. Nutz {prefix}notis zm welche zu farmen",
+			"noUser": "⚠️ ➜ Der User ist nicht in Meiner DB Er kann sich mit {prefix}notis in die DB adden Lassen",
+			"isNan": "⚠️ ➜ Schreibe eine gültige Zahl Beispiel: {prefix}{trigger} {user} 100",
+			"notEnough": "⚠️ ➜ Du hast nicht genung Notis zum giften. Du hast aktuell {notis} Notis",
+			"set": "Loading . . .",
+			"gived": "🎁 Ein Geschenk wurde geöffnet, {user} gibt {notis} Notis an {receiver} • Du hast Jetzt {nowNotis} Notis und {receiver} hat Jetzt {userNotis} Notis",
+			"bonus": "🎉 Glückwunsch {user}, du hast {notis} Notis als Bonus für das Geben von {giftetNotis} Notis erhalten! Sei weiter ein Gönner. Neuer Notis KontoStandt: {nowNotis} Notis"
+		},
 		"globalannounce": {
 			"OnOff": "FeelsOkayMan 👍 Alle Global Benachrichtigungen (von: Badge/Emotes/7TV) wurden {mode}",
 			"twitch": "FeelsOkayMan 👍 imGlitch Global ` {value} ` Nachricht wurde {mode}",
@@ -246,16 +258,16 @@
 				"success": "FeelsOkayMan 👍 Live Nachricht für {user} wurde gelöscht"
 			},
 			"list": {
-				"no": "⚠️ ➜ Es gibt keine Live Nachrichten ihn diesem Channel",
+				"no": "⚠️ ➜ Es gibt keine Live Nachrichten in diesem Channel",
 				"success": "FeelsDankMan ➜ Hier sind alle Live Nachrichten: {link}"
 			},
 			"msg": { 
-				"del": "FeelsOkayMan 👍 Ich hab die Custom Nachricht für {user} Gelöscht",
+				"del": "FeelsOkayMan 👍 Ich hab die Custom Nachricht für {user} gelöscht",
 				"noMsg": "⚠️ ➜ Du musst eine Nachricht angeben • Variablen: {title}",
 				"tooLong": "⚠️ ➜ Deine Nachricht ist zu Lang",
 				"success": "FeelsOkayMan 👍 ich hab die Nachricht für {user} geupdatet"
 			},
-			"no": "⚠️ ➜ Es gibt keine Live Nachricht für {user} Ein Mod Kann dies mit {prefix}livemsg enable {user} erstellen"
+			"no": "⚠️ ➜ Es gibt keine Live Nachricht für {user} Ein Mod kann dies mit {prefix}livemsg enable {user} erstellen"
 		},
 		"liveping": {
 			"removed": "FeelsOkayMan 👍 Du erhältst keine pings mehr wenn {user} Live geht",
@@ -307,7 +319,7 @@
 			}
 		},
 		"spam": {
-			"already": "⚠️ ➜ Es gibst bereits einen Aktiven Spam ein Mod kann den mit {prefix}spamstop beenden",
+			"already": "⚠️ ➜ Es gibt bereits einen Aktiven Spam ein Mod kann ihn mit {prefix}spamstop beenden",
 			"stopped": "FeelsOkayMan 👍 Der Spam wurde beendet",
 			"noSpamFound": "⚠️ ➜ Es wurde kein Aktiver Spam gefunden"
 		},
@@ -402,10 +414,10 @@
 		"remind": {
 			"tooMany": "dinkDonk ➜ {user} Du hast zu viele Reminds hier ist ein Link: {link}",
 			"multi": "dinkDonk ➜ {user} Reminders von {list}",
-			"selfSingle": "dinkDonk ➜ {user} Reminder von dir selber • {msg} {ago}",
+			"selfSingle": "dinkDonk ➜ {user} Reminder von dir selbst • {msg} {ago}",
 			"otherSingle": "dinkDonk ➜ {user} Reminder von {from} • {msg} {ago}",
 			"start": "dinkDonk ➜",
-			"selfReminder": "{user} Reminder von dir Selber • {msg} {ago}",
+			"selfReminder": "{user} Reminder von dir selbst • {msg} {ago}",
 			"otherReminder": "{user} Reminder von {from} • {msg} {ago}",
 			"noMessage": "Keine Nachricht"
 		},
@@ -465,10 +477,10 @@
 			},
 			"stv": {
 				"newBadge": "(7TV) Neues Global 7tv Badge ➜ {badgename}",
-				"renamedBadge": "(7TV) Global 7tv Badge ` {oldname} ` wurde in ` {newname} ` umgebannt",
+				"renamedBadge": "(7TV) Global 7tv Badge ` {oldname} ` wurde in ` {newname} ` umbenannt",
 				"removedBadge": "(7TV) Global 7tv Badge entfernt ➜ {badgename}",
 				"newPaint": "(7TV) Neues Global 7tv Paint ➜ {paintname}",
-				"renamedPaint": "(7TV) Global 7tv Paint ` {oldname} ` wurde in ` {newname} ` umgebannt",
+				"renamedPaint": "(7TV) Global 7tv Paint ` {oldname} ` wurde in ` {newname} ` umbenannt",
 				"removedPaint": "(7TV) Global 7tv Paint entfernt ➜ {paintname}"
 			},
 			"channel": {
@@ -490,12 +502,12 @@
 	},
 	"notis": {
 		"daily": "Daily Bonus 🎉 Du hast deinen täglichen Bonus von {reward} Notis erhalten",
-		"newUser": "Willkommen, {user}! 🎉 Es freut mich, dich im Notis-System zu begrüßen. Du kannst jede Stunde {prefix}notis schreiben, um mehr Notis zu bekommen. Du hast als Start güthaben 100 Notis bekommen, nütz sie aber weise!",
+		"newUser": "Willkommen, {user}! 🎉 Es freut mich, dich im Notis-System zu begrüßen. Du kannst jede Stunde {prefix}notis schreiben, um mehr Notis zu bekommen. Du hast als Startguthaben 100 Notis bekommen, nutze sie aber weise!",
 		"status": {
     		"cd": "⏳ {time} CD",
     		"bank": "🏦 Bank Stand: {notis} Notis",
     		"prestige": "💎 Prestige: {level}",
-    		"ready": "🚀 Bereit für Prestige? Nutz {prefix}prestige",
+    		"ready": "🚀 Bereit für Prestige? Nutze {prefix}prestige",
     		"birthday": "🍰 Geburtstags-Bonus +100 Notis"
   		},
 		"messages": {
@@ -973,7 +985,7 @@
         		    "maythe4th": "⚔️ Berechnungsanomalie! {notis} Notis verloren in einer weit, weit entfernten Galaxie."
         		}, 
         		"nothing": {
-        		    "normal": "Fail! Berechnung fehlgeschlagen, du musst langer arbeiten 👎 sadCat",
+        		    "normal": "Fail! Berechnung fehlgeschlagen, du musst länger arbeiten 👎 sadCat",
         		    "christmas": "❄️ Berechnung pausiert alle CPU-Kerne machen Schneeballschlacht.",
         		    "halloween": "🧠 CPU denkt, sie wäre ein Zombie.",
         		    "easter": "🐣 RAM ist im Nest geblieben. Kein Zugriff.",
