@@ -40,7 +40,8 @@
 				"token": "⚠️ ➜ I'm sorry but my 7TV token has expired, I informed the bot owner",
 				"noPerms": "⚠️ ➜ I don't have 7TV rights. Please add {bot} as editor: {link} (Manage emote sets & emotes). Then please try twice so I can accept",
 				"fullCapacity": "⚠️ ➜ The emote set is full. Please remove another emote. • Emote set: {link}",
-				"notFound": "⚠️ ➜ Emote ` {emote} ` was not found in the emote set",
+				"notFoundinSet": "⚠️ ➜ Emote ` {emote} ` was not found in the emote set",
+				"notFound": "⚠️ ➜ Emote with ID ` {emoteId} ` not found",
 				"unknown": "⚠️ ➜ Unknown error No case for: {error}"
 			},
 			"cosmetics": {
@@ -212,7 +213,7 @@
     		    "1": "[🍕|🍕|🍕] You won! OOOO",
     		    "2": "[🥥|🥥|🥥] heCrazy luck was on your side",
     		    "3": "[🍌|🍌|🍌] EZ Clap Win",
-    		    "4": "[🍉|🍉|🍉] Chaosflo44 would be proud",
+    		    "4": "[🍉|🍉|🍉] Chaosflo44 supported",
     		    "5": "[🍆|🍆|🍆] Uh... a win is a win",
     		    "6": "[🍞|🍞|🍞] Hard work doubled Pag"
     		},
@@ -227,6 +228,17 @@
     		"now": "• You now have {notis} Notis"
 		},
 		"gpt": "🤖 WineTime ➜ {message}",
+		"give": {
+    		"your": "⚠️ ➜ You can't give Notis to yourself.",
+    		"bot": "FeelsOkayMan 👍 I'm the bank, I don't need Notis.",
+    		"noNotis": "⚠️ ➜ You have no Notis. Use {prefix}notis to farm some.",
+    		"noUser": "⚠️ ➜ This user is not in my database. They can use {prefix}notis to get added.",
+    		"isNan": "⚠️ ➜ Please enter a valid number. Example: {prefix}{trigger} {user} 100",
+    		"notEnough": "⚠️ ➜ You don't have enough Notis to gift. You currently have {notis} Notis.",
+    		"set": "Loading . . .",
+    		"gived": "🎁 A gift has been opened! {user} gives {notis} Notis to {receiver} • You now have {nowNotis} Notis and {receiver} now has {userNotis} Notis.",
+    		"bonus": "🎉 Congrats {user}, you received {notis} Notis as a bonus for giving {giftetNotis} Notis! Keep being a generous gifter. New Notis balance: {nowNotis} Notis."
+		},
 		"globalannounce": {
 			"OnOff": "FeelsOkayMan 👍 All global notifications (from: Badge/Emotes/7TV) have been {mode}",
 			"twitch": "FeelsOkayMan 👍 imGlitch Global ` {value} ` message was {mode}",
@@ -1099,7 +1111,7 @@
         		    "maythe4th": "⚔️ May the Force not be with you {notis} Notis lost in a galaxy far, far away!"
         		},
         		"nothing": {
-					"normal": "Fail! Loading error, code error. o O (MrDestructoid Clap gpt) Angry",
+					"normal": "Fail! Loading error, code error. o O ( MrDestructoid Clap gpt ) Angry",
 					"christmas": "🎆 Loading error final status overshadowed by Christmas star.",
 					"halloween": "🌕 Full moon final status turning into werebug!",
 					"easter": "🥕 Status stuck in Easter grass.",
