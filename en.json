@@ -6,7 +6,7 @@
 		"usage": "FeelsDankMan ➜ {usage}",
 		"stv": {
 			"add": {
-				"usage": "FeelsDankMan ➜ Please type {usage} add <EmoteName/EmoteLink> [EmoteAlias]",
+				"usage": "FeelsDankMan ➜ Please type {usage} add <EmoteName • EmoteLink> [EmoteAlias]",
 				"noEmote": "⚠️ ➜ No emote found with the name ` {emotename} `",
 				"success": "FeelsOkayMan 👍 Emote ` {emotename} ` was successfully added"
 			},
@@ -27,6 +27,11 @@
 				"noEmote": "⚠️ ➜ I couldn't get an id from ` {emotename} ` to replace it",
 				"success": "FeelsOkayMan 👍 Emote ` {emotename} ` (old ID: {oldid}) has been replaced with ID ({newid})"
 			},
+			"swap": {
+    			"usage": "FeelsDankMan ➜ Please type {usage} swap <Emote1> <Emote2>",
+    			"noEmote": "⚠️ ➜ Emote ` {emote} ` was not found in the channel",
+    			"success": "FeelsOkayMan 👍 Emotes ` {emote1} ` and ` {emote2} ` have been successfully swapped"
+			},
 			"yoink": {
 				"usage": "FeelsDankMan ➜ Please type {usage} yoink <Channel> <EmoteName> <Optional: EmoteName>",
 				"self": "⚠️ ➜ You can't Yoinked Emotes because they are already here",
@@ -46,20 +51,22 @@
 			},
 			"cosmetics": {
 				"presence": {
-    				"noCosmetics": "(7TV) ➜ {user} has no 7tv cosmetics",
-    				"updated": "(7TV) ➜ I've updated {user}'s 7tv cosmetics"
+					"notyou": "⚠️ ➜ {user} must decide for themselves if they want AutoPresence. Tell them to use {prefix}autopresence",
+					"auto": "BloodTrail AutoPresence {mode}",
+    				"noCosmetics": "⚠️ ➜ {user} has no 7tv cosmetics",
+    				"updated": "(7TV) ➜ Presence Updated"
   				},
   				"badge": {
 					"noFounds": "⚠️ ➜ I didn't find any 7tv badges",
-    				"info": "(7TV) ➜ Badge: {badgeName} • Badge ID: {badgeId} • Badge description: {badgeDescription} • Preview: {preview}",
+    				"info": "(7TV) ➜ Badge: {badgeName} • Badge ID: {badgeId} • Badge description: {badgeDescription} • Preview: {preview} • added {create} ago",
     				"no": "(7TV) ➜ {user} has no 7tv badge",
-    				"badge": "(7TV) ➜ {user} ` {badgeName} ` • Badge ID: {badgeId} • Badge description: {badgeDescription} • Preview: {preview} • Vanity: {vanity}"
+    				"badge": "(7TV) ➜ {user} ` {badgeName} ` • Badge ID: {badgeId} • Badge description: {badgeDescription} • Preview: {preview} • Vanity: {vanity} • added {create} ago"
   				},
   				"paint": {
 					"noFounds": "⚠️ ➜ I didn't find any 7tv paints",
-    				"info": "(7TV) ➜ Paint: {paintName} • Paint ID: {paintId} • Preview: {preview}",
+    				"info": "(7TV) ➜ Paint: {paintName} • Paint ID: {paintId} • Preview: {preview} • added {create} ago",
     				"no": "(7TV) ➜ {user} has no 7tv paint",
-    				"paint": "(7TV) ➜ {user} ` {paintName} ` • Paint ID: {paintId} • Preview: {preview} • Vanity: {vanity}"
+    				"paint": "(7TV) ➜ {user} ` {paintName} ` • Paint ID: {paintId} • Preview: {preview} • Vanity: {vanity} • added {create} ago"
   				}
 			},
 			"subage": {
@@ -74,10 +81,10 @@
 			},
 			"set": "(7TV) Set ➜ {channel} still has {availableSlots} Emote spots available • Emotes: {usedSlots}/{capacity} • Set Name: {emoteSetName} • ID: {activeEmoteSetid} | {emoteSetLink}",
 			"user": {
-				"start": "(7TV) User ➜ Name: {user} • 7tv-id: {stvid} • 7tv-Page: {userURL}",
+				"start": "(7TV) User ➜ Name: {user} • id: {stvid} • Page: {userURL}",
 				"set": " • Emote Set: {emoteSetName} ({usedSlots}/{capacity} Emotes)",
-				"paint": " • 7tv Paint: {paint}",
-				"badge": " • 7tv Badge: {badge}",
+				"paint": " • Paint: {paint}",
+				"badge": " • Badge: {badge}",
 				"cosmetics": " • Badges: {badgecount} Paints: {paintcount}",
 				"noCosmetics": " • No Badges or Paints found",
 				"editors": " • {editorcounts} Channel Editors",
@@ -89,12 +96,12 @@
 			"noSet": "⚠️ ➜ {channel} Doesn't have an active emote set, please create one: {link}",
 			"ownedSet": "⚠️ ➜ The emote set does not belong to deisen channel and cannot be adjusted",
 			"noPerms": "⚠️ ➜ You need 7tv rights in this channel",
-			"noAcc": "(7TV) ➜ No 7TV account found for {user}"
+			"noAcc": "(7TV) ➜ No 7TV account found for ` {user} `"
 		},
 		"afk": {
 			"tooLong": "FeelsDankMan ➜ Your message is too long",
 			"afk": "➜ {user|antiping} is now Afk {message} ⏱️",
-			"gn": "GuNa ➜ {user} is going to sleep {message} 💤",
+			"bedge": "GuNa ➜ {user} is going to sleep {message} 💤",
 			"food": "Tasty ➜ {user} is going to eat {message} 🍕",
 			"shower": "➜ {user} is going to shower {message} 🚿",
 			"resume": {
@@ -113,9 +120,9 @@
 				"start": "FeelsOkayMan ➜ Here are all the {list} emotes in this channel:"
 			},
 			"lang": {
-				"usage": "FeelsDankMan ➜ {prefix}{trigger} lang <de/en/on/off> (de/en for language • on/off to toggle personalized languages [{prefix}lang])",
+				"usage": "FeelsDankMan ➜ {prefix}{trigger} lang <de • en • on • off> (de/en for language and on/off to toggle personalized languages [{prefix}lang])",
 				"change": "FeelsOkayMan 👍 Language set to {lang} • to see all commands do {prefix}commands",
-				"off": "FeelsOkayMan 👍 Language is now free for everyone. You can set it yourself with {prefix}lang <de/en>",
+				"off": "FeelsOkayMan 👍 Language is now free for everyone. You can set it yourself with {prefix}lang <de • en>",
 				"on": "FeelsOkayMan 👍 I will now speak only German in this channel"
 			}
 		},
@@ -155,12 +162,12 @@
 		},
 		"console": {
 			"reload": {
-				"usage": "FeelsDankMan ➜ Please type {prefix}{trigger} reload <commands/lang/apis/all>",
+				"usage": "FeelsDankMan ➜ Please type {prefix}{trigger} reload <commands • lang • apis • crons • all>",
 				"reloaded": "ApuApustaja 👍 ➜ Reloaded the following: {reloaded}"
 			},
 			"ignore": {
 				"usage": {
-					"usage": "FeelsDankMan ➜ Please type {usage} ignore <add/remove/check/list>",
+					"usage": "FeelsDankMan ➜ Please type {usage} ignore <add • remove • check • list>",
 					"add": "FeelsDankMan ➜ Please type {usage} ignore add <user> [Reason]",
 					"remove": "FeelsDankMan ➜ Please type {usage} ignore remove <user>",
 					"check": "FeelsDankMan ➜ Please type {usage} ignore check <user>"
@@ -186,7 +193,7 @@
 			"restart": "ppCircle ➜ Bot Restarts...",
 			"suggest": {
 				"usage": {
-					"usage": "FeelsDankMan ➜ Please type {usage} suggest <finish/delete/list>",
+					"usage": "FeelsDankMan ➜ Please type {usage} suggest <finish • delete • list>",
 					"finish": "FeelsDankMan ➜ Please type {usage} suggest finish <ID>",
 					"delete": "FeelsDankMan ➜ Please type {usage} suggest delete <ID>"
 				},
@@ -251,7 +258,20 @@
 			"noCommand": "⚠️ ➜ Command ` {command} ` was not found",
 			"command": "FeelsDankMan ➜ Command: {name} • Aliases: {aliases} • Description: {description} • Usage: {usage} • Category: {category} • Cooldown: {cooldown} • Permission: {permission}"
 		},
+		"join": {
+  			"rejoin": "peepoHappy ➜ I'm back!",
+  			"botRejoined": "FeelsDankMan ➜ I've updated your channel and rejoined it.",
+  			"allReady": "FeelsDankMan TeaTime ➜ I'm already in your channel. If you forgot my prefix, use ` {name} prefix? ` or let me rejoin with !rejoin",
+  			"rejoining": "ppCircle ➜ {user}, I'm rejoining your channel...",
+  			"rejoinSuccess": "FeelsOkayMan 👍 I've successfully rejoined your channel.",
+  			"add": "peepoHappy Please add me via the website ➜ {website}"
+		},
 		"kok": "{emote} ➜ The kok of {user} is {size}cm long",
+		"lang": {
+  			"off": "FeelsOkayMan 👍 Your personal language has been reset. I will now use the channel language for you.",
+  			"lang_strict": "FeelsDankMan ➜ I will now only speak English for you | ( ⚠️ Personal language is disabled in this channel. The channel owner can enable it again using ${prefix}channellang off )",
+  			"change": "FeelsOkayMan 👍 I will now only speak English for you"
+		},
 		"link": {
   			"add": {
     			"update": "FeelsOkayMan 👍 I've updated your username",
@@ -291,6 +311,11 @@
   			"removed": "FeelsOkayMan 👍 You won't get pinged anymore when {user} goes live",
   			"success": "FeelsOkayMan 👍 You'll get pinged when {user} goes live"
 		},
+		"math": {
+    		"error": "⚠️ ➜ Error calculating ` {input} `",
+    		"result": "FeelsOkayMan 👍 The result is: {result}"
+		},
+		"overlay": "FeelsOkayMan 👉 Here are chat overlays {link}",
 		"paste": "FeelsOkayMan 👉 {link}",
 		"permission": {
   			"bot": "➜ {user} Bot permission is ` {botRank} `",
@@ -301,7 +326,8 @@
   			"changed": "FeelsOkayMan 👍 Permission for {user} has been set to `{rank}`"
 		},
 		"pfp": "FeelsDankMan ➜ {twitch} {stv} {banner}",
-		"ping": "{pong} ➜ Uptime: {uptime} • Latency: {ping}ms • Channels: {channelcount} {devs}",
+		"ping": "{pong} ➜ Uptime: {uptime} • Latenz: {ping}ms • Channels: ( joined: {channelActive} db: {channelCount} )",
+		"devping": "{pong} ➜ Uptime: {uptime} • Latenz: {ping}ms • Channels: ( joined: {channelActive} db: {channelCount} ) • Subs: {allSubscriptions} • Ram: {memorymb}Mb • Commands: {cmds}/{cmdUsed} (Size/Used) • Database Uptime: {dbUptime} • {serverMessage} Server läuft noch {serverdays} Tage",
 		"prefix": { 
 			"usage": "⚠️ ➜ Current prefix: ` {prefix} ` to change {prefix}{trigger} <newPrefix> • If another bot has the prefix too, write {prefix}{prefix}{trigger}",
 			"notAllowed": "⚠️ ➜ The prefix ` {prefix} ` is invalid Here is a list of all the prefixes: {allprefix}",
@@ -323,7 +349,7 @@
 				"reminds": "FeelsDankMan ➜ Here are all your reminders: {link}"
 			},
 			"block": {
-				"usage": "FeelsDankMan ➜ Please type {prefix}remind block <add/remove> <username>",
+				"usage": "FeelsDankMan ➜ Please type {prefix}remind block <add • remove> <username>",
 				"blocked": "⚠️ ➜ {user} is already blocked",
 				"add": "FeelsDankMan ➜ You blocked {user} (ID: {userid}) successfully. This user can't create reminders for you anymore",
 				"notBlocked": "⚠️ ➜ {user} is not blocked",
@@ -341,6 +367,25 @@
   			"stopped": "FeelsOkayMan 👍 The spam has been stopped",
   			"noSpamFound": "⚠️ ➜ No active spam was found"
 		},
+		"sql": {
+  			"eval": "⚠️ ➜ Database codes are only meant for {prefix}sql",
+  			"parameter": "⚠️ ➜ You have {parameters} placeholders (?) but only provided {parms} parameters"
+		},
+		"stats": {
+    		"noUser": "⚠️ ➜ {user} is not in my database. Use {prefix}notis to register!",
+    		"stats": "peepoHappy ➜ {user} has {notis} • Prestige {prestige} • Debug logs {debug} • Chests found {cheast} • Gamble W/L {gambleWin}/{gambleLose} (Winrate: {gambleWinChance}%) • Notis W/L {notisWin}/{notisLose} • Notis Given/Received {notisGive}/{notisGet} • Joined on {joined} • Rank {rank}/{totalUsers}"
+		},
+		"stream": {
+  			"offline": "FeelsDankMan {channel} is currently offline",
+			"vod": "• title: {title} • Lang {lang} • Duration: {duration} • Last stream ended at {endedAt} • Link: {link}",
+			"never": "• never streamed",
+			"ivr": "• title: {title} • Last stream ended at {endedAt}",
+  			"title": "FeelsDankMan ➜ title in {channel}: {title}",
+  			"game": "FeelsDankMan ➜ category in {channel}: {category}",
+  			"thumb": "FeelsDankMan ➜ thumbnail of {channel}: {thumbnail}",
+  			"uptime": "FeelsDankMan ➜ Uptime of {channel}: {ago}",
+  			"info": "FeelsDankMan ➜ {channel} is live • Category: {category} • Title: {title} • Thumbnail: {thumbnail} • Lang: {lang} • Viewers: {viewer} • Uptime: {ago}"
+		},
 		"short": {
 			"blocked": "⛔️ ☝️ ➜ This website is not allowed",
 			"success": "FeelsDankMan ➜ Here is your link: {url}"
@@ -349,7 +394,7 @@
 			"noLinked": "⚠️ ➜ {user} is not linked in my database. Please link your account using {prefix}link add <LastFm Username>",
 			"noSong": "PepePls ➜ {user} is not listening to anything right now",
 			"lastSong": "• Last Song ` {title} ` by {artist} ({date})",
-			"play": "{user} is currently listening to ` {title} ` {emote} by {artist} {count} {link}"
+			"play": "{user} is currently listening to ` {title} ` by {artist} {emote} {count} {link}"
 		},
 		"subage": {
 			"end": "FeelsDankMan ➜ {user} war Sub im Channel {channel} für {time} Months • Sub ist {ago} Tage her",
@@ -366,6 +411,12 @@
 			"success": "✅ The test was successful Clap ✅"
 		},
 		"translate": "FeelsDankMan Translate from {from} to {to} ➜ ` {text} `",
+		"tuck": {
+			"selfTuck": "GuNa ➜ {user} tucks themselves into bed... good night 🛏️",
+			"targetTuck": "GuNa ➜ {username} gently tucks {user} into bed 👉 🛏️",
+			"selfTruck": "GuNa ➜ {user} sends themselves to bed with the power of a {engine} 🛻",
+			"targetTruck": "GuNa ➜ {username} sends {user} to bed using a powerful {engine} 🛻"
+		},
 		"user": {
 			"userbanned": {
 				"indefinite": "⛔ {user} is banned reason: TOS (Terms of Service) monkaS",
@@ -374,7 +425,7 @@
 				"dmca": "copyThis {user} is banned reason: Digital Millennium Copyright Act Squid1 Squid2 Squid3 Squid4",
 				"nothing": "{user}"
 			},
-			"msg": "• id: {id} • {role} • {color} • Follower: {follower} • Badge: {badge} • Bio: {bio} • Created on: {creat} {partyparrot}",
+			"msg": "• id: {id} • {role} • {color} • Follower: {follower} • Badge: {badge} • Prefix: {prefix} • Bio: {bio} • Created on: {creat} {partyparrot}",
 			"id": "imGlitch ID: {id}",
 			"stvId": "• (7TV) ID: {stvid}",
 			"bttvId": "• bttvNice ID: {bttvid}",
@@ -405,17 +456,24 @@
 	},
 
 	"handel": {
-		"cmd": {
-			"disabled": "⚠️ ➜ The command {command} is disabled",
-			"error": "ApuApustaja 👎 ➜ Error reloading commands",
-			"success": "ApuApustaja 👍 ➜ All commands reloaded"
-		},
-		"api": {
-			"error": "ApuApustaja 👎 ➜ Error reloading APIs",
-			"success": "ApuApustaja 👍 ➜ All APIs reloaded"
-		},
-		"lang": {
-			"success": "Apu Apustaja 👍 ➜ Language has been reloaded"
+		"bot": {
+			"cmd": {
+				"disabled": "⚠️ ➜ The command {command} is disabled",
+				"error": "ApuApustaja 👎 Error reloading commands",
+				"success": "ApuApustaja 👍 All commands reloaded"
+			},
+			"api": {
+				"error": "ApuApustaja 👎 Error reloading APIs",
+				"success": "ApuApustaja 👍 All APIs reloaded"
+			},
+			"token": {
+				"bot": "ApuApustaja 👍 Bot Token has been reloaded",
+				"api": "ApuApustaja 👍 Api Token has been reloaded"
+			},
+			"lang": {
+				"success": "ApuApustaja 👍 Language has been reloaded"
+			},
+			"crons": "ApuApustaja 👍 Crons has been reloaded"
 		},
 		"perms": {
 			"vip": "⚠️ ➜ You need to be VIP • https://badges.kappa.lol/cgD1Y",
@@ -511,17 +569,22 @@
 				"sub": {
   					"sub": "heCrazy {user} just subbed with Tier {tier}",
   					"resub": "heCrazy {user} re-subbed after {months} months",
-  					"gift": "heCrazy {user} gifted a sub to {recipient}"
+  					"gift": "heCrazy {user} gifted a sub to {recipient}",
+					"channel": "• in the channel {channel}"
 				},
 				"raid": "heCrazy {user} raided {channel} with {viewers} Viewern"
 			},
 			"online": {
 				"start": "heCrazy {user} is now live",
-				"category": "and playing: {game}",
+				"category": " and playing: {game}",
+				"title": " with the title: {title}",
 				"message": " • {message}",
 				"pings": " • dinkDonk {users}"
 			},
 			"offline": "Saj {user} is now offline"
+		},
+		"ban": {
+			"unban": "peepoHappy Clap Welcome back to Twitch {user}"
 		}
 	},
 	"notis": {
@@ -716,12 +779,12 @@
         		"ping": {
         		    "normal": "✅ {user} The break is over. Your notifications are ready with {prefix}notis",
         		    "christmas": "🎅 {user} The holidays are done. Your notifications are waiting with {prefix}notis",
-        		    "halloween": "👻 The spooky break is over. {user}, your notifications are ready with {prefix}notis",
-        		    "easter": "🐰 Welcome back, {user}. Your notifications are here with {prefix}notis",
-        		    "birthday": "🎂 Happy Birthday again, {user}. Your notifications are ready with {prefix}notis",
-        		    "mothersday": "💖 Welcome back, {user}. Your notifications are now ready with {prefix}notis",
-        		    "fathersday": "💪 The break is over, {user}. Your notifications are here with {prefix}notis",
-        		    "maythe4th": "✨ The Force is with you, {user}. Your notifications are waiting with {prefix}notis"
+        		    "halloween": "👻 The spooky break is over. {user} , your notifications are ready with {prefix}notis",
+        		    "easter": "🐰 Welcome back, {user} . Your notifications are here with {prefix}notis",
+        		    "birthday": "🎂 Happy Birthday again, {user} . Your notifications are ready with {prefix}notis",
+        		    "mothersday": "💖 Welcome back, {user} . Your notifications are now ready with {prefix}notis",
+        		    "fathersday": "💪 The break is over, {user} . Your notifications are here with {prefix}notis",
+        		    "maythe4th": "✨ The Force is with you, {user} . Your notifications are waiting with {prefix}notis"
         		}
 			},
 			"4": {
@@ -777,14 +840,14 @@
         		    "maythe4th": "🚀 Ready for the next jump? Take a deep breath, the Force will be with you as soon as the waiting time of: {message} is over."
         		},
         		"ping": {
-        		    "normal": "{user}! Your break is over. ✅ You're ready again! Get your notifications with {prefix}notis",
-        		    "christmas": "{user}! The reflective time is over. 🎅 Your energy is back! Your notifications are waiting with {prefix}notis",
-        		    "halloween": "{user}! The haunting's passed, you're ready to go! 🎃 Your notifications are here with {prefix}notis",
-        		    "easter": "{user}! The springtime relaxation did you good! 🐰 Your notifications are ready with {prefix}notis",
-        		    "birthday": "{user}! The celebration was great, now you're refreshed! 🎂 Your notifications are waiting with {prefix}notis",
-        		    "mothersday": "{user}! The moment of calm is over! 💐 You're full of love and energy. Your notifications are ready with {prefix}notis",
-        		    "fathersday": "{user}! The break's over, ready for new feats! 💪 Your notifications are here with {prefix}notis",
-        		    "maythe4th": "{user}! The jump is near! ✨ The Force is with you. Your notifications are waiting with {prefix}notis"
+        		    "normal": "{user} ! Your break is over. ✅ You're ready again! Get your notifications with {prefix}notis",
+        		    "christmas": "{user} ! The reflective time is over. 🎅 Your energy is back! Your notifications are waiting with {prefix}notis",
+        		    "halloween": "{user} ! The haunting's passed, you're ready to go! 🎃 Your notifications are here with {prefix}notis",
+        		    "easter": "{user} ! The springtime relaxation did you good! 🐰 Your notifications are ready with {prefix}notis",
+        		    "birthday": "{user} ! The celebration was great, now you're refreshed! 🎂 Your notifications are waiting with {prefix}notis",
+        		    "mothersday": "{user} ! The moment of calm is over! 💐 You're full of love and energy. Your notifications are ready with {prefix}notis",
+        		    "fathersday": "{user} ! The break's over, ready for new feats! 💪 Your notifications are here with {prefix}notis",
+        		    "maythe4th": "{user} ! The jump is near! ✨ The Force is with you. Your notifications are waiting with {prefix}notis"
         		}
 			},
 			"5": {
@@ -840,14 +903,14 @@
         		    "maythe4th": "⭐ For the Republic! Gather your strength, soldier. The next mission is already waiting! duration: {message}"
         		},
         		"ping": {
-        		    "normal": "{user}! Your power is recharged! 🔋 The next round can start. Get your notifications with {prefix}notis",
-        		    "christmas": "{user}! The festive break is over! 🎁 Time for new actions. Your notifications are waiting with {prefix}notis",
-        		    "halloween": "{user}! The haunting has settled, you're ready again! 👻 Collect your notifications with {prefix}notis",
-        		    "easter": "{user}! The Easter rest did you good. 🌷 Your notifications are ready for you with {prefix}notis",
-        		    "birthday": "{user}! The party's over, but the energy's here! 🎉 Get your notifications with {prefix}notis",
-        		    "mothersday": "{user}! The break is over, you're full of energy! 💪 Your notifications are waiting with {prefix}notis",
-        		    "fathersday": "{user}! You've recharged! 👨‍🔧 Your notifications are ready for you with {prefix}notis",
-        		    "maythe4th": "{user}! Your forces are gathered, soldier! 🚀 The next mission for your notifications starts now with {prefix}notis"
+        		    "normal": "{user} ! Your power is recharged! 🔋 The next round can start. Get your notifications with {prefix}notis",
+        		    "christmas": "{user} ! The festive break is over! 🎁 Time for new actions. Your notifications are waiting with {prefix}notis",
+        		    "halloween": "{user} ! The haunting has settled, you're ready again! 👻 Collect your notifications with {prefix}notis",
+        		    "easter": "{user} ! The Easter rest did you good. 🌷 Your notifications are ready for you with {prefix}notis",
+        		    "birthday": "{user} ! The party's over, but the energy's here! 🎉 Get your notifications with {prefix}notis",
+        		    "mothersday": "{user} ! The break is over, you're full of energy! 💪 Your notifications are waiting with {prefix}notis",
+        		    "fathersday": "{user} ! You've recharged! 👨‍🔧 Your notifications are ready for you with {prefix}notis",
+        		    "maythe4th": "{user} ! Your forces are gathered, soldier! 🚀 The next mission for your notifications starts now with {prefix}notis"
         		}
 			},
 			"6": {
@@ -903,14 +966,14 @@
         		    "maythe4th": "🧉 The troopers need a break too! Pause duration: {message}."
         		},
         		"ping": {
-        		    "normal": "{user}! Your sleep paid off! 😴 You're back to full strength for your notifications with {prefix}notis",
-        		    "christmas": "{user}! Winter sleep is over, the presents are waiting! 🎁 Get your notifications with {prefix}notis",
-        		    "halloween": "{user}! The haunting has faded, your energy is back! 🦇 Your notifications are ready with {prefix}notis",
-        		    "easter": "{user}! Well-rested and ready for egg hunting! 🌻 Your notifications are waiting with {prefix}notis",
-        		    "birthday": "{user}! The birthday break is over, the gifts are waiting! 🥳 Your notifications are here with {prefix}notis",
-        		    "mothersday": "{user}! Mom's quiet time did you good! 💖 Get your notifications now with {prefix}notis",
-        		    "fathersday": "{user}! The break's over, Dad's proud! 👍 Your notifications are ready with {prefix}notis",
-        		    "maythe4th": "{user}! The troopers are back on their feet! 🌟 Your notifications are ready for the next mission with {prefix}notis"
+        		    "normal": "{user} ! Your sleep paid off! 😴 You're back to full strength for your notifications with {prefix}notis",
+        		    "christmas": "{user} ! Winter sleep is over, the presents are waiting! 🎁 Get your notifications with {prefix}notis",
+        		    "halloween": "{user} ! The haunting has faded, your energy is back! 🦇 Your notifications are ready with {prefix}notis",
+        		    "easter": "{user} ! Well-rested and ready for egg hunting! 🌻 Your notifications are waiting with {prefix}notis",
+        		    "birthday": "{user} ! The birthday break is over, the gifts are waiting! 🥳 Your notifications are here with {prefix}notis",
+        		    "mothersday": "{user} ! Mom's quiet time did you good! 💖 Get your notifications now with {prefix}notis",
+        		    "fathersday": "{user} ! The break's over, Dad's proud! 👍 Your notifications are ready with {prefix}notis",
+        		    "maythe4th": "{user} ! The troopers are back on their feet! 🌟 Your notifications are ready for the next mission with {prefix}notis"
         		}
 			},
 			"7": {
@@ -966,14 +1029,14 @@
         		    "maythe4th": "🌌 Processor got hit by droid heat rays – cooling down in {message}"
         		},
         		"ping": {
-        		    "normal": "{user}! Your CPU has cooled down. 🌡️ You can now retrieve your notifications with {prefix}notis",
-        		    "christmas": "{user}! The CPU is ice-cold again! ❄️ Your notifications are ready for delivery with {prefix}notis",
-        		    "halloween": "{user}! The haunting is over, the CPU is back to normal temperature. 👻 Get your notifications with {prefix}notis",
-        		    "easter": "{user}! The CPU has crawled out of its nest and is perfectly fit. 🥚 Your notifications are waiting with {prefix}notis",
-        		    "birthday": "{user}! The party's over, the CPU has wound down. 🥳 Your notifications are ready to celebrate with {prefix}notis",
-        		    "mothersday": "{user}! The CPU has relaxed. 💖 Mom says your notifications are ready now with {prefix}notis",
-        		    "fathersday": "{user}! Dad tightened the cooler. 💪 Your CPU is cool, your notifications are waiting with {prefix}notis",
-        		    "maythe4th": "{user}! The processor has recovered from the heat ray. ✨ Your notifications are fully powered up with {prefix}notis"
+        		    "normal": "{user} ! Your CPU has cooled down. 🌡️ You can now retrieve your notifications with {prefix}notis",
+        		    "christmas": "{user} ! The CPU is ice-cold again! ❄️ Your notifications are ready for delivery with {prefix}notis",
+        		    "halloween": "{user} ! The haunting is over, the CPU is back to normal temperature. 👻 Get your notifications with {prefix}notis",
+        		    "easter": "{user} ! The CPU has crawled out of its nest and is perfectly fit. 🥚 Your notifications are waiting with {prefix}notis",
+        		    "birthday": "{user} ! The party's over, the CPU has wound down. 🥳 Your notifications are ready to celebrate with {prefix}notis",
+        		    "mothersday": "{user} ! The CPU has relaxed. 💖 Mom says your notifications are ready now with {prefix}notis",
+        		    "fathersday": "{user} ! Dad tightened the cooler. 💪 Your CPU is cool, your notifications are waiting with {prefix}notis",
+        		    "maythe4th": "{user} ! The processor has recovered from the heat ray. ✨ Your notifications are fully powered up with {prefix}notis"
         		}
 			},
 			"8": {
@@ -1029,14 +1092,14 @@
         		    "maythe4th": "🤖 The droids have damaged the transmitter… repairs will take {message}!"
         		},
         		"ping": {
-        		    "normal": "{user}! Your request has been processed. ✅ You can retrieve your notifications with {prefix}notis",
-        		    "christmas": "{user}! Your wishlist request is done! 🎅 Your notifications are waiting with {prefix}notis",
-        		    "halloween": "{user}! The cobwebs are gone, your request is complete. 🎃 Get your notifications with {prefix}notis",
-        		    "easter": "{user}! The Easter egg has been found, your request is complete. 🥚 Your notifications are ready with {prefix}notis",
-        		    "birthday": "{user}! The candles are out, the cake is eaten. 🥳 Your notifications are here with {prefix}notis",
-        		    "mothersday": "{user}! Mom's optimization is complete! 💖 Your notifications are lovingly waiting for you: {prefix}notis",
-        		    "fathersday": "{user}! Dad fixed it! 💪 Your request is through, get your notifications with {prefix}notis",
-        		    "maythe4th": "{user}! The transmitter is repaired! 🚀 Your notifications are ready for hyperspace with {prefix}notis"
+        		    "normal": "{user} ! Your request has been processed. ✅ You can retrieve your notifications with {prefix}notis",
+        		    "christmas": "{user} ! Your wishlist request is done! 🎅 Your notifications are waiting with {prefix}notis",
+        		    "halloween": "{user} ! The cobwebs are gone, your request is complete. 🎃 Get your notifications with {prefix}notis",
+        		    "easter": "{user} ! The Easter egg has been found, your request is complete. 🥚 Your notifications are ready with {prefix}notis",
+        		    "birthday": "{user} ! The candles are out, the cake is eaten. 🥳 Your notifications are here with {prefix}notis",
+        		    "mothersday": "{user} ! Mom's optimization is complete! 💖 Your notifications are lovingly waiting for you: {prefix}notis",
+        		    "fathersday": "{user} ! Dad fixed it! 💪 Your request is through, get your notifications with {prefix}notis",
+        		    "maythe4th": "{user} ! The transmitter is repaired! 🚀 Your notifications are ready for hyperspace with {prefix}notis"
         		}
 			},
 			"9": {
@@ -1092,14 +1155,14 @@
         		    "maythe4th": "🌌 Droids are enhancing your system via hyperspace… ready in {message}, may the Force be with you!"
         		},
         		"ping": {
-        		    "normal": "{user}! Your system is back to peak performance. ✅ Get your notifications with {prefix}notis",
-        		    "christmas": "{user}! The elves have finished their work. 🎁 Your festive notifications are waiting with {prefix}notis",
-        		    "halloween": "{user}! The haunting is over, the update is through. 👻 Collect your notifications with {prefix}notis",
-        		    "easter": "{user}! The system is fresh as a spring morning. 🌸 Your boosted notifications are ready with {prefix}notis",
-        		    "birthday": "{user}! The birthday booster is active! 🥳 Your notifications are ready for the party with {prefix}notis",
-        		    "mothersday": "{user}! The optimization is complete. 💖 Mom says your notifications are ready now with {prefix}notis",
-        		    "fathersday": "{user}! Dad did a great job. 💪 Your notifications are super-boosted now, get them with {prefix}notis",
-        		    "maythe4th": "{user}! The hyperspace upgrade is complete. ✨ May the power of notifications be with you: {prefix}notis"
+        		    "normal": "{user} ! Your system is back to peak performance. ✅ Get your notifications with {prefix}notis",
+        		    "christmas": "{user} ! The elves have finished their work. 🎁 Your festive notifications are waiting with {prefix}notis",
+        		    "halloween": "{user} ! The haunting is over, the update is through. 👻 Collect your notifications with {prefix}notis",
+        		    "easter": "{user} ! The system is fresh as a spring morning. 🌸 Your boosted notifications are ready with {prefix}notis",
+        		    "birthday": "{user} ! The birthday booster is active! 🥳 Your notifications are ready for the party with {prefix}notis",
+        		    "mothersday": "{user} ! The optimization is complete. 💖 Mom says your notifications are ready now with {prefix}notis",
+        		    "fathersday": "{user} ! Dad did a great job. 💪 Your notifications are super-boosted now, get them with {prefix}notis",
+        		    "maythe4th": "{user} ! The hyperspace upgrade is complete. ✨ May the power of notifications be with you: {prefix}notis"
         		}
 			},
 			"10": {
@@ -1155,11 +1218,11 @@
         		    "maythe4th": "🌌 Holonet disruption detected – patience, young Padawan. Response ➜ Code: 503, Reason: Disturbance in the Force, Retry-After: {message}"
         		},
         		"ping": {
-        		    "normal": "✅ Server is reachable again, {user}! You can collect your notifications with {prefix}notis",
-        		    "christmas": "🎅 Hohoho, the server is back, {user}! Your wishlist notifications are waiting with {prefix}notis",
-        		    "halloween": "👻 The ghosts have been banished, {user}! The server is back online. Get your notifications with {prefix}notis",
-        		    "easter": "🥚 The Easter egg update has been found, {user}! The server is ready. Your notifications are ready for pickup with {prefix}notis",
-        		    "birthday": "🥳 The party's over, {user}! The server is out of party mode. Collect your notifications with {prefix}notis",
+        		    "normal": "✅ Server is reachable again, {user} ! You can collect your notifications with {prefix}notis",
+        		    "christmas": "🎅 Hohoho, the server is back, {user} ! Your wishlist notifications are waiting with {prefix}notis",
+        		    "halloween": "👻 The ghosts have been banished, {user} ! The server is back online. Get your notifications with {prefix}notis",
+        		    "easter": "🥚 The Easter egg update has been found, {user} ! The server is ready. Your notifications are ready for pickup with {prefix}notis",
+        		    "birthday": "🥳 The party's over, {user} ! The server is out of party mode. Collect your notifications with {prefix}notis",
         		    "mothersday": "💐 {user} Mom says you deserve to collect your notifications. Use {prefix}notis",
         		    "fathersday": "{user} Dad writes: Here's your special assignment, collect your notifications with {prefix}notis 👍",
         		    "maythe4th": "{user} May the notifications be with you. Please use {prefix}notis to collect them."
