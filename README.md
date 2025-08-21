@@ -1,1 +1,3 @@
-NotedBot Lang
+**De: Hier sind Die Message files von NotedBot[notedbot link](https://twitch.tv/notedbot). Diese Daten sind eigentlich im Bot intern aber wenn jemand helfen will stelle ich das hier zu verfügung. Wenn ein Recht Schreib fehler oder sonstiges auf trit was bei mir öft passiert (LRS)**
+
+**En: Here are the message files from NotedBot[notedbot link](https://twitch.tv/notedbot). This data is actually stored internally within the bot, but if anyone wants to help, I'll make it available here. If a typo, spelling error, or anything else occurs, which happens often with me (LRS), I'll let you know**
