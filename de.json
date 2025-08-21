@@ -37,7 +37,7 @@
 				"self": "⚠️ ➜ Du kannst deine eigenen Emotes nicht yoinken da sie schon hier sind",
 				"noFound": "⚠️ ➜ Emote ` {emote} ` nicht im Channel gefunden",
 				"nameConflict": "⚠️ ➜ Der Emote Name ` {emote} ` ist in deinem Channel schon besetzt",
-				"success": "FeelsOkayMan 👍 Emote ` {emote} ` von Channel {channel} geyoinkt",
+				"success": "FeelsOkayMan 👍 Emote ` {emote} ` von Channel {channel|antiping} geyoinkt",
 				"yoinked": "FeelsOkayMan 👍 Emote ` {emote} ` erfolgreich geyoinkt"
 			},
 			"error": {
@@ -51,37 +51,40 @@
 			},
 			"cosmetics": {
   				"presence": {
-					"notyou": "⚠️ ➜ {user} Muss Selber Entscheiden ob der AutoPresence will. Sag ihn er Soll dafür {prefix}autopresence nutzen",
-					"auto": "BloodTrail AutoPresence {mode}",
-					"noCosmetics": "⚠️ ➜ {user} hat keine 7tv Cosmetics",
+					"nopresence": "⚠️ ➜ {user|antiping} Ist nicht ihn meiner Presence Datenbank. Er kann sich mit {prefix}autopresence adden lassen",
+					"status": "(7TV) ➜ Presence Status für {user|antiping} • Presence: {presence} • 7tv Sub: {stvsub}",
+					"notyou": "⚠️ ➜ {user|antiping} Muss Selber Entscheiden ob der AutoPresence will. Sag ihn er Soll dafür {prefix}autopresence nutzen",
+					"nosub": "⚠️ Du bist keine Aktiver 7tv Sub",
+					"auto": "BloodTrail AutoPresence {mode} 💡 Hinweis: Wenn dein 7TV Sub endet und du neu abonnierst, kann es bis zu 1 Stunde dauern, bis dein Presence wieder aktualisiert wird",
+					"noCosmetics": "⚠️ ➜ {user|antiping} hat keine 7tv Cosmetics",
 					"updated": "(7TV) ➜ Presence Updatet"
 				},
 				"badge": {
 					"noFounds": "⚠️ ➜ Ich habe Keine 7tv Badges gefunden",
 					"info": "(7TV) ➜ Badge: {badgeName} • Badge ID: {badgeId} • Badge Beschreibung {badgeDescription} • Vorschau: {preview} • hinzugefügt vor {create}",
-					"no": "(7TV) ➜ {user} hat keine 7tv Badge",
-					"badge": "(7TV) ➜ {user}  {badgeName}  • Badge ID: {badgeId} • Badge Beschreibung {badgeDescription} • Vorschau: {preview} • Vanity: {vanity} • hinzugefügt vor {create}"
+					"no": "(7TV) ➜ {user|antiping} hat keine 7tv Badge",
+					"badge": "(7TV) ➜ {user|antiping}  {badgeName}  • Badge ID: {badgeId} • Badge Beschreibung {badgeDescription} • Vorschau: {preview} • Vanity: {vanity} • hinzugefügt vor {create}"
 				}, 
 				"paint": {
 					"noFounds": "⚠️ ➜ ich habe Keine 7tv Paints gefunden",
 					"info": "(7TV) ➜ Paint: {paintName} • Paint ID: {paintId} • Vorschau: {preview} • hinzugefügt vor {create}",
-					"no": "(7TV) ➜ {user} hat keine 7tv Paint",
-					"paint": "(7TV) ➜ {user}  {paintName}  • Paint ID: {paintId} • Vorschau: {preview} • Vanity: {vanity} • hinzugefügt vor {create}"
+					"no": "(7TV) ➜ {user|antiping} hat keine 7tv Paint",
+					"paint": "(7TV) ➜ {user|antiping}  {paintName}  • Paint ID: {paintId} • Vorschau: {preview} • Vanity: {vanity} • hinzugefügt vor {create}"
 				}
 			},
 			"subage": {
 				"billing": "⚠️ ➜ Ich konnte keine 7tv Sub Daten finden",
 				"start": "(7TV) Subage ➜ ",
-				"noSub": "{user} ist kein aktiver 7TV Sub",
+				"noSub": "{user|antiping} ist kein aktiver 7TV Sub",
 				"nonSubDate": " • war für {days} Tage ein Sub, Ende war am {enddays}",
-				"isSub": "{user} ist ein aktiver 7TV Sub • Seit: {months} Monate und {remainingDays} Tage",
+				"isSub": "{user|antiping} ist ein aktiver 7TV Sub • Seit: {months} Monate und {remainingDays} Tage",
 				"nextBadge": " • Nächstes Badge: {badename} in {roundeddaysLeft} Tagen ({roundedPercentage}% voll)",
 				"reSub": " • Resubt am: {subEnd}",
 				"subEnd": " • Sub endet am: {subEnd}"
 			},
-			"set": "(7TV) Set ➜ {channel} hat noch {availableSlots} Emote Plätze frei • Emotes: {usedSlots}/{capacity} • Set Name: {emoteSetName} • ID: {activeEmoteSetid} | {emoteSetLink}",
+			"set": "(7TV) Set ➜ {channel|antiping} hat noch {availableSlots} Emote Plätze frei • Emotes: {usedSlots}/{capacity} • Set Name: {emoteSetName} • ID: {activeEmoteSetid} | {emoteSetLink}",
 			"user": {
-				"start": "(7TV) User ➜ Name: {user} • ID: {stvid} • Page: {userURL}",
+				"start": "(7TV) User ➜ Name: {user|antiping} • ID: {stvid} • Page: {userURL}",
 				"set": " • Emote Set: {emoteSetName} ({usedSlots}/{capacity} Emotes)",
 				"paint": " • Paint: {paint}",
 				"badge": " • Badge: {badge}",
@@ -93,17 +96,40 @@
 				"roles": " • Roles: {roles}"
 			},
 			"inValidName": "⚠️ ➜ Der Emote Name enthält ungültige Zeichen was dazu folgen könnte das man es nicht entfernen oder umbenennen kann. Wenn du aber trozdem willst das er hinzugefügt wird schreibe: {args} confirm",
-			"noSet": "⚠️ ➜ {channel} hat kein aktives Emote Set erstelle bitte eins: {link}",
+			"noSet": "⚠️ ➜ {channel|antiping} hat kein aktives Emote Set erstelle bitte eins: {link}",
 			"ownedSet": "⚠️ ➜ Das Emote Set gehört nicht zu deinem Channel und kann nicht angepasst werden",
 			"noPerms": "⚠️ ➜ Du brauchst 7TV Rechte in diesem Channel",
 			"noAcc": "(7TV) ➜ Kein 7TV Account für ` {user} ` gefunden"
 		},
+		"8ball": {
+   			"1": "Auf keinen Fall!",
+   			"2": "Wahrscheinlich nicht.",
+   			"3": "Sehr unwahrscheinlich.",
+   			"4": "Nein.",
+   			"5": "Frag später nochmal.",
+   			"6": "Kann ich jetzt nicht sagen.",
+   			"7": "Vielleicht.",
+   			"8": "Ja, auf jeden Fall!",
+   			"9": "Definitiv ja!",
+   			"10": "Ohne Zweifel.",
+   			"11": "Du kannst dich darauf verlassen.",
+   			"12": "Das sieht gut aus.",
+   			"13": "Höchstwahrscheinlich.",
+   			"14": "Sehr wahrscheinlich.",
+   			"15": "Zeichen deuten auf Ja.",
+   			"16": "Konzentrier dich und frag nochmal.",
+   			"17": "Ich bin mir nicht sicher.",
+   			"18": "Meine Antwort ist nein.",
+   			"19": "Meine Quellen sagen nein.",
+   			"20": "Die Zukunft sieht rosig aus."
+		},
 		"afk": {
 			"tooLong": "FeelsDankMan ➜ Deine Nachricht ist zu lang",
-			"afk": "➜ {user|antiping} ist jetzt afk {message} ⏱️",
+			"afk": "➜ {user} ist jetzt afk {message} ⏱️",
 			"bedge": "GuNa ➜ {user} geht jetzt schlafen {message} 💤",
 			"food": "Tasty ➜ {user} geht jetzt essen {message} 🍕",
 			"shower": "➜ {user} geht jetzt duschen {message} 🚿",
+			"goon": "uuh ➜ {user} geht jetzt goonen {message} 🥛",
 			"resume": {
 				"failed": "⚠️ ➜ {user} du kannst leider deinen Afk Status nicht mehr aufnehmen da er schon abgelaufen ist",
 				"success": "➜ {user} ist wieder Afk {emoji}"
@@ -114,13 +140,18 @@
 			"error": "⚠️ ➜ Ich konnte keinen booba.tv Stream finden FeelsBadMan",
 			"success": "BOOBA ➜ {user} • Viewer: {viewer} • Preview: {image} • Link: www.twitch.tv/{user}"
 		},
+		"antiping": {
+			"disabled": "FeelsOkayMan 👍 {user} ich pinge dich wieder in Nachrichten",
+			"enabled": "FeelsOkayMan 👍 {user|antiping} ich pinge dich nicht mehr in Nachrichten",
+			"test": "{ping}"
+		},
 		"channel": {
 			"emotes": {
 				"noEmotes": "FeelsDankMan ➜ Ich habe keine Emotes gefunden",
 				"start": "FeelsOkayMan ➜ Hier sind alle {list} Emotes in diesem Channel:"
 			},
 			"lang": {
-				"usage": "FeelsDankMan ➜ {prefix}{trigger} lang <de • en • on • off> (de/en für Sprache und on/off um persönliche Sprachen zu deaktivieren[{prefix}lang])",
+				"usage": "FeelsDankMan ➜ Aktueller Sprache ` {lang} ` zum ändern {prefix}{trigger} lang <de • en • on • off> (de/en für Sprache und on/off um persönliche Sprachen zu deaktivieren[{prefix}lang])",
 				"change": "FeelsOkayMan 👍 Die Sprache wurde auf {lang} gesetzt • um alle Commands zu sehen mach {prefix}commands",
 				"off": "FeelsOkayMan 👍 Meine Sprache ist jetzt für jeden User frei. Man kann es mit {prefix}lang <de • en> für sich einstellen",
 				"on": "FeelsOkayMan 👍 Ich spreche jetzt nur noch Deutsch in diesem Channel"
@@ -128,6 +159,7 @@
 		},
 		"chatterino": "FeelsDankMan ➜ Alle Chatterino Varianten • Normal: {normal} • Homies: {homies} • 7TV: {stv} • Technorino: {techorino}",
 		"chatters": "Es sind gerade {count} User im Chat {channel}",
+		"noChatters": "⚠️ ➜ Keine Chatters gefunden",
 		"clear": {
 			"start": "WEEWOO Eine Nuke Landet WEEWOO",
 			"running": "monkaS cvHazmat"
@@ -147,8 +179,8 @@
 				"check": "FeelsDankMan ➜ Der Command {command} ist {mode}"
 			},
 			"add": {
-				"usage": "FeelsDankMan ➜ Bitte schreibe {usage} add <trigger> <Nachricht> • Variablen: {channelID}, {channelName}, {userID}, {username} • Cmd Cooldown: 5 Sekunden",
-				"tooLang": "⚠️ ➜ Die Nachricht darf nicht länger als 350 Zeichen sein",
+				"usage": "FeelsDankMan ➜ Bitte schreibe {usage} add <trigger> <Nachricht> • Variablen: {channelID}, {channelName}, {userID}, {username}, {randomUser[:viewer/vip/mod/broadcaster]}, {randomNumber[:min:max]}, {time}, {date} • Cooldown: 5 Sekunden",
+				"tooLang": "⚠️ ➜ Die Nachricht darf nicht länger als 480 Zeichen sein",
 				"existing": "⚠️ ➜ Es gibt schon einen Command mit dem Trigger: {trigger}",
 				"added": "FeelsOkayMan 👍 Deine Custom Command ` {trigger} ` wurde erfolgreich hinzugefügt (Antwort: ` {content} `)"
 			},
@@ -159,6 +191,10 @@
 			},
 			"list": "FeelsOkayMan 👉 Es gibt {blocked} geblockte Commands und {custom} Custom Commands Mehr infos? {list}",
 			"prefix": "PoroSad ➜ Mein Channel Prefix ist ` ! ` und da {bot} auch hier ist, bitte ich änderen Sie meinen Prefix mit !prefix sonst gibt’s Ein Trigger-Chaos"
+		},
+		"coinflip": {
+			"head": "🪙 ➜ Kopf (Ja)",
+			"number": "🪙 ➜ Zahl (Nein)"
 		},
 		"console": {
 			"reload": {
@@ -187,8 +223,9 @@
 				}
 			},
 			"pull": {
-				"noUpdate": "🫠 ➜ Nicht vergessen zu pushen",
-				"success": "ApuApustaja 👍 ➜ {data} • Commit Message: {msg} • ppCircle Restart..."
+				"noUpdate": "🫠 TeaTime ➜ Nicht vergessen zu pushen",
+				"restart": "• ppCircle Restart...",
+				"success": "ApuApustaja 👍 ➜ {data} • Commit Message: {msg}"
 			},
 			"restart": "ppCircle ➜ Bot Startet Neu...",
 			"suggest": {
@@ -210,6 +247,10 @@
 			"self": "⚠️ ➜ Man kann sich nicht selber folgen",
 			"notFollowed": "peepoSad ➜ {user} folgt {channel} nicht",
 			"since": "peepoHappy ➜ {user} folgt {channel} seit {duration}"
+		},
+		"founders": {
+			"noFounders": "⚠️ ➜ Keine Founders im Channel {user} gefunden",
+			"founders": "im Channel {user} gibt es {founders} Founders im Channel ( {active} im Chat ) {list}"
 		},
 		"gamba": {
 			"isNan": "⚠️ ➜ Schreibe eine gültige Zahl Beispiel: {prefix}{trigger} 100",
@@ -254,6 +295,7 @@
 			"stv": "FeelsOkayMan 👍 (7TV) Global Notification ` Badge/Paint ` wurde {mode}"
 		},
 		"gonner": "uuh ➜ Hier sind ein Paar Gooner EmoteSets: {links}",
+		"gooning": "🤤 💦 {goon} auf {link}",
 		"help": {
 			"noCommand": "⚠️ ➜ Command ` {command} ` wurde nicht gefunden",
 			"command": "FeelsDankMan ➜ Command: {name} • Aliases: {aliases} • Beschreibung: {description} • Verwendung: {usage} • Kategorie: {category} • Cooldown: {cooldown} • Permission: {permission}"
@@ -273,18 +315,27 @@
 			"change": "FeelsOkayMan 👍 Für dich Spreche ich Jetzt nur noch Deutsch"
 		},
 		"link": {
-			"add": {
-				"update": "FeelsOkayMan 👍 ich habe Deinen User name updatet",
-				"existing": "⚠️ ➜ Du Bist Schon in der db zum ändern oder Removen mache {usage} remove oder set <newUser>",
-				"added": "FeelsOkayMan 👍 Mit Last Fm User ` {name} ` Verbunden"
-			}, 
-			"set": {
-				"notExisting": "⚠️ ➜ Du bist nicht in Meiner Db Nutz {usage} add <LastFm Username> zum verbinden",
-				"change": "FeelsOkayMan 👍 Ich hab dein Last Fm username Updatet"
+			"lastfm": {
+				"usage": "FeelsDankMan ➜ bitte schreibe {prefix}{trigger} lastfm <add • set • remove> <lastFm Username>",
+				"add": {
+					"noUser": "⚠️ ➜ Bitte gebe ein last fm Username an",
+					"success": "FeelsOkayMan 👍 Mit Last Fm User {name} Verbunden"
+				},
+				"remove": {
+					"notExisting": "⚠️ ➜ Du bist nicht in Meiner Db Nutz {usage} add <LastFm Username> zum verbinden",
+					"success": "FeelsOkayMan 👍 Ich hab dich von Meiner Db Removed"
+				}
 			},
-			"remove": {
-				"notExisting": "⚠️ ➜ Du bist nicht in Meiner Db Nutz {usage} add <LastFm Username> zum verbinden",
-				"success": "FeelsOkayMan 👍 Ich hab dich von Meiner Db Removed"
+			"steam": {
+				"usage": "FeelsDankMan ➜ Bitte benutze es so {prefix}{trigger} steam <add • set • remove> <Profil-URL>",
+			    "add": {
+        			"noUser": "🫠 ➜ Du musst eine Profil-URL angeben",
+        			"invalid": "⚠️ ➜ Die angegebene Steam-ID ist ungültig",
+        			"success": "FeelsOkayMan 👍 Dein Steam-Account ` {name} ` wurde erfolgreich verlinkt"
+    			},
+    			"remove": {
+        			"success": "FeelsOkayMan 👍 Dein Steam-Account wurde erfolgreich entfernt"
+				}
 			}
 		},
 		"livemsg": {
@@ -315,6 +366,17 @@
 			"error": "⚠️ ➜ Fehler bei der Berechnung von ` {input} `",
 			"result": "FeelsOkayMan 👍 Das Ergebniss ist: {result}"
 		},
+		"mods": {
+			"noMods": "⚠️ ➜ Keine Mods im Channel {user} gefunden",
+			"mods": "im Channel {user} gibt es {mods} Mods im Channel ( {active} im Chat ) {list}"
+		},
+		"morse": {
+			"morsed": "FeelsOkayMan ➜ Hier ist dein Morse Code ` {morse} ` ",
+			"demorse": {
+				"badword": "⚠️ ➜ Dein Morse Code enthält ein nicht geduldetes Wort",
+				"demorsed": "FeelsOkayMan ➜ Hier ist dein decoded Morse Code: {demorse}"
+			}
+		},
 		"overlay": "FeelsOkayMan 👉 Hier sind Chat Overlays {link}",
 		"paste": "FeelsOkayMan 👉 {link}",
 		"permission": {
@@ -326,12 +388,19 @@
 			"changed": "FeelsOkayMan 👍 Die Permission von {user} wurde auf ` {rank} ` gesetzt"
 		},
 		"pfp": "FeelsDankMan ➜ {twitch} {stv} {banner}",
-		"ping": "{pong} ➜ Uptime: {uptime} • Latenz: {ping}ms • Channels: ( joined: {channelActive} db: {channelCount} )",
-		"devping": "{pong} ➜ Uptime: {uptime} • Latenz: {ping}ms • Channels: ( joined: {channelActive} db: {channelCount} ) • Subs: {allSubscriptions} • Ram: {memorymb}Mb • Commands: {cmds}/{cmdUsed} (Size/Used) • Database Uptime: {dbUptime} • {serverMessage} Server läuft noch {serverdays} Tage",
+		"pick": "🎲 ➜ Ich Wähle ` {choice} `",
+		"ping": "{pong} ➜ Uptime: {uptime} • Latenz: {ping} • Channels: {channels}",
+		"devping": "{pong} ➜ Uptime: {uptime} • Latenz: {ping} • Channels: {channels} • Subs: {allSubscriptions} (Cost: {cost}) • Ram: {memorymb}Mb • Commands: {cmds}/{cmdUsed} (Size/Used) • Database Uptime: {dbUptime} • {serverMessage} Server läuft noch {serverdays}",
 		"prefix": { 
 			"usage": "⚠️ ➜ Aktueller Prefix: ` {prefix} ` zum ändern {prefix}{trigger} <newPrefix> • Wenn ein anderer Bot den Prefix auch hat schreibe {prefix}{prefix}{trigger}",
 			"notAllowed": "⚠️ ➜ Der Prefix ` {prefix} ` ist ungültig Hier ist eine Liste aller Prefixe: {allprefix}",
 			"changed": "FeelsOkayMan 👍 Der Channel Prefix wurde auf ` {prefix} ` geändert"
+		},
+		"prestige": {
+			"noUser": "⚠️ ➜ Du bist nicht ihn meiner Datenbank adde dich bitte mit {prefix}notis",
+			"canNot": "⚠️ ➜ Du benötigst noch folgende Items:",
+			"notConfirmed": "FeelsDankMan ➜ Schreibe {usage} confirm zum Prestigen • ⚠️ Bei Prestige werden Alle Upgrades zurück gesetzt",
+			"confirm": "FeelsOkayMan 👍 Herzlichen Glückwunsch! Dein Prestige Level wurde {level} erhöht • 🏦 Neuer Kontostand: {notis}"
 		},
 		"remind": {
 			"add": {
@@ -375,8 +444,14 @@
 			"noUser": "⚠️ ➜ {user} ist nicht in meiner db. Nutz {prefix}notis zum Regestiren",
 			"stats": "peepoHappy ➜ {user} hat {notis} • Prestige {prestige} • Debugging {debug} • Kisten gefunden {cheast} • Gamble Win/Lost {gambleWin}/{gambleLose} (Gewinn Chance: {gambleWinChance}%) • Notis Win/Lost {notisWin}/{notisLose} • Notis Give/Get {notisGive}/{notisGet} • Seit {joined} dabei • Rank {rank}/{totalUsers}"
 		},
+		"steamuser": {
+			"noid": "⚠️ ➜ Keine Steam Id gefunden du kannst dich mit {prefix}link <steam> <add • set> <Steam Profil Url> verknupfen",
+			"nouser": "⚠️ ➜ Kein Steam user gefunden",
+			"game": "Spielt gerade: {game}",
+			"user": "➜ {name} • Id: {id} • {status} • Profil {profil} • bild: {pfp} • Land: {land} • Erstellt am: {created}"
+		},
 		"stream": {
-			"offline": "FeelsDankMan @{channel} Ist Aktuell Offline",
+			"offline": "FeelsDankMan @{channel|antiping} Ist Aktuell Offline",
 			"vod": "• title: {title} • Lang {lang} • Dauer: {duration} • Letzter Stream vor {endedAt} • Link: {link}",
 			"never": "• hat nie gestreamt",
 			"ivr": "• title: {title} • Letzer Stream vor {endedAt}",
@@ -384,23 +459,23 @@
 			"game": "FeelsDankMan ➜ category im Channel {channel}: {category}",
 			"thumb": "FeelsDankMan ➜ thumbnail im Channel {channel}: {thumbnail}",
 			"uptime": "FeelsDankMan ➜ Uptime vom Channel {channel}: {ago}",
-			"info": "FeelsDankMan ➜ @{channel} Ist Live • Category {category} • title {title} • thumbnail {thumbnail} • Lang {lang} • Viewer {viewer} • Uptime {ago}"
+			"info": "FeelsDankMan ➜ @{channel|antiping} Ist Live • Category {category} • title {title} • thumbnail {thumbnail} • Lang {lang} • Viewer {viewer} • Uptime {ago}"
 		},
 		"short": {
 			"blocked": "⛔️ ☝️ ➜ Die angegebene Website ist nicht erlaubt",
 			"success": "FeelsDankMan ➜ Hier ist ein Link: {url}"
 		},
 		"song": {
-			"noLinked": "⚠️ ➜ {user} ist nicht in meiner Db Bitte verlinke dich mit {prefix}link add <LastFm Username>",
-			"noSong": "PepePls ➜ {user} hört gerade nichts",
+			"noLinked": "⚠️ ➜ {user|antiping} ist nicht in meiner Db Bitte verlinke dich mit {prefix}link <lastfm> <add • set> <LastFm Username>",
+			"noSong": "PepePls ➜ {user|antiping} hört gerade nichts",
 			"lastSong": "• Letzer Song ` {title} ` von {artist} ({date})",
-			"play": "{user} hört gerade ` {title} ` von {artist} {emote} {count} {link}"
+			"play": "{user|antiping} hört gerade ` {title} ` von {artist} {emote} {count} {link}"
 		},
 		"subage": {
 			"end": "FeelsDankMan ➜ {user} war Sub im Channel {channel} für {time} Monate • Sub ist {ago} Tage her",
 			"never": "FeelsDankMan ➜ {user} war noch nie Sub im Channel {channel}",
 			"is": "FeelsDankMan ➜ {user} ist Sub seit {months} Monaten bei {channel} • Tier {tier} • Sub endet/verlängert in {remaining} Tagen • Streak: {streak} Monate",
-			"gifted": " • HolidayPresent Geschenkt von: @{giftedBy}"
+			"gifted": " • HolidayPresent Geschenkt von: @{giftedBy|antiping}"
 		},
 		"suggest": {
 			"error": "⚠️ ➜ Es gibt den Vorschlag/Report schon",
@@ -410,12 +485,29 @@
 			"fail": "❌ Der Test hat nicht geklappt WineTime ❌",
 			"success": "✅ Der Test hat geklappt Clap ✅"
 		},
+		"topartist": {
+			"noArtist": "⚠️ ➜ Keine Top Artists für ` {user|antiping} ` gefunden",
+			"topArtist": "{emote} ➜ {user|antiping} Top {period} last Fm Artists sind {list}"
+		},
+		"topsong": {
+			"noTracks": "⚠️ ➜ Keine Top Songs für ` {user|antiping} ` gefunden",
+			"topTracks": "{emote} ➜ {user|antiping} Top {period} last Fm Songs sind {list}"
+		},
 		"translate": "FeelsDankMan Translate von {from} zu {to} ➜ ` {text} `",
 		"tuck": {
 			"selfTuck": "GuNa ➜ {user} kuschelt sich selbst ins Bett... gute Nacht 🛏️",
 			"targetTuck": "GuNa ➜ {username} bringt {user} vorsichtig ins Bett 👉 🛏️",
 			"selfTruck": "GuNa ➜ {user} bringt sich selber ins bett mit der Kraft von einen {engine} 🛻",
 			"targetTruck": "GuNa ➜ {username} bringt {user} mit Power eines {engine} ins bett 🛻"
+		},
+		"upgrade": {
+			"noNotis": "⚠️ ➜ Du hast keine Notis. Nutze {prefix}notis um welche zu farmen",
+			"upgrades": "FeelsDankMan ➜ Du hast folgende Upgrades Installiert: {upgrades}",
+			"max": "EZ ➜ Du hast {upgrade} Schon auf das Beste Updatet",
+			"unknowType": "⚠️ ➜ Ich kenne das Upgrade nicht?",
+			"notEnough": "⚠️ ➜ Du hast nicht genug Notis zum Upgraden auf Level {level} • 🪙 Du brauchst noch {needed} Notis • 🏦 Kontostand: {notis}",
+			"upgradeFull": "FeelsDankMan Du hast das Upgrade {upgrade} Auf Level {level} updatet • 🏦 Neuer Kontostand: {notis}",
+			"upgrade": "FeelsDankMan Du hast {upgrade} auf Level {level} geupdatet • 🏦 Neuer Kontostand: {notis}"
 		},
 		"user": {
 			"userbanned": {
@@ -425,15 +517,23 @@
 				"dmca": "copyThis {user} ist gebannt Grund: Digital Millennium Copyright Act Squid1 Squid2 Squid3 Squid4",
 				"nothing": "{user}"
 			},
-			"msg": "• id: {id} • {role} • {color} • Follower: {follower} • Badge: {badge} • Prefix: {prefix} • Bio: {bio} • Erstellt am: {creat} {partyparrot}",
+			"msg": "• id: {id} • {role} • {color} • Follower: {follower} • Badge: {badge} • Prefix: {prefix} • Bio: {bio} • Erstellt am: {creat} • Emotes: {emotes} • Links: {links} {partyparrot}",
 			"id": "imGlitch ID: {id}",
 			"stvId": "• (7TV) ID: {stvid}",
 			"bttvId": "• bttvNice ID: {bttvid}",
 			"ffzId": "• FrankerZ ID: {ffzid}",
 			"dbId": "• Interne ID: {dbid}",
+			"lastfm": "• Lastfm ID: {lastfm}",
+			"steam": "• Steam ID: {steam}",
+			"firstseen": "• Zum Ersten mal gesehen: {firstseen}",
 			"noAnotherIds": "• Keine anderen IDs gefunden DinoDance",
 			"uid": "imGlitch Login: {login} • Username: {user}"
 		},
+		"vips": {
+			"noVips": "⚠️ ➜ Keine Vips im Channel {user} gefunden",
+			"vips": "im Channel {user} gibt es {vips} Vips im Channel ( {active} im Chat ) {list}"
+		},
+		"waifu": "😳 was hab ich den hier? {link}",
 		"website": "peepoHappy ➜ Hier findest du Meine {page}: {link}",
 		"users": {
 			"wydios": {
@@ -486,6 +586,8 @@
 		"ignore": "RarePepe ➜ Du bist auf der Ignorierliste",
 		"badWord": "⛔️ ☝️ ➜ Das sage ich nicht",
 		"misstake": "⚠️ ☝️ ➜ Es ist ein Fehler aufgetreten, du kannst mit {prefix}suggest ein Report machen",
+		"accAvailable": "• Name ist verfügbar",
+		"accNotAvailable": "• Name ist nicht verfügbar",
 		"noAcc": "imGlitch ➜ Kein Twitch Account für ` {user} ` gefunden",
 		"noMod": "monkaS cvHazmat ➜ Ich benötige Mod Rechte • https://badges.kappa.lol/G07pb",
 		"noVip": "monkaS WineTime ➜ Ich benötige VIP Rechte • https://badges.kappa.lol/cgD1Y"
@@ -493,6 +595,11 @@
 
 	"event": {
 		"prefix": "FeelsOkayMan 👍 ➜ Mein Channel Prefix ist ` {prefix} `",
+		"stv": "DinoDance ➜ {user|antiping} Bitte Installiere dir 7tv link: https://7tv.app/",
+		"streak": {
+			"increment": "peepoHappy ➜ {user|antiping} hat die Streak auf ` {streak} ` auf {count} gesetzt",
+			"broken": "peepoSad ➜ Die Streak wurde gebrochen. Letzter Stand: {last}, Max Streak: {max}"
+		},
 		"remind": {
 			"tooMany": "dinkDonk ➜ {user} Du hast zu viele Reminds hier ist ein Link: {link}",
 			"multi": "dinkDonk ➜ {user} Reminders von {list}",
@@ -545,7 +652,15 @@
         			"7200000": "Hat versucht, die Dusche neu zu erfinden 🧪",
         			"21600000": "Ist unter Wasser eingezogen 🛁🏠",
         			"Infinity": "Lebt jetzt in Atlantis 🌊🐠"
-      			}
+      			},
+				"goon": {
+					"0": "wow Der Gooning Master ist neidig auf dich",
+					"150000": "Neuer Rekord mach weiter so! 🔥",
+					"600000": "Mehr als 10 Minuten am Goonen, Respekt! ⏳",
+					"1800000": "Lieber Spät als nie",
+					"3600000": "Hat zu Lange nach Material gesucht",
+					"Infinity": "hat seine Mission vergessen"
+				}
 			}
 		},
 		"notification": {
@@ -589,7 +704,7 @@
 	},
 	"notis": {
 		"daily": "Daily Bonus 🎉 Du hast deinen täglichen Bonus von {reward} Notis erhalten",
-		"newUser": "Willkommen, {user}! 🎉 Es freut mich, dich im Notis-System zu begrüßen. Du kannst jede Stunde {prefix}notis schreiben, um mehr Notis zu bekommen. Du hast als Startguthaben 100 Notis bekommen, nutze sie aber weise!",
+		"newUser": "Willkommen, {user|antiping}! 🎉 Es freut mich, dich im Notis-System zu begrüßen. Du kannst jede Stunde {prefix}notis schreiben, um mehr Notis zu bekommen. Du hast als Startguthaben 100 Notis bekommen, nutze sie aber weise!",
 		"status": {
     		"cd": "⏳ {time} CD",
     		"bank": "🏦 Bank Stand: {notis} Notis",
