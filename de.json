@@ -179,7 +179,7 @@
 				"check": "FeelsDankMan ➜ Der Command {command} ist {mode}"
 			},
 			"add": {
-				"usage": "FeelsDankMan ➜ Bitte schreibe {usage} add <trigger> <Nachricht> • Variablen: {channelID}, {channelName}, {userID}, {username}, {randomUser[:viewer/vip/mod/broadcaster]}, {randomNumber[:min:max]}, {time}, {date} • Cooldown: 5 Sekunden",
+				"usage": "FeelsDankMan ➜ Bitte schreibe {usage} add <trigger> <Nachricht> • Variablen: {channelID}, {channelName}, {userID}, {username}, {randomUser[:viewer/vip/mod/broadcaster]}, {randomNumber[:min:max]}, {[1:10]}, {time}, {date} • Cooldown: 5 Sekunden",
 				"tooLang": "⚠️ ➜ Die Nachricht darf nicht länger als 480 Zeichen sein",
 				"existing": "⚠️ ➜ Es gibt schon einen Command mit dem Trigger: {trigger}",
 				"added": "FeelsOkayMan 👍 Deine Custom Command ` {trigger} ` wurde erfolgreich hinzugefügt (Antwort: ` {content} `)"
@@ -583,7 +583,10 @@
 			"admin": "⚠️ ➜ Du musst Administrator sein • https://badges.kappa.lol/eE-mI",
 			"error": "Shrug ➜ Permission Fehler dink Wydios"
 		},
-		"ignore": "RarePepe ➜ Du bist auf der Ignorierliste",
+		"ignore": {
+			"user": "RarePepe ➜ Du bist auf der Ignorierliste",
+			"bot": "MrDestructoid ➜ Du bist als Bot Makiert"
+		},
 		"badWord": "⛔️ ☝️ ➜ Das sage ich nicht",
 		"misstake": "⚠️ ☝️ ➜ Es ist ein Fehler aufgetreten, du kannst mit {prefix}suggest ein Report machen",
 		"accAvailable": "• Name ist verfügbar",
@@ -594,6 +597,16 @@
 	},
 
 	"event": {
+		"bot": {
+			"join": {
+				"channel": "peepoHappy 🩵 Danke, dass du mich hinzugefügt hast. Meine Commands kannst du hier sehen ➜ {link} • Prefix {prefix} • Use {prefix}channel lang en to Change the Language",
+				"bot": "peepoHappy RaveTime NotedBot joined Channel ` @{user} ` data: (ID: {twitchid} • (Lang: {lang}) • (Prefix: {prefix})"
+			},
+			"part": {
+				"channel": "peepoSad RainTime 💔 RainTime Ich verlasse nun den Chat • 🖕 {user}",
+				"bot": "peepoSad RainTime NotedBot parted Channel ` @{user} ` data: (ID: {twitchid}) • (Lang: {lang}) • (Prefix: {prefix}) • Ich bin Am: {joined} gejoint"
+			}
+		},
 		"prefix": "FeelsOkayMan 👍 ➜ Mein Channel Prefix ist ` {prefix} `",
 		"stv": "DinoDance ➜ {user|antiping} Bitte Installiere dir 7tv link: https://7tv.app/",
 		"streak": {
