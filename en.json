@@ -179,7 +179,7 @@
 				"check": "FeelsDankMan ➜ The Command {command} is {mode}"
 			},
 			"add": {
-				"usage": "FeelsDankMan ➜ Please type {usage} add <trigger> <Message> • Variables: {channelID}, {channelName}, {userID}, {username}, {randomUser[:viewer/vip/mod/broadcaster]}, {randomNumber[:min:max]}, {time}, {date} • Cooldown: 5 Seconds",
+				"usage": "FeelsDankMan ➜ Please type {usage} add <trigger> <Message> • Variables: {channelID}, {channelName}, {userID}, {username}, {randomUser[:viewer/vip/mod/broadcaster]}, {randomNumber[:min:max]}, {[1:10]}, {time}, {date} • Cooldown: 5 Seconds",
 				"tooLang": "⚠️ ➜ The message cannot be longer than 480 characters",
 				"existing": "⚠️ ➜ There is already a command with the trigger: {trigger}",
 				"added": "FeelsOkayMan 👍 Your custom Command ` {trigger} ` has been successfully added (Response: ` {content} `)"
@@ -583,7 +583,10 @@
 			"admin": "⚠️ ➜ You need to be Administrator • https://badges.kappa.lol/eE-mI",
 			"error": "Shrug ➜ Permission error, dink Wydios"
 		},
-		"ignore": "RarePepe ➜ You are on the ignore list",
+		"ignore": {
+			"user": "RarePepe ➜ You are on the ignore list",
+			"bot": "MrDestructoid ➜ You are marked as a bot"
+		},
 		"badWord": "⛔️ ☝️ ➜ I don't say that",
 		"misstake": "⚠️ ☝️ ➜ An error occurred, you can report it with {prefix}suggest",
 		"accAvailable": "• name is available",
@@ -594,6 +597,16 @@
 	},
 
 	"event": {
+		"bot": {
+    		"join": {
+    		    "channel": "peepoHappy 🩵 Thanks for adding me! You can check out my commands here ➜ {link} • Prefix {prefix} • Use {prefix}channel lang en to change the language",
+    		    "bot": "peepoHappy RaveTime NotedBot joined channel ` @{user} ` data: (ID: {twitchid} • Lang: {lang} • Prefix: {prefix})"
+    		},
+    		"part": {
+    		    "channel": "peepoSad RainTime 💔 RainTime I'm leaving the chat now • 🖕 {user}",
+    		    "bot": "peepoSad RainTime NotedBot parted channel ` @{user} ` data: (ID: {twitchid}) • Lang: {lang} • Prefix: {prefix} • I joined at: {joined}"
+    		}
+		},
 		"prefix": "FeelsOkayMan 👍 ➜ My channel prefix is ` {prefix} `",
 		"stv": "DinoDance ➜ {user|antiping} Please install 7tv link: https://7tv.app/",
 		"streak": {
