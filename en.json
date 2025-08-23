@@ -34,16 +34,16 @@
 			},
 			"yoink": {
 				"usage": "FeelsDankMan ➜ Please type {usage} yoink <Channel> <EmoteName> <Optional: EmoteName>",
-				"self": "⚠️ ➜ You can't Yoinked Emotes because they are already here",
+				"self": "⛔ ➜ You can't Yoinked Emotes because they are already here",
 				"noFound": "⚠️ ➜ Emote ` {emote} ` not found in Channel",
-				"nameConflict": "⚠️ ➜ The emote name ` {emote} ` is already occupied by your channel",
+				"nameConflict": "📛 ➜ The emote name ` {emote} ` is already occupied by your channel",
 				"success": "FeelsOkayMan 👍 Emote ` {emote} ` from Channel {channel|antiping} geyoinkt",
 				"yoinked": "FeelsOkayMan 👍 Emote ` {emote} ` successfully yoinked"
 			},
 			"error": {
-				"nameConflict": "⚠️ ➜ The name is already used by ` {emotename} `",
-				"token": "⚠️ ➜ I'm sorry but my 7TV token has expired, I informed the bot owner",
-				"noPerms": "⚠️ ➜ I don't have 7TV rights. Please add {bot} as editor: {link} (Manage emote sets & emotes). Then please try twice so I can accept",
+				"nameConflict": "⛔ ➜ The name is already used by ` {emotename} `",
+				"token": "💡 ➜ I'm sorry but my 7TV token has expired, {owner}",
+				"noPerms": "🚫 ➜ I don't have 7TV rights. Please add {bot} as editor: {link} (Manage emote sets & emotes). Then please try twice so I can accept",
 				"fullCapacity": "⚠️ ➜ The emote set is full. Please remove another emote. • Emote set: {link}",
 				"notFoundinSet": "⚠️ ➜ Emote ` {emote} ` was not found in the emote set",
 				"notFound": "⚠️ ➜ Emote with ID ` {emoteId} ` not found",
@@ -51,9 +51,9 @@
 			},
 			"cosmetics": {
 				"presence": {
-					"nopresence": "⚠️ ➜ {user|antiping} is not in my Presence database. They can add themselves with {prefix}autopresence add",
+					"nopresence": "🛑 ➜ {user|antiping} is not in my Presence database. They can add themselves with {prefix}autopresence add",
 					"status": "(7TV) ➜ Presence status for {user|antiping} • Presence: {presence} • 7TV Sub: {stvsub}",
-					"notyou": "⚠️ ➜ {user|antiping} must decide for themselves if they want AutoPresence. Tell them to use {prefix}autopresence",
+					"notyou": "🚫 ➜ {user|antiping} must decide for themselves if they want AutoPresence. Tell them to use {prefix}autopresence",
 					"nosub": "⚠️ You don’t have an active 7TV subscription",
 					"auto": "BloodTrail AutoPresence {mode} 💡 Note: If your 7TV subscription ends and you resubscribe, it may take up to 1 hour for your presence to update again",
     				"noCosmetics": "⚠️ ➜ {user|antiping} has no 7tv cosmetics",
@@ -95,10 +95,10 @@
 				"ownEmotes": " • {ownemotes} Own Emotes",
 				"roles": " • Roles: {roles}"
 			},
-			"inValidName": "⚠️ ➜ The emote name contains invalid characters which could result in it not being able to be removed or renamed. If you still want it to be added, write: {args} confirm",
-			"noSet": "⚠️ ➜ {channel|antiping} Doesn't have an active emote set, please create one: {link}",
-			"ownedSet": "⚠️ ➜ The emote set does not belong to deisen channel and cannot be adjusted",
-			"noPerms": "⚠️ ➜ You need 7tv rights in this channel",
+			"inValidName": "🚫 ➜ The emote name contains invalid characters which could result in it not being able to be removed or renamed. If you still want it to be added, write: {args} confirm",
+			"noSet": "🚫 ➜ {channel|antiping} Doesn't have an active emote set, please create one: {link}",
+			"ownedSet": "🚫 ➜ The emote set does not belong to deisen channel and cannot be adjusted",
+			"noPerms": "🚫 ➜ You need 7tv rights in this channel",
 			"noAcc": "(7TV) ➜ No 7TV account found for ` {user} `"
 		},
 		"8ball": {
@@ -276,15 +276,19 @@
     		},
     		"now": "• You now have {notis} Notis"
 		},
-		"gpt": "🤖 WineTime ➜ {message}",
+		"gpt": {
+			"short": "🤖 WineTime ➜ {message}... {link}",
+			"text": "🤖 WineTime ➜ {message}",
+			"error": "🛑 ➜ Create error in the text{err}"
+		},
 		"give": {
     		"your": "⚠️ ➜ You can't give Notis to yourself.",
     		"bot": "FeelsOkayMan 👍 I'm the bank, I don't need Notis.",
     		"noNotis": "⚠️ ➜ You have no Notis. Use {prefix}notis to farm some.",
     		"noUser": "⚠️ ➜ This user is not in my database. They can use {prefix}notis to get added.",
     		"isNan": "⚠️ ➜ Please enter a valid number. Example: {prefix}{trigger} {user} 100",
-			"zeroNotis": "⚠️ ➜ You can not give 0 Notis",
-    		"notEnough": "⚠️ ➜ You don't have enough Notis to gift. You currently have {notis} Notis.",
+			"zeroNotis": "🚫 ➜ You can not give 0 Notis",
+    		"notEnough": "🚫 ➜ You don't have enough Notis to gift. You currently have {notis} Notis.",
     		"set": "Loading . . .",
     		"gived": "🎁 A gift has been opened! {user} gives {notis} Notis to {receiver} • You now have {nowNotis} Notis and {receiver} now has {userNotis} Notis.",
     		"bonus": "🎉 Congrats {user}, you received {notis} Notis as a bonus for giving {giftetNotis} Notis! Keep being a generous gifter. New Notis balance: {nowNotis} Notis."
@@ -311,7 +315,7 @@
 		"kok": "{emote} ➜ The kok of {user} is {size}cm long",
 		"lang": {
   			"off": "FeelsOkayMan 👍 Your personal language has been reset. I will now use the channel language for you.",
-  			"lang_strict": "FeelsDankMan ➜ I will now only speak English for you | ( ⚠️ Personal language is disabled in this channel. The channel owner can enable it again using ${prefix}channellang off )",
+  			"lang_strict": "FeelsDankMan ➜ I will now only speak English for you • ⚠️ Personal language is disabled in this channel. The channel owner can enable it again using ${prefix}channellang off",
   			"change": "FeelsOkayMan 👍 I will now only speak English for you"
 		},
 		"link": {
@@ -329,7 +333,7 @@
   			"steam": {
 			    "usage": "FeelsDankMan ➜ please type {prefix}{trigger} steam <add • set • remove> <profile URL>",
 			    "add": {
-			        "noUser": "🫠 ➜ You need to provide a profile URL",
+			        "noUser": "🛑 ➜ You need to provide a profile URL",
 			        "invalid": "⚠️ ➜ The provided Steam ID is invalid",
 			        "success": "FeelsOkayMan 👍 Your Steam account `{name}` has been successfully linked"
 			    },
@@ -352,7 +356,7 @@
 			},
 			"msg": { 
     			"del": "FeelsOkayMan 👍 I deleted the custom message for {user}",
-    			"noMsg": "⚠️ ➜ You need to provide a message • Variables: {title}",
+    			"noMsg": "⚠️ ➜ You need to provide a message",
     			"tooLong": "⚠️ ➜ Your message is too long",
     			"success": "FeelsOkayMan 👍 I updated the message for {user}"
 			},
@@ -373,14 +377,14 @@
 		"morse": {
   			"morsed": "FeelsOkayMan ➜ Here is your Morse code: ` {morse} `",
   			"demorse": {
-    			"badword": "⚠️ ➜ Your Morse code contains a forbidden word",
+    			"badword": "⛔ ➜ Your Morse code contains a forbidden word",
     			"demorsed": "FeelsOkayMan ➜ Here is your decoded Morse code: {demorse}"
   			}	
 		},
 		"overlay": "FeelsOkayMan 👉 Here are chat overlays {link}",
 		"paste": "FeelsOkayMan 👉 {link}",
 		"permission": {
-  			"bot": "➜ {user} Bot permission is ` {botRank} `",
+  			"bot": "➜ {user|antiping} Bot permission is ` {botRank} `",
 			"channel": " and channel permission is ` {channelRank} `",
 			"info": "⚠️ Note: For other users, only the permissions stored in the database are displayed",
   			"noPerms": "⚠️ ➜ You don't have the rights to change other users' permissions",
@@ -393,24 +397,24 @@
 		"devping": "{pong} ➜ Uptime: {uptime} • Latenz: {ping} • Channels: {channels} • Subs: {allSubscriptions} (Cost: {cost}) • Ram: {memorymb}Mb • Commands: {cmds}/{cmdUsed} (Size/Used) • Database Uptime: {dbUptime} • {serverMessage} Server is still running {serverdays}",
 		"prefix": { 
 			"usage": "⚠️ ➜ Current prefix: ` {prefix} ` to change {prefix}{trigger} <newPrefix> • If another bot has the prefix too, write {prefix}{prefix}{trigger}",
-			"notAllowed": "⚠️ ➜ The prefix ` {prefix} ` is invalid Here is a list of all the prefixes: {allprefix}",
+			"notAllowed": "🛑 ➜ The prefix ` {prefix} ` is invalid Here is a list of all the prefixes: {allprefix}",
 			"changed": "FeelsOkayMan 👍 The channel prefix has been set to ` {prefix} ` changed"
 		},
 		"prestige": {
-  			"noUser": "⚠️ ➜ You are not in my database yet, please add yourself with {prefix}notis",
-  			"canNot": "⚠️ ➜ You still need the following items:",
+  			"noUser": "🛑 ➜ You are not in my database yet, please add yourself with {prefix}notis",
+  			"canNot": "🚫 ➜ You still need the following items:",
   			"notConfirmed": "FeelsDankMan ➜ Type {usage} confirm to prestige • ⚠️ All upgrades will be reset when you prestige",
   			"confirm": "FeelsOkayMan 👍 Congrats! Your prestige level increased to {level} • 🏦 New balance: {notis}"
 		},
 		"remind": {
 			"add": {
 				"usage": "FeelsDankMan ➜ Please type {prefix}{usage} Optional: <time: e.g. `in 2d` = 2 days or `at 3.10 0:00`>",
-				"bot": "⚠️ ➜ I Don't Need a Remind B)",
-				"inFailed": "⚠️ ➜ Invalid time format! Write it like: 1s = one second, 1m = one minute, 1h = one hour, 1w = one week | Example: `in 1w 2d`",
-				"atFailed": "⚠️ ➜ Invalid time format! Write it like: day:month hour:minute | Example: `at 3.10 0:00`",
-				"tooMany": "⚠️ ➜ You already have too many reminders (30). Delete some with {prefix}unremind",
-				"blocked": "⚠️ ➜ This user blocked you. You can't create reminders for them",
-				"ignored": "⚠️ ➜ This user is ignored by the bot and cannot get a reminder",
+				"bot": "B) ➜ I Don't Need a Remind",
+				"inFailed": "⛔ ➜ Invalid time format! Write it like: 1s = one second, 1m = one minute, 1h = one hour, 1w = one week | Example: `in 1w 2d`",
+				"atFailed": "⛔ ➜ Invalid time format! Write it like: day:month hour:minute | Example: `at 3.10 0:00`",
+				"tooMany": "⛔ ➜ You already have too many reminders (30). Delete some with {prefix}unremind",
+				"blocked": "🚫 ➜ This user blocked you. You can't create reminders for them",
+				"ignored": "🚫 ➜ This user is ignored by the bot and cannot get a reminder",
 				"creat": "Noted ➜ Reminder (ID: {remindid}) saved for {user}. Notification will be: {remindtime}"
 			},
 			"my": {
@@ -419,7 +423,7 @@
 			},
 			"block": {
 				"usage": "FeelsDankMan ➜ Please type {prefix}remind block <add • remove> <username>",
-				"blocked": "⚠️ ➜ {user} is already blocked",
+				"blocked": "🚫 ➜ {user} is already blocked",
 				"add": "FeelsDankMan ➜ You blocked {user} (ID: {userid}) successfully. This user can't create reminders for you anymore",
 				"notBlocked": "⚠️ ➜ {user} is not blocked",
 				"remove": "FeelsDankMan ➜ You unblocked {user} (ID: {userid}) successfully. This user can create reminders for you again"
@@ -437,12 +441,12 @@
   			"noSpamFound": "⚠️ ➜ No active spam was found"
 		},
 		"sql": {
-  			"eval": "⚠️ ➜ Database codes are only meant for {prefix}sql",
+  			"eval": "⛔ ➜ Database codes are only meant for {prefix}sql",
   			"parameter": "⚠️ ➜ You have {parameters} placeholders (?) but only provided {parms} parameters"
 		},
 		"stats": {
-    		"noUser": "⚠️ ➜ {user} is not in my database. Use {prefix}notis to register!",
-    		"stats": "peepoHappy ➜ {user} has {notis} • Prestige {prestige} • Debug logs {debug} • Chests found {cheast} • Gamble W/L {gambleWin}/{gambleLose} (Winrate: {gambleWinChance}%) • Notis W/L {notisWin}/{notisLose} • Notis Given/Received {notisGive}/{notisGet} • Joined on {joined} • Rank {rank}/{totalUsers}"
+    		"noUser": "🛑 ➜ {user|antiping} is not in my database. Use {prefix}notis to register!",
+    		"stats": "peepoHappy ➜ {user|antiping} has {notis} • Prestige {prestige} • Debug logs {debug} • Chests found {cheast} • Gamble W/L {gambleWin}/{gambleLose} (Winrate: {gambleWinChance}%) • Notis W/L {notisWin}/{notisLose} • Notis Given/Received {notisGive}/{notisGet} • Joined on {joined} • Rank {rank}/{totalUsers}"
 		},
 		"steamuser": {
 		    "noid": "⚠️ ➜ No Steam ID found. You can link your account with {prefix}link <steam> <add • set> <steam profile URL>",
@@ -462,7 +466,7 @@
   			"info": "FeelsDankMan ➜ @{channel|antiping} is live • Category: {category} • Title: {title} • Thumbnail: {thumbnail} • Lang: {lang} • Viewers: {viewer} • Uptime: {ago}"
 		},
 		"short": {
-			"blocked": "⛔️ ☝️ ➜ This website is not allowed",
+			"blocked": "⛔️ ➜ This website is not allowed",
 			"success": "FeelsDankMan ➜ Here is your link: {url}"
 		},
 		"song": {
@@ -504,8 +508,8 @@
   			"noNotis": "⚠️ ➜ You don't have any Notis. Use {prefix}notis to farm some",
   			"upgrades": "FeelsDankMan ➜ You have the following upgrades installed: {upgrades}",
   			"max": "EZ ➜ Your {upgrade} is already upgraded to the max level",
-  			"unknowType": "⚠️ ➜ I don't recognize that upgrade?",
-  			"notEnough": "⚠️ ➜ You don't have enough Notis to upgrade to level {level} • 🪙 You still need {needed} Notis • 🏦 Balance: {notis}",
+  			"unknowType": "🚫 ➜ I don't recognize that upgrade?",
+  			"notEnough": "⛔ ➜ You don't have enough Notis to upgrade to level {level} • 🪙 You still need {needed} Notis • 🏦 Balance: {notis}",
   			"upgradeFull": "FeelsDankMan You fully upgraded {upgrade} to level {level} • 🏦 New balance: {notis}",
   			"upgrade": "FeelsDankMan You upgraded {upgrade} to level {level} • 🏦 New balance: {notis}"
 		},
@@ -558,7 +562,7 @@
 	"handel": {
 		"bot": {
 			"cmd": {
-				"disabled": "⚠️ ➜ The command {command} is disabled",
+				"disabled": "⛔ ➜ The command {command} is disabled",
 				"error": "ApuApustaja 👎 Error reloading commands",
 				"success": "ApuApustaja 👍 All commands reloaded"
 			},
@@ -576,19 +580,19 @@
 			"crons": "ApuApustaja 👍 Crons has been reloaded"
 		},
 		"perms": {
-			"vip": "⚠️ ➜ You need to be VIP • https://badges.kappa.lol/cgD1Y",
-			"mod": "⚠️ ➜ You need to be Moderator • https://badges.kappa.lol/G07pb",
-			"broadcaster": "⚠️ ➜ You need to be Broadcaster • https://badges.kappa.lol/TCe8B",
-			"dev": "⚠️ ➜ You need to be Developer • https://badges.kappa.lol/obwTL",
-			"admin": "⚠️ ➜ You need to be Administrator • https://badges.kappa.lol/eE-mI",
+			"vip": "🚫 ➜ You need to be VIP • https://badges.kappa.lol/cgD1Y",
+			"mod": "🚫 ➜ You need to be Moderator • https://badges.kappa.lol/G07pb",
+			"broadcaster": "🚫 ➜ You need to be Broadcaster • https://badges.kappa.lol/TCe8B",
+			"dev": "🚫 ➜ You need to be Developer • https://badges.kappa.lol/obwTL",
+			"admin": "🚫 ➜ You need to be Administrator • https://badges.kappa.lol/eE-mI",
 			"error": "Shrug ➜ Permission error, dink Wydios"
 		},
 		"ignore": {
 			"user": "RarePepe ➜ You are on the ignore list",
 			"bot": "MrDestructoid ➜ You are marked as a bot"
 		},
-		"badWord": "⛔️ ☝️ ➜ I don't say that",
-		"misstake": "⚠️ ☝️ ➜ An error occurred, you can report it with {prefix}suggest",
+		"badWord": "⛔️☝️ ➜ I don't say that",
+		"misstake": "⚠️☝️ ➜ An error occurred, you can report it with {prefix}suggest",
 		"accAvailable": "• name is available",
 		"accNotAvailable": "• name is not available",
 		"noAcc": "imGlitch ➜ No Twitch account found for ` {user} `",
