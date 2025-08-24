@@ -320,7 +320,12 @@
 		},
 		"link": {
   			"lastfm": {
-				"usage": "FeelsDankMan ➜ please type {prefix}{trigger} lastfm <add • set • remove> <lastFm Username>",
+				"usage": "FeelsDankMan ➜ please type {prefix}{trigger} lastfm <add • set • remove • help> <lastFm Username>",
+				"help": {
+    				"usage": "FeelsDankMan ➜ please type {prefix}{trigger} lastfm help <acc • connection>",
+    				"acc": "💡 ➜ No LastFM account? Go to last.fm and create an account there",
+    				"service": "💡 ➜ You can connect your LastFM account to Spotify/YT Music here: https://www.last.fm/settings/applications"
+				},
     			"add": {
       				"noUser": "⚠️ ➜ Please provide a Last.fm username",
       				"success": "FeelsOkayMan 👍 Connected with Last.fm user {name}"
@@ -331,7 +336,11 @@
     			}
   			},
   			"steam": {
-			    "usage": "FeelsDankMan ➜ please type {prefix}{trigger} steam <add • set • remove> <profile URL>",
+			    "usage": "FeelsDankMan ➜ please type {prefix}{trigger} steam <add • set • remove • help> <profile URL>",
+				"help": {
+        			"usage": "FeelsDankMan ➜ Type {prefix}{trigger} steam help <profile> to get tips",
+        			"profile": "💡 ➜ To find your Steam profile URL, go to your Steam profile, click `View Profile`, and copy the URL from the browser"
+    			},
 			    "add": {
 			        "noUser": "🛑 ➜ You need to provide a profile URL",
 			        "invalid": "⚠️ ➜ The provided Steam ID is invalid",
@@ -408,31 +417,26 @@
 		},
 		"remind": {
 			"add": {
-				"usage": "FeelsDankMan ➜ Please type {prefix}{usage} Optional: <time: e.g. `in 2d` = 2 days or `at 3.10 0:00`>",
-				"bot": "B) ➜ I Don't Need a Remind",
-				"inFailed": "⛔ ➜ Invalid time format! Write it like: 1s = one second, 1m = one minute, 1h = one hour, 1w = one week | Example: `in 1w 2d`",
-				"atFailed": "⛔ ➜ Invalid time format! Write it like: day:month hour:minute | Example: `at 3.10 0:00`",
-				"tooMany": "⛔ ➜ You already have too many reminders (30). Delete some with {prefix}unremind",
-				"blocked": "🚫 ➜ This user blocked you. You can't create reminders for them",
-				"ignored": "🚫 ➜ This user is ignored by the bot and cannot get a reminder",
-				"creat": "Noted ➜ Reminder (ID: {remindid}) saved for {user}. Notification will be: {remindtime}"
+    			"usage": "FeelsDankMan ➜ Please use {prefix}{trigger} {user} <message> [Optional: time e.g. `in 3 hours`, `in 2 minutes` or `at 03.10.2025 00:00:00`]",
+    			"bot": "B) ➜ I don't need a reminder",
+    			"blocked": "🚫 ➜ This user has blocked you. You can't create reminders for them",
+    			"ignored": "🚫 ➜ This user is ignored by the bot and cannot receive reminders",
+				"noTime": "on next message",
+    			"creat": "Noted ➜ Reminder (ID: {remindid}) for {user} saved. Will notify at: {remindtime}"
 			},
 			"my": {
 				"noReminds": "FeelsDankMan ➜ You have no reminders",
 				"reminds": "FeelsDankMan ➜ Here are all your reminders: {link}"
 			},
 			"block": {
-				"usage": "FeelsDankMan ➜ Please type {prefix}remind block <add • remove> <username>",
-				"blocked": "🚫 ➜ {user} is already blocked",
-				"add": "FeelsDankMan ➜ You blocked {user} (ID: {userid}) successfully. This user can't create reminders for you anymore",
-				"notBlocked": "⚠️ ➜ {user} is not blocked",
-				"remove": "FeelsDankMan ➜ You unblocked {user} (ID: {userid}) successfully. This user can create reminders for you again"
+			    "usage": "FeelsDankMan ➜ Please type {prefix}{trigger} <username>",
+			    "block": "FeelsOkayMan 👍 ➜ @{user} (ID: {userid}) has been {action}"
 			},
 			"remove": {
-				"usage": "FeelsDankMan ➜ Please type {prefix}remind remove <id> | to see all your reminders do {prefix}remind list",
-				"inValid": "⚠️ ➜ Invalid ID! Please enter a valid ID. Example: {prefix}remind remove 31",
-				"notYourId": "⚠️ ➜ I found no reminder with ID: {remindid} created by you",
-				"success": "FeelsDankMan ➜ Your reminder with ID: {remindid} has been deleted"
+				"usage": "FeelsDankMan ➜ Please type {prefix}{trigger} <id> • to see all your reminders use {prefix}myreminders",
+				"noId": "⚠️ ➜ I couldn't find a reminder with the id ` {id} `",
+				"notYourId": "🚫 ➜ The reminder with the id ` {id} ` does not belong to you",
+				"success": "FeelsDankMan ➜ I deleted your reminder with the ID: ` {id} `"
 			}
 		},
 		"spam": {
@@ -522,13 +526,13 @@
 				"nothing": "{user}"
 			},
 			"msg": "• id: {id} • {role} • {color} • Follower: {follower} • Badge: {badge} • Prefix: {prefix} • Bio: {bio} • Created on: {creat} • Emotes: {emotes} • Links: {links} {partyparrot}",
-			"id": "imGlitch ID: {id}",
-			"stvId": "• (7TV) ID: {stvid}",
-			"bttvId": "• bttvNice ID: {bttvid}",
-			"ffzId": "• FrankerZ ID: {ffzid}",
-			"dbId": "• Interne ID: {dbid}",
-			"lastfm": "• Lastfm ID: {lastfm}",
-			"steam": "• Steam ID: {steam}",
+			"id": "imGlitch {id}",
+			"stvId": "• (7TV) {stvid}",
+			"bttvId": "• bttvNice {bttvid}",
+			"ffzId": "• FrankerZ {ffzid}",
+			"dbId": "• NotedBot {dbid}",
+			"lastfm": "• Lastfm {lastfm}",
+			"steam": "• Steam {steam}",
 			"firstseen": "• firsttimeseen: {firstseen}",
 			"noAnotherIds": "• No other IDs found DinoDance",
 			"uid": "imGlitch Login: {login} • Username: {user}"
@@ -617,69 +621,6 @@
     		"increment": "peepoHappy ➜ {user|antiping} has set the streak ` {streak} ` to {count}",
     		"broken": "peepoSad ➜ The streak has been broken. Last status: {last}, Max streak: {max}"
 		},
-		"remind": {
-			"tooMany": "dinkDonk ➜ {user} You have too many reminders here is a link: {link}",
-			"multi": "dinkDonk ➜ {user} reminders from {list}",
-			"selfSingle": "dinkDonk ➜ {user} Reminder from yourself • {msg} {ago}",
-			"otherSingle": "dinkDonk ➜ {user} Reminder from {from} • {msg} {ago}",
-			"start": "dinkDonk ➜",
-			"selfReminder": "{user} Reminder from yourself • {msg} {ago}",
-			"otherReminder": "{target} Reminder from {from} • {msg} {ago}",
-			"noMessage": "No Message"
-		},
-		"afk": {
-			"afk": "peepoHappy ➜ {user}",
-			"bedge": "GuMo ➜ {user}",
-			"unknown": "➜ {user}",
-			"duration": "Duration: {time}",
-			"message": "• Message: {usermessage}",
-			"return": {
-				"afk": "is back",
- 	 			"bedge": {
-    				"0": "Quickly testing the BillyApprove command",
-    				"300000": "Taking a short break",
-    				"900000": "Still chatting on the phone",
-    				"3600000": "Had a quick nap",
-    				"10800000": "Took a longer powernap",
-    				"21600000": "Went into deep sleep mode 🛌💤",
-    				"36000000": "Almost slept the whole day 😴",
-    				"57600000": "Spent half the day in bed",
-    				"86400000": "AFK for an entire day – hopefully refreshed!",
-    				"259200000": "Took a multi-day break 🛏️",
-    				"604800000": "Seems to have gone on vacation 🏖️",
-    				"Infinity": "Returned from the infinite realm of AFK!"
-  				},
-  				"food": {
-    				"0": "Food isn't even ready yet! 🍳",
-    				"120000": "Just had a quick snack",
-    				"600000": "Had some lunch",
-    				"1800000": "Currently having dinner",
-    				"3600000": "Went on a culinary world tour 🌍🍜",
-    				"7200000": "Enjoyed a 5-course meal 🍽️👨‍🍳",
-    				"14400000": "Cooked something and fixed the kitchen set 🔧🍲",
-    				"28800000": "Visited grandma – got second servings 😋",
-    				"Infinity": "Lost in the kitchen – now full and back 🧁🍕"
-  				},
-  				"shower": {
-    				"0": "Actually doesn't want to shower! 🛑🧼",
-    				"300000": "Freshened up",
-    				"900000": "Quickly washed their hair",
-    				"1800000": "Gave a shower concert 🎤🚿",
-    				"3600000": "Got lost in the shower 🧭",
-    				"7200000": "Tried to reinvent the shower 🧪",
-    				"21600000": "Moved in underwater 🛁🏠",
-    				"Infinity": "Now lives in Atlantis 🌊🐠"
-  				},
-				"goon": {
-				  	"0": "Wow, the Gooning Master is jealous of you!",
-				  	"150000": "New record, keep it up! 🔥",
-				  	"600000": "Over 10 minutes of gooning, respect! ⏳",
-				  	"1800000": "Better late than never!",
-				  	"3600000": "Took too long searching for materials",
-					"infinity": "Forgot his mission"
-				}
-			}
-		},
 		"notification": {
 			"badge": {
 				"newBadge": "imGlitch New Global Badge ➜ {badgename} (id: {badgeid})",
@@ -707,18 +648,86 @@
 				"raid": "heCrazy {user} raided {channel} with {viewers} Viewern"
 			},
 			"online": {
-				"start": "heCrazy {user} is now live",
+				"start": "heCrazy @{user} is now live",
 				"category": " and playing: {game}",
 				"title": " with the title: {title}",
 				"message": " • {message}",
 				"pings": " • dinkDonk {users}"
 			},
-			"offline": "Saj {user} is now offline"
+			"offline": "Saj @{user} is now offline"
 		},
 		"ban": {
 			"unban": "peepoHappy Clap Welcome back to Twitch {user}"
 		}
 	},
+
+	"afk": {
+		"afk": "peepoHappy ➜ {user}",
+		"bedge": "GuMo ➜ {user}",
+		"unknown": "➜ {user}",
+		"duration": "Duration: {time}",
+		"message": "• Message: {usermessage}",
+		"return": {
+			"afk": "is back",
+ 	 		"bedge": {
+    			"0": "Quickly testing the BillyApprove command",
+    			"300000": "Taking a short break",
+    			"900000": "Still chatting on the phone",
+    			"3600000": "Had a quick nap",
+    			"10800000": "Took a longer powernap",
+    			"21600000": "Went into deep sleep mode 🛌💤",
+    			"36000000": "Almost slept the whole day 😴",
+    			"57600000": "Spent half the day in bed",
+    			"86400000": "AFK for an entire day – hopefully refreshed!",
+    			"259200000": "Took a multi-day break 🛏️",
+    			"604800000": "Seems to have gone on vacation 🏖️",
+    			"Infinity": "Returned from the infinite realm of AFK!"
+  			},
+  			"food": {
+    			"0": "Food isn't even ready yet! 🍳",
+    			"120000": "Just had a quick snack",
+    			"600000": "Had some lunch",
+    			"1800000": "Currently having dinner",
+    			"3600000": "Went on a culinary world tour 🌍🍜",
+    			"7200000": "Enjoyed a 5-course meal 🍽️👨‍🍳",
+    			"14400000": "Cooked something and fixed the kitchen set 🔧🍲",
+    			"28800000": "Visited grandma – got second servings 😋",
+    			"Infinity": "Lost in the kitchen – now full and back 🧁🍕"
+  			},
+  			"shower": {
+    			"0": "Actually doesn't want to shower! 🛑🧼",
+    			"300000": "Freshened up",
+    			"900000": "Quickly washed their hair",
+    			"1800000": "Gave a shower concert 🎤🚿",
+    			"3600000": "Got lost in the shower 🧭",
+    			"7200000": "Tried to reinvent the shower 🧪",
+    			"21600000": "Moved in underwater 🛁🏠",
+    			"Infinity": "Now lives in Atlantis 🌊🐠"
+  			},
+			"goon": {
+			  	"0": "Wow, the Gooning Master is jealous of you!",
+			  	"150000": "New record, keep it up! 🔥",
+			  	"600000": "Over 10 minutes of gooning, respect! ⏳",
+			  	"1800000": "Better late than never!",
+			  	"3600000": "Took too long searching for materials",
+				"infinity": "Forgot his mission"
+			}
+		}
+	},
+
+	"remind": {
+		"event": {
+			"tooMany": "dinkDonk ➜ @{user} You have too many reminders here is a link: {link}",
+			"multi": "dinkDonk ➜ @{user} reminders from {allReminders}",
+			"selfSingle": "dinkDonk ➜ @{user} Reminder from yourself • {msg} {ago}",
+			"otherSingle": "dinkDonk ➜ @{user} Reminder from {from} • {msg} {ago}"
+		},
+		"time": {
+			"selfReminder": "dinkDonk ➜ @{user} Reminder from yourself • {msg} {ago}",
+			"otherReminder": "dinkDonk ➜ @{user} Reminder from {from} • {msg} {ago}"
+		}
+	},
+
 	"notis": {
 		"daily": "Daily Bonus 🎉 You received your daily bonus of {reward} Notis",
 		"newUser": "Welcome, {user|antiping}! 🎉 Glad to have you in the Notis system. You can type {prefix}notis every hour to get more Notis. You start with 100 Notis, use them wisely!",
