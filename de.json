@@ -309,7 +309,7 @@
 			"botRejoined": "FeelsDankMan ➜ Ich hab dein Channel geupdatet und bin Neu gejoint",
 			"allReady": "FeelsDankMan TeaTime ➜ Ich bin schon in deinem Channel. Wenn du mein Prefix vergessen hast, benutze ` {name} prefix? ` oder Lass mich Rejoint mit !rejoin",
 			"rejoining": "ppCircle ➜ {user} I rejoin in your channel...",
-			"rejoinSuccess": "FeelsOkaykMan 👍 Ich bin deinen Channel neu gejoint",
+			"rejoinSuccess": "FeelsOkayMan 👍 Ich bin deinen Channel neu gejoint",
 			"add": "peepoHappy Please add me via the website ➜ {website}"
 		},
 		"kok": "{emote} ➜ Der kok von {user} ist {size}cm lang",
@@ -320,7 +320,12 @@
 		},
 		"link": {
 			"lastfm": {
-				"usage": "FeelsDankMan ➜ bitte schreibe {prefix}{trigger} lastfm <add • set • remove> <lastFm Username>",
+				"usage": "FeelsDankMan ➜ bitte schreibe {prefix}{trigger} lastfm <add • set • remove • help> <lastFm Username>",
+				"help": {
+					"usage": "FeelsDankMan ➜ bitte schreibe {prefix}{trigger} lastfm help <acc • connection>",
+					"acc": "💡 ➜ Kein lastFM Account? Geh auf last.fm und Erstelle dort einen Account",
+					"service": "💡 ➜ Dein LastFM Account kannst du mit Spotify/Yt Music verbinden das kannst du hier machen https://www.last.fm/settings/applications"
+				},
 				"add": {
 					"noUser": "⚠️ ➜ Bitte gebe ein last fm Username an",
 					"success": "FeelsOkayMan 👍 Mit Last Fm User {name} Verbunden"
@@ -331,7 +336,11 @@
 				}
 			},
 			"steam": {
-				"usage": "FeelsDankMan ➜ Bitte benutze es so {prefix}{trigger} steam <add • set • remove> <Profil-URL>",
+				"usage": "FeelsDankMan ➜ Bitte benutze es so {prefix}{trigger} steam <add • set • remove • help> <Profil-URL>",
+				"help": {
+       				"usage": "FeelsDankMan ➜ bitte schreibe {prefix}{trigger} steam help <profil>, um Tipps zu bekommen",
+       				"profile": "💡 ➜ Um deine Steam-Profil-URL zu finden: Gehe zu deinem Steam-Profil, klicke auf `Profil anzeigen` und kopiere die URL aus dem Browser"
+    			},
 			    "add": {
         			"noUser": "🛑 ➜ Du musst eine Profil-URL angeben",
         			"invalid": "⚠️ ➜ Die angegebene Steam-ID ist ungültig",
@@ -408,13 +417,11 @@
 		},
 		"remind": {
 			"add": {
-				"usage": "FeelsDankMan ➜ Bitte schreibe {prefix}{usage} Optional: <time: z.b `in 2d` = 2 Tage oder `at 3.10 0:00`>",
+				"usage": "FeelsDankMan ➜ Bitte schreibe {prefix}{trigger} {user} <Nachricht> [Optional: Zeit z.B. `in 3 Stunden`, `in 2 Minuten` oder `am 03.10.2025 00:00:00`]",
 				"bot": "B) ➜ Ich brauche keinen Remind",
-				"inFailed": "⛔ ➜ Ungültige Zeitangabe Schreibe es so: 1s = eine Sekunde 1m = eine Minute 1h = eine Stunde 1w = eine Woche | Beispiel: `in 1w 2d`",
-				"atFailed": "⛔ ➜ Ungültige Zeitangabe Schreibe es so: Tag:Monat Stunde:Minute | Beispiel: `at 3.10 0:00`",
-				"tooMany": "⛔ ➜ Du hast bereits zu viele Reminders (30) du kannst Reminders mit {prefix}unremind löschen",
 				"blocked": "🚫 ➜ Dieser Benutzer hat dich blockiert. Du kannst keine Reminders für ihn erstellen",
 				"ignored": "🚫 ➜ Dieser Benutzer ist vom Bot ignoriert und kann keine Reminders bekommen",
+				"noTime": "bei der nächsten Nachricht",
 				"creat": "Noted ➜ Reminder (ID: {remindid}) für {user} gespeichert. Benachricht wird: {remindtime}"
 			},
 			"my": {
@@ -422,17 +429,14 @@
 				"reminds": "FeelsDankMan ➜ Hier sind alle Deine Reminds: {link}"
 			},
 			"block": {
-				"usage": "FeelsDankMan ➜ Bitte schreibe {prefix}remind block <add • remove> <username>",
-				"blocked": "🚫 ➜ {user} ist Bereits geblockt",
-				"add": "FeelsDankMan ➜ Du hast {user} (ID: {userid}) erfolgreich blockiert. Dieser Nutzer kann keine Erinnerungen mehr für dich erstellen",
-				"notBlocked": "⚠️ ➜ {user} ist nicht blockiert",
-				"remove": "FeelsDankMan ➜ Du hast {user} (ID: {userid}) erfolgreich entblockiert. Dieser Nutzer kann jetzt wieder Erinnerungen für dich erstellen"
+				"usage": "FeelsDankMan ➜ Bitte schreibe {prefix}{trigger} <username>",
+				"block": "FeelsOkayMan 👍 ➜ @{user} (ID: {userid}) wurde {action}"
 			},
 			"remove": {
-				"usage": "FeelsDankMan ➜ Bitte schreibe {prefix}remind remove <id> | um alle deine Reminds zu sehen mach {prefix}remind list",
-				"inValid": "⚠️ ➜ Ungültige ID Bitte gib eine gültige ID ein Beispiel: {prefix}remind remove 31",
-				"notYourId": "⚠️ ➜ Ich habe keinen Remind mit der ID: {remindid} und von dir erstelten remind gefunden",
-				"success": "FeelsDankMan ➜ Ich hab deinen Remind mit der ID: {remindid} gelöscht"
+				"usage": "FeelsDankMan ➜ Bitte schreibe {prefix}{trigger} <id> • um alle deine Reminds zu sehen mach {prefix}myreminders",
+				"noId": "⚠️ ➜ ich hab keinen Remind mit der id ` {id} ` gefunden",
+				"notYourId": "🚫 ➜ Der Remind mit der id ` {id} ` gehört nicht dir",
+				"success": "FeelsDankMan ➜ Ich hab deinen Remind mit der ID: ` {id} ` gelöscht"
 			}
 		},
 		"spam": {
@@ -522,13 +526,13 @@
 				"nothing": "{user}"
 			},
 			"msg": "• id: {id} • {role} • {color} • Follower: {follower} • Badge: {badge} • Prefix: {prefix} • Bio: {bio} • Erstellt am: {creat} • Emotes: {emotes} • Links: {links} {partyparrot}",
-			"id": "imGlitch ID: {id}",
-			"stvId": "• (7TV) ID: {stvid}",
-			"bttvId": "• bttvNice ID: {bttvid}",
-			"ffzId": "• FrankerZ ID: {ffzid}",
-			"dbId": "• Interne ID: {dbid}",
-			"lastfm": "• Lastfm ID: {lastfm}",
-			"steam": "• Steam ID: {steam}",
+			"id": "imGlitch {id}",
+			"stvId": "• (7TV) {stvid}",
+			"bttvId": "• bttvNice {bttvid}",
+			"ffzId": "• FrankerZ {ffzid}",
+			"dbId": "• NotedBot {dbid}",
+			"lastfm": "• Lastfm {lastfm}",
+			"steam": "• Steam {steam}",
 			"firstseen": "• Zum Ersten mal gesehen: {firstseen}",
 			"noAnotherIds": "• Keine anderen IDs gefunden DinoDance",
 			"uid": "imGlitch Login: {login} • Username: {user}"
@@ -617,69 +621,6 @@
 			"increment": "peepoHappy ➜ {user|antiping} hat die Streak auf ` {streak} ` auf {count} gesetzt",
 			"broken": "peepoSad ➜ Die Streak wurde gebrochen. Letzter Stand: {last}, Max Streak: {max}"
 		},
-		"remind": {
-			"tooMany": "dinkDonk ➜ {user} Du hast zu viele Reminds hier ist ein Link: {link}",
-			"multi": "dinkDonk ➜ {user} Reminders von {list}",
-			"selfSingle": "dinkDonk ➜ {user} Reminder von dir selbst • {msg} {ago}",
-			"otherSingle": "dinkDonk ➜ {user} Reminder von {from} • {msg} {ago}",
-			"start": "dinkDonk ➜",
-			"selfReminder": "{user} Reminder von dir selbst • {msg} {ago}",
-			"otherReminder": "{user} Reminder von {from} • {msg} {ago}",
-			"noMessage": "Keine Nachricht"
-		},
-		"afk": {
-			"afk": "peepoHappy ➜ {user}",
-			"bedge": "GuMo ➜ {user}",
-			"unknown": "➜ {user}",
-			"duration": "Dauer: {time}",
-			"message": "• Nachricht: {usermessage}",
-			"return": {
-				"afk": "ist wieder da",
-				"bedge": {
-        			"0": "Testet kurz den Command BillyApprove",
-        			"300000": "Nimmt sich eine kleine Auszeit",
-        			"900000": "Chattet noch kurz am Handy",
-        			"3600000": "Hat ein kleines Nickerchen gemacht",
-        			"10800000": "Hat einen längeren Powernap gemacht",
-        			"21600000": "War wohl im Tiefschlafmodus 🛌💤",
-        			"36000000": "Hat fast den ganzen Tag verpennt 😴",
-        			"57600000": "War den halben Tag im Bett",
-        			"86400000": "War einen ganzen Tag Afk – hoffentlich erholt!",
-        			"259200000": "Hat sich mehrere Tage ausgeruht 🛏️",
-        			"604800000": "Ist wohl im Urlaub verschwunden 🏖️",
-        			"Infinity": "Zurück aus der Unendlichkeit des AFKs!"
-      			},
-      			"food": {
-        			"0": "Essen ist doch noch gar nicht fertig! 🍳",
-        			"120000": "Hat gerade einen Snack gegessen",
-        			"600000": "Hat Mittagessen gegessen",
-        			"1800000": "Hat gerade Abendessen",
-        			"3600000": "War auf kulinarischer Weltreise 🌍🍜",
-        			"7200000": "Hat ein 5-Gänge-Menü genossen 🍽️👨‍🍳",
-        			"14400000": "Hat sich selbst bekocht... und das Küchenset repariert 🔧🍲",
-        			"28800000": "War bei Oma – und es gab Nachschlag 😋",
-        			"Infinity": "War in der Küche verschollen – jetzt satt und zurück 🧁🍕"
-      			},
-      			"shower": {
-        			"0": "Will doch nicht duschen! 🛑🧼",
-        			"300000": "Hat sich frisch gemacht",
-        			"900000": "Hat noch schnell Haare gewaschen",
-        			"1800000": "Hat ein Duschkonzert gegeben 🎤🚿",
-        			"3600000": "Hat sich in der Dusche verirrt 🧭",
-        			"7200000": "Hat versucht, die Dusche neu zu erfinden 🧪",
-        			"21600000": "Ist unter Wasser eingezogen 🛁🏠",
-        			"Infinity": "Lebt jetzt in Atlantis 🌊🐠"
-      			},
-				"goon": {
-					"0": "wow Der Gooning Master ist neidig auf dich",
-					"150000": "Neuer Rekord mach weiter so! 🔥",
-					"600000": "Mehr als 10 Minuten am Goonen, Respekt! ⏳",
-					"1800000": "Lieber Spät als nie",
-					"3600000": "Hat zu Lange nach Material gesucht",
-					"Infinity": "hat seine Mission vergessen"
-				}
-			}
-		},
 		"notification": {
 			"badge": {
 				"newBadge": "imGlitch Neues Global Badge ➜ {badgename} (ID: {badgeid})",
@@ -707,18 +648,86 @@
 				"raid": "heCrazy {user} raided {channel} mit {viewers} Viewern"
 			},
 			"online": {
-				"start": "heCrazy {user} Ist jetzt live",
+				"start": "heCrazy @{user} Ist jetzt live",
 				"category": " und spielt: {game}",
 				"title": " mit den title: {title}",
 				"message": " • {message}",
 				"pings": " • dinkDonk {users}"
 			},
-			"offline": "Saj {user} ist jetzt Offline"
+			"offline": "Saj @{user} ist jetzt Offline"
 		},
 		"ban": {
 			"unban": "peepoHappy Clap Willkommen zurück auf Twitch {user}"
 		}
 	},
+
+	"afk": {
+		"afk": "peepoHappy ➜ {user}",
+		"bedge": "GuMo ➜ {user}",
+		"unknown": "➜ {user}",
+		"duration": "Dauer: {time}",
+		"message": "• Nachricht: {usermessage}",
+		"return": {
+			"afk": "ist wieder da",
+			"bedge": {
+    			"0": "Testet kurz den Command BillyApprove",
+    			"300000": "Nimmt sich eine kleine Auszeit",
+    			"900000": "Chattet noch kurz am Handy",
+    			"3600000": "Hat ein kleines Nickerchen gemacht",
+    			"10800000": "Hat einen längeren Powernap gemacht",
+    			"21600000": "War wohl im Tiefschlafmodus 🛌💤",
+    			"36000000": "Hat fast den ganzen Tag verpennt 😴",
+    			"57600000": "War den halben Tag im Bett",
+    			"86400000": "War einen ganzen Tag Afk – hoffentlich erholt!",
+    			"259200000": "Hat sich mehrere Tage ausgeruht 🛏️",
+    			"604800000": "Ist wohl im Urlaub verschwunden 🏖️",
+    			"Infinity": "Zurück aus der Unendlichkeit des AFKs!"
+    		},
+    		"food": {
+    			"0": "Essen ist doch noch gar nicht fertig! 🍳",
+    			"120000": "Hat gerade einen Snack gegessen",
+    			"600000": "Hat Mittagessen gegessen",
+    			"1800000": "Hat gerade Abendessen",
+    			"3600000": "War auf kulinarischer Weltreise 🌍🍜",
+    			"7200000": "Hat ein 5-Gänge-Menü genossen 🍽️👨‍🍳",
+    			"14400000": "Hat sich selbst bekocht... und das Küchenset repariert 🔧🍲",
+    			"28800000": "War bei Oma – und es gab Nachschlag 😋",
+    			"Infinity": "War in der Küche verschollen – jetzt satt und zurück 🧁🍕"
+    		},
+    		"shower": {
+    			"0": "Will doch nicht duschen! 🛑🧼",
+    			"300000": "Hat sich frisch gemacht",
+    			"900000": "Hat noch schnell Haare gewaschen",
+    			"1800000": "Hat ein Duschkonzert gegeben 🎤🚿",
+    			"3600000": "Hat sich in der Dusche verirrt 🧭",
+    			"7200000": "Hat versucht, die Dusche neu zu erfinden 🧪",
+    			"21600000": "Ist unter Wasser eingezogen 🛁🏠",
+    			"Infinity": "Lebt jetzt in Atlantis 🌊🐠"
+    		},
+			"goon": {
+				"0": "wow Der Gooning Master ist neidig auf dich",
+				"150000": "Neuer Rekord mach weiter so! 🔥",
+				"600000": "Mehr als 10 Minuten am Goonen, Respekt! ⏳",
+				"1800000": "Lieber Spät als nie",
+				"3600000": "Hat zu Lange nach Material gesucht",
+				"Infinity": "hat seine Mission vergessen"
+			}
+		}
+	},
+
+	"remind": {
+		"event": {
+			"tooMany": "dinkDonk ➜ @{user} Du hast zu viele Reminds hier ist ein Link: {link}",
+			"multi": "dinkDonk ➜ @{user} Reminders von {allReminders}",
+			"selfSingle": "dinkDonk ➜ @{user} Reminder von dir selbst • {msg} {ago}",
+			"otherSingle": "dinkDonk ➜ @{user} Reminder von {from} • {msg} {ago}"
+		},
+		"time": {
+			"selfReminder": "dinkDonk ➜ @{user} Reminder von dir selbst • {msg} {ago}",
+			"otherReminder": "dinkDonk ➜ @{user} Reminder von {from} • {msg} {ago}"
+		}
+	},
+
 	"notis": {
 		"daily": "Daily Bonus 🎉 Du hast deinen täglichen Bonus von {reward} Notis erhalten",
 		"newUser": "Willkommen, {user|antiping}! 🎉 Es freut mich, dich im Notis-System zu begrüßen. Du kannst jede Stunde {prefix}notis schreiben, um mehr Notis zu bekommen. Du hast als Startguthaben 100 Notis bekommen, nutze sie aber weise!",
