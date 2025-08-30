@@ -63,40 +63,41 @@
 					"noFounds": "⚠️ ➜ Ich habe Keine 7tv Badges gefunden",
 					"info": "(7TV) ➜ Badge: {badgeName} • Badge ID: {badgeId} • Badge Beschreibung {badgeDescription} • Vorschau: {preview} • hinzugefügt vor {create}",
 					"no": "(7TV) ➜ {user|antiping} hat keine 7tv Badge",
-					"badge": "(7TV) ➜ {user|antiping}  {badgeName}  • Badge ID: {badgeId} • Badge Beschreibung {badgeDescription} • Vorschau: {preview} • Vanity: {vanity} • hinzugefügt vor {create}"
+					"user": "(7TV) ➜ {user|antiping} badge ist ` {badgeName} ` • Badge ID: {badgeId} • Badge Beschreibung {badgeDescription} • Vorschau: {preview} • Vanity: {vanity} • hinzugefügt vor {create}"
 				}, 
 				"paint": {
 					"noFounds": "⚠️ ➜ ich habe Keine 7tv Paints gefunden",
 					"info": "(7TV) ➜ Paint: {paintName} • Paint ID: {paintId} • Vorschau: {preview} • hinzugefügt vor {create}",
 					"no": "(7TV) ➜ {user|antiping} hat keine 7tv Paint",
-					"paint": "(7TV) ➜ {user|antiping}  {paintName}  • Paint ID: {paintId} • Vorschau: {preview} • Vanity: {vanity} • hinzugefügt vor {create}"
+					"user": "(7TV) ➜ {user|antiping} paint ist ` {paintName} ` • Paint ID: {paintId} • Vorschau: {preview} • Vanity: {vanity} • hinzugefügt vor {create}"
 				}
 			},
 			"subage": {
 				"billing": "⚠️ ➜ Ich konnte keine 7tv Sub Daten finden",
-				"start": "(7TV) Subage ➜ ",
+				"start": "(7TV) ➜ ",
 				"noSub": "{user|antiping} ist kein aktiver 7TV Sub",
-				"nonSubDate": " • war für {days} Tage ein Sub, Ende war am {enddays}",
+				"nonSubDate": " • war für {days} Tage ein Sub, Ende war vor {enddays}",
 				"isSub": "{user|antiping} ist ein aktiver 7TV Sub • Seit: {months} Monate und {remainingDays} Tage",
-				"nextBadge": " • Nächstes Badge: {badename} in {roundeddaysLeft} Tagen ({roundedPercentage}% voll)",
-				"reSub": " • Resubt am: {subEnd}",
-				"subEnd": " • Sub endet am: {subEnd}"
+				"nextBadge": " • Nächstes Badge: {badename} in {daysLeft} Tagen ({percentage}% voll)",
+				"reSub": " • Resubt in {subEnd}",
+				"subEnd": " • Sub endet in {subEnd}"
 			},
-			"set": "(7TV) Set ➜ {channel|antiping} hat noch {availableSlots} Emote Plätze frei • Emotes: {usedSlots}/{capacity} • Set Name: {emoteSetName} • ID: {activeEmoteSetid} | {emoteSetLink}",
+			"set": "(7TV) ➜ {channel|antiping} hat noch {availableSlots} Emote Plätze frei • Emotes: {usedSlots}/{capacity} • Set Name: {emoteSetName} • ID: {activeEmoteSetid} | {emoteSetLink}",
 			"user": {
-				"start": "(7TV) User ➜ Name: {user|antiping} • ID: {stvid} • Page: {userURL}",
+				"start": "(7TV) ➜ Name: {user|antiping} • ID: {stvid} • Page: {userUrl}",
 				"set": " • Emote Set: {emoteSetName} ({usedSlots}/{capacity} Emotes)",
 				"paint": " • Paint: {paint}",
 				"badge": " • Badge: {badge}",
-				"cosmetics": " • Badges: {badgecount} Paints: {paintcount}",
+				"cosmetics": " • Badges: {badgeCount} Paints: {paintCount}",
 				"noCosmetics": " • Keine Badges oder Paints gefunden",
-				"editors": " • {editorcounts} Channel Editors",
-				"editorOf": " • Editor für: {editorsofcounts} Channels",
-				"ownEmotes": " • {ownemotes} eigene Emotes",
+				"editors": " • {editorCounts} Channel Editors",
+				"editorOf": " • Editor für: {editorsOfCounts} Channels",
+				"ownEmotes": " • {ownedEmotes} eigene Emotes",
 				"roles": " • Roles: {roles}"
 			},
 			"inValidName": "🚫 ➜ Der Emote Name enthält ungültige Zeichen was dazu folgen könnte das man es nicht entfernen oder umbenennen kann. Wenn du aber trozdem willst das er hinzugefügt wird schreibe: {args} confirm",
 			"noSet": "🚫 ➜ {channel|antiping} hat kein aktives Emote Set erstelle bitte eins: {link}",
+			"noActiveSet": "🚫 ➜ {channel|antiping} hat kein aktives Emote Set",
 			"ownedSet": "🚫 ➜ Das Emote Set gehört nicht zu deinem Channel und kann nicht angepasst werden",
 			"noPerms": "🚫 ➜ Du brauchst 7TV Rechte in diesem Channel",
 			"noAcc": "(7TV) ➜ Kein 7TV Account für ` {user} ` gefunden"
@@ -138,7 +139,7 @@
 		"animal": "{emoji} Hier ist ein Süßes {animal}-{type} SoCute ➜ {image}",
 		"boobatv": {
 			"error": "⚠️ ➜ Ich konnte keinen booba.tv Stream finden FeelsBadMan",
-			"success": "BOOBA ➜ {user} • Viewer: {viewer} • Preview: {image} • Link: www.twitch.tv/{user}"
+			"success": "BOOBA ➜ @{user} • Viewer: {viewer} • Preview: {image} • Link: www.twitch.tv/{user}"
 		},
 		"antiping": {
 			"disabled": "FeelsOkayMan 👍 {user} ich pinge dich wieder in Nachrichten",
@@ -148,13 +149,18 @@
 		"channel": {
 			"emotes": {
 				"noEmotes": "FeelsDankMan ➜ Ich habe keine Emotes gefunden",
-				"start": "FeelsOkayMan ➜ Hier sind alle {list} Emotes in diesem Channel:"
+				"start": "FeelsOkayMan ➜ Hier sind alle {list} Emotes (Count: {count} • {details}) in diesem Channel:"
 			},
 			"lang": {
 				"usage": "FeelsDankMan ➜ Aktueller Sprache ` {lang} ` zum ändern {prefix}{trigger} lang <de • en • on • off> (de/en für Sprache und on/off um persönliche Sprachen zu deaktivieren[{prefix}lang])",
 				"change": "FeelsOkayMan 👍 Die Sprache wurde auf {lang} gesetzt • um alle Commands zu sehen mach {prefix}commands",
 				"off": "FeelsOkayMan 👍 Meine Sprache ist jetzt für jeden User frei. Man kann es mit {prefix}lang <de • en> für sich einstellen",
 				"on": "FeelsOkayMan 👍 Ich spreche jetzt nur noch Deutsch in diesem Channel"
+			},
+			"mode": {
+				"usage": "⚠️ ➜ Bitte Schreibe {prefix}{trigger} mode <1 • 2 • 3> (🔴 1 Online Only, 🔴 2 Offline Only, 🟢 3 = Gemini Mode)",
+				"geminiOn": "FeelsOkayMan 👍 Der Gemini Mode wurde Aktivert Schreibe einfach nur {name} und mit Der Ki zu Schreiben",
+				"geminiOff": "FeelsOkayMan 🛑 Der Gemini Mode wurde deaktiviert KI-Chat ist jetzt aus"
 			}
 		},
 		"chatterino": "FeelsDankMan ➜ Alle Chatterino Varianten • Normal: {normal} • Homies: {homies} • 7TV: {stv} • Technorino: {techorino}",
@@ -198,15 +204,15 @@
 		},
 		"console": {
 			"reload": {
-				"usage": "FeelsDankMan ➜ Bitte schreibe {prefix}{trigger} reload <commands • lang • apis • crons • all>",
+				"usage": "🫠 TeaTime ➜ Bitte schreibe {prefix}{trigger} reload <commands • lang • apis • crons • all>",
 				"reloaded": "ApuApustaja 👍 ➜ Es wurden folgende Funktionen Reloaded {reloaded}"
 			},
 			"ignore": {
 				"usage": {
-					"usage": "FeelsDankMan ➜ Bitte schreibe {usage} ignore <add • remove • check • list>",
-					"add": "FeelsDankMan ➜ Bitte schreibe {usage} ignore add <user> [Grund]",
-					"remove": "FeelsDankMan ➜ Bitte schreibe {usage} ignore remove <user>",
-					"check": "FeelsDankMan ➜ Bitte schreibe {usage} ignore check <user>"
+					"usage": "🫠 TeaTime ➜ Bitte schreibe {usage} ignore <add • remove • check • list>",
+					"add": "🫠 TeaTime ➜ Bitte schreibe {usage} ignore add <user> [Grund]",
+					"remove": "🫠 TeaTime ➜ Bitte schreibe {usage} ignore remove <user>",
+					"check": "🫠 TeaTime ➜ Bitte schreibe {usage} ignore check <user>"
 				},
 				"add": {
 					"added": "ApuApustaja 👍 User: {user} ID: {userid} wurde der Ignorierliste hinzugefügt. {reason}",
@@ -223,16 +229,18 @@
 				}
 			},
 			"pull": {
+				"usage": "🫠 TeaTime ➜ Bitte schreibe {prefix}{trigger} pull <restart | module(lang, cmds, apis, crons, all)>",
 				"noUpdate": "🫠 TeaTime ➜ Nicht vergessen zu pushen",
 				"restart": "• ppCircle Restart...",
+				"reloaded": "| Module: {module}",
 				"success": "ApuApustaja 👍 ➜ {data} • Commit Message: {msg}"
 			},
 			"restart": "ppCircle ➜ Bot Startet Neu...",
 			"suggest": {
 				"usage": {
-					"usage": "FeelsDankMan ➜ Bitte schreibe {usage} suggest <finish • delete • list>",
-					"finish": "FeelsDankMan ➜ Bitte schreibe {usage} suggest finish <ID>",
-					"delete": "FeelsDankMan ➜ Bitte schreibe {usage} suggest delete <ID>"
+					"usage": "🫠 TeaTime ➜ Bitte schreibe {usage} suggest <finish • delete • list>",
+					"finish": "🫠 TeaTime ➜ Bitte schreibe {usage} suggest finish <ID>",
+					"delete": "🫠 TeaTime ➜ Bitte schreibe {usage} suggest delete <ID>"
 				},
 				"error": "⚠️ ➜ Vorschlag/Report mit der ID: {id} nicht gefunden",
 				"finish": "FeelsOkayMan 👍 Vorschlag/Report mit ID {id} wurde erfolgreich erledigt",
@@ -245,19 +253,19 @@
 		"duhu": "{user} • {message}",
 		"followage": {
 			"self": "⚠️ ➜ Man kann sich nicht selber folgen",
-			"notFollowed": "peepoSad ➜ {user} folgt {channel} nicht",
-			"since": "peepoHappy ➜ {user} folgt {channel} seit {duration}"
+			"notFollowed": "peepoSad ➜ {user|antiping} folgt {channel|antiping} nicht",
+			"since": "peepoHappy ➜ {user|antiping} folgt {channel|antiping} seit {duration}"
 		},
 		"founders": {
 			"noFounders": "⚠️ ➜ Keine Founders im Channel {user} gefunden",
-			"founders": "im Channel {user} gibt es {founders} Founders im Channel ( {active} im Chat ) {list}"
+			"founders": "im Channel {user|antiping} gibt es {founders} Founders im Channel ( {active} im Chat ) {list}"
 		},
 		"gamba": {
 			"isNan": "⚠️ ➜ Schreibe eine gültige Zahl Beispiel: {prefix}{trigger} 100",
 			"noNotis": "⚠️ ➜ Du hast keine Notis. Nutze {prefix}notis um welche zu farmen",
 			"zeroNotis": "⚠️ ➜ Du kannst nicht 0 Notis Setzen",
 			"notEnough": "⚠️ ➜ Du hast nicht genug Notis zum Setzen Saj Du hast aktuell {notis} Notis",
-			"set": "{user} setzt {notis} Notis [⬇️|⬇️|⬇️] ...",
+			"set": "{user|antiping} setzt {notis} Notis [⬇️|⬇️|⬇️] ...",
 			"win": {
 				"1": "[🍕|🍕|🍕] Gewonnen OOOO",
 				"2": "[🥥|🥥|🥥] heCrazy das Glück war auf deiner Seite",
@@ -277,6 +285,7 @@
 			"now": "• Du hast jetzt {notis} Notis"
 		},
 		"gpt": {
+			"creat": "🤖⏳ ➜ Nachricht wird generiert...",
 			"short": "🤖 WineTime ➜ {message}... {link}",
 			"text": "🤖 WineTime ➜ {message}",
 			"error": "🛑 ➜ Fehler beim text Erstellen{err}"
@@ -290,8 +299,8 @@
 			"zeroNotis": "🚫 ➜ Du kannst nicht 0 Notis geben",
 			"notEnough": "🚫 ➜ Du hast nicht genung Notis zum giften. Du hast aktuell {notis} Notis",
 			"set": "Loading . . .",
-			"gived": "🎁 Ein Geschenk wurde geöffnet, {user} gibt {notis} Notis an {receiver} • Du hast Jetzt {nowNotis} Notis und {receiver} hat Jetzt {userNotis} Notis",
-			"bonus": "🎉 Glückwunsch {user}, du hast {notis} Notis als Bonus für das Geben von {giftetNotis} Notis erhalten! Sei weiter ein Gönner. Neuer Notis KontoStandt: {nowNotis} Notis"
+			"gived": "🎁 Ein Geschenk wurde geöffnet, {user|antiping} gibt {notis} Notis an {receiver|antiping} • Du hast Jetzt {nowNotis} Notis und {receiver|antiping} hat Jetzt {userNotis} Notis",
+			"bonus": "🎉 Glückwunsch {user|antiping}, du hast {notis} Notis als Bonus für das Geben von {giftetNotis} Notis erhalten! Sei weiter ein Gönner. Neuer Notis KontoStandt: {nowNotis} Notis"
 		},
 		"globalannounce": {
 			"OnOff": "FeelsOkayMan 👍 Alle Global Benachrichtigungen (von: Badge/Emotes/7TV) wurden {mode}",
@@ -379,9 +388,13 @@
 			"error": "⚠️ ➜ Fehler bei der Berechnung von ` {input} `",
 			"result": "FeelsOkayMan 👍 Das Ergebniss ist: {result}"
 		},
+		"message": {
+			"no": "⚠️ ➜ Keine Message mit der id ` {id} ` gefunden",
+			"data": "[{time}] {channel}, {user}: {message}"
+		},
 		"mods": {
-			"noMods": "⚠️ ➜ Keine Mods im Channel {user} gefunden",
-			"mods": "im Channel {user} gibt es {mods} Mods im Channel ( {active} im Chat ) {list}"
+			"noMods": "⚠️ ➜ Keine Mods im Channel {user|antiping} gefunden",
+			"mods": "im Channel {user|antiping} gibt es {mods} Mods im Channel ( {active} im Chat ) {list}"
 		},
 		"morse": {
 			"morsed": "FeelsOkayMan ➜ Hier ist dein Morse Code ` {morse} ` ",
@@ -456,18 +469,24 @@
 			"noid": "⚠️ ➜ Keine Steam Id gefunden du kannst dich mit {prefix}link <steam> <add • set> <Steam Profil Url> verknupfen",
 			"nouser": "⚠️ ➜ Kein Steam user gefunden",
 			"game": "Spielt gerade: {game}",
-			"user": "➜ {name} • Id: {id} • {status} • Profil {profil} • bild: {pfp} • Land: {land} • Erstellt am: {created}"
+			"user": "🎮 ➜ {name} • Id: {id} • {status} • Profil {profil} • bild: {pfp} • Land: {land} • Erstellt am: {created}"
 		},
 		"stream": {
-			"offline": "FeelsDankMan @{channel|antiping} Ist Aktuell Offline",
-			"vod": "• title: {title} • Lang {lang} • Dauer: {duration} • Letzter Stream vor {endedAt} • Link: {link}",
-			"never": "• hat nie gestreamt",
-			"ivr": "• title: {title} • Letzer Stream vor {endedAt}",
-			"title": "FeelsDankMan ➜ title im Channel {channel}: {title}",
-			"game": "FeelsDankMan ➜ category im Channel {channel}: {category}",
-			"thumb": "FeelsDankMan ➜ thumbnail im Channel {channel}: {thumbnail}",
-			"uptime": "FeelsDankMan ➜ Uptime vom Channel {channel}: {ago}",
-			"info": "FeelsDankMan ➜ @{channel|antiping} Ist Live • Category {category} • title {title} • thumbnail {thumbnail} • Lang {lang} • Viewer {viewer} • Uptime {ago}"
+			"uptime": {
+				"online": "🟢 ➜ {channel|antiping} ist live für {time}",
+				"offline": "🔴 ➜ {channel|antiping} ist offline für {time}"
+			},
+			"thumb": {
+				"has": "FeelsDankMan ➜ thumbnail im Channel {channel|antiping}: {thumbnail}",
+				"offline": "FeelsDankMan ➜ Der Channel {channel|antiping} ist offline"
+			},
+			"game": "FeelsDankMan ➜ Category im Channel {channel|antiping}: {category}",
+			"title": "FeelsDankMan ➜ title im Channel {channel|antiping}: {title}",
+			"info": {
+				"online": "FeelsDankMan 🟢 ➜ {channel|antiping} Ist live • Category {category} • title {title} • thumbnail {thumbnail} • Lang {lang} • Viewer {viewer} • Uptime {time}",
+				"offline": "FeelsDankMan 🔴 ➜ {channel|antiping} ist offline • Category {category} • title {title} • Downtime {time}"
+			},
+			"never": "FeelsDankMan ➜ {channel|antiping} hat nie gestreamt"
 		},
 		"short": {
 			"blocked": "⛔️ ➜ Die angegebene Website ist nicht erlaubt",
@@ -538,27 +557,27 @@
 			"uid": "imGlitch Login: {login} • Username: {user}"
 		},
 		"vips": {
-			"noVips": "⚠️ ➜ Keine Vips im Channel {user} gefunden",
-			"vips": "im Channel {user} gibt es {vips} Vips im Channel ( {active} im Chat ) {list}"
+			"noVips": "⚠️ ➜ Keine Vips im Channel {user|antiping} gefunden",
+			"vips": "im Channel {user|antiping} gibt es {vips} Vips im Channel ( {active} im Chat ) {list}"
 		},
 		"waifu": "😳 was hab ich den hier? {link}",
 		"website": "peepoHappy ➜ Hier findest du Meine {page}: {link}",
 		"users": {
 			"wydios": {
-				"1": "{time} Wydios: Gpt meinte das klappt: const kok = size: number => { if size return }",
-				"2": "{time} Wydios: Bro ich hab einfach `any` genommen... läuft jetzt"
+				"1": "{time} {user|antiping}: Gpt meinte das klappt: const kok = size: number => { if size return }",
+				"2": "{time} {user|antiping}: Bro ich hab einfach `any` genommen... läuft jetzt"
 			},
 			"lilb": {
-				"1": "{time} lilb_lxryer: catAsk wann guter Bot?",
-				"2": "{time} lilb_lxryer: lol"
+				"1": "{time} {user|antiping}: catAsk wann guter Bot?",
+				"2": "{time} {user|antiping}: lol"
 			},
 			"dasheiligeklo": {
-				"1": "{time} DasHeiligeKlo: Shush sagt nichts mach aber mal {prefix}boobatv",
-				"2": "{time} DasHeiligeKlo: Der Bot ist immer noch Böse Angry"
+				"1": "{time} {user|antiping}: Shush sagt nichts mach aber mal {prefix}boobatv",
+				"2": "{time} {user|antiping}: Der Bot ist immer noch Böse Angry"
 			},
 			"miro": {
-				"1": "{time} dr_miro_: ICH FINDE KEIN LACHS MANNNN!!!! Angry",
-				"2": "{time} dr_miro_: Die Welt ist nicht perfekt, aber du bist es"
+				"1": "{time} {user|antiping}: ICH FINDE KEIN LACHS MANNNN!!!! Angry",
+				"2": "{time} {user|antiping}: Die Welt ist nicht perfekt, aber du bist es"
 			}
 		}
 	},
@@ -854,16 +873,16 @@
         		    "fathersday": "🍻 Zeit für eine Pause! Danach geht's weiter in: {message}.",
         		    "maythe4th": "🚀 Durchatmen in der Galaxie! Die nächste Mission startet in: {message}."
         		},
-        		"ping": {
-        		    "normal": "✨ {user} Your moment is here. Your notifications are ready with {prefix}notis",
-        		    "christmas": "🌟 {user} The festive break is over. Your notifications are waiting with {prefix}notis",
-        		    "halloween": "👻 {user} The spooky break is done. Your notifications are ready with {prefix}notis",
-        		    "easter": "🥚 {user} Welcome back. Your notifications are here with {prefix}notis",
-        		    "birthday": "🥳 {user} Happy Birthday again. Your notifications are ready with {prefix}notis",
-        		    "mothersday": "💖 {user} Welcome back. Your notifications are now ready with {prefix}notis",
-        		    "fathersday": "🍻 {user} The break is over. Your notifications are here with {prefix}notis",
-        		    "maythe4th": "🚀 {user} The Force is with you. Your notifications are waiting with {prefix}notis"
-        		}
+				"ping": {
+				    "normal": "✨ {user} Dein Moment ist da! Deine Notis warten mit {prefix}notis.",
+				    "christmas": "🌟 {user} Die festliche Pause ist vorbei! Deine Notis warten mit {prefix}notis.",
+				    "halloween": "👻 {user} Die Grusel-Pause ist beendet! Deine Notis stehen bereit mit {prefix}notis.",
+				    "easter": "🥚 {user} Willkommen zurück! Deine Notis sind bereit mit {prefix}notis.",
+				    "birthday": "🥳 {user} Happy Birthday! Deine Notis warten mit {prefix}notis.",
+				    "mothersday": "💖 {user} Deine Pause ist vorbei! Mamas Notis sind bereit mit {prefix}notis.",
+				    "fathersday": "🍻 {user} Die Auszeit ist vorbei! Papas Notis stehen bereit mit {prefix}notis.",
+				    "maythe4th": "🚀 {user} Die Galaxie ruft! Deine Notis sind bereit mit {prefix}notis."
+				}
 			},
 			"3": {
 				"start": "📦 Module werden geladen...",
