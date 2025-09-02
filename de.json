@@ -99,8 +99,14 @@
 			"noSet": "🚫 ➜ {channel|antiping} hat kein aktives Emote Set erstelle bitte eins: {link}",
 			"noActiveSet": "🚫 ➜ {channel|antiping} hat kein aktives Emote Set",
 			"ownedSet": "🚫 ➜ Das Emote Set gehört nicht zu deinem Channel und kann nicht angepasst werden",
-			"noPerms": "🚫 ➜ Du brauchst 7TV Rechte in diesem Channel",
+			"noPerms": "🚫 ➜ Du brauchst 7TV Rechte in diesem Channel oder {channel|antiping} added dich mit {prefix}7tveditor {user} ihn die Interne Liste",
 			"noAcc": "(7TV) ➜ Kein 7TV Account für ` {user} ` gefunden"
+		},
+		"editors": {
+			"noList": "⚠️ ➜ Es gibt keine User ihn der internen Editor Liste du kannst Leute mit {prefix}7tveditor <username> hinzufügen",
+			"list": "FeelsOkayMan ➜ Hier sind Alle internen Editors: {list}",
+			"remove": "FeelsOkayMan ➜ {user|antiping} wurde aus der internen Editor Removed",
+			"add": "FeelsOkayMan ➜ {user|antiping} wurde zur internen Editor Liste hinzugefügt"
 		},
 		"8ball": {
    			"1": "Auf keinen Fall!",
@@ -251,6 +257,10 @@
 			}
 		},
 		"duhu": "{user} • {message}",
+		"ezgif": {
+			"noEmote": "⚠️ ➜ Ich Könnte keine Emote finden",
+			"emote": "FeelsDankMan ➜ ezGif Link von ` {emote} ` {link}"
+		},
 		"followage": {
 			"self": "⚠️ ➜ Man kann sich nicht selber folgen",
 			"notFollowed": "peepoSad ➜ {user|antiping} folgt {channel|antiping} nicht",
@@ -282,7 +292,7 @@
 				"5": "[🍩|🍣|🍜] ...man warum wo Geld?",
 				"6": "[🍌|🍎|🥐] Da ist der Arbeitslohn weg"
 			},
-			"now": "• Du hast jetzt {notis} Notis"
+			"now": "• 🏦 Du hast jetzt {notis} Notis"
 		},
 		"gpt": {
 			"creat": "🤖⏳ ➜ Nachricht wird generiert...",
@@ -299,7 +309,7 @@
 			"zeroNotis": "🚫 ➜ Du kannst nicht 0 Notis geben",
 			"notEnough": "🚫 ➜ Du hast nicht genung Notis zum giften. Du hast aktuell {notis} Notis",
 			"set": "Loading . . .",
-			"gived": "🎁 Ein Geschenk wurde geöffnet, {user|antiping} gibt {notis} Notis an {receiver|antiping} • Du hast Jetzt {nowNotis} Notis und {receiver|antiping} hat Jetzt {userNotis} Notis",
+			"gived": "🎁 Ein Geschenk wurde geöffnet, {user|antiping} gibt {notis} Notis an {receiver|antiping} • 🏦 Du hast Jetzt {nowNotis} Notis und {receiver|antiping} hat Jetzt {userNotis} Notis",
 			"bonus": "🎉 Glückwunsch {user|antiping}, du hast {notis} Notis als Bonus für das Geben von {giftetNotis} Notis erhalten! Sei weiter ein Gönner. Neuer Notis KontoStandt: {nowNotis} Notis"
 		},
 		"globalannounce": {
@@ -307,7 +317,7 @@
 			"twitch": "FeelsOkayMan 👍 imGlitch Global ` {value} ` Nachricht wurde {mode}",
 			"stv": "FeelsOkayMan 👍 (7TV) Global Notification ` Badge/Paint ` wurde {mode}"
 		},
-		"gonner": "uuh ➜ Hier sind ein Paar Gooner EmoteSets: {links}",
+		"gonner": "uuh ➜ Hier ist ein Gooner EmoteSet: {link}",
 		"gooning": "🤤 💦 {goon} auf {link}",
 		"help": {
 			"noCommand": "⚠️ ➜ Command ` {command} ` wurde nicht gefunden",
@@ -390,7 +400,7 @@
 		},
 		"message": {
 			"no": "⚠️ ➜ Keine Message mit der id ` {id} ` gefunden",
-			"data": "[{time}] {channel}, {user}: {message}"
+			"data": "[{time}] {user}: {message}"
 		},
 		"mods": {
 			"noMods": "⚠️ ➜ Keine Mods im Channel {user|antiping} gefunden",
@@ -424,8 +434,8 @@
 		},
 		"prestige": {
 			"noUser": "🛑 ➜ Du bist nicht ihn meiner Datenbank adde dich bitte mit {prefix}notis",
-			"canNot": "🚫 ➜ Du benötigst noch folgende Items:",
-			"notConfirmed": "FeelsDankMan ➜ Schreibe {usage} confirm zum Prestigen • ⚠️ Bei Prestige werden Alle Upgrades zurück gesetzt",
+			"canNot": "🚫 ➜ Du benötigst noch {needNotis} Notis • 🏦 Dein Kontostandt ist gerade {notis}",
+			"notConfirmed": "FeelsDankMan ➜ Schreibe {usage} confirm zum Prestigen",
 			"confirm": "FeelsOkayMan 👍 Herzlichen Glückwunsch! Dein Prestige Level wurde {level} erhöht • 🏦 Neuer Kontostand: {notis}"
 		},
 		"remind": {
@@ -451,6 +461,21 @@
 				"notYourId": "🚫 ➜ Der Remind mit der id ` {id} ` gehört nicht dir",
 				"success": "FeelsDankMan ➜ Ich hab deinen Remind mit der ID: ` {id} ` gelöscht"
 			}
+		},
+		"rollet": {
+			"noNotis": "⚠️ ➜ Du hast keine Notis. Nutz {prefix}notis zm welche zu farmen",
+			"isNan": "⚠️ ➜ Schreibe eine gültige Zahl Beispiel: {prefix}{trigger} {color} 100",
+			"zeroNotis": "🚫 ➜ Du kannst nicht 0 Notis geben",
+			"notEnough": "🚫 ➜ Du hast nicht genung Notis zum giften. Du hast aktuell {notis} Notis",
+			"set": "{user|antiping} setzt {notis} Notis auf ` {color} ` Kugel los...",
+			"display": {
+  				"red":   "(⚫ ➜ 🔴 ➜ 🟢)",
+  				"green": "(🔴 ➜ 🟢 ➜ ⚫)",
+  				"black": "(🟢 ➜ ⚫ ➜ 🔴)"
+			},
+			"win": "Kugel landet auf ` {color} ` Du hast gewinnst dir werden {notis} Notis gut geschrieben",
+			"lose": "Kugel landet auf ` {color} ` Du hast verloren dir werden {notis} Notis genommen",
+			"now": "• 🏦 Du hast jetzt {nowNotis} Notis"
 		},
 		"spam": {
 			"already": "⚠️ ➜ Es gibt bereits einen Aktiven Spam ein Mod kann ihn mit {prefix}spamstop beenden",
@@ -526,15 +551,6 @@
 			"targetTuck": "GuNa ➜ {username} bringt {user} vorsichtig ins Bett 👉 🛏️",
 			"selfTruck": "GuNa ➜ {user} bringt sich selber ins bett mit der Kraft von einen {engine} 🛻",
 			"targetTruck": "GuNa ➜ {username} bringt {user} mit Power eines {engine} ins bett 🛻"
-		},
-		"upgrade": {
-			"noNotis": "⚠️ ➜ Du hast keine Notis. Nutze {prefix}notis um welche zu farmen",
-			"upgrades": "FeelsDankMan ➜ Du hast folgende Upgrades Installiert: {upgrades}",
-			"max": "EZ ➜ Du hast {upgrade} Schon auf das Beste Updatet",
-			"unknowType": "🚫 ➜ Ich kenne das Upgrade nicht?",
-			"notEnough": "⛔ ➜ Du hast nicht genug Notis zum Upgraden auf Level {level} • 🪙 Du brauchst noch {needed} Notis • 🏦 Kontostand: {notis}",
-			"upgradeFull": "FeelsDankMan Du hast das Upgrade {upgrade} Auf Level {level} updatet • 🏦 Neuer Kontostand: {notis}",
-			"upgrade": "FeelsDankMan Du hast {upgrade} auf Level {level} geupdatet • 🏦 Neuer Kontostand: {notis}"
 		},
 		"user": {
 			"userbanned": {
