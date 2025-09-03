@@ -434,7 +434,7 @@
 		},
 		"prestige": {
   			"noUser": "🛑 ➜ You are not in my database yet, please add yourself with {prefix}notis",
-  			"canNot": "🚫 ➜ You still need {needNotis} Notis • 🏦 Your balance is currently {notis}",
+  			"canNot": "🚫 ➜ You still need {needNotis} Notis • 🏦 Your balance is currently {notis} Notis",
   			"notConfirmed": "FeelsDankMan ➜ Type {usage} confirm to prestige",
   			"confirm": "FeelsOkayMan 👍 Congrats! Your prestige level increased to {level} • 🏦 New balance: {notis}"
 		},
@@ -768,7 +768,7 @@
 		"newUser": "Welcome, {user|antiping}! 🎉 Glad to have you in the Notis system. You can type {prefix}notis every hour to get more Notis. You start with 100 Notis, use them wisely!",
 		"status": {
     		"cd": "⏳ {time} CD",
-    		"bank": "🏦 Bank Stand: {notis} Notis",
+    		"bank": "🏦 Balance: {notis} Notis",
     		"prestige": "💎 Prestige: {level}",
     		"ready": "🚀 Ready for Prestige? Use {prefix}prestige",
     		"birthday": "🍰 Birthday Bonus +300 Notis"
