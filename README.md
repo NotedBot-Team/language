@@ -2,4 +2,4 @@
 
 **![English](https://cdn.7tv.app/emote/01GQ0V0Q8R0007HP3X85ZD5WAT/1x.avif) Here are the message files from [NotedBot](https://twitch.tv/notedbot). This data is actually stored internally within the bot, but if anyone wants to help, I'll make it available here. If a typo, spelling error, or anything else occurs, which happens often with me (LRS), I'll let you know**
 
-**| You can inform yourself with the name " Wydios ![](https://cdn.7tv.app/emote/01J4W6Q7WR0008PT8PKHDPB607/1x.avif) " Profils: Twitch = [link](https://twitch.tv/wydios), Discord(Server) = [link](https://discord.gg/7ngxfFYxY4)**
+**• You can inform yourself with the name " Wydios ![](https://cdn.7tv.app/emote/01J4W6Q7WR0008PT8PKHDPB607/1x.avif) " Profils: Twitch = [link](https://twitch.tv/wydios), Discord(Server) = [link](https://discord.gg/7ngxfFYxY4)**
