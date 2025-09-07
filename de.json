@@ -620,15 +620,15 @@
 			"crons": "ApuApustaja 👍 Crons wurden neu geladen"
 		},
 		"perms": {
-			"vip": "🚫 ➜ Du musst VIP sein • https://badges.kappa.lol/cgD1Y",
-			"mod": "🚫 ➜ Du musst Moderator sein • https://badges.kappa.lol/G07pb",
-			"broadcaster": "🚫 ➜ Du musst Broadcaster sein • https://badges.kappa.lol/TCe8B",
-			"dev": "🚫 ➜ Du musst Developer sein • https://badges.kappa.lol/obwTL",
-			"admin": "🚫 ➜ Du musst Administrator sein • https://badges.kappa.lol/eE-mI",
+			"vip": "🚫 ➜ Du musst VIP sein um diesen Command zu benutzen",
+			"mod": "🚫 ➜ Du musst Moderator sein um diesen Command zu benutzen",
+			"broadcaster": "🚫 ➜ Du musst Broadcaster sein um diesen Command zu benutzen",
+			"dev": "🚫 ➜ Du musst Developer sein um diesen Command zu benutzen",
+			"admin": "🚫 ➜ Du musst Administrator sein um diesen Command zu benutzen",
 			"error": "Shrug ➜ Permission Fehler dink Wydios"
 		},
 		"ignore": {
-			"user": "RarePepe ➜ Du bist auf der Ignorierliste",
+			"user": "RarePepe ➜ Du bist auf der Ignorierliste • Grund: {reason}",
 			"bot": "MrDestructoid ➜ Du bist als Bot Makiert"
 		},
 		"badWord": "⛔️☝️ ➜ Das sage ich nicht",
@@ -636,8 +636,8 @@
 		"accAvailable": "• Name ist verfügbar",
 		"accNotAvailable": "• Name ist nicht verfügbar",
 		"noAcc": "imGlitch ➜ Kein Twitch Account für ` {user} ` gefunden",
-		"noMod": "monkaS cvHazmat ➜ Ich benötige Mod Rechte • https://badges.kappa.lol/G07pb",
-		"noVip": "monkaS WineTime ➜ Ich benötige VIP Rechte • https://badges.kappa.lol/cgD1Y"
+		"noMod": "monkaS cvHazmat ➜ Ich benötige Mod Rechte",
+		"noVip": "monkaS WineTime ➜ Ich benötige VIP Rechte"
 	},
 
 	"event": {
