@@ -182,27 +182,12 @@
   			"success": "FeelsOkayMan ➜ Here's your clip {channel} {link}"
 		},
 		"cmd": {
-			"toggle": {
-				"usage": "FeelsDankMan ➜ Please type {usage} <command>",
-				"notFound": "⚠️ ➜ Command {command} was not found",
-				"me": "peepoSad ➜ Why do you want to deactivate me?",
-				"enable": "FeelsOkayMan 👍 Command {command} has been enabled",
-				"disable": "FeelsOkayMan 👍 Command {command} has been disabled",
-				"check": "FeelsDankMan ➜ The Command {command} is {mode}"
-			},
-			"add": {
-				"usage": "FeelsDankMan ➜ Please type {usage} add <trigger> <Message> • Variables: {channelID}, {channelName}, {userID}, {username}, {randomUser[:viewer/vip/mod/broadcaster]}, {randomNumber[:min:max]}, {[1:10]}, {time}, {date} • Cooldown: 5 Seconds",
-				"tooLang": "⚠️ ➜ The message cannot be longer than 480 characters",
-				"existing": "⚠️ ➜ There is already a command with the trigger: {trigger}",
-				"added": "FeelsOkayMan 👍 Your custom Command ` {trigger} ` has been successfully added (Response: ` {content} `)"
-			},
-			"remove": {
-				"usage": "FeelsDankMan ➜ please type {usage} remove <trigger> • If you forgot a command, do {usage} list",
-				"notExisting": "⚠️ ➜ No custom command with the trigger ` {trigger} ` found",
-				"removed": "FeelsOkayMan 👍 Your custom Command ` {trigger} ` has been deleted"
-			},
-			"list": "FeelsOkayMan 👉 There are {blocked} blocked commands and {custom} Custom Commands More infos? {list}",
-			"prefix": "PoroSad ➜ My channel prefix is ` ! ` and since {bot} is also here, please change my prefix with !prefix otherwise there will be trigger chaos"
+			"usage": "FeelsDankMan ➜ Please type {usage} <command>",
+			"notFound": "⚠️ ➜ Command {command} was not found",
+			"me": "peepoSad ➜ Why do you want to deactivate me?",
+			"enable": "FeelsOkayMan 👍 Command {command} has been enabled",
+			"disable": "FeelsOkayMan 👍 Command {command} has been disabled",
+			"check": "FeelsDankMan ➜ The Command {command} is {mode}"
 		},
 		"coinflip": {
 			"head": "🪙 ➜ Head (Yes)",
@@ -255,6 +240,22 @@
 				"noFound": "⚠️ ➜ No suggestions/reports found",
 				"list": "FeelsDankMan ➜ Here is a list of all suggestions/reports: {link}"
 			}
+		},
+		"customcmd": {
+		    "add": {
+		        "usage": "FeelsDankMan ➜ Please type {usage} <trigger> <message> • Cooldown: 5 seconds • Variables: {variablen} ⚠️ Max 480 characters",
+		        "tooLang": "⛔ ➜ The message cannot be longer than 480 characters",
+		        "existing": "🚫 ➜ There’s already a command with the trigger: {trigger}",
+		        "added": "FeelsOkayMan 👍 Your custom command `{trigger}` was successfully added (Response: `{content}`)"
+		    },
+		    "remove": {
+		        "usage": "FeelsDankMan ➜ Please type {usage} <trigger> • If you forgot a command use {prefix}cc list",
+		        "notExisting": "⚠️ ➜ No custom command found with the trigger `{trigger}`",
+		        "removed": "FeelsOkayMan 👍 Your custom command `{trigger}` was removed"
+		    },
+		    "noList": "⚠️ ➜ There are no blocked or custom commands. Add some using {prefix}addcmd",
+		    "list": "FeelsOkayMan 👉 There are {blocked} blocked commands and {custom} custom commands {list}",
+		    "prefix": "PoroSad ➜ My channel prefix is `!`. Since {bot} is also here, please change my prefix with !prefix or triggers might get messy 💡 Or type !!{usage} to bypass it"
 		},
 		"duhu": "{user} • {message}",
 		"ezgif": {
@@ -426,7 +427,7 @@
 		"pfp": "FeelsDankMan ➜ {twitch} {stv} {banner}",
 		"pick": "🎲 ➜ I choose ` {choice} `",
 		"ping": "{pong} ➜ Uptime: {uptime} • Latenz: {ping} • Channels: {channels}",
-		"devping": "{pong} ➜ Uptime: {uptime} • Latenz: {ping} • Channels: {channels} • Subs: {allSubscriptions} (Cost: {cost}) • Ram: {memorymb}Mb • Commands: {cmds}/{cmdUsed} (Size/Used) • Database Uptime: {dbUptime} • {serverMessage} Server is still running {serverdays}",
+		"devping": "{pong} ➜ Uptime: {uptime} • Latenz: {ping} • Channels: {channels} • Subs: {allSubscriptions} (Cost: {cost}) • Ram: {memorymb}Mb • Commands: {cmds}/{cmdUsed} (Size/Used) • Database Querys/Uptime: {dbQuerys}/{dbUptime} • {serverMessage} Server is still running {serverdays}",
 		"prefix": { 
 			"usage": "⚠️ ➜ Current prefix: ` {prefix} ` to change {prefix}{trigger} <newPrefix> • If another bot has the prefix too, write {prefix}{prefix}{trigger}",
 			"notAllowed": "🛑 ➜ The prefix ` {prefix} ` is invalid Here is a list of all the prefixes: {allprefix}",
@@ -434,8 +435,8 @@
 		},
 		"prestige": {
   			"noUser": "🛑 ➜ You are not in my database yet, please add yourself with {prefix}notis",
-  			"canNot": "🚫 ➜ You still need {needNotis} Notis • 🏦 Your balance is currently {notis} Notis",
-  			"notConfirmed": "FeelsDankMan ➜ Type {usage} confirm to prestige",
+  			"canNot": "🚫 ➜ You still need {needNotis} Notis • 🪙 You will currently receive {minReward} to {maxReward} Notis • 🏦 Your balance is currently {notis} Notis",
+  			"notConfirmed": "FeelsDankMan ➜ Type {usage} confirm to prestige • 🪙 You will currently receive {minReward} to {maxReward} Notis",
   			"confirm": "FeelsOkayMan 👍 Congrats! Your prestige level increased to {level} • 🏦 New balance: {notis}"
 		},
 		"remind": {
