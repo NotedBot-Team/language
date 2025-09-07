@@ -182,27 +182,12 @@
 			"success": "FeelsOkayMan ➜ Hier ist dein Clip {channel} {link}"
 		},
 		"cmd": {
-			"toggle": {
-				"usage": "FeelsDankMan ➜ Bitte schreibe {usage} <command>",
-				"notFound": "⚠️ ➜ Command {command} wurde nicht gefunden",
-				"me": "peepoSad ➜ Warum willst du mich deaktivieren?",
-				"enable": "FeelsOkayMan 👍 Command {command} wurde aktiviert",
-				"disable": "FeelsOkayMan 👍 Command {command} wurde deaktiviert",
-				"check": "FeelsDankMan ➜ Der Command {command} ist {mode}"
-			},
-			"add": {
-				"usage": "FeelsDankMan ➜ Bitte schreibe {usage} add <trigger> <Nachricht> • Variablen: {channelID}, {channelName}, {userID}, {username}, {randomUser[:viewer/vip/mod/broadcaster]}, {randomNumber[:min:max]}, {[1:10]}, {time}, {date} • Cooldown: 5 Sekunden",
-				"tooLang": "⚠️ ➜ Die Nachricht darf nicht länger als 480 Zeichen sein",
-				"existing": "⚠️ ➜ Es gibt schon einen Command mit dem Trigger: {trigger}",
-				"added": "FeelsOkayMan 👍 Deine Custom Command ` {trigger} ` wurde erfolgreich hinzugefügt (Antwort: ` {content} `)"
-			},
-			"remove": {
-				"usage": "FeelsDankMan ➜ Bitte schreibe {usage} remove <trigger> • Wenn du ein Command vergessen hast mach {usage} list",
-				"notExisting": "⚠️ ➜ Kein Custom Command mit dem Trigger ` {trigger} ` gefunden",
-				"removed": "FeelsOkayMan 👍 Deine Custom Command ` {trigger} ` wurde gelöscht"
-			},
-			"list": "FeelsOkayMan 👉 Es gibt {blocked} geblockte Commands und {custom} Custom Commands Mehr infos? {list}",
-			"prefix": "PoroSad ➜ Mein Channel Prefix ist ` ! ` und da {bot} auch hier ist, bitte ich änderen Sie meinen Prefix mit !prefix sonst gibt’s Ein Trigger-Chaos"
+			"usage": "FeelsDankMan ➜ Bitte schreibe {usage} <command>",
+			"notFound": "⚠️ ➜ Command {command} wurde nicht gefunden",
+			"me": "peepoSad ➜ Warum willst du mich deaktivieren?",
+			"enable": "FeelsOkayMan 👍 Command {command} wurde aktiviert",
+			"disable": "FeelsOkayMan 👍 Command {command} wurde deaktiviert",
+			"check": "FeelsDankMan ➜ Der Command {command} ist {mode}"
 		},
 		"coinflip": {
 			"head": "🪙 ➜ Kopf (Ja)",
@@ -255,6 +240,22 @@
 				"noFound": "⚠️ ➜ Keine Vorschläge/Reports gefunden",
 				"list": "FeelsDankMan ➜ Hier ist eine Liste von allen Vorschlägen/Reports: {link}"
 			}
+		},
+		"customcmd": {
+			"add": {
+				"usage": "FeelsDankMan ➜ Bitte schreibe {usage} <trigger> <Nachricht> • Cooldown: 5 Sekunden • Variablen: {variablen} ⚠️ Maximal 480 Zeichen",
+				"tooLang": "⛔ ➜ Die Nachricht darf nicht länger als 480 Zeichen sein",
+				"existing": "🚫 ➜ Es gibt schon einen Command mit dem Trigger: {trigger}",
+				"added": "FeelsOkayMan 👍 Deine Custom Command ` {trigger} ` wurde erfolgreich hinzugefügt (Antwort: ` {content} `)"
+			},
+			"remove": {
+				"usage": "FeelsDankMan ➜ Bitte schreibe {usage} <trigger> • Wenn du ein Command vergessen hast mach {prefix}cc list",
+				"notExisting": "⚠️ ➜ Kein Custom Command mit dem Trigger ` {trigger} ` gefunden",
+				"removed": "FeelsOkayMan 👍 Deine Custom Command ` {trigger} ` wurde gelöscht"
+			},
+			"noList": "⚠️ ➜ Es gibt keine geblocket und Custom Commands füge welche mit {prefix}addcmd hinzu",
+			"list": "FeelsOkayMan 👉 Es gibt {blocked} geblockte Commands und {custom} Custom Commands {list}",
+			"prefix": "PoroSad ➜ Mein Channel Prefix ist ` ! ` und da {bot} auch hier ist, bitte ich änderen Sie meinen Prefix mit !prefix sonst gibt’s Ein Trigger-Chaos • 💡 Oder Schreibe !!{usage} um es zu umgehen"
 		},
 		"duhu": "{user} • {message}",
 		"ezgif": {
@@ -426,7 +427,7 @@
 		"pfp": "FeelsDankMan ➜ {twitch} {stv} {banner}",
 		"pick": "🎲 ➜ Ich Wähle ` {choice} `",
 		"ping": "{pong} ➜ Uptime: {uptime} • Latenz: {ping} • Channels: {channels}",
-		"devping": "{pong} ➜ Uptime: {uptime} • Latenz: {ping} • Channels: {channels} • Subs: {allSubscriptions} (Cost: {cost}) • Ram: {memorymb}Mb • Commands: {cmds}/{cmdUsed} (Size/Used) • Database Uptime: {dbUptime} • {serverMessage} Server läuft noch {serverdays}",
+		"devping": "{pong} ➜ Uptime: {uptime} • Latenz: {ping} • Channels: {channels} • Subs: {allSubscriptions} (Cost: {cost}) • Ram: {memorymb}Mb • Commands: {cmds}/{cmdUsed} (Size/Used) • Database Querys/Uptime: {dbQuerys}/{dbUptime} • {serverMessage} Server läuft noch {serverdays}",
 		"prefix": { 
 			"usage": "⚠️ ➜ Aktueller Prefix: ` {prefix} ` zum ändern {prefix}{trigger} <newPrefix> • Wenn ein anderer Bot den Prefix auch hat schreibe {prefix}{prefix}{trigger}",
 			"notAllowed": "🛑 ➜ Der Prefix ` {prefix} ` ist ungültig Hier ist eine Liste aller Prefixe: {allprefix}",
@@ -434,8 +435,8 @@
 		},
 		"prestige": {
 			"noUser": "🛑 ➜ Du bist nicht ihn meiner Datenbank adde dich bitte mit {prefix}notis",
-			"canNot": "🚫 ➜ Du benötigst noch {needNotis} Notis • 🏦 Dein Kontostandt ist gerade {notis} Notis",
-			"notConfirmed": "FeelsDankMan ➜ Schreibe {usage} confirm zum Prestigen",
+			"canNot": "🚫 ➜ Du benötigst noch {needNotis} Notis • 🪙 Derzeit bekommst du {minReward} bis {maxReward} Notis • 🏦 Dein Kontostandt ist gerade {notis} Notis",
+			"notConfirmed": "FeelsDankMan ➜ Schreibe {usage} confirm zum Prestigen • 🪙 Derzeit bekommst du {minReward} bis {maxReward} Notis",
 			"confirm": "FeelsOkayMan 👍 Herzlichen Glückwunsch! Dein Prestige Level wurde {level} erhöht • 🏦 Neuer Kontostand: {notis}"
 		},
 		"remind": {
