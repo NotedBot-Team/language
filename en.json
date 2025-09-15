@@ -314,6 +314,7 @@
     		"bonus": "🎉 Congrats {user|antiping}, you received {notis} Notis as a bonus for giving {giftetNotis} Notis! Keep being a generous gifter. New Notis balance: {nowNotis} Notis."
 		},
 		"globalannounce": {
+			"noMod": "💡 Notice: I’m not a moderator. Because of this, Twitch’s rate limits might prevent the message from being sent",
 			"OnOff": "FeelsOkayMan 👍 All global notifications (from: Badge/Emotes/7TV) have been {mode}",
 			"twitch": "FeelsOkayMan 👍 imGlitch Global ` {value} ` message was {mode}",
 			"stv": "FeelsOkayMan 👍 (7TV) Global Notification ` Badge/Paint ` was {mode}" 
@@ -435,7 +436,7 @@
 		},
 		"prestige": {
   			"noUser": "🛑 ➜ You are not in my database yet, please add yourself with {prefix}notis",
-  			"canNot": "🚫 ➜ You still need {needNotis} Notis • 🪙 You will currently receive {minReward} to {maxReward} Notis • 🏦 Your balance is currently {notis} Notis",
+  			"canNot": "🚫 ➜ Your current Prestige Level: {prestige} 💎 • You still need {needNotis} Notis 🎯 • 🪙 Current Salary: {minReward}–{maxReward} Notis | With Prestige {prestige2} your salary increases to {nextMinReward}–{nextMaxReward} Notis • 🏦 Your current balance is {notis} Notis",
   			"notConfirmed": "FeelsDankMan ➜ Type {usage} confirm to prestige • 🪙 You will currently receive {minReward} to {maxReward} Notis",
   			"confirm": "FeelsOkayMan 👍 Congrats! Your prestige level increased to {level} • 🏦 New balance: {notis}"
 		},
@@ -631,7 +632,8 @@
 			"user": "RarePepe ➜ You are on the ignore list • Reason: {reason}",
 			"bot": "MrDestructoid ➜ You are marked as a bot"
 		},
-		"badWord": "⛔️☝️ ➜ I don't say that",
+		"stvDown": "peepoSad ➜ 7tv is currently down",
+		"badWord": "⛔☝️ ➜ I don't say that",
 		"misstake": "⚠️☝️ ➜ An error occurred, you can report it with {prefix}suggest",
 		"accAvailable": "• name is available",
 		"accNotAvailable": "• name is not available",
