@@ -314,6 +314,7 @@
 			"bonus": "🎉 Glückwunsch {user|antiping}, du hast {notis} Notis als Bonus für das Geben von {giftetNotis} Notis erhalten! Sei weiter ein Gönner. Neuer Notis KontoStandt: {nowNotis} Notis"
 		},
 		"globalannounce": {
+			"noMod": "💡 Hinweis: Ich bin kein Moderator. Aufgrund dessen könnte Twitchs Rate-Limit verhindern, dass die Nachricht gesendet wird",
 			"OnOff": "FeelsOkayMan 👍 Alle Global Benachrichtigungen (von: Badge/Emotes/7TV) wurden {mode}",
 			"twitch": "FeelsOkayMan 👍 imGlitch Global ` {value} ` Nachricht wurde {mode}",
 			"stv": "FeelsOkayMan 👍 (7TV) Global Notification ` Badge/Paint ` wurde {mode}"
@@ -435,8 +436,8 @@
 		},
 		"prestige": {
 			"noUser": "🛑 ➜ Du bist nicht ihn meiner Datenbank adde dich bitte mit {prefix}notis",
-			"canNot": "🚫 ➜ Du benötigst noch {needNotis} Notis • 🪙 Derzeit bekommst du {minReward} bis {maxReward} Notis • 🏦 Dein Kontostandt ist gerade {notis} Notis",
-			"notConfirmed": "FeelsDankMan ➜ Schreibe {usage} confirm zum Prestigen • 🪙 Derzeit bekommst du {minReward} bis {maxReward} Notis",
+			"canNot": "🚫 ➜ Dein aktuelles Prestige Level {prestige} 💎 • Dir fehlen noch {needNotis} Notis 🎯 • 🪙 Aktuelles Gehalt: {minReward}–{maxReward} Notis Mit Prestige {prestige2} steigert sich dein Gehalt auf {nextMinReward}–{nextMaxReward} Notis • 🏦 Dein Kontostandt ist gerade {notis} Notis",
+			"notConfirmed": "FeelsDankMan ➜ Schreibe {usage} confirm zum Prestigen • 🪙 dann Bekommst du {minReward} bis {maxReward} Notis",
 			"confirm": "FeelsOkayMan 👍 Herzlichen Glückwunsch! Dein Prestige Level wurde {level} erhöht • 🏦 Neuer Kontostand: {notis}"
 		},
 		"remind": {
@@ -631,6 +632,7 @@
 			"user": "RarePepe ➜ Du bist auf der Ignorierliste • Grund: {reason}",
 			"bot": "MrDestructoid ➜ Du bist als Bot Makiert"
 		},
+		"stvDown": "peepoSad ➜ 7tv ist gerade Down",
 		"badWord": "⛔️☝️ ➜ Das sage ich nicht",
 		"misstake": "⚠️☝️ ➜ Es ist ein Fehler aufgetreten, du kannst mit {prefix}suggest ein Report machen",
 		"accAvailable": "• Name ist verfügbar",
