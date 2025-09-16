@@ -339,6 +339,10 @@
 			"lang_strict": "FeelsDankMan ➜ Für dich Spreche ich Jetzt nur noch Deutsch • ⚠️ Persönliche Sprache ist in Diesen Channel deaktiviert. Der Channel Besitzer kann es mit ${prefix}channellang off wieder Aktivieren",
 			"change": "FeelsOkayMan 👍 Für dich Spreche ich Jetzt nur noch Deutsch"
 		},
+		"leaderboard": {
+			"noNotis": "⚠️ ➜ Es gibt keine User in der Datenbank",
+			"list": "➜ Hier sind die Top {count} Notis User: {list}"
+		},
 		"link": {
 			"lastfm": {
 				"usage": "FeelsDankMan ➜ bitte schreibe {prefix}{trigger} lastfm <add • set • remove • help> <lastFm Username>",
