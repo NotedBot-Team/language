@@ -339,6 +339,10 @@
   			"lang_strict": "FeelsDankMan ➜ I will now only speak English for you • ⚠️ Personal language is disabled in this channel. The channel owner can enable it again using ${prefix}channellang off",
   			"change": "FeelsOkayMan 👍 I will now only speak English for you"
 		},
+		"leaderboard": {
+    		"noNotis": "⚠️ ➜ There are no users in the database",
+    		"list": "➜ Here are the top {count} Notis users: {list}"
+		},
 		"link": {
   			"lastfm": {
 				"usage": "FeelsDankMan ➜ please type {prefix}{trigger} lastfm <add • set • remove • help> <lastFm Username>",
