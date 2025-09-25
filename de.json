@@ -1,44 +1,44 @@
 {
-	"error": "❌ TeaTime ➜ {err}",
-	"warning": "⚠️ TeaTime ➜ {warn}",
+	"error": "{❌ TeaTime|wydiosShook} ➜ {err}",
+	"warning": "{⚠️ TeaTime|wydiosShook} ➜ {warn}",
 
 	"cmd": {
-		"usage": "FeelsDankMan ➜ {usage}",
+		"usage": "{FeelsDankMan|wydiosStop} ➜ {usage}",
 		"stv": {
 			"add": {
-				"usage": "FeelsDankMan ➜ Bitte schreibe {usage} add <EmoteName • EmoteLink> [EmoteAlias]",
+				"usage": "{FeelsDankMan|wydiosStop} ➜ Bitte schreibe {usage} add <EmoteName • EmoteLink> [EmoteAlias]",
 				"noEmote": "⚠️ ➜ Kein Emote mit dem Namen ` {emotename} ` gefunden",
-				"success": "FeelsOkayMan 👍 Emote ` {emotename} ` wurde erfolgreich hinzugefügt"
+				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emotename} ` wurde erfolgreich hinzugefügt"
 			},
 			"rename": {
-				"usage": "FeelsDankMan ➜ Bitte schreibe {usage} rename <EmoteName> <NewEmoteName>",
+				"usage": "{FeelsDankMan|wydiosStop} ➜ Bitte schreibe {usage} rename <EmoteName> <NewEmoteName>",
 				"noEmote": "⚠️ ➜ Emote mit dem Namen ` {emotename} ` nicht in diesem Emote-Set gefunden",
-				"success": "FeelsOkayMan 👍 Emote ` {oldname} ` wurde erfolgreich in ` {newname} ` umbenannt"
+				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {oldname} ` wurde erfolgreich in ` {newname} ` umbenannt"
 			},
 			"remove": {
-				"usage": "FeelsDankMan ➜ Bitte schreibe {usage} remove <EmoteName> [Weiter Emotes...]",
+				"usage": "{FeelsDankMan|wydiosStop} ➜ Bitte schreibe {usage} remove <EmoteName/EmoteID> [Weiter Emotes/Weiter Emote Ids...]",
 				"notSuccess": "FeelsBadMan 👎 Emote ` {emote} ` konnten nicht entfernt werden",
-				"success": "FeelsOkayMan 👍 Emote ` {emote} ` erfolgreich entfernt",
+				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` erfolgreich entfernt",
 				"moreFinal": "FeelsOkayMan ➜ 👍 {removedcount} Emotes erfolgreich entfernt • 👎 {failedcount} Emotes ({failedlist}) konnten nicht entfernt werden"
 			},
 			"replace": {
-				"usage": "FeelsDankMan ➜ Bitte schreibe {usage} replace <EmoteName> <EmoteLink>",
+				"usage": "{FeelsDankMan|wydiosStop} ➜ Bitte schreibe {usage} replace <EmoteName> <EmoteLink>",
 				"noFound": "⚠️ ➜ Emote ` {emote} ` nicht im Channel gefunden",
 				"noEmote": "⚠️ ➜ Ich konnte von ` {emotename} ` keine ID bekommen um es zu replacen",
-				"success": "FeelsOkayMan 👍 Emote ` {emotename} ` (alte ID: {oldid}) wurde mit ID ({newid}) replaced"
+				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emotename} ` (alte ID: {oldid}) wurde mit ID ({newid}) replaced"
 			},
 			"swap": {
-				"usage": "FeelsDankMan ➜ Bitte schreibe {usage} swap <Emote1> <Emote2>",
+				"usage": "{FeelsDankMan|wydiosStop} ➜ Bitte schreibe {usage} swap <Emote1> <Emote2>",
 				"noEmote": "⚠️ ➜ Emote ` {emote} ` wurden nicht im Channel gefunden",
-				"success": "FeelsOkayMan 👍 Emote ` {emote1} ` und ` {emote2} ` wurden erfolgreich getauscht"
+				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote1} ` und ` {emote2} ` wurden erfolgreich getauscht"
 			},
 			"yoink": {
-				"usage": "FeelsDankMan ➜ Bitte schreibe {usage} yoink <Channel> <EmoteName> <Optional: EmoteName>",
-				"self": "⛔ ➜ Du kannst deine eigenen Emotes nicht yoinken da sie schon hier sind",
+				"usage": "{FeelsDankMan|wydiosStop} ➜ Bitte schreibe {usage} yoink <Channel> <EmoteName> <Optional: EmoteName>",
+				"self": "⛔ ➜ Du kannst deine eigenen Emotes nicht yoinken da sie hier sind",
 				"noFound": "⚠️ ➜ Emote ` {emote} ` nicht im Channel gefunden",
 				"nameConflict": "📛 ➜ Der Emote Name ` {emote} ` ist in deinem Channel schon besetzt",
-				"success": "FeelsOkayMan 👍 Emote ` {emote} ` von Channel {channel|antiping} geyoinkt",
-				"yoinked": "FeelsOkayMan 👍 Emote ` {emote} ` erfolgreich geyoinkt"
+				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` von Channel {channel|antiping} geyoinkt",
+				"yoinked": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` erfolgreich geyoinkt"
 			},
 			"error": {
 				"nameConflict": "⛔ ➜ Der Name wird bereits von ` {emotename} ` verwendet",
@@ -47,7 +47,9 @@
 				"fullCapacity": "⚠️ ➜ Das Emote Set ist voll. Bitte entferne ein anderes Emote • Emote-Set: {link}",
 				"notFoundinSet": "⚠️ ➜ Emote ` {emote} ` wurde nicht im Emote Set gefunden",
 				"notFound": "⚠️ ➜ Emote Mit der ID ` {emoteId} ` nicht gefunden",
-				"unknown": "⚠️ ➜ Unbekannter Fehler Keine Case für: {error}"
+				"invalidName": "⛔ ➜ 7tv Akzeptiert diese Zeichen nicht",
+				"invalidSyntax": "⛔ ➜ Der Name enthält ungültige Zeichen. Shush versuch mal mit \\",
+				"unknown": "⚠️ ➜ Unbekannter Fehler Keine Error Case für: {error}"
 			},
 			"cosmetics": {
   				"presence": {
@@ -55,7 +57,7 @@
 					"status": "(7TV) ➜ Presence Status für {user|antiping} • Presence: {presence} • 7tv Sub: {stvsub}",
 					"notyou": "🚫 ➜ {user|antiping} Muss Selber Entscheiden ob der AutoPresence will. Sag ihn er Soll dafür {prefix}autopresence nutzen",
 					"nosub": "⚠️ Du bist keine Aktiver 7tv Sub",
-					"auto": "BloodTrail AutoPresence {mode} 💡 Hinweis: Wenn dein 7TV Sub endet und du neu abonnierst, kann es bis zu 1 Stunde dauern, bis dein Presence wieder aktualisiert wird",
+					"auto": "{BloodTrail|wydiosOk} AutoPresence {mode} 💡 Hinweis: Wenn dein 7TV Sub endet und du neu abonnierst, kann es bis zu 1 Stunde dauern, bis dein Presence wieder aktualisiert wird",
 					"noCosmetics": "⚠️ ➜ {user|antiping} hat keine 7tv Cosmetics",
 					"updated": "(7TV) ➜ Presence Updatet"
 				},
@@ -95,7 +97,6 @@
 				"ownEmotes": " • {ownedEmotes} eigene Emotes",
 				"roles": " • Roles: {roles}"
 			},
-			"inValidName": "🚫 ➜ Der Emote Name enthält ungültige Zeichen was dazu folgen könnte das man es nicht entfernen oder umbenennen kann. Wenn du aber trozdem willst das er hinzugefügt wird schreibe: {args} confirm",
 			"noSet": "🚫 ➜ {channel|antiping} hat kein aktives Emote Set erstelle bitte eins: {link}",
 			"noActiveSet": "🚫 ➜ {channel|antiping} hat kein aktives Emote Set",
 			"ownedSet": "🚫 ➜ Das Emote Set gehört nicht zu deinem Channel und kann nicht angepasst werden",
@@ -104,9 +105,9 @@
 		},
 		"editors": {
 			"noList": "⚠️ ➜ Es gibt keine User ihn der internen Editor Liste du kannst Leute mit {prefix}7tveditor <username> hinzufügen",
-			"list": "FeelsOkayMan ➜ Hier sind Alle internen Editors: {list}",
-			"remove": "FeelsOkayMan ➜ {user|antiping} wurde aus der internen Editor Removed",
-			"add": "FeelsOkayMan ➜ {user|antiping} wurde zur internen Editor Liste hinzugefügt"
+			"list": "{FeelsOkayMan|wydiosOk} ➜ Hier sind Alle internen Editors: {list}",
+			"remove": "{FeelsOkayMan|wydiosOk} ➜ {user|antiping} wurde aus der internen Editor Removed",
+			"add": "{FeelsOkayMan|wydiosOk} ➜ {user|antiping} wurde zur internen Editor Liste hinzugefügt"
 		},
 		"8ball": {
    			"1": "Auf keinen Fall!",
@@ -131,7 +132,7 @@
    			"20": "Die Zukunft sieht rosig aus."
 		},
 		"afk": {
-			"tooLong": "FeelsDankMan ➜ Deine Nachricht ist zu lang",
+			"tooLong": "{FeelsDankMan|wydiosStop} ➜ Deine Nachricht ist zu lang",
 			"afk": "➜ {user} ist jetzt afk {message} ⏱️",
 			"bedge": "GuNa ➜ {user} geht jetzt schlafen {message} 💤",
 			"food": "Tasty ➜ {user} geht jetzt essen {message} 🍕",
@@ -154,11 +155,11 @@
 		},
 		"channel": {
 			"emotes": {
-				"noEmotes": "FeelsDankMan ➜ Ich habe keine Emotes gefunden",
+				"noEmotes": "{FeelsDankMan|wydiosStop} ➜ Ich habe keine Emotes gefunden",
 				"start": "FeelsOkayMan ➜ Hier sind alle {list} Emotes (Count: {count} • {details}) in diesem Channel:"
 			},
 			"lang": {
-				"usage": "FeelsDankMan ➜ Aktueller Sprache ` {lang} ` zum ändern {prefix}{trigger} lang <de • en • on • off> (de/en für Sprache und on/off um persönliche Sprachen zu deaktivieren[{prefix}lang])",
+				"usage": "{FeelsDankMan|wydiosStop} ➜ Aktueller Sprache ` {lang} ` zum ändern {prefix}{trigger} lang <de • en • on • off> (de/en für Sprache und on/off um persönliche Sprachen zu deaktivieren[{prefix}lang])",
 				"change": "FeelsOkayMan 👍 Die Sprache wurde auf {lang} gesetzt • um alle Commands zu sehen mach {prefix}commands",
 				"off": "FeelsOkayMan 👍 Meine Sprache ist jetzt für jeden User frei. Man kann es mit {prefix}lang <de • en> für sich einstellen",
 				"on": "FeelsOkayMan 👍 Ich spreche jetzt nur noch Deutsch in diesem Channel"
@@ -169,7 +170,7 @@
 				"geminiOff": "FeelsOkayMan 🛑 Der Gemini Mode wurde deaktiviert KI-Chat ist jetzt aus"
 			}
 		},
-		"chatterino": "FeelsDankMan ➜ Alle Chatterino Varianten • Normal: {normal} • Homies: {homies} • 7TV: {stv} • Technorino: {techorino}",
+		"chatterino": "{FeelsDankMan|wydiosOk} ➜ Alle Chatterino Varianten • Normal: {normal} • Homies: {homies} • 7TV: {stv} • Technorino: {techorino}",
 		"chatters": "Es sind gerade {count} User im Chat {channel}",
 		"noChatters": "⚠️ ➜ Keine Chatters gefunden",
 		"clear": {
@@ -182,12 +183,12 @@
 			"success": "FeelsOkayMan ➜ Hier ist dein Clip {channel} {link}"
 		},
 		"cmd": {
-			"usage": "FeelsDankMan ➜ Bitte schreibe {usage} <command>",
+			"usage": "{FeelsDankMan|wydiosStop} ➜ Bitte schreibe {usage} <command>",
 			"notFound": "⚠️ ➜ Command {command} wurde nicht gefunden",
-			"me": "peepoSad ➜ Warum willst du mich deaktivieren?",
+			"me": "{peepoSad|wydiosPout} ➜ Warum willst du mich deaktivieren?",
 			"enable": "FeelsOkayMan 👍 Command {command} wurde aktiviert",
 			"disable": "FeelsOkayMan 👍 Command {command} wurde deaktiviert",
-			"check": "FeelsDankMan ➜ Der Command {command} ist {mode}"
+			"check": "{FeelsOkayMan|wydiosOk} ➜ Der Command {command} ist {mode}"
 		},
 		"coinflip": {
 			"head": "🪙 ➜ Kopf (Ja)",
@@ -195,77 +196,77 @@
 		},
 		"console": {
 			"reload": {
-				"usage": "🫠 TeaTime ➜ Bitte schreibe {prefix}{trigger} reload <commands • lang • apis • crons • all>",
-				"reloaded": "ApuApustaja 👍 ➜ Es wurden folgende Funktionen Reloaded {reloaded}"
+				"usage": "{🫠 TeaTime|wydiosHacker} ➜ Bitte schreibe {prefix}{trigger} reload <commands • lang • apis • crons • all>",
+				"reloaded": "{ApuApustaja 👍|wydiosBased} ➜ Es wurden folgende Funktionen Reloaded {reloaded}"
 			},
 			"ignore": {
 				"usage": {
-					"usage": "🫠 TeaTime ➜ Bitte schreibe {usage} ignore <add • remove • check • list>",
-					"add": "🫠 TeaTime ➜ Bitte schreibe {usage} ignore add <user> [Grund]",
-					"remove": "🫠 TeaTime ➜ Bitte schreibe {usage} ignore remove <user>",
-					"check": "🫠 TeaTime ➜ Bitte schreibe {usage} ignore check <user>"
+					"usage": "{🫠 TeaTime|wydiosHacker} ➜ Bitte schreibe {usage} ignore <add • remove • check • list>",
+					"add": "{🫠 TeaTime|wydiosHacker} ➜ Bitte schreibe {usage} ignore add <user> [Grund]",
+					"remove": "{🫠 TeaTime|wydiosHacker} ➜ Bitte schreibe {usage} ignore remove <user>",
+					"check": "{🫠 TeaTime|wydiosHacker} ➜ Bitte schreibe {usage} ignore check <user>"
 				},
 				"add": {
-					"added": "ApuApustaja 👍 User: {user} ID: {userid} wurde der Ignorierliste hinzugefügt. {reason}",
+					"added": "{ApuApustaja 👍|wydiosBased} User: {user} ID: {userid} wurde der Ignorierliste hinzugefügt. {reason}",
 					"error": "⚠️ ➜ Der User: {user} ist bereits in der Liste"
 				},
 				"remove": {
-					"removed": "ApuApustaja 👍 User: {user} ID: {userid} wurde von der Liste entfernt",
+					"removed": "{ApuApustaja 👍|wydiosBased} User: {user} ID: {userid} wurde von der Liste entfernt",
 					"error": "⚠️ ➜ Der User {user} ist nicht in der Liste"
 				},
-				"check": "ApuApustaja 👉 User: {user} ID: {userid} ist in der Liste (am: {date} ) Grund: {reason}",
+				"check": "{ApuApustaja 👉|wydiosBased} User: {user} ID: {userid} ist in der Liste (am: {date} ) Grund: {reason}",
 				"list": {
-					"list": "ApuApustaja 👉 Hier ist die Liste aller User, die ignoriert sind: {link}",
+					"list": "{ApuApustaja 👉|wydiosBased} Hier ist die Liste aller User, die ignoriert sind: {link}",
 					"error": "⚠️ ➜ Es gibt keine User in der Liste"
 				}
 			},
 			"pull": {
-				"usage": "🫠 TeaTime ➜ Bitte schreibe {prefix}{trigger} pull <restart | module(lang, cmds, apis, crons, all)>",
-				"noUpdate": "🫠 TeaTime ➜ Nicht vergessen zu pushen",
+				"usage": "{🫠 TeaTime|wydiosHacker} ➜ Bitte schreibe {prefix}{trigger} pull <restart | module(lang, cmds, apis, crons, all)>",
+				"noUpdate": "{🫠 TeaTime|wydiosHacker} ➜ Nicht vergessen zu pushen",
 				"restart": "• ppCircle Restart...",
 				"reloaded": "| Module: {module}",
-				"success": "ApuApustaja 👍 ➜ {data} • Commit Message: {msg}"
+				"success": "{ApuApustaja 👍|wydiosBased} ➜ {data} • Commit Message: {msg}"
 			},
 			"restart": "ppCircle ➜ Bot Startet Neu...",
 			"suggest": {
 				"usage": {
-					"usage": "🫠 TeaTime ➜ Bitte schreibe {usage} suggest <finish • delete • list>",
-					"finish": "🫠 TeaTime ➜ Bitte schreibe {usage} suggest finish <ID>",
-					"delete": "🫠 TeaTime ➜ Bitte schreibe {usage} suggest delete <ID>"
+					"usage": "{🫠 TeaTime|wydiosHacker} ➜ Bitte schreibe {usage} suggest <finish • delete • list>",
+					"finish": "{🫠 TeaTime|wydiosHacker} ➜ Bitte schreibe {usage} suggest finish <ID>",
+					"delete": "{🫠 TeaTime|wydiosHacker} ➜ Bitte schreibe {usage} suggest delete <ID>"
 				},
 				"error": "⚠️ ➜ Vorschlag/Report mit der ID: {id} nicht gefunden",
-				"finish": "FeelsOkayMan 👍 Vorschlag/Report mit ID {id} wurde erfolgreich erledigt",
+				"finish": "{FeelsOkayMan 👍|wydiosOk} Vorschlag/Report mit ID {id} wurde erfolgreich erledigt",
 				"alertChannel": "BillyApprove ➜ {user} Dein Vorschlag/Report mit der ID: {id} wurde bearbeitet. Danke für die Mitteilung",
-				"delete": "FeelsOkayMan 👍 Vorschlag/Report mit ID {id} wurde erfolgreich gelöscht",
+				"delete": "{FeelsOkayMan 👍|wydiosOk} Vorschlag/Report mit ID {id} wurde erfolgreich gelöscht",
 				"noFound": "⚠️ ➜ Keine Vorschläge/Reports gefunden",
-				"list": "FeelsDankMan ➜ Hier ist eine Liste von allen Vorschlägen/Reports: {link}"
+				"list": "{FeelsDankMan|wydiosStop} ➜ Hier ist eine Liste von allen Vorschlägen/Reports: {link}"
 			}
 		},
 		"customcmd": {
 			"add": {
-				"usage": "FeelsDankMan ➜ Bitte schreibe {usage} <trigger> <Nachricht> • Cooldown: 5 Sekunden • Variablen: {variablen} ⚠️ Maximal 480 Zeichen",
+				"usage": "{FeelsDankMan|wydiosStop} ➜ Bitte schreibe {usage} <trigger> <Nachricht> • Cooldown: 5 Sekunden • Variablen: {variablen} ⚠️ Maximal 480 Zeichen",
 				"tooLang": "⛔ ➜ Die Nachricht darf nicht länger als 480 Zeichen sein",
 				"existing": "🚫 ➜ Es gibt schon einen Command mit dem Trigger: {trigger}",
-				"added": "FeelsOkayMan 👍 Deine Custom Command ` {trigger} ` wurde erfolgreich hinzugefügt (Antwort: ` {content} `)"
+				"added": "{FeelsOkayMan 👍|wydiosOk} Deine Custom Command ` {trigger} ` wurde erfolgreich hinzugefügt (Antwort: ` {content} `)"
 			},
 			"remove": {
-				"usage": "FeelsDankMan ➜ Bitte schreibe {usage} <trigger> • Wenn du ein Command vergessen hast mach {prefix}cc list",
+				"usage": "{FeelsDankMan|wydiosStop} ➜ Bitte schreibe {usage} <trigger> • Wenn du ein Command vergessen hast mach {prefix}cc list",
 				"notExisting": "⚠️ ➜ Kein Custom Command mit dem Trigger ` {trigger} ` gefunden",
-				"removed": "FeelsOkayMan 👍 Deine Custom Command ` {trigger} ` wurde gelöscht"
+				"removed": "{FeelsOkayMan 👍|wydiosOk} Deine Custom Command ` {trigger} ` wurde gelöscht"
 			},
 			"noList": "⚠️ ➜ Es gibt keine geblocket und Custom Commands füge welche mit {prefix}addcmd hinzu",
-			"list": "FeelsOkayMan 👉 Es gibt {blocked} geblockte Commands und {custom} Custom Commands {list}",
-			"prefix": "PoroSad ➜ Mein Channel Prefix ist ` ! ` und da {bot} auch hier ist, bitte ich änderen Sie meinen Prefix mit !prefix sonst gibt’s Ein Trigger-Chaos • 💡 Oder Schreibe !!{usage} um es zu umgehen"
+			"list": "{FeelsOkayMan 👉|wydiosOk} Es gibt {blocked} geblockte Commands und {custom} Custom Commands {list}",
+			"prefix": "{PoroSad|wydiosSad} ➜ Mein Channel Prefix ist ` ! ` und da {bot} auch hier ist, bitte ich änderen Sie meinen Prefix mit !prefix sonst gibt’s Ein Trigger-Chaos • 💡 Oder Schreibe !!{usage} um es zu umgehen"
 		},
 		"duhu": "{user} • {message}",
 		"ezgif": {
 			"noEmote": "⚠️ ➜ Ich Könnte keine Emote finden",
-			"emote": "FeelsDankMan ➜ ezGif Link von ` {emote} ` {link}"
+			"emote": "{FeelsDankMan|wydiosOk} ➜ ezGif Link von ` {emote} ` {link}"
 		},
 		"followage": {
 			"self": "⚠️ ➜ Man kann sich nicht selber folgen",
-			"notFollowed": "peepoSad ➜ {user|antiping} folgt {channel|antiping} nicht",
-			"since": "peepoHappy ➜ {user|antiping} folgt {channel|antiping} seit {duration}"
+			"notFollowed": "{peepoSad|wydiosSad} ➜ {user|antiping} folgt {channel|antiping} nicht",
+			"since": "{peepoHappy|wydiosLove} ➜ {user|antiping} folgt {channel|antiping} seit {duration}"
 		},
 		"founders": {
 			"noFounders": "⚠️ ➜ Keine Founders im Channel {user} gefunden",
@@ -281,7 +282,7 @@
 				"1": "[🍕|🍕|🍕] Gewonnen OOOO",
 				"2": "[🥥|🥥|🥥] heCrazy das Glück war auf deiner Seite",
 				"3": "[🍌|🍌|🍌] EZ Clap Win",
-				"4": "[🍉|🍉|🍉] Chaosflo44 hat gesupportet",
+				"4": "[🍉|🍉|🍉] Chaosflo44 hat geholfen",
 				"5": "[🍆|🍆|🍆] uuh Also Gewonnen ist Gewonnen",
 				"6": "[🍞|🍞|🍞] Arbeitslohn Verdoppelt Pag"
 			},
@@ -303,7 +304,7 @@
 		},
 		"give": {
 			"your": "⚠️ ➜ Du kannst dir Selber keine Notis geben",
-			"bot": "FeelsOkayMan 👍 ich bin die Bank ich brauche keine Notis",
+			"bot": "{FeelsOkayMan 👍|wydiosBased} ich bin die Bank ich brauche keine Notis",
 			"noNotis": "⚠️ ➜ Du hast keine Notis. Nutz {prefix}notis zm welche zu farmen",
 			"noUser": "⚠️ ➜ Der User ist nicht in Meiner DB Er kann sich mit {prefix}notis in die DB adden Lassen",
 			"isNan": "⚠️ ➜ Schreibe eine gültige Zahl Beispiel: {prefix}{trigger} {user} 100",
@@ -311,13 +312,13 @@
 			"notEnough": "🚫 ➜ Du hast nicht genung Notis zum giften. Du hast aktuell {notis} Notis",
 			"set": "Loading . . .",
 			"gived": "🎁 Ein Geschenk wurde geöffnet, {user|antiping} gibt {notis} Notis an {receiver|antiping} • 🏦 Du hast Jetzt {nowNotis} Notis und {receiver|antiping} hat Jetzt {userNotis} Notis",
-			"bonus": "🎉 Glückwunsch {user|antiping}, du hast {notis} Notis als Bonus für das Geben von {giftetNotis} Notis erhalten! Sei weiter ein Gönner. Neuer Notis KontoStandt: {nowNotis} Notis"
+			"bonus": "🎉 Glückwunsch {user|antiping}, du hast {notis} Notis als Bonus für das Geben von {giftetNotis} Notis erhalten! Sei weiter ein Gönner. Neuer Notis kontostand: {nowNotis} Notis"
 		},
 		"globalannounce": {
-			"noMod": "💡 Hinweis: Ich bin kein Moderator. Aufgrund dessen könnte Twitchs Rate-Limit verhindern, dass die Nachricht gesendet wird",
-			"OnOff": "FeelsOkayMan 👍 Alle Global Benachrichtigungen (von: Badge/Emotes/7TV) wurden {mode}",
-			"twitch": "FeelsOkayMan 👍 imGlitch Global ` {value} ` Nachricht wurde {mode}",
-			"stv": "FeelsOkayMan 👍 (7TV) Global Notification ` Badge/Paint ` wurde {mode}"
+			"noMod": "💡 Hinweis: Ich bin kein Moderator oder Vip. Aufgrund dessen könnte Twitchs Rate-Limit verhindern, dass die Nachricht gesendet wird",
+			"OnOff": "{FeelsOkayMan 👍|wydiosOk} Alle Global Benachrichtigungen (von: Badge/Emotes/7TV) wurden {mode}",
+			"twitch": "{FeelsOkayMan 👍|wydiosOk} imGlitch Global ` {value} ` Nachricht wurde {mode}",
+			"stv": "{FeelsOkayMan 👍|wydiosOk} (7TV) Global Notification ` Badge/Paint ` wurde {mode}"
 		},
 		"gonner": "uuh ➜ Hier ist ein Gooner EmoteSet: {link}",
 		"gooning": "🤤 💦 {goon} auf {link}",
@@ -335,9 +336,10 @@
 		},
 		"kok": "{emote} ➜ Der kok von {user} ist {size}cm lang",
 		"lang": {
-			"off": "FeelsOkayMan 👍 Deine persönliche Sprache wurde zurückgesetzt. Ich benutze jetzt die Channelsprache für dich",
+			"current": "Aktuelle Sprache: {lang}",
+			"off": "{FeelsOkayMan 👍|wydiosOk} Deine persönliche Sprache wurde zurückgesetzt. Ich benutze jetzt die Channelsprache für dich",
 			"lang_strict": "FeelsDankMan ➜ Für dich Spreche ich Jetzt nur noch Deutsch • ⚠️ Persönliche Sprache ist in Diesen Channel deaktiviert. Der Channel Besitzer kann es mit ${prefix}channellang off wieder Aktivieren",
-			"change": "FeelsOkayMan 👍 Für dich Spreche ich Jetzt nur noch Deutsch"
+			"change": "{FeelsOkayMan 👍|wydiosOk} Für dich Spreche ich Jetzt nur noch Deutsch"
 		},
 		"leaderboard": {
 			"noNotis": "⚠️ ➜ Es gibt keine User in der Datenbank",
@@ -345,64 +347,64 @@
 		},
 		"link": {
 			"lastfm": {
-				"usage": "FeelsDankMan ➜ bitte schreibe {prefix}{trigger} lastfm <add • set • remove • help> <lastFm Username>",
+				"usage": "{FeelsDankMan|wydiosStop} ➜ bitte schreibe {prefix}{trigger} lastfm <add • set • remove • help> <lastFm Username>",
 				"help": {
-					"usage": "FeelsDankMan ➜ bitte schreibe {prefix}{trigger} lastfm help <acc • connection>",
+					"usage": "{FeelsDankMan|wydiosStop} ➜ bitte schreibe {prefix}{trigger} lastfm help <acc • connection>",
 					"acc": "💡 ➜ Kein lastFM Account? Geh auf last.fm und Erstelle dort einen Account",
 					"service": "💡 ➜ Dein LastFM Account kannst du mit Spotify/Yt Music verbinden das kannst du hier machen https://www.last.fm/settings/applications"
 				},
 				"add": {
 					"noUser": "⚠️ ➜ Bitte gebe ein last fm Username an",
-					"success": "FeelsOkayMan 👍 Mit Last Fm User {name} Verbunden"
+					"success": "{FeelsOkayMan 👍|wydiosOk} Mit Last Fm User {name} Verbunden"
 				},
 				"remove": {
 					"notExisting": "⚠️ ➜ Du bist nicht in Meiner Db Nutz {usage} add <LastFm Username> zum verbinden",
-					"success": "FeelsOkayMan 👍 Ich hab dich von Meiner Db Removed"
+					"success": "{FeelsOkayMan 👍|wydiosOk} Ich hab dich von Meiner Db Removed"
 				}
 			},
 			"steam": {
-				"usage": "FeelsDankMan ➜ Bitte benutze es so {prefix}{trigger} steam <add • set • remove • help> <Profil-URL>",
+				"usage": "{FeelsDankMan|wydiosStop} ➜ Bitte benutze es so {prefix}{trigger} steam <add • set • remove • help> <Profil-URL>",
 				"help": {
-       				"usage": "FeelsDankMan ➜ bitte schreibe {prefix}{trigger} steam help <profil>, um Tipps zu bekommen",
+       				"usage": "{FeelsDankMan|wydiosStop} ➜ bitte schreibe {prefix}{trigger} steam help <profil>, um Tipps zu bekommen",
        				"profile": "💡 ➜ Um deine Steam-Profil-URL zu finden: Gehe zu deinem Steam-Profil, klicke auf `Profil anzeigen` und kopiere die URL aus dem Browser"
     			},
 			    "add": {
         			"noUser": "🛑 ➜ Du musst eine Profil-URL angeben",
         			"invalid": "⚠️ ➜ Die angegebene Steam-ID ist ungültig",
-        			"success": "FeelsOkayMan 👍 Dein Steam-Account ` {name} ` wurde erfolgreich verlinkt"
+        			"success": "{FeelsOkayMan 👍|wydiosOk} Dein Steam-Account ` {name} ` wurde erfolgreich verlinkt"
     			},
     			"remove": {
-        			"success": "FeelsOkayMan 👍 Dein Steam-Account wurde erfolgreich entfernt"
+        			"success": "{FeelsOkayMan 👍|wydiosOk} Dein Steam-Account wurde erfolgreich entfernt"
 				}
 			}
 		},
 		"livemsg": {
 			"enable": {
 				"is": "⚠️ ➜ Es gibt bereits eine Live Nachricht für {user}",
-				"success": "FeelsOkayMan 👍 Live Nachricht für {user} wurde erstellt. Wenn du gepingt werden willst mach {prefix}liveping {user}"	
+				"success": "{FeelsOkayMan 👍|wydiosOk} Live Nachricht für {user} wurde erstellt. Wenn du gepingt werden willst mach {prefix}liveping {user}"	
 			},
 			"disable": {
-				"success": "FeelsOkayMan 👍 Live Nachricht für {user} wurde gelöscht"
+				"success": "{FeelsOkayMan 👍|wydiosBased} Live Nachricht für {user} wurde gelöscht"
 			},
 			"list": {
 				"no": "⚠️ ➜ Es gibt keine Live Nachrichten in diesem Channel",
-				"success": "FeelsDankMan ➜ Hier sind alle Live Nachrichten: {link}"
+				"success": "{FeelsDankMan|wydiosOk} ➜ Hier sind alle Live Nachrichten: {link}"
 			},
 			"msg": { 
-				"del": "FeelsOkayMan 👍 Ich hab die Custom Nachricht für {user} gelöscht",
+				"del": "{FeelsOkayMan 👍|wydiosOk} Ich hab die Custom Nachricht für {user} gelöscht",
 				"noMsg": "⚠️ ➜ Du musst eine Nachricht angeben",
 				"tooLong": "⚠️ ➜ Deine Nachricht ist zu Lang",
-				"success": "FeelsOkayMan 👍 ich hab die Nachricht für {user} geupdatet"
+				"success": "{FeelsOkayMan 👍|wydiosOk} ich hab die Nachricht für {user} geupdatet"
 			},
 			"no": "⚠️ ➜ Es gibt keine Live Nachricht für {user} Ein Mod kann dies mit {prefix}livemsg enable {user} erstellen"
 		},
 		"liveping": {
-			"removed": "FeelsOkayMan 👍 Du erhältst keine pings mehr wenn {user} Live geht",
-			"success": "FeelsOkayMan 👍 Du wirst gepingt wenn {user} live geht"
+			"removed": "{FeelsOkayMan 👍|wydiosOk} Du erhältst keine pings mehr wenn {user} Live geht",
+			"success": "{FeelsOkayMan 👍|wydiosOk} Du wirst gepingt wenn {user} live geht"
 		},
 		"math": {
 			"error": "⚠️ ➜ Fehler bei der Berechnung von ` {input} `",
-			"result": "FeelsOkayMan 👍 Das Ergebniss ist: {result}"
+			"result": "{FeelsOkayMan 👍|wydiosOk} Das Ergebniss ist: {result}"
 		},
 		"message": {
 			"no": "⚠️ ➜ Keine Message mit der id ` {id} ` gefunden",
@@ -413,36 +415,35 @@
 			"mods": "im Channel {user|antiping} gibt es {mods} Mods im Channel ( {active} im Chat ) {list}"
 		},
 		"morse": {
-			"morsed": "FeelsOkayMan ➜ Hier ist dein Morse Code ` {morse} ` ",
+			"morsed": "{FeelsOkayMan|wydiosOk} ➜ Hier ist dein Morse Code ` {morse} ` ",
 			"demorse": {
 				"badword": "⛔ ➜ Dein Morse Code enthält ein nicht geduldetes Wort",
-				"demorsed": "FeelsOkayMan ➜ Hier ist dein decoded Morse Code: {demorse}"
+				"demorsed": "{FeelsOkayMan|wydiosOk} ➜ Hier ist dein decoded Morse Code: {demorse}"
 			}
 		},
-		"overlay": "FeelsOkayMan 👉 Hier sind Chat Overlays {link}",
-		"paste": "FeelsOkayMan 👉 {link}",
+		"overlay": "{FeelsOkayMan|wydiosOk} 👉 Hier sind Chat Overlays {link}",
+		"paste": "{FeelsOkayMan|wydiosOk} 👉 {link}",
 		"permission": {
 			"bot": "➜ {user|antiping} Bot Permision ist ` {botRank} `",
 			"channel": " und Channel Permission ist ` {channelRank} `",
 			"info": "⚠️ Hinweis: Bei anderen Usern werden nur die in der Datenbank gespeicherten Permissions angezeigt",
 			"noPerms": "⚠️ ➜ Du hast keine Rechte andere Rechte anzupassen",
 			"your": "⚠️ ➜ Du kannst nicht deine eigenen Rechte ändern",
-			"changed": "FeelsOkayMan 👍 Die Permission von {user} wurde auf ` {rank} ` gesetzt"
+			"changed": "{FeelsOkayMan 👍|wydiosOk} Die Permission von {user} wurde auf ` {rank} ` gesetzt"
 		},
-		"pfp": "FeelsDankMan ➜ {twitch} {stv} {banner}",
+		"pfp": "{FeelsDankMan|wydiosOk} ➜ {twitch} {stv} {banner}",
 		"pick": "🎲 ➜ Ich Wähle ` {choice} `",
 		"ping": "{pong} ➜ Uptime: {uptime} • Latenz: {ping} • Channels: {channels}",
-		"devping": "{pong} ➜ Uptime: {uptime} • Latenz: {ping} • Channels: {channels} • Subs: {allSubscriptions} (Cost: {cost}) • Ram: {memorymb}Mb • Commands: {cmds}/{cmdUsed} (Size/Used) • Database Querys/Uptime: {dbQuerys}/{dbUptime} • {serverMessage} Server läuft noch {serverdays}",
+		"devping": "{pong} ➜ Uptime: {uptime} • Latenz: {ping} • Channels: {channels} • Subs: {allSubscriptions} (Cost: {cost}) • Ram: {memorymb}Mb • Commands Size/Used: {cmds}/{cmdUsed} • Database Querys/Uptime: {dbQuerys}/{dbUptime} • {serverMessage} Server läuft noch {serverdays}",
 		"prefix": { 
 			"usage": "⚠️ ➜ Aktueller Prefix: ` {prefix} ` zum ändern {prefix}{trigger} <newPrefix> • Wenn ein anderer Bot den Prefix auch hat schreibe {prefix}{prefix}{trigger}",
 			"notAllowed": "🛑 ➜ Der Prefix ` {prefix} ` ist ungültig Hier ist eine Liste aller Prefixe: {allprefix}",
-			"changed": "FeelsOkayMan 👍 Der Channel Prefix wurde auf ` {prefix} ` geändert"
+			"changed": "{FeelsOkayMan 👍|wydiosOk} Der Channel Prefix wurde auf ` {prefix} ` geändert"
 		},
 		"prestige": {
 			"noUser": "🛑 ➜ Du bist nicht ihn meiner Datenbank adde dich bitte mit {prefix}notis",
-			"canNot": "🚫 ➜ Dein aktuelles Prestige Level {prestige} 💎 • Dir fehlen noch {needNotis} Notis 🎯 • 🪙 Aktuelles Gehalt: {minReward}–{maxReward} Notis Mit Prestige {prestige2} steigert sich dein Gehalt auf {nextMinReward}–{nextMaxReward} Notis • 🏦 Dein Kontostandt ist gerade {notis} Notis",
-			"notConfirmed": "FeelsDankMan ➜ Schreibe {usage} confirm zum Prestigen • 🪙 dann Bekommst du {minReward} bis {maxReward} Notis",
-			"confirm": "FeelsOkayMan 👍 Herzlichen Glückwunsch! Dein Prestige Level wurde {level} erhöht • 🏦 Neuer Kontostand: {notis}"
+			"canNot": "🚫 ➜ Dein aktuelles Prestige Level {prestige} 💎 • Dir fehlen noch {needNotis} Notis 🎯 • 🪙 Aktuelles Gehalt: {minReward}–{maxReward} Notis Mit Prestige {prestige2} steigert sich dein Gehalt auf {nextMinReward}–{nextMaxReward} Notis • 🏦 Dein kontostand ist gerade {notis} Notis",
+			"confirm": "{FeelsOkayMan 👍|wydiosOk} Herzlichen Glückwunsch! Dein Prestige Level wurde {level} erhöht • 🏦 Neuer kontostand: {notis}"
 		},
 		"remind": {
 			"add": {
@@ -472,20 +473,21 @@
 			"noNotis": "⚠️ ➜ Du hast keine Notis. Nutz {prefix}notis zm welche zu farmen",
 			"isNan": "⚠️ ➜ Schreibe eine gültige Zahl Beispiel: {prefix}{trigger} {color} 100",
 			"zeroNotis": "🚫 ➜ Du kannst nicht 0 Notis geben",
-			"notEnough": "🚫 ➜ Du hast nicht genung Notis zum giften. Du hast aktuell {notis} Notis",
+			"notEnough": "🚫 ➜ Du hast nicht genung Notis zum Spielen. Du hast aktuell {notis} Notis",
 			"set": "{user|antiping} setzt {notis} Notis auf ` {color} ` Kugel los...",
 			"display": {
   				"red":   "(⚫ ➜ 🔴 ➜ 🟢)",
   				"green": "(🔴 ➜ 🟢 ➜ ⚫)",
   				"black": "(🟢 ➜ ⚫ ➜ 🔴)"
 			},
-			"win": "Kugel landet auf ` {color} ` Du hast gewinnst dir werden {notis} Notis gut geschrieben",
+			"win": "Kugel landet auf ` {color} ` Du hast gewonnen dir werden {notis} Notis gut geschrieben",
 			"lose": "Kugel landet auf ` {color} ` Du hast verloren dir werden {notis} Notis genommen",
 			"now": "• 🏦 Du hast jetzt {nowNotis} Notis"
 		},
+		"say": "{BloodTrail|wydiosOk}",
 		"spam": {
 			"already": "⚠️ ➜ Es gibt bereits einen Aktiven Spam ein Mod kann ihn mit {prefix}spamstop beenden",
-			"stopped": "FeelsOkayMan 👍 Der Spam wurde beendet",
+			"stopped": "{FeelsOkayMan 👍|wydiosOk} Der Spam wurde beendet",
 			"noSpamFound": "⚠️ ➜ Es wurde kein Aktiver Spam gefunden"
 		},
 		"sql": {
@@ -494,7 +496,7 @@
 		},
 		"stats": {
 			"noUser": "🛑 ➜ {user|antiping} ist nicht in meiner Datenbank. Nutz {prefix}notis zum Regestiren",
-			"stats": "peepoHappy ➜ {user|antiping} hat {notis} • Prestige {prestige} • Debugging {debug} • Kisten gefunden {cheast} • Gamble Win/Lost {gambleWin}/{gambleLose} (Gewinn Chance: {gambleWinChance}%) • Notis Win/Lost {notisWin}/{notisLose} • Notis Give/Get {notisGive}/{notisGet} • Seit {joined} dabei • Rank {rank}/{totalUsers}"
+			"stats": "{peepoHappy|wydiosBased} ➜ {user|antiping} hat {notis} Notis • Prestige {prestige} • Debugging {debug} • Kisten gefunden {cheast} • Gamble Win/Lost {gambleWin}/{gambleLose} (Gewinn Chance: {gambleWinChance}%) • Notis Win/Lost {notisWin}/{notisLose} • Notis Give/Get {notisGive}/{notisGet} • Seit {joined} dabei • Rank {rank}/{totalUsers}"
 		},
 		"steamuser": {
 			"noid": "⚠️ ➜ Keine Steam Id gefunden du kannst dich mit {prefix}link <steam> <add • set> <Steam Profil Url> verknupfen",
@@ -504,24 +506,24 @@
 		},
 		"stream": {
 			"uptime": {
-				"online": "🟢 ➜ {channel|antiping} ist live für {time}",
-				"offline": "🔴 ➜ {channel|antiping} ist offline für {time}"
+				"online": "{🟢|wydiosLive} ➜ {channel|antiping} ist live für {time}",
+				"offline": "{🔴|wydiosOffline} ➜ {channel|antiping} ist offline für {time}"
 			},
 			"thumb": {
-				"has": "FeelsDankMan ➜ thumbnail im Channel {channel|antiping}: {thumbnail}",
-				"offline": "FeelsDankMan ➜ Der Channel {channel|antiping} ist offline"
+				"has": "{FeelsDankMan|wydiosOk} ➜ thumbnail im Channel {channel|antiping}: {thumbnail}",
+				"offline": "{FeelsDankMan|wydiosOk} ➜ Der Channel {channel|antiping} ist offline"
 			},
-			"game": "FeelsDankMan ➜ Category im Channel {channel|antiping}: {category}",
-			"title": "FeelsDankMan ➜ title im Channel {channel|antiping}: {title}",
+			"game": "{FeelsDankMan|wydiosOk} ➜ Category im Channel {channel|antiping}: {category}",
+			"title": "{FeelsDankMan|wydiosOk} ➜ title im Channel {channel|antiping}: {title}",
 			"info": {
-				"online": "FeelsDankMan 🟢 ➜ {channel|antiping} Ist live • Category {category} • title {title} • thumbnail {thumbnail} • Lang {lang} • Viewer {viewer} • Uptime {time}",
-				"offline": "FeelsDankMan 🔴 ➜ {channel|antiping} ist offline • Category {category} • title {title} • Downtime {time}"
+				"online": "{FeelsDankMan|wydiosOk} 🟢 ➜ {channel|antiping} Ist live • Category {category} • title {title} • thumbnail {thumbnail} • Lang {lang} • Viewer {viewer} • Uptime {time}",
+				"offline": "{FeelsDankMan|wydiosOk} 🔴 ➜ {channel|antiping} ist offline • Category {category} • title {title} • Downtime {time}"
 			},
-			"never": "FeelsDankMan ➜ {channel|antiping} hat nie gestreamt"
+			"never": "{FeelsDankMan|wydiosOk} ➜ {channel|antiping} hat nie gestreamt"
 		},
 		"short": {
 			"blocked": "⛔️ ➜ Die angegebene Website ist nicht erlaubt",
-			"success": "FeelsDankMan ➜ Hier ist ein Link: {url}"
+			"success": "{FeelsDankMan|wydiosOk} ➜ Hier ist ein Link: {url}"
 		},
 		"song": {
 			"noLinked": "⚠️ ➜ {user|antiping} ist nicht in meiner Db Bitte verlinke dich mit {prefix}link <lastfm> <add • set> <LastFm Username>",
@@ -530,9 +532,9 @@
 			"play": "{user|antiping} hört gerade ` {title} ` von {artist} {emote} {count} {link}"
 		},
 		"subage": {
-			"end": "FeelsDankMan ➜ {user} war Sub im Channel {channel} für {time} Monate • Sub ist {ago} Tage her",
-			"never": "FeelsDankMan ➜ {user} war noch nie Sub im Channel {channel}",
-			"is": "FeelsDankMan ➜ {user} ist Sub seit {months} Monaten bei {channel} • Tier {tier} • Sub endet/verlängert in {remaining} Tagen • Streak: {streak} Monate",
+			"end": "{FeelsDankMan|wydiosOk} ➜ {user|antiping} war Sub im Channel {channel|antiping} für {time} Monate • Sub ist {ago} Tage her",
+			"never": "{FeelsDankMan|wydiosOk} ➜ {user|antiping} war noch nie Sub im Channel {channel|antiping}",
+			"is": "{FeelsDankMan|wydiosOk} ➜ {user|antiping} ist Sub seit {months} Monaten bei {channel|antiping} • Tier {tier} • Sub endet/verlängert in {remaining} Tagen • Streak: {streak} Monate",
 			"gifted": " • HolidayPresent Geschenkt von: @{giftedBy|antiping}"
 		},
 		"suggest": {
@@ -540,8 +542,8 @@
 			"creat": "peepoHappy PETPET ➜ Danke für deinen Vorschlag/Report wir bearbeiten ihn so schnell wie möglich (ID: {id})"
 		},
 		"test": {
-			"fail": "❌ Der Test hat nicht geklappt WineTime ❌",
-			"success": "✅ Der Test hat geklappt Clap ✅"
+			"fail": "{❌|wydiosSad} Der Test hat nicht geklappt WineTime",
+			"success": "{✅|wydiosLove} Der Test hat geklappt Clap"
 		},
 		"topartist": {
 			"noArtist": "⚠️ ➜ Keine Top Artists für ` {user|antiping} ` gefunden",
@@ -551,7 +553,7 @@
 			"noTracks": "⚠️ ➜ Keine Top Songs für ` {user|antiping} ` gefunden",
 			"topTracks": "{emote} ➜ {user|antiping} Top {period} last Fm Songs sind {list}"
 		},
-		"translate": "FeelsDankMan Translate von {from} zu {to} ➜ ` {text} `",
+		"translate": "{FeelsDankMan|wydiosOk} Translate von {from} zu {to} ➜ ` {text} `",
 		"tuck": {
 			"selfTuck": "GuNa ➜ {user} kuschelt sich selbst ins Bett... gute Nacht 🛏️",
 			"targetTuck": "GuNa ➜ {username} bringt {user} vorsichtig ins Bett 👉 🛏️",
@@ -608,21 +610,21 @@
 		"bot": {
 			"cmd": {
 				"disabled": "⛔ ➜ Der Command {command} ist deaktiviert",
-				"error": "ApuApustaja 👎 Fehler beim Neuladen der Commands",
-				"success": "ApuApustaja 👍 Alle Commands neu geladen"
+				"error": "{ApuApustaja|wydiosBased} 👎 Fehler beim Neuladen der Commands",
+				"success": "{ApuApustaja|wydiosBased} 👍 Alle Commands neu geladen"
 			},
 			"api": {
-				"error": "ApuApustaja 👎 Fehler beim Neuladen der Apis",
-				"success": "ApuApustaja 👍 Alle Apis neu geladen"
+				"error": "{ApuApustaja|wydiosBased} 👎 Fehler beim Neuladen der Apis",
+				"success": "{ApuApustaja|wydiosBased} 👍 Alle Apis neu geladen"
 			},
 			"token": {
-				"bot": "ApuApustaja 👍 Bot Token neu geladen",
-				"api": "ApuApustaja 👍 Api Token neu geladen"
+				"bot": "{ApuApustaja|wydiosBased} 👍 Bot Token neu geladen",
+				"api": "{ApuApustaja|wydiosBased} 👍 Api Token neu geladen"
 			},
 			"lang": {
-				"success": "ApuApustaja 👍 Language wurde neu geladen"
+				"success": "{ApuApustaja|wydiosBased} 👍 Language wurde neu geladen"
 			},
-			"crons": "ApuApustaja 👍 Crons wurden neu geladen"
+			"crons": "{ApuApustaja|wydiosBased} 👍 Crons wurden neu geladen"
 		},
 		"perms": {
 			"vip": "🚫 ➜ Du musst VIP sein um diesen Command zu benutzen",
@@ -649,36 +651,36 @@
 	"event": {
 		"bot": {
 			"join": {
-				"channel": "peepoHappy 🩵 Danke, dass du mich hinzugefügt hast. Meine Commands kannst du hier sehen ➜ {link} • Prefix {prefix} • Use {prefix}channel lang en to Change the Language",
-				"bot": "peepoHappy RaveTime NotedBot joined Channel ` @{user} ` data: (ID: {twitchid} • (Lang: {lang}) • (Prefix: {prefix})"
+				"channel": "{peepoHappy 🩵|wydiosLove} Danke, dass du mich hinzugefügt hast. Meine Commands kannst du hier sehen ➜ {link} • Prefix {prefix} • Use ` {prefix}channel lang en ` to Change the Language",
+				"bot": "{peepoHappy|wydiosLove} RaveTime NotedBot joined Channel ` @{user} ` data: (ID: {twitchid} • (Lang: {lang}) • (Prefix: {prefix})"
 			},
 			"part": {
-				"channel": "peepoSad RainTime 💔 RainTime Ich verlasse nun den Chat • 🖕 {user}",
-				"bot": "peepoSad RainTime NotedBot parted Channel ` @{user} ` data: (ID: {twitchid}) • (Lang: {lang}) • (Prefix: {prefix}) • Ich bin Am: {joined} gejoint"
+				"channel": "{peepoSad|wydiosSad} RainTime 💔 RainTime Ich verlasse nun den Chat • 🖕 {user}",
+				"bot": "{peepoSad|wydiosSad} RainTime NotedBot parted Channel ` @{user} ` data: (ID: {twitchid}) • (Lang: {lang}) • (Prefix: {prefix}) • Ich bin Am: {joined} gejoint"
 			}
 		},
-		"prefix": "FeelsOkayMan 👍 ➜ Mein Channel Prefix ist ` {prefix} `",
+		"prefix": "{FeelsOkayMan 👍|wydiosOk} ➜ Mein Channel Prefix ist ` {prefix} `",
 		"stv": "DinoDance ➜ {user|antiping} Bitte Installiere dir 7tv link: https://7tv.app/",
 		"streak": {
-			"increment": "peepoHappy ➜ {user|antiping} hat die Streak auf ` {streak} ` auf {count} gesetzt",
+			"increment": "peepoHappy ➜ {user|antiping} hat die Streak ` {streak} ` auf {count} gesetzt",
 			"broken": "peepoSad ➜ Die Streak wurde gebrochen. Letzter Stand: {last}, Max Streak: {max}"
 		},
 		"notification": {
 			"badge": {
-				"newBadge": "imGlitch Neues Global Badge ➜ {badgename} (ID: {badgeid})",
-				"removedBadge": "imGlitch Global Badge entfernt ➜ {badgeid}"
+				"newBadge": "imGlitch Neues Global Badge ➜ {badgeName} (ID: {badgeId})",
+				"removedBadge": "imGlitch Global Badge entfernt ➜ {badgeName}"
 			},
 			"emote": {
-				"newEmote": "imGlitch Neues Global Emote ➜ {emotename}",
-				"removedEmote": "imGlitch Global Emote entfernt ➜ {emotename}"
+				"newEmote": "imGlitch Neues Global Emote ➜ {emoteName}",
+				"removedEmote": "imGlitch Global Emote entfernt ➜ {emoteName}"
 			},
 			"stv": {
-				"newBadge": "(7TV) Neues Global 7tv Badge ➜ {badgename}",
-				"renamedBadge": "(7TV) Global 7tv Badge ` {oldname} ` wurde in ` {newname} ` umbenannt",
-				"removedBadge": "(7TV) Global 7tv Badge entfernt ➜ {badgename}",
-				"newPaint": "(7TV) Neues Global 7tv Paint ➜ {paintname}",
-				"renamedPaint": "(7TV) Global 7tv Paint ` {oldname} ` wurde in ` {newname} ` umbenannt",
-				"removedPaint": "(7TV) Global 7tv Paint entfernt ➜ {paintname}"
+				"newBadge": "(7TV) Neues Global 7tv Badge ➜ {badgeName}",
+				"renamedBadge": "(7TV) Global 7tv Badge ` {oldName} ` wurde in ` {newName} ` umbenannt",
+				"removedBadge": "(7TV) Global 7tv Badge entfernt ➜ {badgeName}",
+				"newPaint": "(7TV) Neues Global 7tv Paint ➜ {paintName}",
+				"renamedPaint": "(7TV) Global 7tv Paint ` {oldName} ` wurde in ` {newName} ` umbenannt",
+				"removedPaint": "(7TV) Global 7tv Paint entfernt ➜ {paintName}"
 			},
 			"channel": {
 				"sub": {
@@ -690,13 +692,13 @@
 				"raid": "heCrazy {user} raided {channel} mit {viewers} Viewern"
 			},
 			"online": {
-				"start": "heCrazy @{user} Ist jetzt live",
+				"start": "heCrazy @{user} Ist jetzt {live|wydiosLive}",
 				"category": " und spielt: {game}",
 				"title": " mit den title: {title}",
 				"message": " • {message}",
 				"pings": " • dinkDonk {users}"
 			},
-			"offline": "Saj @{user} ist jetzt Offline"
+			"offline": "Saj @{user} ist jetzt {Offline|wydiosOffline}"
 		},
 		"ban": {
 			"unban": "peepoHappy Clap Willkommen zurück auf Twitch {user}"
@@ -775,16 +777,16 @@
 		"newUser": "Willkommen, {user|antiping}! 🎉 Es freut mich, dich im Notis-System zu begrüßen. Du kannst jede Stunde {prefix}notis schreiben, um mehr Notis zu bekommen. Du hast als Startguthaben 100 Notis bekommen, nutze sie aber weise!",
 		"status": {
     		"cd": "⏳ {time} CD",
-    		"bank": "🏦 Kontostandt: {notis} Notis",
+    		"bank": "🏦 kontostand: {notis} Notis",
     		"prestige": "💎 Prestige: {level}",
     		"ready": "🚀 Bereit für Prestige? Nutze {prefix}prestige",
     		"birthday": "🍰 Geburtstags-Bonus +300 Notis"
   		},
 		"messages": {
 			"1": {
-				"start": "💻 Debugging gestartet...",
+				"start": "💻 [{time}] {user|antiping} system:~{rootSymbole} debug --start",
 				"chest": {
-            		"normal": "🔥 Du hast eine Debug-Kiste geöffnet und darin waren {notis} Notis! Pag",
+            		"normal": "🔥 Du hast eine Debug-Kiste geöffnet und darin waren {notis} Notis!",
             		"christmas": "🎄 Du öffnest die festliche Debug-Kiste... und findest {notis} Notis zwischen Lebkuchen-Code und Lichterketten!",
             		"halloween": "🎃 Die verfluchte Debug-Kiste knarrt auf... und spuckt dir {notis} schaurige Notis entgegen!",
             		"easter": "🐰 In der Debug-Kiste lag ein Osterei gefüllt mit {notis} süßen Notis!",
@@ -811,7 +813,7 @@
             		"birthday": "🎉 Oops, die Party ist vorbei! {notis} Notis sind weg, wie ein Kuchen ohne Kerzen!",
             		"mothersday": "💐 Oh nein, Mama’s Kiste ist leer! {notis} Notis fehlen dir, wie ein Strauß ohne Blumen.",
             		"fathersday": "🛠️ Schraube locker! {notis} Notis sind dir entglitten, wie Werkzeug aus der Hand gerutscht!",
-            		"maythe4th": "🌌 Der dunkle Lord war stärker! {notis} Notis sind verloren in einer weit, weit entfernten Galaxie..."
+            		"maythe4th": "🌌 Der dunkle Lord hat deinen Debug mir Errors gefluttet {notis} Notis sind verloren in einer weit, weit entfernten Galaxie..."
         		},
        	 		"nothing": {
             		"normal": "Debugging gescheitert Neue Error Codes entdeckt.",
@@ -845,7 +847,7 @@
         		}
 			},
 			"2": {
-				"start": "⚙️ System wird initialisiert...",
+				"start": "⚙️ [{time}] {user|antiping} system:~{rootSymbole} init --boot",
 				"chest": {
             		"normal": "🖥️ Systeme laufen bei 100% beim Start wurde eine Kiste mit {notis} Notis entdeckt.",
             		"christmas": "🎄 Während der Initialisierung fiel eine Kiste aus dem Schornstein darin: {notis} Notis und ein Hauch Zimt!",
@@ -897,18 +899,18 @@
         		    "maythe4th": "🚀 Durchatmen in der Galaxie! Die nächste Mission startet in: {message}."
         		},
 				"ping": {
-				    "normal": "✨ {user} Dein Moment ist da! Deine Notis warten mit {prefix}notis.",
-				    "christmas": "🌟 {user} Die festliche Pause ist vorbei! Deine Notis warten mit {prefix}notis.",
-				    "halloween": "👻 {user} Die Grusel-Pause ist beendet! Deine Notis stehen bereit mit {prefix}notis.",
-				    "easter": "🥚 {user} Willkommen zurück! Deine Notis sind bereit mit {prefix}notis.",
-				    "birthday": "🥳 {user} Happy Birthday! Deine Notis warten mit {prefix}notis.",
-				    "mothersday": "💖 {user} Deine Pause ist vorbei! Mamas Notis sind bereit mit {prefix}notis.",
-				    "fathersday": "🍻 {user} Die Auszeit ist vorbei! Papas Notis stehen bereit mit {prefix}notis.",
-				    "maythe4th": "🚀 {user} Die Galaxie ruft! Deine Notis sind bereit mit {prefix}notis."
+				    "normal": "✨ {user} Dein Moment ist da! Deine Notis warten mit {prefix}notis",
+				    "christmas": "🌟 {user} Die festliche Pause ist vorbei! Deine Notis warten mit {prefix}notis",
+				    "halloween": "👻 {user} Die Grusel-Pause ist beendet! Deine Notis stehen bereit mit {prefix}notis",
+				    "easter": "🥚 {user} Willkommen zurück! Deine Notis sind bereit mit {prefix}notis",
+				    "birthday": "🥳 {user} Happy Birthday! Deine Notis warten mit {prefix}notis",
+				    "mothersday": "💖 {user} Deine Pause ist vorbei! Mamas Notis sind bereit mit {prefix}notis",
+				    "fathersday": "🍻 {user} Die Auszeit ist vorbei! Papas Notis stehen bereit mit {prefix}notis",
+				    "maythe4th": "🚀 {user} Die Galaxie ruft! Deine Notis sind bereit mit {prefix}notis"
 				}
 			},
 			"3": {
-				"start": "📦 Module werden geladen...",
+				"start": "📦 [{time}] {user|antiping} system:~{rootSymbole} load-modules --init",
         		"chest": {
         		    "normal": "💾 In den Modulen wurde eine Kiste gefunden du hast sie geöffnet und {notis} Notis bekommen.",
         		    "christmas": "🎁 Ein Modul war wie ein Geschenk verpackt drin waren {notis} Notis und digitaler Lebkuchen!",
@@ -971,7 +973,7 @@
         		}
 			},
 			"4": {
-				"start": "🌐 Verbindung wird überprüft...",
+				"start": "🌐 [{time}] {user|antiping} system:~{rootSymbole} ping-server --check",
         		"chest": {
         		    "normal": "🔍 Verbindung stabil! Du bekommst {notis} Notis für den erfolgreichen Check.",
         		    "christmas": "🎅 Verbindung hält auch unterm Weihnachtsbaum! {notis} Notis gehen an dich raus.",
@@ -1034,7 +1036,7 @@
         		}
 			},
 			"5": {
-				"start": "🗄️ Datenbanksynchronisation wird gestartet...",
+				"start": "🗄️ [{time}] {user|antiping} system:~{rootSymbole} db-sync --start",
         		"chest": {
         		    "normal": "🗄️ Datenbank-System läuft auf {notis}% (Diese Menge bekommst du Orm )",
         		    "christmas": "🎅 Das Datenbank-System ist festlich optimiert und läuft bei {notis}% Frohe Datenfesttage (Diese Menge bekommst du Orm )",
@@ -1097,7 +1099,7 @@
         		}
 			},
 			"6": {
-				"start": "✅ Die Synchronisierung wird abgeschlossen...",
+				"start": "✅ [{time}] {user|antiping} system:~{rootSymbole} db-sync --complete",
         		"chest": {
         		    "normal": "📦 Bei der finalen Synchronisierung ploppte eine Kiste auf! Du öffnest sie und findest {notis} Notis!",
         		    "christmas": "🎄 Die Sync hat eine festlich verpackte Kiste geliefert {notis} Notis als Geschenk für dich!",
@@ -1160,7 +1162,7 @@
         		}
 			},
 			"7": {
-				"start": "🔎 Log-Dateien werden analysiert...",
+				"start": "🔎 [{time}] {user|antiping} system:~{rootSymbole} log-analyze --run",
         		"chest": {
         		    "normal": "📁 Zwischen alten Logs findest du geheime Infos über einen Verräter! Dein Commander belohnt dich mit {notis} Notis!",
         		    "christmas": "🎄 Im Log-Archiv liegt eine festlich blinkende Datei... du öffnest sie und bekommst {notis} Notis!",
@@ -1223,7 +1225,7 @@
         		}
 			},
 			"8": {
-				"start": "📊 Ressourcen werden berechnet...",
+				"start": "🧮 [{time}] {user|antiping} system:~{rootSymbole} calc-resources --run",
         		"chest": {
         		    "normal": "📊 Deine Ressourcenanalyse war erfolgreich! Du hast eine Belohnungskiste mit {notis} Notis gefunden.",
         		    "christmas": "🎄 Beim Ressourcencheck wurde eine festlich verpackte Kiste entdeckt du bekommst {notis} Notis!",
@@ -1286,7 +1288,7 @@
         		}
 			},
 			"9": {
-				"start": "💼 Ressourcen berechnen...",
+				"start": "💼 [{time}] {user|antiping} system:~{rootSymbole} analyze-resources --init",
         		"chest": {
         		    "normal": "💼 Deine Berechnung war erfolgreich! Du findest eine schwere Belohnungskiste mit {notis} Notis darin.",
         		    "christmas": "🎁 Eine festliche Ressourcenkiste erscheint sie enthält {notis} Notis für dich!",
@@ -1349,7 +1351,7 @@
         		}
 			},
 			"10": {
-				"start": "🚀 Finaler Status wird geladen...",
+				"start": "🚀 [{time}] {user|antiping} system:~{rootSymbole} load-final-status --run",
         		"chest": {
         		    "normal": "🚀 Der finale Status ist geladen! Du öffnest die Endkiste und findest {notis} Notis als Belohnung.",
         		    "christmas": "🎄 Der finale Status glänzt festlich eine Geschenkekiste mit {notis} Notis wartet auf dich!",
@@ -1371,13 +1373,13 @@
         		    "maythe4th": "⚔️ Möge der Sieg mit dir sein! {notis} Notis als Belohnung direkt aus einer Galaxie weit, weit entfernt!"
         		},
         		"lose": {
-        		    "normal": "💥 Boom! Der finale Status hat versagt {notis} Notis sind weg, als hätte ein T-34 sie plattgemacht!",
+        		    "normal": "💥 Boom! Der finale Status hat versagt {notis} Notis sind weg",
         		    "christmas": "🎄 Weihnachtschaos! Die Rentiere haben {notis} Notis geklaut, weg wie Geschenke unterm Baum!",
         		    "halloween": "👻 Gruselalarm! Der finale Status spukt {notis} Notis verschwunden im Nebel!",
         		    "easter": "🥚 Eier-Notfall! Der finale Status ist geplatzt {notis} Notis fliegen davon!",
         		    "birthday": "🎉 Partycrash! Der finale Status feiert zu hart {notis} Notis ausgeblasen wie Kerzen!",
         		    "mothersday": "🌷 Mama hat den finalen Status mit Kaffee sabotiert {notis} Notis verblasst!",
-        		    "fathersday": "🔧 Papa hat den finalen Status zerlegt {notis} Notis kaputt wie ’n IS-3 in der Werkstatt!",
+        		    "fathersday": "🔧 Papa hat den finalen Status zerlegt {notis} Notis!",
         		    "maythe4th": "⚔️ Möge die Macht nicht mit dir sein {notis} Notis verschwinden in einer weit, weit entfernten Galaxie!"
         		},
         		"nothing": {
@@ -1407,7 +1409,7 @@
         		    "easter": "🥚 Das Osterei-Update ist gefunden, {user} ! Der Server ist bereit. Deine Notis sind mit {prefix}notis abholbereit.",
         		    "birthday": "🥳 Die Party ist vorbei, {user} ! Der Server ist wieder aus dem Party-Modus. Sammel deine Notis mit {prefix}notis ein.",
         		    "mothersday": "💐 {user} Mama sagt, du hast es verdient, Deine Notis einzusammeln Nutz {prefix}notis",
-        		    "fathersday": "{user} Papa Schreibt: Hier ist dein Spezial auftrag sammel deine Notis mit {prefix}notis 👍",
+        		    "fathersday": "{user} Papa Schreibt: Hier ist dein Spezial auftrag sammel deine Notis mit {prefix}notis",
         		    "maythe4th": "{user} Mögen die Notis mit dir sein Nutz bitte {prefix}notis um sie einzusammeln."
         		}
 			}
