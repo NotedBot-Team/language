@@ -1,44 +1,44 @@
 {
-	"error": "❌ TeaTime ➜ {err}",
-	"warning": "⚠️ TeaTime ➜ {warn}",
+	"error": "{❌ TeaTime|wydiosShook} ➜ {err}",
+	"warning": "{⚠️ TeaTime|wydiosShook} ➜ {warn}",
 
 	"cmd": {
-		"usage": "FeelsDankMan ➜ {usage}",
+		"usage": "{FeelsDankMan|wydiosStop} ➜ {usage}",
 		"stv": {
 			"add": {
-				"usage": "FeelsDankMan ➜ Please type {usage} add <EmoteName • EmoteLink> [EmoteAlias]",
+				"usage": "{FeelsDankMan|wydiosStop} ➜ Please type {usage} add <EmoteName • EmoteLink> [EmoteAlias]",
 				"noEmote": "⚠️ ➜ No emote found with the name ` {emotename} `",
-				"success": "FeelsOkayMan 👍 Emote ` {emotename} ` was successfully added"
+				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emotename} ` was successfully added"
 			},
 			"rename": {
-				"usage": "FeelsDankMan ➜ Please type {usage} rename <EmoteName> <NewEmoteName>",
+				"usage": "{FeelsDankMan|wydiosStop} ➜ Please type {usage} rename <EmoteName> <NewEmoteName>",
 				"noEmote": "⚠️ ➜ Emote with name ` {emotename} ` not found in this emote set",
-				"success": "FeelsOkayMan 👍 Emote ` {oldname} ` was successfully renamed to ` {newname} `"
+				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {oldname} ` was successfully renamed to ` {newname} `"
 			},
 			"remove": {
-				"usage": "FeelsDankMan ➜ Please type {usage} remove <EmoteName> [More Emotes...]",
+				"usage": "{FeelsDankMan|wydiosStop} ➜ Please type {usage} remove <EmoteName/EmoteID> [More Emotes/More Emote Ids...]",
 				"notSuccess": "FeelsBadMan 👎 Emote ` {emote} ` could not be removed",
-				"success": "FeelsOkayMan 👍 Emote ` {emote} ` successfully removed",
+				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` successfully removed",
 				"moreFinal": "FeelsOkayMan ➜ 👍 {removedcount} Emotes successfully removed • 👎 {failedcount} Emotes ({failedlist}) could not be removed"
 			},
 			"replace": {
-				"usage": "FeelsDankMan ➜ Please type {usage} replace <EmoteName> <EmoteLink>",
+				"usage": "{FeelsDankMan|wydiosStop} ➜ Please type {usage} replace <EmoteName> <EmoteLink>",
 				"noFound": "⚠️ ➜ Emote ` {emote} ` not found in Channel",
 				"noEmote": "⚠️ ➜ I couldn't get an id from ` {emotename} ` to replace it",
-				"success": "FeelsOkayMan 👍 Emote ` {emotename} ` (old ID: {oldid}) has been replaced with ID ({newid})"
+				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emotename} ` (old ID: {oldid}) has been replaced with ID ({newid})"
 			},
 			"swap": {
-    			"usage": "FeelsDankMan ➜ Please type {usage} swap <Emote1> <Emote2>",
+    			"usage": "{FeelsDankMan|wydiosStop} ➜ Please type {usage} swap <Emote1> <Emote2>",
     			"noEmote": "⚠️ ➜ Emote ` {emote} ` was not found in the channel",
-    			"success": "FeelsOkayMan 👍 Emotes ` {emote1} ` and ` {emote2} ` have been successfully swapped"
+    			"success": "{FeelsOkayMan 👍|wydiosOk} Emotes ` {emote1} ` and ` {emote2} ` have been successfully swapped"
 			},
 			"yoink": {
-				"usage": "FeelsDankMan ➜ Please type {usage} yoink <Channel> <EmoteName> <Optional: EmoteName>",
+				"usage": "{FeelsDankMan|wydiosStop} ➜ Please type {usage} yoink <Channel> <EmoteName> <Optional: EmoteName>",
 				"self": "⛔ ➜ You can't Yoinked Emotes because they are already here",
 				"noFound": "⚠️ ➜ Emote ` {emote} ` not found in Channel",
 				"nameConflict": "📛 ➜ The emote name ` {emote} ` is already occupied by your channel",
-				"success": "FeelsOkayMan 👍 Emote ` {emote} ` from Channel {channel|antiping} geyoinkt",
-				"yoinked": "FeelsOkayMan 👍 Emote ` {emote} ` successfully yoinked"
+				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` from Channel {channel|antiping} geyoinkt",
+				"yoinked": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` successfully yoinked"
 			},
 			"error": {
 				"nameConflict": "⛔ ➜ The name is already used by ` {emotename} `",
@@ -47,7 +47,9 @@
 				"fullCapacity": "⚠️ ➜ The emote set is full. Please remove another emote. • Emote set: {link}",
 				"notFoundinSet": "⚠️ ➜ Emote ` {emote} ` was not found in the emote set",
 				"notFound": "⚠️ ➜ Emote with ID ` {emoteId} ` not found",
-				"unknown": "⚠️ ➜ Unknown error No case for: {error}"
+				"invalidName": "⛔ ➜ 7TV does not accept these characters",
+				"invalidSyntax": "⛔ ➜ The name contains invalid characters. Shush, try using \\",
+				"unknown": "⚠️ ➜ Unknown error No error case for: {error}"
 			},
 			"cosmetics": {
 				"presence": {
@@ -55,7 +57,7 @@
 					"status": "(7TV) ➜ Presence status for {user|antiping} • Presence: {presence} • 7TV Sub: {stvsub}",
 					"notyou": "🚫 ➜ {user|antiping} must decide for themselves if they want AutoPresence. Tell them to use {prefix}autopresence",
 					"nosub": "⚠️ You don’t have an active 7TV subscription",
-					"auto": "BloodTrail AutoPresence {mode} 💡 Note: If your 7TV subscription ends and you resubscribe, it may take up to 1 hour for your presence to update again",
+					"auto": "{BloodTrail|wydiosOk} AutoPresence {mode} 💡 Note: If your 7TV subscription ends and you resubscribe, it may take up to 1 hour for your presence to update again",
     				"noCosmetics": "⚠️ ➜ {user|antiping} has no 7tv cosmetics",
     				"updated": "(7TV) ➜ Presence Updated"
   				},
@@ -95,7 +97,6 @@
 				"ownEmotes": " • {ownedEmotes} Own Emotes",
 				"roles": " • Roles: {roles}"
 			},
-			"inValidName": "🚫 ➜ The emote name contains invalid characters which could result in it not being able to be removed or renamed. If you still want it to be added, write: {args} confirm",
 			"noSet": "🚫 ➜ {channel|antiping} Doesn't have an active emote set, please create one: {link}",
 			"noActiveSet": "🚫 ➜ {channel|antiping} Doesn't have an active emote set",
 			"ownedSet": "🚫 ➜ The emote set does not belong to deisen channel and cannot be adjusted",
@@ -104,9 +105,9 @@
 		},
 		"editors": {
     		"noList": "⚠️ ➜ There are no users in the internal editor list. You can add people with {prefix}7tveditor <username>",
-    		"list": "FeelsOkayMan ➜ Here are all internal editors: {list}",
-    		"remove": "FeelsOkayMan ➜ {user|antiping} has been removed from the internal editor list",
-    		"add": "FeelsOkayMan ➜ {user|antiping} has been added to the internal editor list"
+    		"list": "{FeelsOkayMan|wydiosOk} ➜ Here are all internal editors: {list}",
+    		"remove": "{FeelsOkayMan|wydiosOk} ➜ {user|antiping} has been removed from the internal editor list",
+    		"add": "{FeelsOkayMan|wydiosOk} ➜ {user|antiping} has been added to the internal editor list"
 		},
 		"8ball": {
     		"1": "No way!",
@@ -131,7 +132,7 @@
     		"20": "The future is bright."
 		},
 		"afk": {
-			"tooLong": "FeelsDankMan ➜ Your message is too long",
+			"tooLong": "{FeelsDankMan|wydiosStop} ➜ Your message is too long",
 			"afk": "➜ {user} is now Afk {message} ⏱️",
 			"bedge": "GuNa ➜ {user} is going to sleep {message} 💤",
 			"food": "Tasty ➜ {user} is going to eat {message} 🍕",
@@ -154,11 +155,11 @@
 		},
 		"channel": {
 			"emotes": {
-				"noEmotes": "FeelsDankMan ➜ I didn't find any emotes",
+				"noEmotes": "{FeelsDankMan|wydiosStop} ➜ I didn't find any emotes",
 				"start": "FeelsOkayMan ➜ Here are all {list} emotes (Total: {count} • {details}) in this channel:"
 			},
 			"lang": {
-				"usage": "FeelsDankMan ➜ Current lang ` {lang} ` to change {prefix}{trigger} lang <de • en • on • off> (de/en for language and on/off to toggle personalized languages [{prefix}lang])",
+				"usage": "{FeelsDankMan|wydiosStop} ➜ Current lang ` {lang} ` to change {prefix}{trigger} lang <de • en • on • off> (de/en for language and on/off to toggle personalized languages [{prefix}lang])",
 				"change": "FeelsOkayMan 👍 Language set to {lang} • to see all commands do {prefix}commands",
 				"off": "FeelsOkayMan 👍 Language is now free for everyone. You can set it yourself with {prefix}lang <de • en>",
 				"on": "FeelsOkayMan 👍 I will now speak only German in this channel"
@@ -169,7 +170,7 @@
 				"geminiOff": "FeelsOkayMan 🛑 Gemini Mode deactivated! AI chat is now off"
 			}
 		},
-		"chatterino": "FeelsDankMan ➜ All Chatterino Variants • Normal: {normal} • Homies: {homies} • 7TV: {stv} • Technorino: {techorino}",
+		"chatterino": "{FeelsDankMan|wydiosOk} ➜ All Chatterino Variants • Normal: {normal} • Homies: {homies} • 7TV: {stv} • Technorino: {techorino}",
 		"chatters": "Currently, there are {count} users in the chat {channel}",
 		"noChatters": "⚠️ ➜ No Chatters found",
 		"clear": {
@@ -182,12 +183,12 @@
   			"success": "FeelsOkayMan ➜ Here's your clip {channel} {link}"
 		},
 		"cmd": {
-			"usage": "FeelsDankMan ➜ Please type {usage} <command>",
+			"usage": "{FeelsDankMan|wydiosStop} ➜ Please type {usage} <command>",
 			"notFound": "⚠️ ➜ Command {command} was not found",
-			"me": "peepoSad ➜ Why do you want to deactivate me?",
+			"me": "{peepoSad|wydiosPout} ➜ Why do you want to deactivate me?",
 			"enable": "FeelsOkayMan 👍 Command {command} has been enabled",
 			"disable": "FeelsOkayMan 👍 Command {command} has been disabled",
-			"check": "FeelsDankMan ➜ The Command {command} is {mode}"
+			"check": "{FeelsOkayMan|wydiosOk} ➜ The Command {command} is {mode}"
 		},
 		"coinflip": {
 			"head": "🪙 ➜ Head (Yes)",
@@ -195,27 +196,27 @@
 		},
 		"console": {
 			"reload": {
-				"usage": "🫠 TeaTime ➜ Please type {prefix}{trigger} reload <commands • lang • apis • crons • all>",
-				"reloaded": "ApuApustaja 👍 ➜ Reloaded the following: {reloaded}"
+				"usage": "{🫠 TeaTime|wydiosHacker} ➜ Please type {prefix}{trigger} reload <commands • lang • apis • crons • all>",
+				"reloaded": "{ApuApustaja 👍|wydiosBased} ➜ Reloaded the following: {reloaded}"
 			},
 			"ignore": {
 				"usage": {
-					"usage": "🫠 TeaTime ➜ Please type {usage} ignore <add • remove • check • list>",
-					"add": "🫠 TeaTime ➜ Please type {usage} ignore add <user> [Reason]",
-					"remove": "🫠 TeaTime ➜ Please type {usage} ignore remove <user>",
-					"check": "🫠 TeaTime ➜ Please type {usage} ignore check <user>"
+					"usage": "{🫠 TeaTime|wydiosHacker} ➜ Please type {usage} ignore <add • remove • check • list>",
+					"add": "{🫠 TeaTime|wydiosHacker} ➜ Please type {usage} ignore add <user> [Reason]",
+					"remove": "{🫠 TeaTime|wydiosHacker} ➜ Please type {usage} ignore remove <user>",
+					"check": "{🫠 TeaTime|wydiosHacker} ➜ Please type {usage} ignore check <user>"
 				},
 				"add": {
-					"added": "ApuApustaja 👍 User: {user} ID: {userid} has been added to the ignore list. {reason}",
+					"added": "{ApuApustaja 👍|wydiosBased} User: {user} ID: {userid} has been added to the ignore list. {reason}",
 					"error": "⚠️ ➜ Der User: {user} is already in the list"
 				},
 				"remove": {
-					"removed": "ApuApustaja 👍 User: {user} ID: {userid} has been removed from the list",
+					"removed": "{ApuApustaja 👍|wydiosBased} User: {user} ID: {userid} has been removed from the list",
 					"error": "⚠️ ➜ User {user} is not in the list"
 				},
-				"check": "ApuApustaja 👉 User: {user} ID: {userid} is in the list (at: {date} ) Reason: {reason}",
+				"check": "{ApuApustaja 👉|wydiosBased} User: {user} ID: {userid} is in the list (at: {date} ) Reason: {reason}",
 				"list": {
-					"list": "ApuApustaja 👉 Here is the list of all users who are ignored: {link}",
+					"list": "{ApuApustaja 👉|wydiosBased} Here is the list of all users who are ignored: {link}",
 					"error": "⚠️ ➜ There are no users in the list"
 				}
 			},
@@ -224,48 +225,48 @@
 				"noUpdate": "🫠 TeaTime ➜ Don't forget to push",
 				"restart": "• ppCircle Restart...",
 				"reloaded": "| Module: {module}",
-				"success": "ApuApustaja 👍 ➜ {data} • Commit Message: {msg}"
+				"success": "{ApuApustaja 👍|wydiosBased} ➜ {data} • Commit Message: {msg}"
 			},
 			"restart": "ppCircle ➜ Bot Restarts...",
 			"suggest": {
 				"usage": {
-					"usage": "🫠 TeaTime ➜ Please type {usage} suggest <finish • delete • list>",
-					"finish": "🫠 TeaTime ➜ Please type {usage} suggest finish <ID>",
-					"delete": "🫠 TeaTime ➜ Please type {usage} suggest delete <ID>"
+					"usage": "{🫠 TeaTime|wydiosHacker} ➜ Please type {usage} suggest <finish • delete • list>",
+					"finish": "{🫠 TeaTime|wydiosHacker} ➜ Please type {usage} suggest finish <ID>",
+					"delete": "{🫠 TeaTime|wydiosHacker} ➜ Please type {usage} suggest delete <ID>"
 				},
 				"error": "⚠️ ➜ Suggestion/Report not found with ID: {id}",
-				"finish": "FeelsOkayMan 👍 Suggestion/Report with ID {id} was successfully completed",
+				"finish": "{FeelsOkayMan 👍|wydiosOk} Suggestion/Report with ID {id} was successfully completed",
 				"alertChannel": "BillyApprove ➜ {user} Your suggestion/report with the ID: {id} has been processed. Thanks for the message",
-				"delete": "FeelsOkayMan 👍 Suggestion/Report with ID {id} was successfully deleted",
+				"delete": "{FeelsOkayMan 👍|wydiosOk} Suggestion/Report with ID {id} was successfully deleted",
 				"noFound": "⚠️ ➜ No suggestions/reports found",
-				"list": "FeelsDankMan ➜ Here is a list of all suggestions/reports: {link}"
+				"list": "{FeelsDankMan|wydiosStop} ➜ Here is a list of all suggestions/reports: {link}"
 			}
 		},
 		"customcmd": {
 		    "add": {
-		        "usage": "FeelsDankMan ➜ Please type {usage} <trigger> <message> • Cooldown: 5 seconds • Variables: {variablen} ⚠️ Max 480 characters",
+		        "usage": "{FeelsDankMan|wydiosStop} ➜ Please type {usage} <trigger> <message> • Cooldown: 5 seconds • Variables: {variablen} ⚠️ Max 480 characters",
 		        "tooLang": "⛔ ➜ The message cannot be longer than 480 characters",
 		        "existing": "🚫 ➜ There’s already a command with the trigger: {trigger}",
-		        "added": "FeelsOkayMan 👍 Your custom command `{trigger}` was successfully added (Response: `{content}`)"
+		        "added": "{FeelsOkayMan 👍|wydiosOk} Your custom command `{trigger}` was successfully added (Response: `{content}`)"
 		    },
 		    "remove": {
-		        "usage": "FeelsDankMan ➜ Please type {usage} <trigger> • If you forgot a command use {prefix}cc list",
+		        "usage": "{FeelsDankMan|wydiosStop} ➜ Please type {usage} <trigger> • If you forgot a command use {prefix}cc list",
 		        "notExisting": "⚠️ ➜ No custom command found with the trigger `{trigger}`",
-		        "removed": "FeelsOkayMan 👍 Your custom command `{trigger}` was removed"
+		        "removed": "{FeelsOkayMan 👍|wydiosOk} Your custom command `{trigger}` was removed"
 		    },
 		    "noList": "⚠️ ➜ There are no blocked or custom commands. Add some using {prefix}addcmd",
-		    "list": "FeelsOkayMan 👉 There are {blocked} blocked commands and {custom} custom commands {list}",
-		    "prefix": "PoroSad ➜ My channel prefix is `!`. Since {bot} is also here, please change my prefix with !prefix or triggers might get messy 💡 Or type !!{usage} to bypass it"
+		    "list": "{FeelsOkayMan 👉|wydiosOk} There are {blocked} blocked commands and {custom} custom commands {list}",
+		    "prefix": "{PoroSad|wydiosSad} ➜ My channel prefix is `!`. Since {bot} is also here, please change my prefix with !prefix or triggers might get messy 💡 Or type !!{usage} to bypass it"
 		},
 		"duhu": "{user} • {message}",
 		"ezgif": {
     		"noEmote": "⚠️ ➜ I couldn't find any emote",
-    		"emote": "FeelsDankMan ➜ ezGif link for ` {emote} ` {link}"
+    		"emote": "{FeelsDankMan|wydiosOk} ➜ ezGif link for ` {emote} ` {link}"
 		},
 		"followage": {
   			"self": "⚠️ ➜ You can't follow yourself",
-  			"notFollowed": "peepoSad ➜ {user|antiping} is not following {channel|antiping}",
-  			"since": "peepoHappy ➜ {user|antiping} has been following {channel|antiping} for {duration}"
+  			"notFollowed": "{peepoSad|wydiosSad} ➜ {user|antiping} is not following {channel|antiping}",
+  			"since": "{peepoHappy|wydiosLove} ➜ {user|antiping} has been following {channel|antiping} for {duration}"
 		},
 		"founders": {
    			"noFounders": "⚠️ ➜ No founders found in channel {user}",
@@ -303,7 +304,7 @@
 		},
 		"give": {
     		"your": "⚠️ ➜ You can't give Notis to yourself.",
-    		"bot": "FeelsOkayMan 👍 I'm the bank, I don't need Notis.",
+    		"bot": "{FeelsOkayMan 👍|wydiosBased} I'm the bank, I don't need Notis.",
     		"noNotis": "⚠️ ➜ You have no Notis. Use {prefix}notis to farm some.",
     		"noUser": "⚠️ ➜ This user is not in my database. They can use {prefix}notis to get added.",
     		"isNan": "⚠️ ➜ Please enter a valid number. Example: {prefix}{trigger} {user} 100",
@@ -314,10 +315,10 @@
     		"bonus": "🎉 Congrats {user|antiping}, you received {notis} Notis as a bonus for giving {giftetNotis} Notis! Keep being a generous gifter. New Notis balance: {nowNotis} Notis."
 		},
 		"globalannounce": {
-			"noMod": "💡 Notice: I’m not a moderator. Because of this, Twitch’s rate limits might prevent the message from being sent",
-			"OnOff": "FeelsOkayMan 👍 All global notifications (from: Badge/Emotes/7TV) have been {mode}",
-			"twitch": "FeelsOkayMan 👍 imGlitch Global ` {value} ` message was {mode}",
-			"stv": "FeelsOkayMan 👍 (7TV) Global Notification ` Badge/Paint ` was {mode}" 
+			"noMod": "💡 Notice: I’m not a moderator or vip. Because of this, Twitch’s rate limits might prevent the message from being sent",
+			"OnOff": "{FeelsOkayMan 👍|wydiosOk} All global notifications (from: Badge/Emotes/7TV) have been {mode}",
+			"twitch": "{FeelsOkayMan 👍|wydiosOk} imGlitch Global ` {value} ` message was {mode}",
+			"stv": "{FeelsOkayMan 👍|wydiosOk} (7TV) Global Notification ` Badge/Paint ` was {mode}" 
 		},
 		"gonner": "uuh ➜ Here’s a Gooner EmoteSet: {link}",
 		"gooning": "🤤 💦 {goon} on {link}",
@@ -335,9 +336,10 @@
 		},
 		"kok": "{emote} ➜ The kok of {user} is {size}cm long",
 		"lang": {
-  			"off": "FeelsOkayMan 👍 Your personal language has been reset. I will now use the channel language for you.",
+			"current": "Current language: {lang}",
+  			"off": "{FeelsOkayMan 👍|wydiosOk} Your personal language has been reset. I will now use the channel language for you.",
   			"lang_strict": "FeelsDankMan ➜ I will now only speak English for you • ⚠️ Personal language is disabled in this channel. The channel owner can enable it again using ${prefix}channellang off",
-  			"change": "FeelsOkayMan 👍 I will now only speak English for you"
+  			"change": "{FeelsOkayMan 👍|wydiosOk} I will now only speak English for you"
 		},
 		"leaderboard": {
     		"noNotis": "⚠️ ➜ There are no users in the database",
@@ -345,64 +347,64 @@
 		},
 		"link": {
   			"lastfm": {
-				"usage": "FeelsDankMan ➜ please type {prefix}{trigger} lastfm <add • set • remove • help> <lastFm Username>",
+				"usage": "{FeelsDankMan|wydiosStop} ➜ please type {prefix}{trigger} lastfm <add • set • remove • help> <lastFm Username>",
 				"help": {
-    				"usage": "FeelsDankMan ➜ please type {prefix}{trigger} lastfm help <acc • connection>",
+    				"usage": "{FeelsDankMan|wydiosStop} ➜ please type {prefix}{trigger} lastfm help <acc • connection>",
     				"acc": "💡 ➜ No LastFM account? Go to last.fm and create an account there",
     				"service": "💡 ➜ You can connect your LastFM account to Spotify/YT Music here: https://www.last.fm/settings/applications"
 				},
     			"add": {
       				"noUser": "⚠️ ➜ Please provide a Last.fm username",
-      				"success": "FeelsOkayMan 👍 Connected with Last.fm user {name}"
+      				"success": "{FeelsOkayMan 👍|wydiosOk} Connected with Last.fm user {name}"
     			},
     			"remove": {
       				"notExisting": "⚠️ ➜ You’re not in my DB. Use {usage} add <LastFm username> to connect",
-      				"success": "FeelsOkayMan 👍 I removed you from my DB"
+      				"success": "{FeelsOkayMan 👍|wydiosOk} I removed you from my DB"
     			}
   			},
   			"steam": {
-			    "usage": "FeelsDankMan ➜ please type {prefix}{trigger} steam <add • set • remove • help> <profile URL>",
+			    "usage": "{FeelsDankMan|wydiosStop} ➜ please type {prefix}{trigger} steam <add • set • remove • help> <profile URL>",
 				"help": {
-        			"usage": "FeelsDankMan ➜ Type {prefix}{trigger} steam help <profile> to get tips",
+        			"usage": "{FeelsDankMan|wydiosStop} ➜ Type {prefix}{trigger} steam help <profile> to get tips",
         			"profile": "💡 ➜ To find your Steam profile URL, go to your Steam profile, click `View Profile`, and copy the URL from the browser"
     			},
 			    "add": {
 			        "noUser": "🛑 ➜ You need to provide a profile URL",
 			        "invalid": "⚠️ ➜ The provided Steam ID is invalid",
-			        "success": "FeelsOkayMan 👍 Your Steam account `{name}` has been successfully linked"
+			        "success": "{FeelsOkayMan 👍|wydiosOk} Your Steam account `{name}` has been successfully linked"
 			    },
 			    "remove": {
-			        "success": "FeelsOkayMan 👍 Your Steam account has been successfully removed"
+			        "success": "{FeelsOkayMan 👍|wydiosOk} Your Steam account has been successfully removed"
 			    }
 			}
 		},
 		"livemsg": {
 			"enable": {
   				"is": "⚠️ ➜ There is already a live message for {user}",
-  				"success": "FeelsOkayMan 👍 Live message for {user} has been created. If you want to get pinged, do {prefix}liveping {user}"
+  				"success": "{FeelsOkayMan 👍|wydiosOk} Live message for {user} has been created. If you want to get pinged, do {prefix}liveping {user}"
 			},
 			"disable": {
-  				"success": "FeelsOkayMan 👍 Live message for {user} has been deleted"
+  				"success": "{FeelsOkayMan 👍|wydiosBased} Live message for {user} has been deleted"
 			},
 			"list": {
     			"no": "⚠️ ➜ There are no live notifications in this channel",
-    			"success": "FeelsDankMan ➜ Here are all live notifications: {link}"
+    			"success": "{FeelsDankMan|wydiosOk} ➜ Here are all live notifications: {link}"
 			},
 			"msg": { 
-    			"del": "FeelsOkayMan 👍 I deleted the custom message for {user}",
+    			"del": "{FeelsOkayMan 👍|wydiosOk} I deleted the custom message for {user}",
     			"noMsg": "⚠️ ➜ You need to provide a message",
     			"tooLong": "⚠️ ➜ Your message is too long",
-    			"success": "FeelsOkayMan 👍 I updated the message for {user}"
+    			"success": "{FeelsOkayMan 👍|wydiosOk} I updated the message for {user}"
 			},
 			"no": "⚠️ ➜ There is no live message for {user} A mod can create this with {prefix}livemsg enable {user}"
 		},
 		"liveping": {
-  			"removed": "FeelsOkayMan 👍 You won't get pinged anymore when {user} goes live",
-  			"success": "FeelsOkayMan 👍 You'll get pinged when {user} goes live"
+  			"removed": "{FeelsOkayMan 👍|wydiosOk} You won't get pinged anymore when {user} goes live",
+  			"success": "{FeelsOkayMan 👍|wydiosOk} You'll get pinged when {user} goes live"
 		},
 		"math": {
     		"error": "⚠️ ➜ Error calculating ` {input} `",
-    		"result": "FeelsOkayMan 👍 The result is: {result}"
+    		"result": "{FeelsOkayMan 👍|wydiosOk} The result is: {result}"
 		},
 		"message": {
 			"no": "⚠️ ➜ No message found with the id ` {id} `",
@@ -413,36 +415,35 @@
 			"mods": "In Channel {user|antiping} there is just {mods} mods in channel ({active} in the chat) {list}"
 		},
 		"morse": {
-  			"morsed": "FeelsOkayMan ➜ Here is your Morse code: ` {morse} `",
+  			"morsed": "{FeelsOkayMan|wydiosOk} ➜ Here is your Morse code: ` {morse} `",
   			"demorse": {
     			"badword": "⛔ ➜ Your Morse code contains a forbidden word",
-    			"demorsed": "FeelsOkayMan ➜ Here is your decoded Morse code: {demorse}"
+    			"demorsed": "{FeelsOkayMan|wydiosOk} ➜ Here is your decoded Morse code: {demorse}"
   			}	
 		},
-		"overlay": "FeelsOkayMan 👉 Here are chat overlays {link}",
-		"paste": "FeelsOkayMan 👉 {link}",
+		"overlay": "{FeelsOkayMan|wydiosOk} 👉 Here are chat overlays {link}",
+		"paste": "{FeelsOkayMan|wydiosOk} 👉 {link}",
 		"permission": {
   			"bot": "➜ {user|antiping} Bot permission is ` {botRank} `",
 			"channel": " and channel permission is ` {channelRank} `",
 			"info": "⚠️ Note: For other users, only the permissions stored in the database are displayed",
   			"noPerms": "⚠️ ➜ You don't have the rights to change other users' permissions",
   			"your": "⚠️ ➜ You can't change your own permissions",
-  			"changed": "FeelsOkayMan 👍 Permission for {user} has been set to `{rank}`"
+  			"changed": "{FeelsOkayMan 👍|wydiosOk} Permission for {user} has been set to `{rank}`"
 		},
-		"pfp": "FeelsDankMan ➜ {twitch} {stv} {banner}",
+		"pfp": "{FeelsDankMan|wydiosOk} ➜ {twitch} {stv} {banner}",
 		"pick": "🎲 ➜ I choose ` {choice} `",
 		"ping": "{pong} ➜ Uptime: {uptime} • Latenz: {ping} • Channels: {channels}",
-		"devping": "{pong} ➜ Uptime: {uptime} • Latenz: {ping} • Channels: {channels} • Subs: {allSubscriptions} (Cost: {cost}) • Ram: {memorymb}Mb • Commands: {cmds}/{cmdUsed} (Size/Used) • Database Querys/Uptime: {dbQuerys}/{dbUptime} • {serverMessage} Server is still running {serverdays}",
+		"devping": "{pong} ➜ Uptime: {uptime} • Latenz: {ping} • Channels: {channels} • Subs: {allSubscriptions} (Cost: {cost}) • Ram: {memorymb}Mb • Commands Size/Used: {cmds}/{cmdUsed} • Database Querys/Uptime: {dbQuerys}/{dbUptime} • {serverMessage} Server is still running {serverdays}",
 		"prefix": { 
 			"usage": "⚠️ ➜ Current prefix: ` {prefix} ` to change {prefix}{trigger} <newPrefix> • If another bot has the prefix too, write {prefix}{prefix}{trigger}",
 			"notAllowed": "🛑 ➜ The prefix ` {prefix} ` is invalid Here is a list of all the prefixes: {allprefix}",
-			"changed": "FeelsOkayMan 👍 The channel prefix has been set to ` {prefix} ` changed"
+			"changed": "{FeelsOkayMan 👍|wydiosOk} The channel prefix has been set to ` {prefix} ` changed"
 		},
 		"prestige": {
   			"noUser": "🛑 ➜ You are not in my database yet, please add yourself with {prefix}notis",
   			"canNot": "🚫 ➜ Your current Prestige Level: {prestige} 💎 • You still need {needNotis} Notis 🎯 • 🪙 Current Salary: {minReward}–{maxReward} Notis | With Prestige {prestige2} your salary increases to {nextMinReward}–{nextMaxReward} Notis • 🏦 Your current balance is {notis} Notis",
-  			"notConfirmed": "FeelsDankMan ➜ Type {usage} confirm to prestige • 🪙 You will currently receive {minReward} to {maxReward} Notis",
-  			"confirm": "FeelsOkayMan 👍 Congrats! Your prestige level increased to {level} • 🏦 New balance: {notis}"
+  			"confirm": "{FeelsOkayMan 👍|wydiosOk} Congrats! Your prestige level increased to {level} • 🏦 New balance: {notis}"
 		},
 		"remind": {
 			"add": {
@@ -483,9 +484,10 @@
   			"lose": "The ball lands on ` {color} ` You lose and {notis} Notis are taken from you",
 			"now": "• 🏦 You now have {nowNotis} Notis"
 		},
+		"say": "{BloodTrail|wydiosOk}",
 		"spam": {
   			"already": "⚠️ ➜ There is already an active spam going on. A mod can stop it with {prefix}spamstop",
-  			"stopped": "FeelsOkayMan 👍 The spam has been stopped",
+  			"stopped": "{FeelsOkayMan 👍|wydiosOk} The spam has been stopped",
   			"noSpamFound": "⚠️ ➜ No active spam was found"
 		},
 		"sql": {
@@ -494,7 +496,7 @@
 		},
 		"stats": {
     		"noUser": "🛑 ➜ {user|antiping} is not in my database. Use {prefix}notis to register!",
-    		"stats": "peepoHappy ➜ {user|antiping} has {notis} • Prestige {prestige} • Debug logs {debug} • Chests found {cheast} • Gamble W/L {gambleWin}/{gambleLose} (Winrate: {gambleWinChance}%) • Notis W/L {notisWin}/{notisLose} • Notis Given/Received {notisGive}/{notisGet} • Joined on {joined} • Rank {rank}/{totalUsers}"
+    		"stats": "{peepoHappy|wydiosBased} ➜ {user|antiping} has {notis} Notis • Prestige {prestige} • Debug logs {debug} • Chests found {cheast} • Gamble W/L {gambleWin}/{gambleLose} (Winrate: {gambleWinChance}%) • Notis W/L {notisWin}/{notisLose} • Notis Given/Received {notisGive}/{notisGet} • Joined on {joined} • Rank {rank}/{totalUsers}"
 		},
 		"steamuser": {
 		    "noid": "⚠️ ➜ No Steam ID found. You can link your account with {prefix}link <steam> <add • set> <steam profile URL>",
@@ -504,24 +506,24 @@
 		},
 		"stream": {
     		"uptime": {
-    		    "online": "🟢 ➜ {channel|antiping} is live for {time}",
-    		    "offline": "🔴 ➜ {channel|antiping} has been offline for {time}"
+    		    "online": "{🟢|wydiosLive} ➜ {channel|antiping} is live for {time}",
+    		    "offline": "{🔴|wydiosOffline} ➜ {channel|antiping} has been offline for {time}"
     		},
     		"thumb": {
-    		    "has": "FeelsDankMan ➜ Thumbnail for channel {channel|antiping}: {thumbnail}",
-    		    "offline": "FeelsDankMan ➜ Channel {channel|antiping} is offline"
+    		    "has": "{FeelsDankMan|wydiosOk} ➜ Thumbnail for channel {channel|antiping}: {thumbnail}",
+    		    "offline": "{FeelsDankMan|wydiosOk} ➜ Channel {channel|antiping} is offline"
     		},
-    		"game": "FeelsDankMan ➜ Category for channel {channel|antiping}: {category}",
-    		"title": "FeelsDankMan ➜ Title for channel {channel|antiping}: {title}",
+    		"game": "{FeelsDankMan|wydiosOk} ➜ Category for channel {channel|antiping}: {category}",
+    		"title": "{FeelsDankMan|wydiosOk} ➜ Title for channel {channel|antiping}: {title}",
     		"info": {
-    		    "online": "FeelsDankMan 🟢 ➜ {channel|antiping} is live • Category {category} • Title {title} • Thumbnail {thumbnail} • Language {lang} • Viewers {viewer} • Uptime {time}",
-    		    "offline": "FeelsDankMan 🔴 ➜ {channel|antiping} is offline • Category {category} • Title {title} • Downtime {time}"
+    		    "online": "{FeelsDankMan|wydiosOk} 🟢 ➜ {channel|antiping} is live • Category {category} • Title {title} • Thumbnail {thumbnail} • Language {lang} • Viewers {viewer} • Uptime {time}",
+    		    "offline": "{FeelsDankMan|wydiosOk} 🔴 ➜ {channel|antiping} is offline • Category {category} • Title {title} • Downtime {time}"
     		},
-			"never": "FeelsDankMan ➜ {channel|antiping} has never streamed"
+			"never": "{FeelsDankMan|wydiosOk} ➜ {channel|antiping} has never streamed"
 		},
 		"short": {
 			"blocked": "⛔️ ➜ This website is not allowed",
-			"success": "FeelsDankMan ➜ Here is your link: {url}"
+			"success": "{FeelsDankMan|wydiosOk} ➜ Here is your link: {url}"
 		},
 		"song": {
 			"noLinked": "⚠️ ➜ {user|antiping} is not linked in my database. Please link your account using {prefix}link <lastfm> <add • set> <LastFm Username>",
@@ -530,9 +532,9 @@
 			"play": "{user|antiping} is currently listening to ` {title} ` by {artist} {emote} {count} {link}"
 		},
 		"subage": {
-			"end": "FeelsDankMan ➜ {user} war Sub im Channel {channel} für {time} Months • Sub ist {ago} Tage her",
-			"never": "FeelsDankMan ➜ {user} has never been a sub in the channel {channel}",
-			"is": "FeelsDankMan ➜ {user} has been a sub for {months}  months at {channel} • Tier {tier} • Sub ends/extended in {remaining} days • Streak: {streak} months",
+			"end": "{FeelsDankMan|wydiosOk} ➜ {user|antiping} war Sub im Channel {channel|antiping} für {time} Months • Sub ist {ago} Tage her",
+			"never": "{FeelsDankMan|wydiosOk} ➜ {user|antiping} has never been a sub in the channel {channel|antiping}",
+			"is": "{FeelsDankMan|wydiosOk} ➜ {user|antiping} has been a sub for {months} months at {channel|antiping} • Tier {tier} • Sub ends/extended in {remaining} days • Streak: {streak} months",
 			"gifted": " • HolidayPresent Gifted by: @{giftedBy|antiping}"
 		},
 		"suggest": {
@@ -540,8 +542,8 @@
 			"creat": "peepoHappy PETPET ➜ Thanks for a suggestion/report We'll process it as quickly as possible (ID: {id})"
 		},
 		"test": {
-			"fail": "❌ The test failed WineTime ❌",
-			"success": "✅ The test was successful Clap ✅"
+			"fail": "{❌|wydiosSad} The test failed WineTime",
+			"success": "{✅|wydiosLove} The test was successful Clap"
 		},
 		"topartist": {
 			"noArtist": "⚠️ ➜ No top artists found for ` {user|antiping} `",
@@ -551,7 +553,7 @@
 			"noTracks": "⚠️ ➜ No top songs found for ` {user|antiping} `",
 			"topTracks": "{emote} ➜ {user|antiping} top {period} last fm songs are {list}"
 		},
-		"translate": "FeelsDankMan Translate from {from} to {to} ➜ ` {text} `",
+		"translate": "{FeelsDankMan|wydiosOk} Translate from {from} to {to} ➜ ` {text} `",
 		"tuck": {
 			"selfTuck": "GuNa ➜ {user} tucks themselves into bed... good night 🛏️",
 			"targetTuck": "GuNa ➜ {username} gently tucks {user} into bed 👉 🛏️",
@@ -608,21 +610,21 @@
 		"bot": {
 			"cmd": {
 				"disabled": "⛔ ➜ The command {command} is disabled",
-				"error": "ApuApustaja 👎 Error reloading commands",
-				"success": "ApuApustaja 👍 All commands reloaded"
+				"error": "{ApuApustaja|wydiosBased} 👎 Error reloading commands",
+				"success": "{ApuApustaja|wydiosBased} 👍 All commands reloaded"
 			},
 			"api": {
-				"error": "ApuApustaja 👎 Error reloading APIs",
-				"success": "ApuApustaja 👍 All APIs reloaded"
+				"error": "{ApuApustaja|wydiosBased} 👎 Error reloading APIs",
+				"success": "{ApuApustaja|wydiosBased} 👍 All APIs reloaded"
 			},
 			"token": {
-				"bot": "ApuApustaja 👍 Bot Token has been reloaded",
-				"api": "ApuApustaja 👍 Api Token has been reloaded"
+				"bot": "{ApuApustaja|wydiosBased} 👍 Bot Token has been reloaded",
+				"api": "{ApuApustaja|wydiosBased} 👍 Api Token has been reloaded"
 			},
 			"lang": {
-				"success": "ApuApustaja 👍 Language has been reloaded"
+				"success": "{ApuApustaja|wydiosBased} 👍 Language has been reloaded"
 			},
-			"crons": "ApuApustaja 👍 Crons has been reloaded"
+			"crons": "{ApuApustaja|wydiosBased} 👍 Crons has been reloaded"
 		},
 		"perms": {
 			"vip": "🚫 ➜ You need to be VIP to use this command",
@@ -649,15 +651,15 @@
 	"event": {
 		"bot": {
     		"join": {
-    		    "channel": "peepoHappy 🩵 Thanks for adding me! You can check out my commands here ➜ {link} • Prefix {prefix} • Use {prefix}channel lang en to change the language",
-    		    "bot": "peepoHappy RaveTime NotedBot joined channel ` @{user} ` data: (ID: {twitchid} • Lang: {lang} • Prefix: {prefix})"
+    		    "channel": "{peepoHappy 🩵|wydiosLove} Thanks for adding me! You can check out my commands here ➜ {link} • Prefix {prefix} • Use ` {prefix}channel lang en ` to change the language",
+    		    "bot": "{peepoHappy|wydiosLove} RaveTime NotedBot joined channel ` @{user} ` data: (ID: {twitchid} • Lang: {lang} • Prefix: {prefix})"
     		},
     		"part": {
-    		    "channel": "peepoSad RainTime 💔 RainTime I'm leaving the chat now • 🖕 {user}",
-    		    "bot": "peepoSad RainTime NotedBot parted channel ` @{user} ` data: (ID: {twitchid}) • Lang: {lang} • Prefix: {prefix} • I joined at: {joined}"
+    		    "channel": "{peepoSad|wydiosSad} RainTime 💔 RainTime I'm leaving the chat now • 🖕 {user}",
+    		    "bot": "{peepoSad|wydiosSad} RainTime NotedBot parted channel ` @{user} ` data: (ID: {twitchid}) • Lang: {lang} • Prefix: {prefix} • I joined at: {joined}"
     		}
 		},
-		"prefix": "FeelsOkayMan 👍 ➜ My channel prefix is ` {prefix} `",
+		"prefix": "{FeelsOkayMan 👍|wydiosOk} ➜ My channel prefix is ` {prefix} `",
 		"stv": "DinoDance ➜ {user|antiping} Please install 7tv link: https://7tv.app/",
 		"streak": {
     		"increment": "peepoHappy ➜ {user|antiping} has set the streak ` {streak} ` to {count}",
@@ -665,20 +667,20 @@
 		},
 		"notification": {
 			"badge": {
-				"newBadge": "imGlitch New Global Badge ➜ {badgename} (id: {badgeid})",
-				"removedBadge": "imGlitch Global Badge removed ➜ {badgeid}"
+				"newBadge": "imGlitch New Global Badge ➜ {badgeName} (id: {badgeId})",
+				"removedBadge": "imGlitch Global Badge removed ➜ {badgeName}"
 			},
 			"emote": {
-				"newEmote": "imGlitch New Global Emote ➜ {emotename}",
-				"removedEmote": "imGlitch Global Emote removed ➜ {emotename}"
+				"newEmote": "imGlitch New Global Emote ➜ {emoteName}",
+				"removedEmote": "imGlitch Global Emote removed ➜ {emoteName}"
 			},
 			"stv": {
-				"newBadge": "(7TV) New Global 7tv Badge ➜ {badgename}",
-				"renamedBadge": "(7TV) Global 7tv Badge ` {oldname} ` renamed to ` {newname} `",
-				"removedBadge": "(7TV) Global 7tv Badge removed ➜ {badgename}",
-				"newPaint": "(7TV) New Global 7tv Paint ➜ {paintname}",
-				"renamedPaint": "(7TV) Global 7tv Paint ` {oldname} ` renamed to ` {newname} `",
-				"removedPaint": "(7TV) Global 7tv Paint removed ➜ {paintname}"
+				"newBadge": "(7TV) New Global 7tv Badge ➜ {badgeName}",
+				"renamedBadge": "(7TV) Global 7tv Badge ` {oldName} ` renamed to ` {newName} `",
+				"removedBadge": "(7TV) Global 7tv Badge removed ➜ {badgeName}",
+				"newPaint": "(7TV) New Global 7tv Paint ➜ {paintName}",
+				"renamedPaint": "(7TV) Global 7tv Paint ` {oldName} ` renamed to ` {newName} `",
+				"removedPaint": "(7TV) Global 7tv Paint removed ➜ {paintName}"
 			},
 			"channel": {
 				"sub": {
@@ -690,13 +692,13 @@
 				"raid": "heCrazy {user} raided {channel} with {viewers} Viewern"
 			},
 			"online": {
-				"start": "heCrazy @{user} is now live",
+				"start": "heCrazy @{user} is now {live|wydiosLive}",
 				"category": " and playing: {game}",
 				"title": " with the title: {title}",
 				"message": " • {message}",
 				"pings": " • dinkDonk {users}"
 			},
-			"offline": "Saj @{user} is now offline"
+			"offline": "Saj @{user} is now {offline|wydiosOffline}"
 		},
 		"ban": {
 			"unban": "peepoHappy Clap Welcome back to Twitch {user}"
@@ -782,7 +784,7 @@
   		},
 		"messages": {
 			"1": {
-				"start": "💻 Debugging gestartet...",
+				"start": "💻 [{time}] {user|antiping} system:~{rootSymbole} debug --start",
 				"chest": {
             		"normal": "🔥 You opened a debug chest and found {notis} Notis inside! Pag",
             		"christmas": "🎄 You opened a festive debug chest... and discovered {notis} Notis hidden between gingerbread code and fairy lights!",
@@ -801,7 +803,7 @@
         		    "birthday": "🎉 Birthday bug defeated! Celebrate with {notis} party Notis!",
         		    "mothersday": "💐 Mom found the issue! She gifts you {notis} loving Notis!",
         		    "fathersday": "🛠️ Dad fixed the code! You get {notis} strong Notis!",
-        		    "maythe4th": "🌌 You repaired the hyperdrive and received {notis} Notis as a reward"
+        		    "maythe4th": "🌌 The Dark Lord has flooded your debug with errors! {notis} Notis are lost in a galaxy far, far away..."
         		},
        			"lose": {
         		    "normal": "💥 Oh no, you lost and {notis} Notis slipped away like a plane without wings!",
@@ -845,7 +847,7 @@
 				}
 			},
 			"2": {
-				"start": "⚙️ System is initializing...",
+				"start": "⚙️ [{time}] {user|antiping} system:~{rootSymbole} init --boot",
 				"chest": {
             		"normal": "🖥️ Systems running at 100% a chest containing {notis} Notis was discovered during startup.",
             		"christmas": "🎄 A chest fell down the digital chimney inside: {notis} Notis and a sprinkle of cinnamon bytes!",
@@ -897,18 +899,18 @@
         		    "maythe4th": "🚀 Take a breath in the galaxy! The next mission starts in: {message}."
         		},
 				"ping": {
-				    "normal": "✨ {user} Your moment has arrived! Your Notis are waiting with {prefix}notis.",
-				    "christmas": "🌟 {user} The festive break is over! Your Notis are waiting with {prefix}notis.",
-				    "halloween": "👻 {user} The spooky break is over! Your Notis are ready with {prefix}notis.",
-				    "easter": "🥚 {user} Welcome back! Your Notis are ready with {prefix}notis.",
-				    "birthday": "🥳 {user} Happy Birthday! Your Notis are waiting with {prefix}notis.",
-				    "mothersday": "💖 {user} Your break is over! Mom’s Notis are ready with {prefix}notis.",
-				    "fathersday": "🍻 {user} The pause is over! Dad’s Notis are ready with {prefix}notis.",
-				    "maythe4th": "🚀 {user} The galaxy calls! Your Notis are ready with {prefix}notis."
+				    "normal": "✨ {user} Your moment has arrived! Your Notis are waiting with {prefix}notis",
+				    "christmas": "🌟 {user} The festive break is over! Your Notis are waiting with {prefix}notis",
+				    "halloween": "👻 {user} The spooky break is over! Your Notis are ready with {prefix}notis",
+				    "easter": "🥚 {user} Welcome back! Your Notis are ready with {prefix}notis",
+				    "birthday": "🥳 {user} Happy Birthday! Your Notis are waiting with {prefix}notis",
+				    "mothersday": "💖 {user} Your break is over! Mom’s Notis are ready with {prefix}notis",
+				    "fathersday": "🍻 {user} The pause is over! Dad’s Notis are ready with {prefix}notis",
+				    "maythe4th": "🚀 {user} The galaxy calls! Your Notis are ready with {prefix}notis"
 				}
 			},
 			"3": {
-				"start": "📦 Loading modules...",
+				"start": "📦 [{time}] {user|antiping} system:~{rootSymbole} load-modules --init",
 				"chest": {
         		    "normal": "💾 A chest was discovered inside the modules you opened it and received {notis} Notis!",
         		    "christmas": "🎁 One module was gift-wrapped inside: {notis} Notis and some digital gingerbread!",
@@ -960,18 +962,18 @@
         		    "maythe4th": "⭐ May the break be short! We'll be back in: {message}."
         		},
 				"ping": {
-				    "normal": "✨ {user} Your moment is here! Your Notis are ready with {prefix}notis.",
-				    "christmas": "🌟 {user} The festive break is over! Your Notis are waiting with {prefix}notis.",
-				    "halloween": "👻 {user} The spooky break is done! Your Notis are ready with {prefix}notis.",
-				    "easter": "🥚 {user} Welcome back! Your Notis are ready with {prefix}notis.",
-				    "birthday": "🥳 {user} Happy Birthday! Your Notis are ready with {prefix}notis.",
-				    "mothersday": "💖 {user} Your short break is over! Mom’s Notis are ready with {prefix}notis.",
-				    "fathersday": "🍻 {user} The pause is over! Dad’s Notis are ready with {prefix}notis.",
-				    "maythe4th": "🚀 {user} The galaxy calls! Your Notis are ready with {prefix}notis."
+				    "normal": "✨ {user} Your moment is here! Your Notis are ready with {prefix}notis",
+				    "christmas": "🌟 {user} The festive break is over! Your Notis are waiting with {prefix}notis",
+				    "halloween": "👻 {user} The spooky break is done! Your Notis are ready with {prefix}notis",
+				    "easter": "🥚 {user} Welcome back! Your Notis are ready with {prefix}notis",
+				    "birthday": "🥳 {user} Happy Birthday! Your Notis are ready with {prefix}notis",
+				    "mothersday": "💖 {user} Your short break is over! Mom’s Notis are ready with {prefix}notis",
+				    "fathersday": "🍻 {user} The pause is over! Dad’s Notis are ready with {prefix}notis",
+				    "maythe4th": "🚀 {user} The galaxy calls! Your Notis are ready with {prefix}notis"
 				}
 			},
 			"4": {
-				"start": "🌐 Checking connection...",
+				"start": "🌐 [{time}] {user|antiping} system:~{rootSymbole} ping-server --check",
         		"chest": {
         		    "normal": "🔍 Connection stable! You earned {notis} Notis for the successful check.",
         		    "christmas": "🎅 Connection holds strong even under the Christmas tree! {notis} Notis awarded.",
@@ -1034,7 +1036,7 @@
 				}
 			},
 			"5": {
-			 	"start": "🗄️ Starting database sync...",
+			 	"start": "🗄️ [{time}] {user|antiping} system:~{rootSymbole} db-sync --start",
 				"chest": {
         		    "normal": "🗄️ Database system is running at {notis}% (That's the amount you get)",
         		    "christmas": "🎅 The database system is festively optimized and running at {notis}% Merry Data Holidays (That's the amount you get)",
@@ -1097,7 +1099,7 @@
 				}
 			},
 			"6": {
-				"start": "✅ Completing synchronization...",
+				"start": "✅ [{time}] {user|antiping} system:~{rootSymbole} db-sync --complete",
 				"chest": {
         		   	"normal": "📦 A mysterious chest appeared during the sync! You opened it and found {notis} Notis!",
         		   	"christmas": "🎄 A holiday chest appeared during syncing full of {notis} Notis just for you!",
@@ -1160,7 +1162,7 @@
 				}
 			},
 			"7": {
-				"start": "🔎 Analyzing log files...",
+				"start": "🔎 [{time}] {user|antiping} system:~{rootSymbole} log-analyze --run",
 				"chest": {
         		    "normal": "📁 You uncover secret logs about a traitor! Your commander rewards you with {notis} Notis!",
         		    "christmas": "🎄 Hidden in the logs is a festive data packet... you open it and receive {notis} Notis!",
@@ -1212,7 +1214,7 @@
         		    "maythe4th": "🌌 Processor got hit by droid heat rays – cooling down in {message}"
         		},
 				"ping": {
-				    "normal": "{user} ! Your CPU has cooled down. 🌡️ You can now grab your Notis with {prefix}notis.",
+				    "normal": "{user} ! Your CPU has cooled down. 🌡️ You can now grab your Notis with {prefix}notis",
 				    "christmas": "{user} ! The CPU is ice-cold again! ❄️ Your Notis are ready for the gift-giving with {prefix}notis",
 				    "halloween": "{user} ! The spooky time is over, the CPU is back to normal temperature. 👻 Grab your Notis with {prefix}notis",
 				    "easter": "{user} ! The CPU has crawled out of its nest and is top fit. 🥚 Your Notis are waiting with {prefix}notis",
@@ -1223,7 +1225,7 @@
 				}
 			},
 			"8": {
-				"start": "📊 Calculating resources...",
+				"start": "🧮 [{time}] {user|antiping} system:~{rootSymbole} calc-resources --run",
 				"chest": {
         		    "normal": "📊 Your resource analysis was successful! You found a reward chest containing {notis} Notis.",
         		    "christmas": "🎄 While scanning resources, you found a festively wrapped crate it contains {notis} Notis!",
@@ -1286,7 +1288,7 @@
 				}
 			},
 			"9": {
-				"start": "💼 Calculating resources...",
+				"start": "💼 [{time}] {user|antiping} system:~{rootSymbole} analyze-resources --init",
 				"chest": {
         		    "normal": "💼 Your calculation was a success! You find a hefty reward chest with {notis} Notis inside.",
         		    "christmas": "🎁 A festive resource crate appears it contains {notis} Notis just for you!",
@@ -1308,7 +1310,7 @@
         		    "maythe4th": "🌌 Your resources shine like a Jedi crystal! {notis} Notis for your courage!"
         		},
         		"lose": {
-        		    "normal": "💥 Boom! Resource check blew up you lost {notis} Notis like a T-34 crushing everything!",
+        		    "normal": "💥 Boom! Resource check blew up you lost {notis} Notis",
         		    "christmas": "🎄 Christmas chaos! The reindeer stole the resources {notis} Notis vanished like presents under the tree!",
         		    "halloween": "👻 Spooky alert! Resources vanished like a ghost in the fog {notis} Notis gone!",
         		    "easter": "🥚 Egg emergency! Resources cracked like Easter eggs {notis} Notis flying everywhere!",
@@ -1349,7 +1351,7 @@
 				}
 			},
 			"10": {
-				"start": "🚀 Loading final status...",
+				"start": "🚀 [{time}] {user|antiping} system:~{rootSymbole} load-final-status --run",
 				"chest": {
         		    "normal": "🚀 Final status loaded! You open the end chest and find {notis} Notis as your reward.",
         		    "christmas": "🎄 The final status shines festive a gift chest with {notis} Notis awaits you!",
@@ -1371,13 +1373,13 @@
         		    "maythe4th": "⚔️ May the win be with you! {notis} Notis as a reward from a galaxy far, far away!"
         		},
         		"lose": {
-        		    "normal": "💥 Boom! Final status failed you lost {notis} Notis like a T-34 crushing everything!",
+        		    "normal": "💥 Boom! Final status failed you lost {notis} Notis",
         		    "christmas": "🎄 Christmas chaos! The reindeer stole {notis} Notis, gone like presents under the tree!",
         		    "halloween": "👻 Spooky alert! Final status haunted {notis} Notis vanished in the fog!",
         		    "easter": "🥚 Egg emergency! Final status cracked {notis} Notis flying everywhere!",
         		    "birthday": "🎉 Party crash! Final status partied too hard {notis} Notis blown out like candles!",
         		    "mothersday": "🌷 Mom sabotaged the final status with coffee {notis} Notis faded away!",
-        		    "fathersday": "🔧 Dad smashed the final status {notis} Notis broken like an IS-3 in the garage!",
+        		    "fathersday": "🔧 Dad smashed the final status {notis} Notis broken!",
         		    "maythe4th": "⚔️ May the Force not be with you {notis} Notis lost in a galaxy far, far away!"
         		},
         		"nothing": {
@@ -1407,7 +1409,7 @@
 				    "easter": "🥚 The Easter egg update is found, {user} ! The server is ready. Your Notis are ready to collect with {prefix}notis",
 				    "birthday": "🥳 The party is over, {user} ! The server is out of party mode. Collect your Notis with {prefix}notis",
 				    "mothersday": "💐 {user} Mom says you earned it! Grab your Notis with {prefix}notis",
-				    "fathersday": "{user} Dad says: Here’s your special mission, collect your Notis with {prefix}notis 👍",
+				    "fathersday": "{user} Dad says: Here’s your special mission, collect your Notis with {prefix}notis",
 				    "maythe4th": "{user} May the Notis be with you! Use {prefix}notis to collect them"
 				}
 			}
