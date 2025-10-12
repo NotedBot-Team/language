@@ -17,9 +17,9 @@
 			},
 			"remove": {
 				"usage": "{FeelsDankMan|wydiosStop} ➜ Please type {usage} remove <EmoteName/EmoteID> [More Emotes/More Emote Ids...]",
-				"notSuccess": "FeelsBadMan 👎 Emote ` {emote} ` could not be removed",
+				"notSuccess": "{FeelsBadMan 👎|wydiosSad} Emote ` {emote} ` could not be removed",
 				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` successfully removed",
-				"moreFinal": "FeelsOkayMan ➜ 👍 {removedcount} Emotes successfully removed • 👎 {failedcount} Emotes ({failedlist}) could not be removed"
+				"moreFinal": "{FeelsOkayMan|wydiosThink} ➜ 👍 {removedcount} Emotes successfully removed • 👎 {failedcount} Emotes ({failedlist}) could not be removed"
 			},
 			"replace": {
 				"usage": "{FeelsDankMan|wydiosStop} ➜ Please type {usage} replace <EmoteName> <EmoteLink>",
@@ -36,7 +36,7 @@
 				"usage": "{FeelsDankMan|wydiosStop} ➜ Please type {usage} yoink <Channel> <EmoteName> <Optional: EmoteName>",
 				"self": "⛔ ➜ You can't Yoinked Emotes because they are already here",
 				"noFound": "⚠️ ➜ Emote ` {emote} ` not found in Channel",
-				"nameConflict": "📛 ➜ The emote name ` {emote} ` is already occupied by your channel",
+				"nameConflict": "⛔ ➜ The emote name ` {emote} ` is already occupied by your channel",
 				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` from Channel {channel|antiping} geyoinkt",
 				"yoinked": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` successfully yoinked"
 			},
@@ -53,7 +53,7 @@
 			},
 			"cosmetics": {
 				"presence": {
-					"nopresence": "🛑 ➜ {user|antiping} is not in my Presence database. They can add themselves with {prefix}autopresence add",
+					"nopresence": "🛑 ➜ {user|antiping} is not in my presence database. He can be added with {prefix}autopresence",
 					"status": "(7TV) ➜ Presence status for {user|antiping} • Presence: {presence} • 7TV Sub: {stvsub}",
 					"notyou": "🚫 ➜ {user|antiping} must decide for themselves if they want AutoPresence. Tell them to use {prefix}autopresence",
 					"nosub": "⚠️ You don’t have an active 7TV subscription",
@@ -63,15 +63,15 @@
   				},
   				"badge": {
 					"noFounds": "⚠️ ➜ I didn't find any 7tv badges",
-    				"info": "(7TV) ➜ Badge: {badgeName} • Badge ID: {badgeId} • Badge description: {badgeDescription} • Preview: {preview} • added {create} ago",
+    				"info": "(7TV) ➜ Badge: {badgeName} • Badge ID: {badgeId} • Badge description: {badgeDescription} • Preview: {preview}",
     				"no": "(7TV) ➜ {user|antiping} has no 7tv badge",
-    				"user": "(7TV) ➜ {user|antiping} badge are ` {badgeName} ` • Badge ID: {badgeId} • Badge description: {badgeDescription} • Preview: {preview} • Vanity: {vanity} • added {create} ago"
+    				"user": "(7TV) ➜ {user|antiping} badge are ` {badgeName} ` • Badge ID: {badgeId} • Badge description: {badgeDescription} • Preview: {preview} • Vanity: {vanity}"
   				},
   				"paint": {
 					"noFounds": "⚠️ ➜ I didn't find any 7tv paints",
-    				"info": "(7TV) ➜ Paint: {paintName} • Paint ID: {paintId} • Preview: {preview} • added {create} ago",
+    				"info": "(7TV) ➜ Paint: {paintName} • Paint ID: {paintId} • Preview: {preview}",
     				"no": "(7TV) ➜ {user|antiping} has no 7tv paint",
-    				"user": "(7TV) ➜ {user|antiping} paint are ` {paintName} ` • Paint ID: {paintId} • Preview: {preview} • Vanity: {vanity} • added {create} ago"
+    				"user": "(7TV) ➜ {user|antiping} paint are ` {paintName} ` • Paint ID: {paintId} • Preview: {preview} • Vanity: {vanity}"
   				}
 			},
 			"subage": {
@@ -149,30 +149,34 @@
 			"success": "BOOBA ➜ @{user} • Viewer: {viewer} • Preview: {image} • Link: www.twitch.tv/{user}"
 		},
 		"antiping": {
-			"disabled": "FeelsOkayMan 👍 {user} I will ping you again in messages",
-			"enabled": "FeelsOkayMan 👍 {user|antiping} I will no longer ping you in messages",
+			"disabled": "{FeelsOkayMan 👍|wydiosOk} {user} I will ping you again in messages",
+			"enabled": "{FeelsOkayMan 👍|wydiosOk} {user|antiping} I will no longer ping you in messages",
 			"test": "{ping}"
 		},
 		"channel": {
 			"emotes": {
 				"noEmotes": "{FeelsDankMan|wydiosStop} ➜ I didn't find any emotes",
-				"start": "FeelsOkayMan ➜ Here are all {list} emotes (Total: {count} • {details}) in this channel:"
+				"start": "{FeelsOkayMan|wydiosOk} ➜ Here are all {list} emotes (Total: {count} • {details}) in this channel:"
 			},
 			"lang": {
 				"usage": "{FeelsDankMan|wydiosStop} ➜ Current lang ` {lang} ` to change {prefix}{trigger} lang <de • en • on • off> (de/en for language and on/off to toggle personalized languages [{prefix}lang])",
-				"change": "FeelsOkayMan 👍 Language set to {lang} • to see all commands do {prefix}commands",
-				"off": "FeelsOkayMan 👍 Language is now free for everyone. You can set it yourself with {prefix}lang <de • en>",
-				"on": "FeelsOkayMan 👍 I will now speak only German in this channel"
+				"change": "{FeelsOkayMan 👍|wydiosOk} Language set to {lang} • to see all commands do {prefix}commands",
+				"off": "{FeelsOkayMan 👍|wydiosOk} Language is now free for everyone. You can set it yourself with {prefix}lang <de • en>",
+				"on": "{FeelsOkayMan 👍|wydiosOk} I will now speak only {lang} in this channel"
 			},
 			"mode": {
 				"usage": "⚠️ ➜ Please type {prefix}{trigger} mode <1 • 2 • 3> (🔴 1 Online Only, 🔴 2 Offline Only, 🟢 3 = Gemini Mode)",
-				"geminiOn": "FeelsOkayMan 👍 The Gemini Mode has been activated! Just type {name} to chat with the AI",
-				"geminiOff": "FeelsOkayMan 🛑 Gemini Mode deactivated! AI chat is now off"
+				"geminiOn": "{FeelsOkayMan 👍|wydiosOk} The Gemini Mode has been activated! Just type {name} to chat with the AI",
+				"geminiOff": "{FeelsOkayMan 🛑|wydiosOk} Gemini Mode deactivated! AI chat is now off"
 			}
 		},
 		"chatterino": "{FeelsDankMan|wydiosOk} ➜ All Chatterino Variants • Normal: {normal} • Homies: {homies} • 7TV: {stv} • Technorino: {techorino}",
 		"chatters": "Currently, there are {count} users in the chat {channel}",
 		"noChatters": "⚠️ ➜ No Chatters found",
+		"checkname": {
+			"no": "{peepoSad|wydiosSad} ➜ Username ` {user} ` is no longer available",
+			"yes": "{FeelsOkayMan|wydiosHacker} ➜ Username ` {user} ` is available"
+		},
 		"clear": {
 			"start": "WEEWOO A nuke lands WEEWOO",
 			"running": "monkaS cvHazmat"
@@ -180,14 +184,14 @@
 		"clip": {
   			"offline": "⚠️ ➜ You can't create clips for offline channels",
   			"perms": "⚠️ ➜ I don't have permission to create clips in that channel",
-  			"success": "FeelsOkayMan ➜ Here's your clip {channel} {link}"
+  			"success": "{FeelsOkayMan|wydiosOk} ➜ Here's your clip {channel} {link}"
 		},
 		"cmd": {
 			"usage": "{FeelsDankMan|wydiosStop} ➜ Please type {usage} <command>",
 			"notFound": "⚠️ ➜ Command {command} was not found",
 			"me": "{peepoSad|wydiosPout} ➜ Why do you want to deactivate me?",
-			"enable": "FeelsOkayMan 👍 Command {command} has been enabled",
-			"disable": "FeelsOkayMan 👍 Command {command} has been disabled",
+			"enable": "{FeelsOkayMan 👍|wydiosOk} Command {command} has been enabled",
+			"disable": "{FeelsOkayMan 👍|wydiosOk} Command {command} has been disabled",
 			"check": "{FeelsOkayMan|wydiosOk} ➜ The Command {command} is {mode}"
 		},
 		"coinflip": {
@@ -237,6 +241,7 @@
 				"error": "⚠️ ➜ Suggestion/Report not found with ID: {id}",
 				"finish": "{FeelsOkayMan 👍|wydiosOk} Suggestion/Report with ID {id} was successfully completed",
 				"alertChannel": "BillyApprove ➜ {user} Your suggestion/report with the ID: {id} has been processed. Thanks for the message",
+				"commit": "• Message from Dev: {commit}",
 				"delete": "{FeelsOkayMan 👍|wydiosOk} Suggestion/Report with ID {id} was successfully deleted",
 				"noFound": "⚠️ ➜ No suggestions/reports found",
 				"list": "{FeelsDankMan|wydiosStop} ➜ Here is a list of all suggestions/reports: {link}"
@@ -259,6 +264,10 @@
 		    "prefix": "{PoroSad|wydiosSad} ➜ My channel prefix is `!`. Since {bot} is also here, please change my prefix with !prefix or triggers might get messy 💡 Or type !!{usage} to bypass it"
 		},
 		"duhu": "{user} • {message}",
+		"eval": {
+			"sql": "⛔ ➜ Database codes are only meant for {prefix}sql",
+			"code": "{FeelsDankMan|wydiosDebug} ➜"
+		},
 		"ezgif": {
     		"noEmote": "⚠️ ➜ I couldn't find any emote",
     		"emote": "{FeelsDankMan|wydiosOk} ➜ ezGif link for ` {emote} ` {link}"
@@ -270,7 +279,7 @@
 		},
 		"founders": {
    			"noFounders": "⚠️ ➜ No founders found in channel {user}",
-   			"founders": "There are {founders|antiping} founders in channel {user|antiping} ({active} active in chat) {list}"
+   			"founders": "There are {founders} founders in channel {user|antiping} ({active} active in chat) {list}"
 		},
 		"gamba": {
     		"isNan": "⚠️ ➜ Please enter a valid number. Example: {prefix}{trigger} 100",
@@ -300,7 +309,7 @@
 			"creat": "🤖⏳ ➜ Generating message...",
 			"short": "🤖 WineTime ➜ {message}... {link}",
 			"text": "🤖 WineTime ➜ {message}",
-			"error": "🛑 ➜ Create error in the text{err}"
+			"error": "🛑 ➜ Create error in the text {err}"
 		},
 		"give": {
     		"your": "⚠️ ➜ You can't give Notis to yourself.",
@@ -310,15 +319,22 @@
     		"isNan": "⚠️ ➜ Please enter a valid number. Example: {prefix}{trigger} {user} 100",
 			"zeroNotis": "🚫 ➜ You can not give 0 Notis",
     		"notEnough": "🚫 ➜ You don't have enough Notis to gift. You currently have {notis} Notis.",
-    		"set": "Loading . . .",
-    		"gived": "🎁 A gift has been opened! {user|antiping} gives {notis} Notis to {receiver|antiping} • 🏦 You now have {nowNotis} Notis and {receiver|antiping} now has {userNotis} Notis.",
-    		"bonus": "🎉 Congrats {user|antiping}, you received {notis} Notis as a bonus for giving {giftetNotis} Notis! Keep being a generous gifter. New Notis balance: {nowNotis} Notis."
+    		"gived": "🎁 A gift has been opened! {user|antiping} gives {notis} Notis to {receiver|antiping} • 🏦 You now have {nowNotis} Notis and {receiver|antiping} now has {userNotis} Notis"
 		},
 		"globalannounce": {
-			"noMod": "💡 Notice: I’m not a moderator or vip. Because of this, Twitch’s rate limits might prevent the message from being sent",
-			"OnOff": "{FeelsOkayMan 👍|wydiosOk} All global notifications (from: Badge/Emotes/7TV) have been {mode}",
-			"twitch": "{FeelsOkayMan 👍|wydiosOk} imGlitch Global ` {value} ` message was {mode}",
-			"stv": "{FeelsOkayMan 👍|wydiosOk} (7TV) Global Notification ` Badge/Paint ` was {mode}" 
+		    "noMod": "💡 Note: I am not a Moderator or VIP. Twitch's rate limits might prevent the message from being sent",
+		    "OnOff": "{FeelsOkayMan 👍|wydiosOk} All global notifications (from Badge/Emotes/7TV) have been {mode}",
+		    "twitch": "{FeelsOkayMan 👍|wydiosOk} imGlitch Global `{value}` message has been {mode}",
+		    "stv": "{FeelsOkayMan 👍|wydiosOk} (7TV) Global Notification `Badge/Paint` has been {mode}",
+		    "allFeaturesMe": "{FeelsOkayMan 👍|wydiosOk} `Me` for all features has been {mode}",
+		    "featureMe": "{FeelsOkayMan 👍|wydiosOk} `Me` for `{value}` has been {mode}"
+		},
+		"globalping": {
+		    "notEnabled": "{FeelsDankMan|wydiosStop} ➜ There is no global announce message for {feature}. A moderator can enable it with {prefix}globalannounce {feature}",
+		    "ping": {
+		        "added": "{FeelsOkayMan 👍|wydiosOk} You will be pinged when a global {feature} announce happens",
+		        "removed": "{FeelsOkayMan 👍|wydiosOk} You will no longer be pinged when a global {feature} announce happens"
+		    }
 		},
 		"gonner": "uuh ➜ Here’s a Gooner EmoteSet: {link}",
 		"gooning": "🤤 💦 {goon} on {link}",
@@ -327,12 +343,20 @@
 			"command": "FeelsDankMan ➜ Command: {name} • Aliases: {aliases} • Description: {description} • Usage: {usage} • Category: {category} • Cooldown: {cooldown} • Permission: {permission}"
 		},
 		"join": {
-  			"rejoin": "peepoHappy ➜ I'm back!",
+  			"rejoin": "{peepoHappy|wydiosHappy} ➜ I'm back!",
   			"botRejoined": "FeelsDankMan ➜ I've updated your channel and rejoined it.",
   			"allReady": "FeelsDankMan TeaTime ➜ I'm already in your channel. If you forgot my prefix, use ` {name} prefix? ` or let me rejoin with !rejoin",
   			"rejoining": "ppCircle ➜ {user}, I'm rejoining your channel...",
-  			"rejoinSuccess": "FeelsOkayMan 👍 I've successfully rejoined your channel.",
-  			"add": "peepoHappy Please add me via the website ➜ {website}"
+  			"rejoinSuccess": "{FeelsOkayMan 👍|wydiosOk} I've successfully rejoined your channel.",
+  			"add": "{peepoHappy|wydiosHappy} Please add me via the website ➜ {website}"
+		},
+		"karaoke": {
+   			"stopped": "{FeelsDankMan|wydiosOk} ➜ The karaoke has been stopped",
+   			"notRunning": "⚠️ ➜ There is currently no karaoke running",
+   			"noLyrics": "{peepoSad|wydiosSad} ➜ No lyrics found for the song `{song}` by {artist}",
+			"isRunning": "{FeelsDankMan|wydiosStop} ➜ There is already a karaoke playing. You can stop it with {prefix}karaokestop",
+			"start": "{peepoHappy|wydiosHappy} ➜ Karaoke for `{song}` by {artist} is starting now...",
+   			"end": "{FeelsOkayMan|wydiosOk} ➜ Karaoke finished, thanks for singing along"
 		},
 		"kok": "{emote} ➜ The kok of {user} is {size}cm long",
 		"lang": {
@@ -421,13 +445,13 @@
     			"demorsed": "{FeelsOkayMan|wydiosOk} ➜ Here is your decoded Morse code: {demorse}"
   			}	
 		},
-		"overlay": "{FeelsOkayMan|wydiosOk} 👉 Here are chat overlays {link}",
-		"paste": "{FeelsOkayMan|wydiosOk} 👉 {link}",
+		"overlay": "{FeelsOkayMan 👉|wydiosOk} Here are chat overlays {link}",
+		"paste": "{FeelsOkayMan 👉|wydiosOk} {link}",
 		"permission": {
   			"bot": "➜ {user|antiping} Bot permission is ` {botRank} `",
 			"channel": " and channel permission is ` {channelRank} `",
 			"info": "⚠️ Note: For other users, only the permissions stored in the database are displayed",
-  			"noPerms": "⚠️ ➜ You don't have the rights to change other users' permissions",
+  			"noPerms": "⚠️ ➜ You don't have the rights to change other users permissions",
   			"your": "⚠️ ➜ You can't change your own permissions",
   			"changed": "{FeelsOkayMan 👍|wydiosOk} Permission for {user} has been set to `{rank}`"
 		},
@@ -443,7 +467,7 @@
 		"prestige": {
   			"noUser": "🛑 ➜ You are not in my database yet, please add yourself with {prefix}notis",
   			"canNot": "🚫 ➜ Your current Prestige Level: {prestige} 💎 • You still need {needNotis} Notis 🎯 • 🪙 Current Salary: {minReward}–{maxReward} Notis | With Prestige {prestige2} your salary increases to {nextMinReward}–{nextMaxReward} Notis • 🏦 Your current balance is {notis} Notis",
-  			"confirm": "{FeelsOkayMan 👍|wydiosOk} Congrats! Your prestige level increased to {level} • 🏦 New balance: {notis}"
+  			"confirm": "{FeelsOkayMan 👍|wydiosOk} Congratulations! Your prestige has been increased to level {level} • 🏦 New account balance: {notis} Notis"
 		},
 		"remind": {
 			"add": {
@@ -491,8 +515,8 @@
   			"noSpamFound": "⚠️ ➜ No active spam was found"
 		},
 		"sql": {
-  			"eval": "⛔ ➜ Database codes are only meant for {prefix}sql",
-  			"parameter": "⚠️ ➜ You have {parameters} placeholders (?) but only provided {parms} parameters"
+  			"parameter": "⚠️ ➜ You have {parameters} placeholders (?) but only provided {parms} parameters",
+			"code": "{FeelsDankMan|wydiosDebug} ➜ {query}"
 		},
 		"stats": {
     		"noUser": "🛑 ➜ {user|antiping} is not in my database. Use {prefix}notis to register!",
@@ -539,7 +563,7 @@
 		},
 		"suggest": {
 			"error": "⚠️ ➜ The suggestion/report already exists",
-			"creat": "peepoHappy PETPET ➜ Thanks for a suggestion/report We'll process it as quickly as possible (ID: {id})"
+			"creat": "{peepoHappy PETPET|wydiosLove} ➜ Thanks for a suggestion/report We'll process it as quickly as possible (ID: {id})"
 		},
 		"test": {
 			"fail": "{❌|wydiosSad} The test failed WineTime",
@@ -562,11 +586,11 @@
 		},
 		"user": {
 			"userbanned": {
-				"indefinite": "⛔ {user} is banned reason: TOS (Terms of Service) monkaS",
-				"temporary": "⛔ {user} is temporally banned reason: TOS (Terms of Service) monkaS",
-				"deactivated": "🌃 {user} ist Deaktiviert peepoSad",
-				"dmca": "copyThis {user} is banned reason: Digital Millennium Copyright Act Squid1 Squid2 Squid3 Squid4",
-				"nothing": "{user}"
+				"indefinite": "⛔ {user|antiping} is banned reason: TOS (Terms of Service) monkaS",
+				"temporary": "⛔ {user|antiping} is temporally banned reason: TOS (Terms of Service) monkaS",
+				"deactivated": "🌃 {user|antiping} ist Deaktiviert peepoSad",
+				"dmca": "copyThis {user|antiping} is banned reason: Digital Millennium Copyright Act Squid1 Squid2 Squid3 Squid4",
+				"nothing": "{user|antiping}"
 			},
 			"msg": "• id: {id} • {role} • {color} • Follower: {follower} • Badge: {badge} • Prefix: {prefix} • Bio: {bio} • Created on: {creat} • Emotes: {emotes} • Links: {links} {partyparrot}",
 			"id": "imGlitch {id}",
@@ -582,10 +606,10 @@
 		},
 		"vips": {
 			"noVips": "⚠️ ➜ No VIPs found in channel {user|antiping}",
-			"vips": "There are {vips|antiping} VIPs in channel {user} ({active} active in chat) {list}"
+			"vips": "There are {vips} VIPs in channel {user|antiping} ({active} active in chat) {list}"
 		},
 		"waifu": "😳 what do we have here? {link}",
-		"website": "peepoHappy ➜ Here you can find my {page}: {link}",
+		"website": "{peepoHappy|wydiosHacker} ➜ Here you can find my {page}: {link}",
 		"users": {
 			"wydios": {
 				"1": "{time} {user|antiping}: Gpt said it works: const kok = size: number => { if size return }",
@@ -632,20 +656,20 @@
 			"broadcaster": "🚫 ➜ You need to be Broadcaster to use this command",
 			"dev": "🚫 ➜ You need to be Developer to use this command",
 			"admin": "🚫 ➜ You need to be Administrator to use this command",
-			"error": "Shrug ➜ Permission error, dink Wydios"
+			"error": "{Shrug|wydiosShrug} ➜ Permission error, dink Wydios"
 		},
 		"ignore": {
-			"user": "RarePepe ➜ You are on the ignore list • Reason: {reason}",
+			"user": "{RarePepe|wydiosThink} ➜ You are on the ignore list • Reason: {reason}",
 			"bot": "MrDestructoid ➜ You are marked as a bot"
 		},
-		"stvDown": "peepoSad ➜ 7tv is currently down",
-		"badWord": "⛔☝️ ➜ I don't say that",
-		"misstake": "⚠️☝️ ➜ An error occurred, you can report it with {prefix}suggest",
+		"stvDown": "{peepoSad|wydiosPout} ➜ 7tv is currently down, try again later",
+		"badWord": "{⛔️☝️|wydiosShook} ➜ I don't say that",
+		"misstake": "{⚠️☝️|wydiosSad} ➜ An error occurred, you can report it with {prefix}suggest",
 		"accAvailable": "• name is available",
 		"accNotAvailable": "• name is not available",
 		"noAcc": "imGlitch ➜ No Twitch account found for ` {user} `",
-		"noMod": "monkaS cvHazmat ➜ I require Mod permissions",
-		"noVip": "monkaS WineTime ➜ I require VIP permissions"
+		"noMod": "{monkaS cvHazmat|wydiosShrug} ➜ I require Mod permissions",
+		"noVip": "{monkaS WineTime|wydiosShrug} ➜ I require VIP permissions"
 	},
 
 	"event": {
@@ -661,13 +685,14 @@
 		},
 		"prefix": "{FeelsOkayMan 👍|wydiosOk} ➜ My channel prefix is ` {prefix} `",
 		"stv": "DinoDance ➜ {user|antiping} Please install 7tv link: https://7tv.app/",
+		"sad": "{peepoSad|wydiosSad}",
 		"streak": {
-    		"increment": "peepoHappy ➜ {user|antiping} has set the streak ` {streak} ` to {count}",
-    		"broken": "peepoSad ➜ The streak has been broken. Last status: {last}, Max streak: {max}"
+    		"increment": "{peepoHappy|wydiosHappy} ➜ {user|antiping} has set the streak ` {streak} ` to {count}",
+    		"broken": "{peepoSad|wydiosSad} ➜ The streak has been broken. Last status: {last}, Max streak: {max}"
 		},
 		"notification": {
 			"badge": {
-				"newBadge": "imGlitch New Global Badge ➜ {badgeName} (id: {badgeId})",
+				"newBadge": "imGlitch New Global Badge ➜ {badgeName} (id: {badgeId}, v{versionId})",
 				"removedBadge": "imGlitch Global Badge removed ➜ {badgeName}"
 			},
 			"emote": {
@@ -698,15 +723,16 @@
 				"message": " • {message}",
 				"pings": " • dinkDonk {users}"
 			},
-			"offline": "Saj @{user} is now {offline|wydiosOffline}"
+			"offline": "Saj @{user} is now {offline|wydiosOffline}",
+			"ping": "• dinkDonk {pings}"
 		},
 		"ban": {
-			"unban": "peepoHappy Clap Welcome back to Twitch {user}"
+			"unban": "{peepoHappy|wydiosLove} Clap Welcome back to Twitch {user}"
 		}
 	},
 
 	"afk": {
-		"afk": "peepoHappy ➜ {user}",
+		"afk": "{peepoHappy|wydiosHappy} ➜ {user}",
 		"bedge": "GuMo ➜ {user}",
 		"unknown": "➜ {user}",
 		"duration": "Duration: {time}",
@@ -773,8 +799,8 @@
 	},
 
 	"notis": {
-		"daily": "Daily Bonus 🎉 You received your daily bonus of {reward} Notis",
-		"newUser": "Welcome, {user|antiping}! 🎉 Glad to have you in the Notis system. You can type {prefix}notis every hour to get more Notis. You start with 100 Notis, use them wisely!",
+		"daily": "🎉 Daily Bonus You received your daily bonus of {reward} Notis",
+		"newUser": "🎉 Welcome aboard, {user|antiping}! Your adventure in the Notis-Universe begins now. With {prefix}notis you can collect new Notis every hour. As a starting bonus, you receive 100 Notis. Use them wisely!",
 		"status": {
     		"cd": "⏳ {time} CD",
     		"bank": "🏦 Balance: {notis} Notis",
@@ -786,14 +812,14 @@
 			"1": {
 				"start": "💻 [{time}] {user|antiping} system:~{rootSymbole} debug --start",
 				"chest": {
-            		"normal": "🔥 You opened a debug chest and found {notis} Notis inside! Pag",
-            		"christmas": "🎄 You opened a festive debug chest... and discovered {notis} Notis hidden between gingerbread code and fairy lights!",
-            		"halloween": "🎃 The cursed debug chest creaks open... and spits out {notis} spooky Notis!",
-            		"easter": "🐰 Inside the debug chest was an Easter egg filled with {notis} sweet Notis!",
-            		"birthday": "🎉 Birthday chest unlocked! It bursts with joy and hands you {notis} party Notis! 🎁",
-            		"mothersday": "💐 Mom packed the debug chest obviously filled with {notis} caring Notis!",
-            		"fathersday": "🛠️ Dad-style debug chest opened! Between the tools, you find {notis} solid Notis!",
-            		"maythe4th": "🛸 The debug chest hums like a lightsaber you pull out {notis} galactic Notis. May the code be with you!"
+            		"normal": "🔥~💰 You opened a debug chest and found {notis} Notis inside! Pag",
+            		"christmas": "🎄~💰 You opened a festive debug chest... and discovered {notis} Notis hidden between gingerbread code and fairy lights!",
+            		"halloween": "🎃~💰 The cursed debug chest creaks open... and spits out {notis} spooky Notis!",
+            		"easter": "🐰~💰 Inside the debug chest was an Easter egg filled with {notis} sweet Notis!",
+            		"birthday": "🎉~💰 Birthday chest unlocked! It bursts with joy and hands you {notis} party Notis! 🎁",
+            		"mothersday": "💐~💰 Mom packed the debug chest obviously filled with {notis} caring Notis!",
+            		"fathersday": "🛠️~💰 Dad-style debug chest opened! Between the tools, you find {notis} solid Notis!",
+            		"maythe4th": "🛸~💰 The debug chest hums like a lightsaber you pull out {notis} galactic Notis. May the code be with you!"
         		},
         		"win": {
         		    "normal": "🔥 Debugging complete! You receive {notis} Notis. heCrazy",
@@ -806,7 +832,7 @@
         		    "maythe4th": "🌌 The Dark Lord has flooded your debug with errors! {notis} Notis are lost in a galaxy far, far away..."
         		},
        			"lose": {
-        		    "normal": "💥 Oh no, you lost and {notis} Notis slipped away like a plane without wings!",
+        		    "normal": "💥 Oh no, you lost and {notis} Notis slipped away!",
         		    "christmas": "🎄 Dang, your Christmas crate is empty! {notis} Notis vanished, as cold as winter night!",
         		    "halloween": "👻 Boo! You lost and {notis} Notis disappeared into the spooky fog!",
         		    "easter": "🐰 Oops, the Easter egg cracked! {notis} Notis hopped away like crazy bunnies!",
@@ -849,14 +875,14 @@
 			"2": {
 				"start": "⚙️ [{time}] {user|antiping} system:~{rootSymbole} init --boot",
 				"chest": {
-            		"normal": "🖥️ Systems running at 100% a chest containing {notis} Notis was discovered during startup.",
-            		"christmas": "🎄 A chest fell down the digital chimney inside: {notis} Notis and a sprinkle of cinnamon bytes!",
-            		"halloween": "🎃 A cursed script opened a spooky chest {notis} Notis crawled out of it!",
-            		"easter": "🐰 Boot sequence stumbled over an Easter nest {notis} Notis were hiding inside!",
-            		"birthday": "🎉 Birthday boot initiated confetti chest loaded with {notis} Notis!",
-            		"mothersday": "💐 Mom prepared a Notis chest during startup {notis} Notis, delivered with love!",
-            		"fathersday": "🛠️ Dad cracked open a startup chest with a wrench {notis} Notis inside, obviously!",
-            		"maythe4th": "🛸 A rare Republic chest was discovered in hyperspace containing {notis} Notis!"
+            		"normal": "🖥️~💰 Systems running at 100% a chest containing {notis} Notis was discovered during startup.",
+            		"christmas": "🎄~💰 A chest fell down the digital chimney inside: {notis} Notis and a sprinkle of cinnamon bytes!",
+            		"halloween": "🎃~💰 A cursed script opened a spooky chest {notis} Notis crawled out of it!",
+            		"easter": "🐰~💰 Boot sequence stumbled over an Easter nest {notis} Notis were hiding inside!",
+            		"birthday": "🎉~💰 Birthday boot initiated confetti chest loaded with {notis} Notis!",
+            		"mothersday": "💐~💰 Mom prepared a Notis chest during startup {notis} Notis, delivered with love!",
+            		"fathersday": "🛠️~💰 Dad cracked open a startup chest with a wrench {notis} Notis inside, obviously!",
+            		"maythe4th": "🛸~💰 A rare Republic chest was discovered in hyperspace containing {notis} Notis!"
         		},
         		"win": {
         		    "normal": "💡 System running smoothly! You earn {notis} stable Notis!",
@@ -912,14 +938,14 @@
 			"3": {
 				"start": "📦 [{time}] {user|antiping} system:~{rootSymbole} load-modules --init",
 				"chest": {
-        		    "normal": "💾 A chest was discovered inside the modules you opened it and received {notis} Notis!",
-        		    "christmas": "🎁 One module was gift-wrapped inside: {notis} Notis and some digital gingerbread!",
-        		    "halloween": "👻 While loading modules, a haunted chest appeared {notis} Notis were hiding in the dark!",
-        		    "easter": "🥚 Module 4B contained a hidden Easter chest {notis} Notis hopped out with joy!",
-        		    "birthday": "🎂 The birthday module delivered a surprise chest packed with {notis} Notis!",
-        		    "mothersday": "🧶 Mom patched the code and left a sweet chest inside: {notis} Notis and good vibes!",
-        		    "fathersday": "🔩 Dad fixed a module and found a chest behind it {notis} Notis earned like a boss!",
-        		    "maythe4th": "✨ A Jedi module loaded a secret cargo hold inside: {notis} Notis and a mini lightsaber!"
+        		    "normal": "💾~💰 A chest was discovered inside the modules you opened it and received {notis} Notis!",
+        		    "christmas": "🎁~💰 One module was gift-wrapped inside: {notis} Notis and some digital gingerbread!",
+        		    "halloween": "👻~💰 While loading modules, a haunted chest appeared {notis} Notis were hiding in the dark!",
+        		    "easter": "🥚~💰 Module 4B contained a hidden Easter chest {notis} Notis hopped out with joy!",
+        		    "birthday": "🎂~💰 The birthday module delivered a surprise chest packed with {notis} Notis!",
+        		    "mothersday": "🧶~💰 Mom patched the code and left a sweet chest inside: {notis} Notis and good vibes!",
+        		    "fathersday": "🔩~💰 Dad fixed a module and found a chest behind it {notis} Notis earned like a boss!",
+        		    "maythe4th": "✨~💰 A Jedi module loaded a secret cargo hold inside: {notis} Notis and a mini lightsaber!"
         		},
         		"win": {
         		    "normal": "✅ Modules loaded! You receive {notis} Notis as a reward!",
@@ -975,14 +1001,14 @@
 			"4": {
 				"start": "🌐 [{time}] {user|antiping} system:~{rootSymbole} ping-server --check",
         		"chest": {
-        		    "normal": "🔍 Connection stable! You earned {notis} Notis for the successful check.",
-        		    "christmas": "🎅 Connection holds strong even under the Christmas tree! {notis} Notis awarded.",
-        		    "halloween": "🎃 Connection spooky stable! {notis} Notis for you, ghostbuster.",
-        		    "easter": "🐣 Connection is hidden like an Easter egg here are {notis} Notis!",
-        		    "birthday": "🎉 Connection celebrating with you! {notis} Notis for your birthday boost.",
-        		    "mothersday": "💐 Connection running perfectly thanks to Mom! {notis} Notis for you.",
-        		    "fathersday": "🛠️ Connection tuned by Dad {notis} Notis as a reward!",
-        		    "maythe4th": "🛸 May the connection be with you! {notis} Notis secured."
+        		    "normal": "🔍~💰 Connection stable! You earned {notis} Notis for the successful check.",
+        		    "christmas": "🎅~💰 Connection holds strong even under the Christmas tree! {notis} Notis awarded.",
+        		    "halloween": "🎃~💰 Connection spooky stable! {notis} Notis for you, ghostbuster.",
+        		    "easter": "🐣~💰 Connection is hidden like an Easter egg here are {notis} Notis!",
+        		    "birthday": "🎉~💰 Connection celebrating with you! {notis} Notis for your birthday boost.",
+        		    "mothersday": "💐~💰 Connection running perfectly thanks to Mom! {notis} Notis for you.",
+        		    "fathersday": "🛠️~💰 Connection tuned by Dad {notis} Notis as a reward!",
+        		    "maythe4th": "🛸~💰 May the connection be with you! {notis} Notis secured."
         		},
         		"win": {
         		    "normal": "✅ Connection established! You receive {notis} Notis for your patience!",
@@ -1025,27 +1051,27 @@
         		    "maythe4th": "🚀 Ready for the next jump? Take a deep breath, the Force will be with you as soon as the waiting time of: {message} is over."
         		},
 				"ping": {
-				    "normal": "{user} ! Your break is over. ✅ You’re ready again! Grab your Notis with {prefix}notis",
-				    "christmas": "{user} ! The festive time is over. 🎅 Your energy is back! Your Notis are waiting with {prefix}notis",
-				    "halloween": "{user} ! The spooky break is done, you’re ready to continue! 🎃 Your Notis are here with {prefix}notis",
-				    "easter": "{user} ! The springtime rest did you good! 🐰 Your Notis are ready with {prefix}notis",
-				    "birthday": "{user} ! The celebration was great, now you’re refreshed! 🎂 Your Notis are waiting with {prefix}notis",
-				    "mothersday": "{user} ! The moment of rest is over! 💐 You’re full of love and energy. Your Notis are ready with {prefix}notis",
-				    "fathersday": "{user} ! The break is over, ready for new deeds! 💪 Your Notis are here with {prefix}notis",
-				    "maythe4th": "{user} ! The jump is near! ✨ The Force is with you. Your Notis are waiting with {prefix}notis"
+				    "normal": "{user} Your break is over. ✅ You’re ready again! Grab your Notis with {prefix}notis",
+				    "christmas": "{user} The festive time is over. 🎅 Your energy is back! Your Notis are waiting with {prefix}notis",
+				    "halloween": "{user} The spooky break is done, you’re ready to continue! 🎃 Your Notis are here with {prefix}notis",
+				    "easter": "{user} The springtime rest did you good! 🐰 Your Notis are ready with {prefix}notis",
+				    "birthday": "{user} The celebration was great, now you’re refreshed! 🎂 Your Notis are waiting with {prefix}notis",
+				    "mothersday": "{user} The moment of rest is over! 💐 You’re full of love and energy. Your Notis are ready with {prefix}notis",
+				    "fathersday": "{user} The break is over, ready for new deeds! 💪 Your Notis are here with {prefix}notis",
+				    "maythe4th": "{user} The jump is near! ✨ The Force is with you. Your Notis are waiting with {prefix}notis"
 				}
 			},
 			"5": {
 			 	"start": "🗄️ [{time}] {user|antiping} system:~{rootSymbole} db-sync --start",
 				"chest": {
-        		    "normal": "🗄️ Database system is running at {notis}% (That's the amount you get)",
-        		    "christmas": "🎅 The database system is festively optimized and running at {notis}% Merry Data Holidays (That's the amount you get)",
-        		    "halloween": "🎃 Database system running at {notis}% but there's a spooky bug lurking (That's the amount you get)",
-        		    "easter": "🐣 Database system happily hunting Easter eggs at {notis}% (That's the amount you get)",
-        		    "birthday": "🎉 Database system running at {notis}% Birthday boost activated (That's the amount you get)!",
-        		    "mothersday": "💐 Mom got the database system up to {notis}% running smooth (That's the amount you get)",
-        		    "fathersday": "🛠️ Dad fixed the database system to {notis}% full throttle (That's the amount you get)",
-        		    "maythe4th": "🛸 May the database be with you running at {notis}% (That's the amount you get)"
+        		    "normal": "🗄️~💰 Database system is running at {notis}% (That's the amount you get)",
+        		    "christmas": "🎅~💰 The database system is festively optimized and running at {notis}% Merry Data Holidays (That's the amount you get)",
+        		    "halloween": "🎃~💰 Database system running at {notis}% but there's a spooky bug lurking (That's the amount you get)",
+        		    "easter": "🐣~💰 Database system happily hunting Easter eggs at {notis}% (That's the amount you get)",
+        		    "birthday": "🎉~💰 Database system running at {notis}% Birthday boost activated (That's the amount you get)!",
+        		    "mothersday": "💐~💰 Mom got the database system up to {notis}% running smooth (That's the amount you get)",
+        		    "fathersday": "🛠️~💰 Dad fixed the database system to {notis}% full throttle (That's the amount you get)",
+        		    "maythe4th": "🛸~💰 May the database be with you running at {notis}% (That's the amount you get)"
         		},
         		"win": {
         		    "normal": "✅ Database synced! You receive {notis} Notis as a reward!",
@@ -1088,27 +1114,27 @@
         		    "maythe4th": "⭐ For the Republic! Gather your strength, soldier. The next mission is already waiting! duration: {message}"
         		},
 				"ping": {
-				    "normal": "{user} ! Your power is charged! 🔋 The next round can start. Grab your Notis with {prefix}notis",
-				    "christmas": "{user} ! The festive break is over! 🎁 Time for new actions. Your Notis are waiting with {prefix}notis",
-				    "halloween": "{user} ! The spooky time is over, you’re ready again! 👻 Collect your Notis with {prefix}notis",
-				    "easter": "{user} ! The Easter rest did you good. 🌷 Your Notis are ready for you with {prefix}notis",
-				    "birthday": "{user} ! The party is over, but your energy is back! 🎉 Grab your Notis with {prefix}notis",
-				    "mothersday": "{user} ! The break is over, you’re full of energy! 💪 Your Notis are waiting with {prefix}notis",
-				    "fathersday": "{user} ! You’ve recharged your strength! 👨‍🔧 Your Notis are ready for you with {prefix}notis",
-				    "maythe4th": "{user} ! Your powers are gathered, soldier! 🚀 The next mission for your Notis starts now with {prefix}notis"
+				    "normal": "{user} Your power is charged! 🔋 The next round can start. Grab your Notis with {prefix}notis",
+				    "christmas": "{user} The festive break is over! 🎁 Time for new actions. Your Notis are waiting with {prefix}notis",
+				    "halloween": "{user} The spooky time is over, you’re ready again! 👻 Collect your Notis with {prefix}notis",
+				    "easter": "{user} The Easter rest did you good. 🌷 Your Notis are ready for you with {prefix}notis",
+				    "birthday": "{user} The party is over, but your energy is back! 🎉 Grab your Notis with {prefix}notis",
+				    "mothersday": "{user} The break is over, you’re full of energy! 💪 Your Notis are waiting with {prefix}notis",
+				    "fathersday": "{user} You’ve recharged your strength! 👨‍🔧 Your Notis are ready for you with {prefix}notis",
+				    "maythe4th": "{user} Your powers are gathered, soldier! 🚀 The next mission for your Notis starts now with {prefix}notis"
 				}
 			},
 			"6": {
 				"start": "✅ [{time}] {user|antiping} system:~{rootSymbole} db-sync --complete",
 				"chest": {
-        		   	"normal": "📦 A mysterious chest appeared during the sync! You opened it and found {notis} Notis!",
-        		   	"christmas": "🎄 A holiday chest appeared during syncing full of {notis} Notis just for you!",
-        		   	"halloween": "🎃 A haunted chest showed up mid-sync... You dared to open it and got {notis} Notis!",
-        		   	"easter": "🐣 Hidden in the last sync module was a chest filled with {notis} Notis!",
-        		   	"birthday": "🎉 Birthday sync successful! A special chest with {notis} Notis popped open!",
-        		   	"mothersday": "💐 A motherly-synced chest appeared and it’s packed with {notis} Notis for you!",
-        		   	"fathersday": "🛠️ A dad-level chest synced in and boom! {notis} Notis for the taking!",
-        		   	"maythe4th": "🛰️ A Jedi chest emerged from the sync stream full of {notis} Notis, young Padawan!"
+        		   	"normal": "📦~💰 A mysterious chest appeared during the sync! You opened it and found {notis} Notis!",
+        		   	"christmas": "🎄~💰 A holiday chest appeared during syncing full of {notis} Notis just for you!",
+        		   	"halloween": "🎃~💰 A haunted chest showed up mid-sync... You dared to open it and got {notis} Notis!",
+        		   	"easter": "🐣~💰 Hidden in the last sync module was a chest filled with {notis} Notis!",
+        		   	"birthday": "🎉~💰 Birthday sync successful! A special chest with {notis} Notis popped open!",
+        		   	"mothersday": "💐~💰 A motherly-synced chest appeared and it’s packed with {notis} Notis for you!",
+        		   	"fathersday": "🛠️~💰 A dad-level chest synced in and boom! {notis} Notis for the taking!",
+        		   	"maythe4th": "🛰️~💰 A Jedi chest emerged from the sync stream full of {notis} Notis, young Padawan!"
         		},
         		"win": {
         		    "normal": "📡 Sync complete! {notis} Notis have been added to your account.",
@@ -1151,27 +1177,27 @@
         		    "maythe4th": "🧉 The troopers need a break too! Pause duration: {message}."
         		},
 				"ping": {
-				    "normal": "{user} ! Your rest has paid off! 😴 You’re fit again for your Notis with {prefix}notis",
-				    "christmas": "{user} ! The winter sleep is over, the gifts are waiting! 🎁 Grab your Notis with {prefix}notis",
-				    "halloween": "{user} ! The spooky time has passed, your energy is back! 🦇 Your Notis are ready with {prefix}notis",
-				    "easter": "{user} ! Rested and ready to collect eggs! 🌻 Your Notis are waiting with {prefix}notis",
-				    "birthday": "{user} ! The birthday break is over, the gifts are waiting! 🥳 Your Notis are ready with {prefix}notis",
-				    "mothersday": "{user} ! Mom’s rest time did you good! 💖 Grab your Notis now with {prefix}notis",
-				    "fathersday": "{user} ! The break is over, Dad is proud! 👍 Your Notis are ready with {prefix}notis",
-				    "maythe4th": "{user} ! The troopers are back on their feet! 🌟 Your Notis are ready for the next mission with {prefix}notis"
+				    "normal": "{user} Your rest has paid off! 😴 You’re fit again for your Notis with {prefix}notis",
+				    "christmas": "{user} The winter sleep is over, the gifts are waiting! 🎁 Grab your Notis with {prefix}notis",
+				    "halloween": "{user} The spooky time has passed, your energy is back! 🦇 Your Notis are ready with {prefix}notis",
+				    "easter": "{user} Rested and ready to collect eggs! 🌻 Your Notis are waiting with {prefix}notis",
+				    "birthday": "{user} The birthday break is over, the gifts are waiting! 🥳 Your Notis are ready with {prefix}notis",
+				    "mothersday": "{user} Mom’s rest time did you good! 💖 Grab your Notis now with {prefix}notis",
+				    "fathersday": "{user} The break is over, Dad is proud! 👍 Your Notis are ready with {prefix}notis",
+				    "maythe4th": "{user} The troopers are back on their feet! 🌟 Your Notis are ready for the next mission with {prefix}notis"
 				}
 			},
 			"7": {
 				"start": "🔎 [{time}] {user|antiping} system:~{rootSymbole} log-analyze --run",
 				"chest": {
-        		    "normal": "📁 You uncover secret logs about a traitor! Your commander rewards you with {notis} Notis!",
-        		    "christmas": "🎄 Hidden in the logs is a festive data packet... you open it and receive {notis} Notis!",
-        		    "halloween": "👻 A cursed log file appears... inside is a spooky chest full of {notis} Notis!",
-        		    "easter": "🐰 Among the files, you find a colorful data egg cracked open, it's full of {notis} Notis!",
-        		    "birthday": "🎉 You discover a birthday log! Inside: a chest with {notis} Notis as a surprise!",
-        		    "mothersday": "💐 A heartfelt message hidden in the logs your mom left you {notis} Notis!",
-        		    "fathersday": "🛠️ Your dad’s debug logs contain a chest {notis} Notis inside, ready to collect!",
-        		    "maythe4th": "🛰️ You've uncovered critical intel about the next Separatist attack! Your fleet admiral rewards you with {notis} Notis!"
+        		    "normal": "📁~💰 You uncover secret logs about a traitor! Your Boss rewards you with {notis} Notis!",
+        		    "christmas": "🎄~💰 Hidden in the logs is a festive data packet... you open it and receive {notis} Notis!",
+        		    "halloween": "👻~💰 A cursed log file appears... inside is a spooky chest full of {notis} Notis!",
+        		    "easter": "🐰~💰 Among the files, you find a colorful data egg cracked open, it's full of {notis} Notis!",
+        		    "birthday": "🎉~💰 You discover a birthday log! Inside: a chest with {notis} Notis as a surprise!",
+        		    "mothersday": "💐~💰 A heartfelt message hidden in the logs your mom left you {notis} Notis!",
+        		    "fathersday": "🛠️~💰 Your dad’s debug logs contain a chest {notis} Notis inside, ready to collect!",
+        		    "maythe4th": "🛰️~💰 You've uncovered critical intel about the next Separatist attack! Your fleet admiral rewards you with {notis} Notis!"
         		},
         		"win": {
         		    "normal": "✅ Logs checked and no errors found! You get {notis} Notis",
@@ -1214,27 +1240,27 @@
         		    "maythe4th": "🌌 Processor got hit by droid heat rays – cooling down in {message}"
         		},
 				"ping": {
-				    "normal": "{user} ! Your CPU has cooled down. 🌡️ You can now grab your Notis with {prefix}notis",
-				    "christmas": "{user} ! The CPU is ice-cold again! ❄️ Your Notis are ready for the gift-giving with {prefix}notis",
-				    "halloween": "{user} ! The spooky time is over, the CPU is back to normal temperature. 👻 Grab your Notis with {prefix}notis",
-				    "easter": "{user} ! The CPU has crawled out of its nest and is top fit. 🥚 Your Notis are waiting with {prefix}notis",
-				    "birthday": "{user} ! The party is over, the CPU has cooled down. 🥳 Your Notis are ready to celebrate with {prefix}notis",
-				    "mothersday": "{user} ! The CPU has relaxed. 💖 Mom says your Notis are ready with {prefix}notis",
-				    "fathersday": "{user} ! Dad tightened the cooler. 💪 Your CPU is cool, your Notis are waiting with {prefix}notis",
-				    "maythe4th": "{user} ! The processor has recovered from the heat beam. ✨ Your Notis are fully charged again with {prefix}notis"
+				    "normal": "{user} Your CPU has cooled down. 🌡️ You can now grab your Notis with {prefix}notis",
+				    "christmas": "{user} The CPU is ice-cold again! ❄️ Your Notis are ready for the gift-giving with {prefix}notis",
+				    "halloween": "{user} The spooky time is over, the CPU is back to normal temperature. 👻 Grab your Notis with {prefix}notis",
+				    "easter": "{user} The CPU has crawled out of its nest and is top fit. 🥚 Your Notis are waiting with {prefix}notis",
+				    "birthday": "{user} The party is over, the CPU has cooled down. 🥳 Your Notis are ready to celebrate with {prefix}notis",
+				    "mothersday": "{user} The CPU has relaxed. 💖 Mom says your Notis are ready with {prefix}notis",
+				    "fathersday": "{user} Dad tightened the cooler. 💪 Your CPU is cool, your Notis are waiting with {prefix}notis",
+				    "maythe4th": "{user} The processor has recovered from the heat beam. ✨ Your Notis are fully charged again with {prefix}notis"
 				}
 			},
 			"8": {
 				"start": "🧮 [{time}] {user|antiping} system:~{rootSymbole} calc-resources --run",
 				"chest": {
-        		    "normal": "📊 Your resource analysis was successful! You found a reward chest containing {notis} Notis.",
-        		    "christmas": "🎄 While scanning resources, you found a festively wrapped crate it contains {notis} Notis!",
-        		    "halloween": "🕸️ A spooky chest haunted your data… you opened it and found {notis} Notis!",
-        		    "easter": "🐣 Your scan revealed a hidden Easter egg with {notis} Notis inside!",
-        		    "birthday": "🎉 Birthday scan complete! You receive {notis} Notis as a gift from your reward crate!",
-        		    "mothersday": "💐 Mom helped you with the numbers you’re rewarded with {notis} Notis from a shiny chest!",
-        		    "fathersday": "🛠️ Dad ran the calculations a toolbox rewards you with {notis} Notis!",
-        		    "maythe4th": "🚀 Your analysis uncovered a hidden Imperial supply crate you receive {notis} Notis as a reward!"
+        		    "normal": "📊~💰 Your resource analysis was successful! You found a reward chest containing {notis} Notis.",
+        		    "christmas": "🎄~💰 While scanning resources, you found a festively wrapped crate it contains {notis} Notis!",
+        		    "halloween": "🕸️~💰 A spooky chest haunted your data… you opened it and found {notis} Notis!",
+        		    "easter": "🐣~💰 Your scan revealed a hidden Easter egg with {notis} Notis inside!",
+        		    "birthday": "🎉~💰 Birthday scan complete! You receive {notis} Notis as a gift from your reward crate!",
+        		    "mothersday": "💐~💰 Mom helped you with the numbers you’re rewarded with {notis} Notis from a shiny chest!",
+        		    "fathersday": "🛠️~💰 Dad ran the calculations a toolbox rewards you with {notis} Notis!",
+        		    "maythe4th": "🚀~💰 Your analysis uncovered a hidden Imperial supply crate you receive {notis} Notis as a reward!"
         		},
         		"win": {
         		    "normal": "🔥 Mission accomplished! You receive {notis} glowing Notis as a reward! heCrazy",
@@ -1277,27 +1303,27 @@
         		    "maythe4th": "🤖 The droids have damaged the transmitter… repairs will take {message}!"
         		},
 				"ping": {
-				    "normal": "{user} ! Your request has been processed. ✅ You can grab your Notis with {prefix}notis",
-				    "christmas": "{user} ! Your wishlist request is complete! 🎅 Your Notis are waiting with {prefix}notis",
-				    "halloween": "{user} ! The cobwebs are gone, your request is ready. 🎃 Grab your Notis with {prefix}notis",
-				    "easter": "{user} ! The Easter egg is found, your request is complete. 🥚 Your Notis are ready with {prefix}notis",
-				    "birthday": "{user} ! The candles are out, the cake is eaten. 🥳 Your Notis are ready with {prefix}notis",
-				    "mothersday": "{user} ! Mom’s optimization is done! 💖 Your Notis are lovingly waiting for you: {prefix}notis",
-				    "fathersday": "{user} ! Dad fixed it! 💪 Your request is done, grab your Notis with {prefix}notis",
-				    "maythe4th": "{user} ! The transmitter is repaired! 🚀 Your Notis are ready for hyperspace with {prefix}notis"
+				    "normal": "{user} Your request has been processed. ✅ You can grab your Notis with {prefix}notis",
+				    "christmas": "{user} Your wishlist request is complete! 🎅 Your Notis are waiting with {prefix}notis",
+				    "halloween": "{user} The cobwebs are gone, your request is ready. 🎃 Grab your Notis with {prefix}notis",
+				    "easter": "{user} The Easter egg is found, your request is complete. 🥚 Your Notis are ready with {prefix}notis",
+				    "birthday": "{user} The candles are out, the cake is eaten. 🥳 Your Notis are ready with {prefix}notis",
+				    "mothersday": "{user} Mom’s optimization is done! 💖 Your Notis are lovingly waiting for you: {prefix}notis",
+				    "fathersday": "{user} Dad fixed it! 💪 Your request is done, grab your Notis with {prefix}notis",
+				    "maythe4th": "{user} The transmitter is repaired! 🚀 Your Notis are ready for hyperspace with {prefix}notis"
 				}
 			},
 			"9": {
 				"start": "💼 [{time}] {user|antiping} system:~{rootSymbole} analyze-resources --init",
 				"chest": {
-        		    "normal": "💼 Your calculation was a success! You find a hefty reward chest with {notis} Notis inside.",
-        		    "christmas": "🎁 A festive resource crate appears it contains {notis} Notis just for you!",
-        		    "halloween": "🎃 Your math summoned a cursed chest… inside it rattles with {notis} Notis!",
-        		    "easter": "🥚 Hidden in the equations was an Easter nest filled with {notis} Notis!",
-        		    "birthday": "🎉 Birthday bonus detected! Your calculations reward you with {notis} Notis!",
-        		    "mothersday": "💐 Mom helped balance the books a chest filled with {notis} Notis appears!",
-        		    "fathersday": "🔧 Dad's calculator was on fire you're rewarded with {notis} Notis!",
-        		    "maythe4th": "🛰️ Your calculation uncovered an Imperial supply point {notis} Notis are yours!"
+        		    "normal": "💼~💰 Your calculation was a success! You find a hefty reward chest with {notis} Notis inside.",
+        		    "christmas": "🎁~💰 A festive resource crate appears it contains {notis} Notis just for you!",
+        		    "halloween": "🎃~💰 Your math summoned a cursed chest… inside it rattles with {notis} Notis!",
+        		    "easter": "🥚~💰 Hidden in the equations was an Easter nest filled with {notis} Notis!",
+        		    "birthday": "🎉~💰 Birthday bonus detected! Your calculations reward you with {notis} Notis!",
+        		    "mothersday": "💐~💰 Mom helped balance the books a chest filled with {notis} Notis appears!",
+        		    "fathersday": "🔧~💰 Dad's calculator was on fire you're rewarded with {notis} Notis!",
+        		    "maythe4th": "🛰️~💰 Your calculation uncovered an Imperial supply point {notis} Notis are yours!"
         		},
         		"win": {
         		    "normal": "✅ Resources successfully collected! You receive {notis} Notis!",
@@ -1316,11 +1342,11 @@
         		    "easter": "🥚 Egg emergency! Resources cracked like Easter eggs {notis} Notis flying everywhere!",
         		    "birthday": "🎉 Party crash! Resources partied too hard {notis} Notis blown out like candles!",
         		    "mothersday": "🌷 Mom was baking and accidentally tossed {notis} Notis in the cake resources lost!",
-        		    "fathersday": "🔧 Dad dropped the wrench {notis} Notis smashed like an IS-3 in the garage!",
+        		    "fathersday": "🔧 Dad dropped the wrench {notis} Notis smashed!",
         		    "maythe4th": "⚔️ May the Force fail you {notis} Notis disappeared in a galaxy far, far away!"
         		},
 				"nothing": {
-					"normal": "📉 Elon Musk tweeted bad about your code, you have to work longer. HAH",
+					"normal": "📉 Elon Musk tweeted bad about your code, you have to work longer.",
 					"christmas": "🎅 Elon put you on the naughty list no resources until New Year!",
 					"halloween": "🎭 Elon is dressed as a bug today. Chaos!",
 					"easter": "🐇 Elon buried the resources in the garden.",
@@ -1340,30 +1366,30 @@
         		    "maythe4th": "🌌 Droids are enhancing your system via hyperspace… ready in {message}, may the Force be with you!"
         		},
 				"ping": {
-				    "normal": "{user} ! Your system is back at peak performance. ✅ Grab your Notis with {prefix}notis",
-				    "christmas": "{user} ! The elves have finished their work. 🎁 Your festive Notis are waiting with {prefix}notis",
-				    "halloween": "{user} ! The spooky time is over, the update is complete. 👻 Collect your Notis with {prefix}notis",
-				    "easter": "{user} ! The system is fresh like a spring morning. 🌸 Your boosted Notis are ready with {prefix}notis",
-				    "birthday": "{user} ! The birthday booster is active! 🥳 Your Notis are ready for the party with {prefix}notis",
-				    "mothersday": "{user} ! The optimization is complete. 💖 Mom says your Notis are now ready with {prefix}notis",
-				    "fathersday": "{user} ! Dad did a great job. 💪 Your Notis are now super-boosted, grab them with {prefix}notis",
-				    "maythe4th": "{user} ! The hyperspace upgrade is complete. ✨ May the Force of Notis be with you: {prefix}notis"
+				    "normal": "{user} Your system is back at peak performance. ✅ Grab your Notis with {prefix}notis",
+				    "christmas": "{user} The elves have finished their work. 🎁 Your festive Notis are waiting with {prefix}notis",
+				    "halloween": "{user} The spooky time is over, the update is complete. 👻 Collect your Notis with {prefix}notis",
+				    "easter": "{user} The system is fresh like a spring morning. 🌸 Your boosted Notis are ready with {prefix}notis",
+				    "birthday": "{user} The birthday booster is active! 🥳 Your Notis are ready for the party with {prefix}notis",
+				    "mothersday": "{user} The optimization is complete. 💖 Mom says your Notis are now ready with {prefix}notis",
+				    "fathersday": "{user} Dad did a great job. 💪 Your Notis are now super-boosted, grab them with {prefix}notis",
+				    "maythe4th": "{user} The hyperspace upgrade is complete. ✨ May the Force of Notis be with you: {prefix}notis"
 				}
 			},
 			"10": {
 				"start": "🚀 [{time}] {user|antiping} system:~{rootSymbole} load-final-status --run",
 				"chest": {
-        		    "normal": "🚀 Final status loaded! You open the end chest and find {notis} Notis as your reward.",
-        		    "christmas": "🎄 The final status shines festive a gift chest with {notis} Notis awaits you!",
-        		    "halloween": "👻 Final load with spooky vibes! A creepy chest grants you {notis} Notis.",
-        		    "easter": "🐰 The final status reveals a colorful Easter egg with {notis} Notis inside!",
-        		    "birthday": "🎉 The final status comes with a gift: {notis} Notis from the chest!",
-        		    "mothersday": "💐 Mom’s final support brings a chest with {notis} Notis for you.",
-        		    "fathersday": "🛠️ Dad’s final checklist ends with {notis} Notis from the toolbox!",
-        		    "maythe4th": "🌌 Finally, after a long search, you found Anakin's lightsaber on Mustafar and receive {notis} Notis as a reward!"
+        		    "normal": "🚀~💰 Final status loaded! You open the end chest and find {notis} Notis as your reward.",
+        		    "christmas": "🎄~💰 The final status shines festive a gift chest with {notis} Notis awaits you!",
+        		    "halloween": "👻~💰 Final load with spooky vibes! A creepy chest grants you {notis} Notis.",
+        		    "easter": "🐰~💰 The final status reveals a colorful Easter egg with {notis} Notis inside!",
+        		    "birthday": "🎉~💰 The final status comes with a gift: {notis} Notis from the chest!",
+        		    "mothersday": "💐~💰 Mom’s final support brings a chest with {notis} Notis for you.",
+        		    "fathersday": "🛠️~💰 Dad’s final checklist ends with {notis} Notis from the toolbox!",
+        		    "maythe4th": "🌌~💰 Finally, after a long search, you found Anakin's lightsaber on Mustafar and receive {notis} Notis as a reward!"
         		},
         		"win": {
-        		    "normal": "🔥 You won! {notis} Notis are yours, like a perfect hit on target!",
+        		    "normal": "🔥 You won! {notis} Notis are yours!",
         		    "christmas": "🎅 Merry Christmas! Your victory brings you {notis} Notis, as festive as a gift under the tree!",
         		    "halloween": "🎃 Spooktacular win! You earned {notis} Notis, scary good!",
         		    "easter": "🥚 You found the Easter egg! {notis} Notis hop your way as your reward!",
@@ -1403,11 +1429,11 @@
         		    "maythe4th": "🌌 Holonet disruption detected – patience, young Padawan. Response ➜ Code: 503, Reason: Disturbance in the Force, Retry-After: {message}"
         		},
 				"ping": {
-				    "normal": "✅ Server is reachable again, {user} ! You can grab your Notis with {prefix}notis",
-				    "christmas": "🎅 Hohoho, the server is back, {user} ! Your wishlist Notis are waiting with {prefix}notis",
-				    "halloween": "👻 The ghosts have been chased away, {user} ! The server is online again. Grab your Notis with {prefix}notis",
-				    "easter": "🥚 The Easter egg update is found, {user} ! The server is ready. Your Notis are ready to collect with {prefix}notis",
-				    "birthday": "🥳 The party is over, {user} ! The server is out of party mode. Collect your Notis with {prefix}notis",
+				    "normal": "✅ Server is reachable again, {user} You can grab your Notis with {prefix}notis",
+				    "christmas": "🎅 Hohoho, the server is back, {user} Your wishlist Notis are waiting with {prefix}notis",
+				    "halloween": "👻 The ghosts have been chased away, {user} The server is online again. Grab your Notis with {prefix}notis",
+				    "easter": "🥚 The Easter egg update is found, {user} The server is ready. Your Notis are ready to collect with {prefix}notis",
+				    "birthday": "🥳 The party is over, {user} The server is out of party mode. Collect your Notis with {prefix}notis",
 				    "mothersday": "💐 {user} Mom says you earned it! Grab your Notis with {prefix}notis",
 				    "fathersday": "{user} Dad says: Here’s your special mission, collect your Notis with {prefix}notis",
 				    "maythe4th": "{user} May the Notis be with you! Use {prefix}notis to collect them"
