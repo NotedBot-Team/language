@@ -40,10 +40,16 @@
 				"success": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` von Channel {channel|antiping} geyoinkt",
 				"yoinked": "{FeelsOkayMan 👍|wydiosOk} Emote ` {emote} ` erfolgreich geyoinkt"
 			},
+			"import": {
+				"usage": "{FeelsDankMan|wydiosStop} ➜ Bitte schreibe {usage} import <channel • Emote-Set ID> <Emote-Set ID • Emote-Set Name>",
+				"noEmoteSet": "⚠️ ➜ Kein Emote Set mit den Namen {name} gefunden",
+				"createEmoteSet": "{FeelsOkayMan|wydiosOk} ➜ Emote Set ` {name} ` von {owner} wird Erstellt... ⚠️ Das kann bis zu 15 Minuten Dauern",
+				"finish": "{FeelsOkayMan|wydiosOk} ➜ Emote Set ` {name} ` von {owner} Fertig Importiert • Dauer: {duration} (tut mir leid, wegen Rate Limits dauert es leider länger)"
+			},
 			"error": {
 				"nameConflict": "⛔ ➜ Der Name wird bereits von ` {emotename} ` verwendet",
 				"token": "💡 ➜ Tut mir leid, aber mein 7TV Token ist abgelaufen, {owner}",
-				"noPerms": "🚫 ➜ Ich habe keine 7TV-Rechte. Bitte füge {bot} als Editor: {link} (Emote-Set & Emotes verwalten) hinzu, versuche es dann bitte 2x mal damit ich akzeptieren kann",
+				"noPerms": "🚫 ➜ Ich habe keine 7TV-Rechte. Bitte füge {bot} als Editor: {link} (Emote-Set & Emotes verwalten für import auch Emote Sets Create) hinzu, versuche es dann bitte 2x mal damit ich akzeptieren kann",
 				"fullCapacity": "⚠️ ➜ Das Emote Set ist voll. Bitte entferne ein anderes Emote • Emote-Set: {link}",
 				"notFoundinSet": "⚠️ ➜ Emote ` {emote} ` wurde nicht im Emote Set gefunden",
 				"notFound": "⚠️ ➜ Emote Mit der ID ` {emoteId} ` nicht gefunden",
@@ -62,16 +68,14 @@
 					"updated": "(7TV) ➜ Presence Updatet"
 				},
 				"badge": {
-					"noFounds": "⚠️ ➜ Ich habe Keine 7tv Badges gefunden",
-					"info": "(7TV) ➜ Badge: {badgeName} • Badge ID: {badgeId} • Badge Beschreibung {badgeDescription} • Vorschau: {preview}",
+					"info": "(7TV) ➜ Badge: {badgeName} • Badge ID: {badgeId} • Badge Beschreibung {badgeDescription} • Vorschau: {preview} • {activeCount} Users haben dieses Badge Aktive • {inventoryCount} Users besitzen dieses Badge",
 					"no": "(7TV) ➜ {user|antiping} hat keine 7tv Badge",
-					"user": "(7TV) ➜ {user|antiping} badge ist ` {badgeName} ` • Badge ID: {badgeId} • Badge Beschreibung {badgeDescription} • Vorschau: {preview} • Vanity: {vanity}"
+					"user": "(7TV) ➜ {user|antiping} badge ist ` {badgeName} ` • Badge ID: {badgeId} • Badge Beschreibung {badgeDescription} • Vorschau: {preview} • Vanity: {vanity} • {activeCount} Users haben dieses Badge Aktive • {inventoryCount} Users besitzen dieses Badge"
 				}, 
 				"paint": {
-					"noFounds": "⚠️ ➜ ich habe Keine 7tv Paints gefunden",
-					"info": "(7TV) ➜ Paint: {paintName} • Paint ID: {paintId} • Vorschau: {preview}",
+					"info": "(7TV) ➜ Paint: {paintName} • Paint ID: {paintId} • Vorschau: {preview} • {activeCount} Users haben dieses Paint Aktive • {inventoryCount} Users besitzen dieses Paint",
 					"no": "(7TV) ➜ {user|antiping} hat keine 7tv Paint",
-					"user": "(7TV) ➜ {user|antiping} paint ist ` {paintName} ` • Paint ID: {paintId} • Vorschau: {preview} • Vanity: {vanity}"
+					"user": "(7TV) ➜ {user|antiping} paint ist ` {paintName} ` • Paint ID: {paintId} • Vorschau: {preview} • Vanity: {vanity} • {activeCount} Users haben dieses Paint Aktive • {inventoryCount} Users besitzen dieses Paint"
 				}
 			},
 			"subage": {
@@ -245,6 +249,30 @@
 				"delete": "{FeelsOkayMan 👍|wydiosOk} Vorschlag/Report mit ID {id} wurde erfolgreich gelöscht",
 				"noFound": "⚠️ ➜ Keine Vorschläge/Reports gefunden",
 				"list": "{FeelsDankMan|wydiosStop} ➜ Hier ist eine Liste von allen Vorschlägen/Reports: {link}"
+			},
+			"scraper": {
+				"usage": "{🫠 TeaTime|wydiosHacker} ➜ Bitte schreibe {usage} scraper <users • cosmetics • check> <stop • stats>",
+				"stvUsers": {
+					"start": "ppHop ➜ Scraper startet bei ID {startId}...",
+					"stop": "ppHop ➜ Scraper wird beendet...",
+					"notRunning": "{FeelsDankMan|wydiosStop} ➜ Momentan läuft kein Scraper. Starte ihn mit ` {usage} scraper users `",
+					"stats": "{FeelsDankMan|wydiosDebug} ➜ Scraper läuft • Aktuelle ID: {id} • Gefundene Accounts: {founds} • Dauer bisher: {duration}",
+					"running": "{FeelsDankMan|wydiosStop} ➜ Scraper läuft schon Dauer bisher: {duration} • Stoppe ihn mit ` {usage} scraper users stop `",
+					"final": "{FeelOkayMan|wydiosBased} ➜ Scraper beendet. Insgesamt {found} Accounts gefunden & gespeichert • Dauer: {duration}"
+				},
+				"stvCosmetics": {
+					"start": "ppHop ➜ Scraper Startet mit {users} Usern...",
+					"stop": "ppHop ➜ Scraper wird beendet...",
+					"notRunning": "{FeelsDankMan|wydiosStop} ➜ Momentan läuft kein Scraper. Starte ihn mit ` {usage} scraper cosmetics `",
+					"stats": "{FeelsDankMan|wydiosDebug} ➜ Scraper läuft • Users geupdatet: {users} • Neue Paints: {paints} • Neue Badges: {badges} • Dauer bisher: {duration}",
+					"running": "{FeelsDankMan|wydiosStop} ➜ Scraper läuft schon Dauer bisher: {duration} • Stoppe ihn mit ` {usage} scraper cosmetics stop `",
+					"final": "{FeelOkayMan|wydiosBased} ➜ Scraper beendet. {users} Users geupdatet • {newPaints} neue Paints • {newBadges} neue Badges • Dauer: {duration}"
+				},
+				"check": {
+					"usage": "{🫠 TeaTime|wydiosHacker} ➜ Bitte schreibe {usage} scraper check <username>",
+					"notFound": "{FeelsBadMan|wydiosSad} ➜ Acc ` {user} ` ist nicht ihn der Scraper Datenbank",
+					"found": "{FeelsDankMan|wydiosOk} ➜ Acc ` {user} ` ist in der Scraper Datenbank Infos • Active Paint: {activePaint} • Paint Count {paintCount} • Active Badge: {activeBadge} • Badge Count {badgeCount}"
+				}
 			}
 		},
 		"customcmd": {
@@ -326,8 +354,14 @@
    			"OnOff": "{FeelsOkayMan 👍|wydiosOk} Alle Global Benachrichtigungen (von: Badge/Emotes/7TV) wurden {mode}",
    			"twitch": "{FeelsOkayMan 👍|wydiosOk} imGlitch Global ` {value} ` Nachricht wurde {mode}",
    			"stv": "{FeelsOkayMan 👍|wydiosOk} (7TV) Global Notification ` Badge/Paint ` wurde {mode}",
-   			"allFeaturesMe": "{FeelsOkayMan 👍|wydiosOk} ` Me ` für alle Features wurde {mode}",
-   			"featureMe": "{FeelsOkayMan 👍|wydiosOk} ` Me ` für `{value}` wurde {mode}"
+   			"allFeaturesMe": "{FeelsOkayMan 👍|wydiosOk} ➜ ` /me ` für alle Features wurde {mode}",
+   			"featureMe": "{FeelsOkayMan 👍|wydiosOk} ➜ ` /me ` für ` {value} ` wurde {mode}",
+			"pingMsg": {
+				"noUsers": "{FeelsDankMan|wydiosStop} ➜ Momentan sind keine User in einem Global Announce Ping. Du kannst dich mit {prefix}globalping <emote • badge • 7tv> hinzufügen lassen",
+				"global": "{FeelsOkayMan 👍|wydiosOk} ➜ Global Ping-Nachricht von ` {oldMessage} ` auf ` {newMessage} ` geändert",
+				"noUser": "{FeelsDankMan|wydiosStop} ➜ Für {feature} sind aktuell keine User im Global Ping. Du kannst dich mit {prefix}globalping {feature} hinzufügen lassen",
+				"single": "{FeelsOkayMan 👍|wydiosOk} ➜ Ping-Nachricht für {feature} von ` {oldMessage} ` auf ` {newMessage} ` geändert"
+			}
 		},
 		"globalping": {
 			"notEnabled": "{FeelsDankMan|wydiosStop} ➜ Es gibt keine Global Announce Message für {feature}. Ein Moderator kann mit {prefix}globalannounce {feature} es Aktivieren",
@@ -724,7 +758,7 @@
 				"pings": " • dinkDonk {users}"
 			},
 			"offline": "Saj @{user} ist jetzt {Offline|wydiosOffline}",
-			"ping": "• dinkDonk {pings}"
+			"ping": "• {ping_emoji} {pings}"
 		},
 		"ban": {
 			"unban": "{peepoHappy|wydiosLove} Clap Willkommen zurück auf Twitch {user}"
@@ -739,49 +773,10 @@
 		"message": "• Nachricht: {usermessage}",
 		"return": {
 			"afk": "ist wieder da",
-			"bedge": {
-    			"0": "Testet kurz den Command BillyApprove",
-    			"300000": "Nimmt sich eine kleine Auszeit",
-    			"900000": "Chattet noch kurz am Handy",
-    			"3600000": "Hat ein kleines Nickerchen gemacht",
-    			"10800000": "Hat einen längeren Powernap gemacht",
-    			"21600000": "War wohl im Tiefschlafmodus 🛌💤",
-    			"36000000": "Hat fast den ganzen Tag verpennt 😴",
-    			"57600000": "War den halben Tag im Bett",
-    			"86400000": "War einen ganzen Tag Afk – hoffentlich erholt!",
-    			"259200000": "Hat sich mehrere Tage ausgeruht 🛏️",
-    			"604800000": "Ist wohl im Urlaub verschwunden 🏖️",
-    			"Infinity": "Zurück aus der Unendlichkeit des AFKs!"
-    		},
-    		"food": {
-    			"0": "Essen ist doch noch gar nicht fertig! 🍳",
-    			"120000": "Hat gerade einen Snack gegessen",
-    			"600000": "Hat Mittagessen gegessen",
-    			"1800000": "Hat gerade Abendessen",
-    			"3600000": "War auf kulinarischer Weltreise 🌍🍜",
-    			"7200000": "Hat ein 5-Gänge-Menü genossen 🍽️👨‍🍳",
-    			"14400000": "Hat sich selbst bekocht... und das Küchenset repariert 🔧🍲",
-    			"28800000": "War bei Oma – und es gab Nachschlag 😋",
-    			"Infinity": "War in der Küche verschollen – jetzt satt und zurück 🧁🍕"
-    		},
-    		"shower": {
-    			"0": "Will doch nicht duschen! 🛑🧼",
-    			"300000": "Hat sich frisch gemacht",
-    			"900000": "Hat noch schnell Haare gewaschen",
-    			"1800000": "Hat ein Duschkonzert gegeben 🎤🚿",
-    			"3600000": "Hat sich in der Dusche verirrt 🧭",
-    			"7200000": "Hat versucht, die Dusche neu zu erfinden 🧪",
-    			"21600000": "Ist unter Wasser eingezogen 🛁🏠",
-    			"Infinity": "Lebt jetzt in Atlantis 🌊🐠"
-    		},
-			"goon": {
-				"0": "wow Der Gooning Master ist neidig auf dich",
-				"150000": "Neuer Rekord mach weiter so! 🔥",
-				"600000": "Mehr als 10 Minuten am Goonen, Respekt! ⏳",
-				"1800000": "Lieber Spät als nie",
-				"3600000": "Hat zu Lange nach Material gesucht",
-				"Infinity": "hat seine Mission vergessen"
-			}
+			"bedge": "ist aus dem Bett gekommen",
+    		"food": "hat zu ende gegessen",
+    		"shower": "ist Fertig mit Duschen",
+			"goon": "hat den Tab endlich geschlossen"
 		}
 	},
 
@@ -810,634 +805,320 @@
   		},
 		"messages": {
 			"1": {
-				"start": "💻 [{time}] {user|antiping} system:~{rootSymbole} debug --start",
+				"start": "🧠 [{time}] {user|antiping} fängt an Neue Ideen zu erstellen...",
 				"chest": {
-            		"normal": "🔥~💰 Du hast eine Debug-Kiste geöffnet und darin waren {notis} Notis!",
-            		"christmas": "🎄~💰 Du öffnest die festliche Debug-Kiste... und findest {notis} Notis zwischen Lebkuchen-Code und Lichterketten!",
-            		"halloween": "🎃~💰 Die verfluchte Debug-Kiste knarrt auf... und spuckt dir {notis} schaurige Notis entgegen!",
-            		"easter": "🐰~💰 In der Debug-Kiste lag ein Osterei gefüllt mit {notis} süßen Notis!",
-            		"birthday": "🎉~💰 Geburtstags-Kiste geöffnet! Sie explodiert fast vor Freude und du bekommst {notis} Party-Notis! 🎁",
-            		"mothersday": "💐~💰 Mama hat die Debug-Kiste gepackt natürlich mit {notis} liebevollen Notis drin!",
-            		"fathersday": "🛠️~💰 Papa-Style Debug-Kiste geöffnet! Zwischen Werkzeugen liegen {notis} robuste Notis!",
-            		"maythe4th": "🛸~💰 Die Debug-Kiste summt wie ein Lichtschwert du ziehst {notis} galaktische Notis heraus. Möge der Code mit dir sein!"
-        		},
-        		"win": {
-           			"normal": "🔥 Debugging abgeschlossen! Du bekommst {notis} Notis. heCrazy",
-           			"christmas": "🎄 Weihnachts-Bug gefixt! Du bekommst {notis} festliche Notis!",
-           			"halloween": "🎃 Grusel-Bug gebannt! Du verdienst {notis} schaurige Notis!",
-           			"easter": "🐣 Debug-Ei geöffnet! Du findest {notis} süße Notis darin!",
-           			"birthday": "🎉 Geburtstags-Bug besiegt! Zur Feier gibt’s {notis} Party-Notis!",
-           			"mothersday": "💐 Mama hat den Fehler gefunden! Sie schenkt dir {notis} liebevolle Notis!",
-           			"fathersday": "🛠️ Papa hat den Code repariert! Du bekommst {notis} starke Notis!",
-           			"maythe4th": "🌌 Du hast den Hyperantrieb wieder repariert du bekommst dafür {notis} Notis"
-        		},
-        		"lose": {
-            		"normal": "💥 Oh no, du hast verloren und {notis} Notis sind dir entwischt!",
-            		"christmas": "🎄 Mist, deine Weihnachtskiste ist leer! {notis} Notis gehen flöten, fast so kalt wie der Winter!",
-            		"halloween": "👻 Buuuh! Du hast verloren und {notis} Notis verschwinden im Spuknebel!",
-            		"easter": "🐰 Hoppla, das Osterei ist zerbrochen! {notis} Notis hüpfen davon wie verrückte Häschen!",
-            		"birthday": "🎉 Oops, die Party ist vorbei! {notis} Notis sind weg, wie ein Kuchen ohne Kerzen!",
-            		"mothersday": "💐 Oh nein, Mama’s Kiste ist leer! {notis} Notis fehlen dir, wie ein Strauß ohne Blumen.",
-            		"fathersday": "🛠️ Schraube locker! {notis} Notis sind dir entglitten, wie Werkzeug aus der Hand gerutscht!",
-            		"maythe4th": "🌌 Der dunkle Lord hat deinen Debug mir Errors gefluttet {notis} Notis sind verloren in einer weit, weit entfernten Galaxie..."
-        		},
-       	 		"nothing": {
-            		"normal": "Debugging gescheitert Neue Error Codes entdeckt.",
-            		"christmas": "🎅 Du hast den Debugger gegen einen heißen Kakao eingetauscht. Debugging unter dem Tannenbaum!",
-            		"halloween": "🎃 Ein Geist hat deinen Code übernommen Debugging unmöglich!",
-            		"easter": "🐣 Der Bug ist im Osterei versteckt. Viel Spaß beim Suchen!",
-            		"birthday": "🎉 Alles steht still Der Bot Owner hat Geburtstag! Keine Zeit für Bugs, nur für Party! 🍰",
-            		"mothersday": "💐 Deine Mutter hat den Bug schon gefixt weil sie einfach alles kann!",
-            		"fathersday": "🛠️ Dein Vater hat den Debugger mit dem Hammer repariert. Problem gelöst! (Irgendwie...)",
-            		"maythe4th": "🛸 Möge der Bug mit dir sein aber heute ist Feiertag im Jedi-Code!"
-        		},
-        		"cooldown": {
-            		"normal": "🪫 Dein Akku ist leer! Lade ihn erstmal auf bevor du weitermachen kannst, dauer der Ladezeit: {message}.",
-            		"christmas": "🔋 Die Feiertage laden zum Entspannen ein! Tanke neue Energie, bevor es in {message} weitergeht.",
-            		"halloween": "👻 Selbst Geister brauchen mal eine Ladepause! Sei wieder spukbereit in {message}.",
-            		"easter": "🐇 Der Osterhase braucht auch mal eine Pause zum Aufladen! Wir hoppeln zurück in {message}.",
-            		"birthday": "🎂 Dein Energielevel ist niedrig vom Feiern! Lade dich wieder auf, die nächste Runde startet in {message}.",
-            		"mothersday": "💖 Tanke Liebe und Energie auf! Wir sind in {message} wieder für dich da.",
-            		"fathersday": "👨‍👧‍👦 Zeit, die Batterien wieder aufzuladen! Weiter geht's in {message}.",
-            		"maythe4th": "✨ Die Macht braucht eine Aufladepause! Sei bereit für neue Abenteuer in {message}."
-        		},
-        		"ping": {
-            		"normal": "⚡ {user} Dein Akku ist voll! Du bist wieder einsatzbereit. Hol dir deine Notis mit {prefix}notis",
-            		"christmas": "🎉 {user} Die Energie ist zurück! Frohe Weihnachten und viel Spaß mit deinen Notis. Hol sie dir mit {prefix}notis",
-            		"halloween": "🎃 {user} Die Geister sind aufgeladen! Du bist wieder bereit für Spuk und Notis. Sammel sie mit {prefix}notis",
-            		"easter": "🔋 {user} Der Osterhase ist wieder fit! Deine Notis sind bereit zum Hoppeln. Hol sie dir mit {prefix}notis",
-            		"birthday": "🥳 {user} Dein Energielevel ist wieder top! Feier weiter und hol dir deine Notis mit {prefix}notis",
-            		"mothersday": "💐 {user} Voller Liebe und Energie! Deine Notis warten schon auf dich. Hol sie dir mit {prefix}notis",
-            		"fathersday": "💪 {user} Die Batterien sind voll! Du bist bereit für neue Taten. Hol deine Notis mit {prefix}notis",
-            		"maythe4th": "🌌 {user} Die Macht ist aufgeladen! Neue Abenteuer warten. Deine Notis sind bereit mit {prefix}notis"
-        		}
+    				"normal": "📊~💰 Datenanalyse erfolgreich! Deine Idee ist genial und revolutioniert die Programmier Welt. Du bekommst {notis} Notis dafür, mach weiter so!",
+    				"christmas": "🎄~💰 Weihnachts Inspiration! Zwischen Lichtern und Plätzchen findest du {notis} festliche Notis für deine kreative Idee!",
+    				"halloween": "🎃~💰 Gruselige Codes! Deine Idee jagt die Bugs Angst ein. Du bekommst {notis} spooky Notis!",
+    				"easter": "🐣~💰 Ein digitales Osterei entdeckt! Deine Idee bringt {notis} Notis voller Überraschungen!",
+    				"birthday": "🎉~💰 Geburtstagsbonus! Deine Idee ist ein echter Hit, du bekommst {notis} Notis zum Feiern!",
+    				"mothersday": "💐~💰 Mama ist stolz! Deine Idee wird belohnt mit {notis} sicheren Notis!",
+    				"fathersday": "🛠️~💰 Papa genehmigt! Deine Idee bekommt {notis} stabile Notis für die Programmierwelt!",
+    				"maythe4th": "🌌~💰 Möge die Macht mit dir sein! Deine Idee ist galaktisch stark und du erhältst {notis} Notis!"
+				},
+				"win": {
+				    "normal": "🏆 Super! Deine neue Idee wurde angenommen. Du bekommst {notis} Notis dafür, arbeite weiter so!",
+				    "christmas": "🎄 Frohe Weihnachten! Deine Idee wurde angenommen, du erhältst {notis} festliche Notis!",
+				    "halloween": "🎃 Boo! Gruselig gut! Deine Idee wurde angenommen, du bekommst {notis} spooky Notis!",
+				    "easter": "🐣 Hurra! Dein digitales Osterei wurde entdeckt. Du erhältst {notis} Notis voller Überraschungen!",
+				    "birthday": "🎉 Happy Birthday! Deine Idee ist ein Hit, du bekommst {notis} Notis zum Feiern!",
+				    "mothersday": "💐 Mama ist stolz! Deine Idee wurde angenommen, du bekommst {notis} sichere Notis!",
+				    "fathersday": "🛠️ Papa genehmigt! Deine Idee ist super, du erhältst {notis} stabile Notis!",
+				    "maythe4th": "🌌 Die Sternenflotte applaudiert! Deine Idee wurde angenommen, du bekommst {notis} galaktische Notis!"
+				},
+				"lose": {
+				    "normal": "💥 Oh nein! Deine Idee kam nicht gut an. Minus {notis} Notis!",
+				    "christmas": "🎄 Weihnachtschaos! Die Geschenkidee floppte, minus {notis} Notis!",
+				    "halloween": "🎃 Deine Idee war zu gruselig keiner traut sich! Minus {notis} spooky Notis!",
+				    "easter": "🐣 Dein Osterei war leer... Minus {notis} Notis!",
+				    "birthday": "🎉 Party Crash! Die Geburtstagsidee ging nach hinten los, minus {notis} Notis!",
+				    "mothersday": "💐 Mama sagt: `Das war nix, Schatz.` Minus {notis} Notis verloren!",
+				    "fathersday": "🛠️ Papa klopft auf den Tisch: `Probier’s nochmal ordentlich` Minus {notis} Notis!",
+				    "maythe4th": "🌌 Deine Idee wurde von der dunklen Seite zerschmettert! Minus {notis} galaktische Notis!"
+				},
+				"nothing": {
+				    "normal": "⚠️ Keine neue Idee gefunden. Vielleicht morgen wieder kreativ?",
+				    "christmas": "🎄 Keine Weihnachtsidee heute. Der Kopf ist noch im Plätzchenmodus!",
+				    "halloween": "🎃 Kein Schreckmoment heute dein Ideenlabor bleibt still!",
+				    "easter": "🐣 Kein Ei der Inspiration gefunden. Alles bleibt ruhig!",
+				    "birthday": "🎉 Heute keine Ideen, nur Kuchen und gute Laune!",
+				    "mothersday": "💐 Mama sagt: `Mach dir keinen Stress, Ideen kommen von allein.`",
+				    "fathersday": "🧰 Papa nickt zufrieden: `Nicht denken ist auch mal okay`",
+				    "maythe4th": "🌌 Die Macht schweigt heute keine neuen Ideen in der Galaxis."
+				},
+				"cooldown": {
+				    "normal": "🕛 Stop! Nimm dir {message} Zeit, um neue Ideen reifen zu lassen.",
+				    "christmas": "🔔 Trink Kakao, entspann dich! {message} Pause für neue Ideen.",
+				    "halloween": "👻 Warte {message}, bis die nächste Idee aus der Dunkelheit kriecht!",
+				    "easter": "🐇 Sammle erst Inspiration {message} Zeit bis zur nächsten Idee!",
+				    "birthday": "🎂 Geburtstagsruhe! {message} Zeit, bevor neue Ideen sprudeln.",
+				    "mothersday": "💐 Mama sagt: `Kreativität braucht Pausen` {message} Zeit für dich.",
+				    "fathersday": "🛠️ Papa meint: `Ideen kommen nicht mit Druck` {message} Pause einlegen.",
+				    "maythe4th": "🌌 Die Macht meditiert... {message} Zeit, bevor du die nächste Idee channelst."
+				},
+				"ping": {
+				    "normal": "⏰ Zeit für neue Ideen, {user} Starte mit {prefix}notis und bring deine Kreativität ins Rollen.",
+				    "christmas": "🎄 Zeit für kreative Weihnachtsideen, {user} Starte mit {prefix}notis unter den Lichtern.",
+				    "halloween": "🎃 Zeit für gruselige Ideen, {user} Starte mit {prefix}notis und gestalte spannende Projekte.",
+				    "easter": "🐣 Zeit für Osterei-Ideen, {user} Starte mit {prefix}notis und entdecke neue Möglichkeiten.",
+				    "birthday": "🎉 Zeit für Geburtstagsideen, {user} Starte mit {prefix}notis und lass die Projekte starten.",
+				    "mothersday": "💐 Zeit für Mamas Ideen, {user} Starte mit {prefix}notis und bring alles in Bewegung.",
+				    "fathersday": "🛠️ Zeit für Papas Ideen, {user} Starte mit {prefix}notis und setze alles um.",
+				    "maythe4th": "🌌 Zeit für galaktische Ideen, {user} Starte mit {prefix}notis und lass die Kreativität fliegen."
+				}
 			},
 			"2": {
-				"start": "⚙️ [{time}] {user|antiping} system:~{rootSymbole} init --boot",
-				"chest": {
-            		"normal": "🖥️~💰 Systeme laufen bei 100% beim Start wurde eine Kiste mit {notis} Notis entdeckt.",
-            		"christmas": "🎄~💰 Während der Initialisierung fiel eine Kiste aus dem Schornstein darin: {notis} Notis und ein Hauch Zimt!",
-            		"halloween": "🎃~💰 Ein verfluchtes Script öffnete eine mysteriöse Kiste {notis} Notis kamen herausgekrochen!",
-            		"easter": "🐰~💰 Beim Booten über ein Osternest gestolpert {notis} Notis lagen mittendrin!",
-            		"birthday": "🎉~💰 Geburtstags-Startup gestartet eine Konfetti-Kiste mit {notis} Notis wurde geladen!",
-            		"mothersday": "💐~💰 Während des Systemstarts hat Mama dir eine Notis-Kiste vorbereitet {notis} drin, mit Liebe!",
-            		"fathersday": "🛠️~💰 Papa hat die Kiste beim Hochfahren mit'm Schraubenschlüssel rausgehebelt {notis} Notis inside!",
-            		"maythe4th": "🛸~💰 Bei der Hyperraum-Initialisierung wurde eine seltene Kiste der Republik gefunden darin waren {notis} Notis!"
-        		},
-        		"win": {
-        		    "normal": "💡 System läuft stabil! Du sicherst dir {notis} funktionierende Notis!",
-        		    "christmas": "🎅 Der Weihnachts-Server blinkt grün! {notis} festliche Notis für dich!",
-        		    "halloween": "🕸️ Der Spuk-Code ist gebannt! {notis} gespenstische Notis erscheinen!",
-        		    "easter": "🥚 Das Debug-Ei ist geknackt! {notis} kunterbunte Notis ploppen raus!",
-        		    "birthday": "🎂 Geburtstagsprozess abgeschlossen! {notis} feierliche Notis wurden ausgeliefert!",
-        		    "mothersday": "💖 Mamas Code hat funktioniert! {notis} herzerwärmende Notis sind dein!",
-        		    "fathersday": "🔧 Papas Debughammer hat getroffen! {notis} stabile Notis eingesammelt!",
-        		    "maythe4th": "🌠 Der Hyperantrieb schnurrt wieder! Dafür bekommst du {notis} galaktische Notis!"
-        		},
-        		"lose": {
-        		    "normal": "⚠️ Systemfehler! Du verlierst {notis} Notis, wie ein Bug im Code.",
-        		    "christmas": "🎄 System stürzt ab! {notis} Notis sind weg, wie ein kaputtes Geschenk.",
-        		    "halloween": "👻 System spukt! {notis} Notis verschwinden, als wärst du verflucht.",
-        		    "easter": "🐰 System hängt sich auf! {notis} Notis hüpfen davon wie ein verrücktes Osterei.",
-        		    "birthday": "🎉 Systemcrash zum Geburtstag! {notis} Notis sind futsch, wie eine leere Party.",
-        		    "mothersday": "💐 System ist down! {notis} Notis fehlen dir, wie Blumen ohne Wasser.",
-        		    "fathersday": "🛠️ System defekt! {notis} Notis fallen raus, wie Werkzeug ohne Griff.",
-        		    "maythe4th": "🌌 System von der dunklen Seite übernommen! {notis} Notis verloren in der Galaxie..."
-        		},
-        		"nothing": {
-        		    "normal": "fehlgeschlagen...⚠️ Die Systeme Konnten nicht initialisiert werden! Saj",
-        		    "christmas": "🎄 Die Elfen haben vergessen, das System zu booten zu viel Glühwein im RAM!",
-        		    "halloween": "🦇 Die Initialisierung wurde von Vampir-Code unterbrochen!",
-        		    "easter": "🐰 Die Init-Datei wurde im Osternest versteckt.",
-        		    "birthday": "🎂 Heute wird nicht initialisiert es wird gefeiert!",
-        		    "mothersday": "👩‍💻 Deine Mama hat den Boot-Prozess übernommen. Läuft jetzt besser als je zuvor.",
-        		    "fathersday": "🔧 Papa hat's einfach mit WD-40 repariert. Läuft.",
-        		    "maythe4th": "⚔️ System versucht sich mit Lichtschwert zu booten fehlgeschlagen, aber stylisch."
-        		},
-        		"cooldown": {
-        		    "normal": "⏱️ Nur ein Augenblick! Die nächste Gelegenheit kommt in: {message}.",
-        		    "christmas": "🎁 Festliche Pause! Wir sind nach den Feiertagen in: {message} wieder aktiv.",
-        		    "halloween": "🕷️ Kleine Auszeit vom Grusel! Sei bereit in: {message}.",
-        		    "easter": "🥚 Ostereier suchen ist anstrengend! Wir melden uns in: {message} zurück.",
-        		    "birthday": "🥳 Feierlaune! Nach der Party geht's weiter in: {message}.",
-        		    "mothersday": "🌷 Ein Moment der Ruhe und Wertschätzung! Wir sind bald wieder da: {message}.",
-        		    "fathersday": "🍻 Zeit für eine Pause! Danach geht's weiter in: {message}.",
-        		    "maythe4th": "🚀 Durchatmen in der Galaxie! Die nächste Mission startet in: {message}."
-        		},
+				"start": "🗂️ [{time}] {user|antiping} strukturiert clever die Pläne und bereitet alles für die Umsetzung vor...",
+				"chest":{
+					"normal": "📦~💰 Alles sortiert! Deine Idee ist gut strukturiert und du bekommst {notis} Notis dafür",
+    			    "christmas": "🎄~📦 Unter dem Weihnachtsbaum sortierst du deine Ideen! Du erhältst {notis} festliche Notis",
+    			    "halloween": "🎃~📦 Gruselig gut organisiert! Deine Idee ist spooky perfekt, du bekommst {notis} Notis",
+    			    "easter": "🐣~📦 Osterei gefunden! Deine strukturierten Ideen bringen {notis} Notis voller Überraschungen",
+    			    "birthday": "🎉~📦 Geburtstagsplanung erfolgreich! Du erhältst {notis} Notis für deine durchdachten Ideen",
+    			    "mothersday": "💐~📦 Mama lobt deine Ordnung! Du bekommst {notis} sichere Notis",
+    			    "fathersday": "🛠️~📦 Papa genehmigt die Struktur! Du erhältst {notis} stabile Notis",
+    			    "maythe4th": "🌌~📦 Die Sternenflotte staunt! Deine Pläne sind galaktisch geordnet, du bekommst {notis} Notis"
+    			},
+				"win": {
+				    "normal": "🏆 Top organisiert! Deine strukturierte Idee wurde angenommen. Du bekommst {notis} Notis",
+				    "christmas": "🎄 Frohe Weihnachten! Deine gut organisierten Ideen wurden angenommen, du erhältst {notis} festliche Notis",
+				    "halloween": "🎃 Boo! Gruselig gut organisiert! Deine strukturierte Idee wurde angenommen, du bekommst {notis} spooky Notis",
+				    "easter": "🐣 Hurra! Deine strukturierten Ideen wurden entdeckt. Du erhältst {notis} Notis voller Überraschungen",
+				    "birthday": "🎉 Happy Birthday! Deine durchdachten Ideen sind ein Hit, du bekommst {notis} Notis zum Feiern",
+				    "mothersday": "💐 Mama ist stolz! Deine gut organisierten Ideen wurden angenommen, du bekommst {notis} sichere Notis",
+				    "fathersday": "🛠️ Papa genehmigt! Deine strukturierten Ideen sind super, du erhältst {notis} stabile Notis",
+				    "maythe4th": "🌌 Die Sternenflotte applaudiert! Deine gut organisierten Ideen wurden angenommen, du bekommst {notis} galaktische Notis"
+				},
+				"lose": {
+				    "normal": "💥 Oh nein! Deine durchdachte Struktur ist zusammengebrochen. Minus {notis} Notis",
+				    "christmas": "🎄 Weihnachtschaos! Deine perfekte Planung wurde im Geschenkpapier verheddert, minus {notis} Notis",
+				    "halloween": "🎃 Gruselalarm! Deine Struktur wurde von Geister-Code sabotiert, minus {notis} spooky Notis",
+				    "easter": "🐣 Dein Organisations-Ei war leer! Minus {notis} Notis",
+				    "birthday": "🎉 Party Crash! Deine Planungsrunde ist im Kuchen gelandet, minus {notis} Notis",
+				    "mothersday": "💐 Mama sagt: `So unordentlich? Versuch’s nochmal` Minus {notis} Notis",
+				    "fathersday": "🛠️ Papa runzelt die Stirn: `Das war keine gute Planung` Minus {notis} Notis",
+				    "maythe4th": "🌌 Die imperiale Bürokratie hat deine Pläne konfisziert! Minus {notis} galaktische Notis"
+				},
+				"nothing": {
+				    "normal": "⚠️ Keine neuen Strukturen erstellt. Alles bleibt beim Alten Ordnung bewahrt!",
+				    "christmas": "🎄 Keine Weihnachtsplanung heute. Die To-do-Liste ruht im Schnee!",
+				    "halloween": "🎃 Kein Spuk in der Planung alles still im Ordnerverzeichnis!",
+				    "easter": "🐇 Keine versteckten Ideen gefunden. Alles bleibt sortiert!",
+				    "birthday": "🎉 Heute keine Pläne, nur Feierlaune!",
+				    "mothersday": "💐 Mama sagt: `Manchmal ist keine Planung die beste Planung.`",
+				    "fathersday": "🧰 Papa nickt: `Wenn’s läuft, läuft’s` Keine neuen Strukturen nötig.",
+				    "maythe4th": "🌌 Die Macht hält Ordnung. Keine neuen Strukturen nötig im galaktischen Plan."
+				},
+				"cooldown": {
+				    "normal": "🕛 Durchatmen, Planer! Nimm dir {message} Zeit, bevor du neue Strukturen schmiedest.",
+				    "christmas": "🔔 Erst ein Plätzchen, dann planen! Nimm dir {message} Pause für klare Gedanken.",
+				    "halloween": "👻 Warte {message}, bevor du neue Pläne aus dem Schatten ziehst!",
+				    "easter": "🐇 Sortier erst deine Eier äh, Ideen! {message} Zeit für neue Planung.",
+				    "birthday": "🎂 Geburtstagspause! {message} Ruhe, bevor du weiter strukturierst.",
+				    "mothersday": "💐 Mama sagt: `Räum erst dein Zimmer, dann plan` {message} Zeit zur Neuordnung.",
+				    "fathersday": "🛠️ Papa meint: `Erst Kaffee, dann Konzept.` {message} Zeit, bevor du weitermachst.",
+				    "maythe4th": "🌌 Die Jedi-Archive werden sortiert. {message} Zeit, bevor du neue Pläne schmiedest."
+				},
 				"ping": {
-				    "normal": "✨ {user} Dein Moment ist da! Deine Notis warten mit {prefix}notis",
-				    "christmas": "🌟 {user} Die festliche Pause ist vorbei! Deine Notis warten mit {prefix}notis",
-				    "halloween": "👻 {user} Die Grusel-Pause ist beendet! Deine Notis stehen bereit mit {prefix}notis",
-				    "easter": "🥚 {user} Willkommen zurück! Deine Notis sind bereit mit {prefix}notis",
-				    "birthday": "🥳 {user} Happy Birthday! Deine Notis warten mit {prefix}notis",
-				    "mothersday": "💖 {user} Deine Pause ist vorbei! Mamas Notis sind bereit mit {prefix}notis",
-				    "fathersday": "🍻 {user} Die Auszeit ist vorbei! Papas Notis stehen bereit mit {prefix}notis",
-				    "maythe4th": "🚀 {user} Die Galaxie ruft! Deine Notis sind bereit mit {prefix}notis"
+				    "normal": "⏰ {user} Zeit, die Pläne in die Tat umzusetzen Starte mit {prefix}notis und bring alles in Bewegung!",
+				    "christmas": "🎄 {user} Weihnachtspläne warten Starte mit {prefix}notis unter den Lichtern!",
+				    "halloween": "🎃 {user} Gruselige Pläne bereit Starte mit {prefix}notis und erschrecke die Bugs!",
+				    "easter": "🐣 {user} Ostereier-Strategie aktiv Starte mit {prefix}notis und finde deine Ideen!",
+				    "birthday": "🎉 {user} Geburtstagspläne warten Nutze {prefix}notis und starte durch!",
+				    "mothersday": "💐 Mama freut sich auf deine cleveren Pläne, {user} Starte mit {prefix}notis!",
+				    "fathersday": "🛠️ {user} Papa gibt grünes Licht Bring deine Pläne mit {prefix}notis zum Laufen!",
+				    "maythe4th": "🌌 Galaktische Strategien warten, {user} Nutze {prefix}notis für interstellare Pläne!"
 				}
 			},
 			"3": {
-				"start": "📦 [{time}] {user|antiping} system:~{rootSymbole} load-modules --init",
-        		"chest": {
-        		    "normal": "💾~💰 In den Modulen wurde eine Kiste gefunden du hast sie geöffnet und {notis} Notis bekommen.",
-        		    "christmas": "🎁~💰 Ein Modul war wie ein Geschenk verpackt drin waren {notis} Notis und digitaler Lebkuchen!",
-        		    "halloween": "👻~💰 Beim Laden der Module erschien eine verfluchte Kiste {notis} Notis lauerten im Schatten!",
-        		    "easter": "🥚~💰 Modul 4B enthielt eine versteckte Ostereier-Kiste {notis} Notis sprangen fröhlich heraus!",
-        		    "birthday": "🎂~💰 Das Geburtstagsmodul brachte eine Überraschungskiste gefüllt mit {notis} Notis!",
-        		    "mothersday": "🧶~💰 Mama hat das Modul geflickt und eine süße Kiste hinterlassen {notis} Notis und Liebe enthalten!",
-        		    "fathersday": "🔩~💰 Papa hat das Modul repariert und dahinter eine Kiste entdeckt {notis} Notis verdient wie ein Profi!",
-        		    "maythe4th": "✨~💰 Ein Jedi-Modul hat eine geheime Frachtkammer geladen {notis} Notis und ein Mini-Lichtschwert drin!"
-        		},
-        		"win": {
-        		    "normal": "✅ Module geladen! Du erhältst {notis} Notis als Belohnung!",
-        		    "christmas": "🎄 Festliche Module geladen! {notis} Notis warten auf dich!",
-        		    "halloween": "🎃 Gruselige Module installiert! {notis} schaurige Notis für dich!",
-        		    "easter": "🐣 Frühlingshafte Module geladen! {notis} süße Notis kommen zu dir!",
-        		    "birthday": "🎉 Geburtstagsmodule aktiv! Du bekommst {notis} Party-Notis!",
-        		    "mothersday": "💐 Module von Mama geprüft! {notis} liebevolle Notis für dich!",
-        		    "fathersday": "🛠️ Papa hat die Module repariert! {notis} starke Notis gibt’s!",
-        		    "maythe4th": "😊 ihn den Modulen waren Vorate für die Front die Truper sind dankbar und zeigen es mit {notis} Notis "
-        		},
-        		"lose": {
-        		    "normal": "💥 Modulefehler! Du verlierst {notis} Notis, wie ein Crash im System.",
-        		    "christmas": "🎄 Modul kaputt! {notis} Notis sind weg, wie ein zerbrochenes Geschenk.",
-        		    "halloween": "👻 Modul spukt! {notis} Notis verschwinden im Gruselmodus.",
-        		    "easter": "🐰 Modul hängt! {notis} Notis hüpfen davon wie verrückte Ostereier.",
-        		    "birthday": "🎉 Modulcrash zum Geburtstag! {notis} Notis sind futsch, wie die Party ohne Gäste.",
-        		    "mothersday": "💐 Modul ausgefallen! {notis} Notis fehlen wie Blumen ohne Wasser.",
-        		    "fathersday": "🛠️ Modul defekt! {notis} Notis fallen raus, wie Werkzeug ohne Griff.",
-        		    "maythe4th": "🌌 Modul von der dunklen Seite übernommen! {notis} Notis verloren in der Galaxie..."
-        		},
-        		"nothing": {
-        		    "normal": "Fail! Es gab einen Fehler beim Laden der Module.",
-        		    "christmas": "🎁 Module stecken noch im Schornstein fest bitte warte auf den Weihnachtsmann-Installer!",
-        		    "halloween": "👻 Die Module spuken rum. Keine Chance.",
-        		    "easter": "🥚 Modul 'EggHunt.ts' wurde nicht gefunden.",
-        		    "birthday": "🎊 Module feiern mit heute wird nichts geladen!",
-        		    "mothersday": "🧵 Modul lädt aber Mama hat's vorher ordentlich sortiert.",
-        		    "fathersday": "🔨 Papa hat das Modul hart compiled mit einem Bier in der Hand.",
-        		    "maythe4th": "🛸 Die Macht lädt... die Module leider nicht."
-        		},
-        		"cooldown": {
-        		    "normal": "😌 Warte kurz, die nächste Aktion startet in: {message}.",
-        		    "christmas": "🎄 Genieße die Feiertage! Die nächste Runde beginnt in: {message}.",
-        		    "halloween": "🎃 Kleine Gruselpause! Sei bereit in: {message}.",
-        		    "easter": "🐰 Frohe Ostern! Wir sind in: {message} wieder da.",
-        		    "birthday": "🎂 Herzlichen Glückwunsch! Die nächste Aktivität startet in: {message}.",
-        		    "mothersday": "💐 Alles Liebe! Wir melden uns wieder in: {message}.",
-        		    "fathersday": "👨‍👧‍👦 Schönen Vatertag! Bis in: {message}.",
-        		    "maythe4th": "⭐ Möge die Pause kurz sein! Wir sind zurück in: {message}."
-        		},
-        		"ping": {
-        		    "normal": "{user} Die Pause ist vorbei. ✅ Deine Notis sind bereit mit {prefix}notis",
-        		    "christmas": "{user} Die Feiertage sind um! 🎅 Deine Notis warten mit {prefix}notis",
-        		    "halloween": "{user} Die Gruselpause ist vorbei. 👻 Deine Notis sind bereit mit {prefix}notis",
-        		    "easter": "{user} Willkommen zurück! 🌷 Deine Notis sind da mit {prefix}notis",
-        		    "birthday": "{user} Herzlichen Glückwunsch nochmal! 🥳 Deine Notis sind bereit mit {prefix}notis",
-        		    "mothersday": "{user} Willkommen zurück! 💖 Deine Notis sind jetzt bereit mit {prefix}notis",
-        		    "fathersday": "{user} Die Pause ist vorbei! 💪 Deine Notis sind da mit {prefix}notis",
-        		    "maythe4th": "{user} Die Macht ist mit dir! ✨ Deine Notis warten mit {prefix}notis"
-        		}
+				"start": "💻 [{time}] {user|antiping} taucht tief in den Code ein und bringt die Ideen zum Leben...",
+				"chest": {
+				    "normal": "🧰~💰 Code kompiliert! Dein Programm läuft einwandfrei und du bekommst {notis} Notis dafür",
+				    "christmas": "🎄~💰 Weihnachtscode erfolgreich! Zwischen Lichtern und Plätzchen findest du {notis} festliche Notis",
+				    "halloween": "🎃~💰 Gruseliger Code! Dein Programm jagt die Bugs Angst ein. Du bekommst {notis} spooky Notis",
+				    "easter": "🐣~💰 Osterei im Code entdeckt! Dein Programm bringt {notis} Notis voller Überraschungen",
+				    "birthday": "🎉~💰 Geburtstagscode läuft! Du erhältst {notis} Notis für dein feierliches Programm",
+				    "mothersday": "💐~💰 Mama lobt deinen Code! Du bekommst {notis} sichere Notis",
+				    "fathersday": "🛠️~💰 Papa genehmigt den Code! Du erhältst {notis} stabile Notis",
+				    "maythe4th": "🌌~💰 Die Macht ist stark in deinem Code! Du bekommst {notis} galaktische Notis"
+				},
+				"win": {
+				    "normal": "🏆 Code erfolgreich! Dein Programm läuft einwandfrei. Du bekommst {notis} Notis",
+					"christmas": "🎄 Frohe Weihnachten! Dein Weihnachtscode läuft einwandfrei, du erhältst {notis} festliche Notis",
+					"halloween": "🎃 Boo! Gruseliger Code läuft einwandfrei! Du bekommst {notis} spooky Notis",
+					"easter": "🐣 Hurra! Dein Osterei-Code läuft einwandfrei. Du erhältst {notis} Notis voller Überraschungen",
+					"birthday": "🎉 Happy Birthday! Dein Geburtstagscode ist ein Hit, du bekommst {notis} Notis zum Feiern",
+					"mothersday": "💐 Mama ist stolz! Dein Code läuft einwandfrei, du bekommst {notis} sichere Notis",
+					"fathersday": "🛠️ Papa genehmigt! Dein Code läuft super, du erhältst {notis} stabile Notis",
+					"maythe4th": "🌌 Die Sternenflotte ist begeistert! Dein Code läuft einwandfrei, du bekommst {notis} galaktische Notis"
+				},
+				"lose": {
+    				"normal": "💥 Oh nein! Dein Code hat sich selbst in den Abgrund kompiliert. Minus {notis} Notis",
+    				"christmas": "🎄 Weihnachtschaos! Dein Code hat sich in Lichterketten verheddert, minus {notis} Notis",
+    				"halloween": "🎃 Der Bug kam aus dem Schatten! Dein Code zerfiel zu Staub, minus {notis} spooky Notis",
+    				"easter": "🥚 Dein Osterei-Code hat sich versteckt und nie ausgeführt! Minus {notis} Notis",
+    				"birthday": "🎉 Party-Crash! Dein Geburtstagscode hat die Musik gestoppt, minus {notis} Notis",
+    				"mothersday": "💐 Mama sagt: `Ich hab’s dir gesagt, schreib Kommentare` Minus {notis} Notis",
+    				"fathersday": "🛠️ Papa meint: `Ein Semikolon hätte das verhindert` Minus {notis} Notis",
+				    "maythe4th": "🌌 Imperiale Codes überliesten dich! Minus {notis} galaktische Notis"
+				},
+				"nothing": {
+			    	"normal": "⚠️ Kein Code ausgeführt. Die IDE bleibt still alles beim Alten.",
+			    	"christmas": "🎄 Keine Weihnachtsmagie im Code. Alles ruhig und frostfrei!",
+			    	"halloween": "🎃 Kein Spuk im Code gefunden. Alles läuft... fast zu perfekt.",
+			    	"easter": "🐣 Kein versteckter Code entdeckt. Alles bleibt friedlich verschachtelt!",
+			    	"birthday": "🎉 Kein Code-Geschenk heute. Einfach mal nichts tun!",
+			    	"mothersday": "💐 Mama nickt stolz kein unnötiger Code heute!",
+			    	"fathersday": "🧰 Papa sagt: `Manchmal ist kein Code der beste Code.`",
+			    	"maythe4th": "🌌 Die Galaxis ruht kein Code ausgeführt, keine Bugs gespürt."
+				},
+				"cooldown": {
+				    "normal": "🕛 Chill kurz! Nimm dir {message} Zeit, bevor du neuen Code schreibst.",
+				    "christmas": "🔔 Trink etwas Kakao und gönn dir {message} Pause vorm nächsten Code!",
+				    "halloween": "👻 Warte {message}, bevor du den nächsten verfluchten Code beschwörst!",
+				    "easter": "🐇 Sammle deine Ideen-Eier! {message} Pause vorm nächsten Code.",
+				    "birthday": "🎂 Geburtstagsbreak! Feier dich {message}, dann geht’s weiter mit Code.",
+				    "mothersday": "💐 Mama sagt: `Mach langsam` Gönn dir {message} Pause vorm nächsten Code.",
+				    "fathersday": "🛠️ Papa sagt: `Ruh dich aus, Sohn` {message} Zeit, bevor du wieder coden darfst.",
+				    "maythe4th": "🌌 Meditiere mit der Macht {message} Zeit, bevor du neuen Code schreibst."
+				},
+				"ping": {
+				    "normal": "⏰ {user} Zeit die Ideen in Code zu verwandeln! Starte mit {prefix}notis",
+				    "christmas": "🎄 Starte jetzt, {user} mit {prefix}notis und bring den Weihnachtscode zum Glühen",
+				    "halloween": "🎃 {user} deine gruseligen Codes warten! Lade {prefix}notis und erschrecke die Bugs",
+				    "easter": "🐣 Fröhliches Coden {user} finde die versteckten Osterei-Ideen mit {prefix}notis",
+				    "birthday": "🎉 {user} heute ist Coding-Party! Nutze {prefix}notis und bring die Ideen zum Laufen",
+				    "mothersday": "💐 Mama freut sich, {user} starte jetzt mit {prefix}notis deine coolen Codes",
+				    "fathersday": "🛠️ {user} Papa gibt grünes Licht! Starte mit {prefix}notis und bring die Programme online",
+				    "maythe4th": "🌌 {user} möge der Code mit dir sein, nutze {prefix}notis für galaktische Programme"
+				}
 			},
 			"4": {
-				"start": "🌐 [{time}] {user|antiping} system:~{rootSymbole} ping-server --check",
-        		"chest": {
-        		    "normal": "🔍~💰 Verbindung stabil! Du bekommst {notis} Notis für den erfolgreichen Check.",
-        		    "christmas": "🎅~💰 Verbindung hält auch unterm Weihnachtsbaum! {notis} Notis gehen an dich raus.",
-        		    "halloween": "🎃~💰 Verbindung spooky stabil! {notis} Notis sind dein Lohn, Gruselheld.",
-        		    "easter": "🐣~💰 Verbindung sitzt wie ein Osterei versteckt hier hast du {notis} Notis!",
-        		    "birthday": "🎉~💰 Verbindung feiert mit dir! {notis} Notis für den Geburtstags-Boost.",
-        		    "mothersday": "💐~💰 Verbindung läuft dank Mama perfekt! {notis} Notis für dich.",
-        		    "fathersday": "🛠️~💰 Verbindung getunt von Papa {notis} Notis als Belohnung!",
-        		    "maythe4th": "🛸~💰 Möge die Verbindung mit dir sein! {notis} Notis gesichert."
-        		},
-        		"win": {
-        		    "normal": "✅ Verbindung steht! Du bekommst {notis} Notis für deine Geduld!",
-        		    "christmas": "🎄 Verbindung festlich hergestellt! {notis} Notis warten auf dich!",
-        		    "halloween": "🎃 Verbindung spooky stabil! {notis} schaurige Notis für dich!",
-        		    "easter": "🐣 Verbindung österlich bestätigt! {notis} süße Notis sind dein!",
-        		    "birthday": "🎉 Verbindung zum Geburtstag top! {notis} Party-Notis für dich!",
-        		    "mothersday": "💐 Verbindung mit Mama-Check! {notis} liebevolle Notis!",
-        		    "fathersday": "🛠️ Verbindung stabil wie Papa’s Werkstatt! {notis} starke Notis!",
-        		    "maythe4th": "🌌 Verbindung zur Republik steht! Die Macht ist mit dir und {notis} Notis!"
-        		},
-        		"lose": {
-        		    "normal": "⚠️ Verbindung unterbrochen! Du verlierst {notis} Notis, wie ein Paket im Datenstau.",
-        		    "christmas": "🎄 Verbindung bricht ab! {notis} Notis sind weg, wie Schneeflocken im Wind.",
-        		    "halloween": "👻 Verbindung spukt! {notis} Notis verschwinden im Netzwerknebel.",
-        		    "easter": "🐰 Verbindung hoppelt weg! {notis} Notis sind verschwunden wie Ostereier im Gras.",
-        		    "birthday": "🎉 Verbindung weg! {notis} Notis fehlen, wie eine Party ohne WLAN.",
-        		    "mothersday": "💐 Verbindung gestört! {notis} Notis sind verloren, wie Blumen ohne Wasser.",
-        		    "fathersday": "🛠️ Verbindung ausgefallen! {notis} Notis rausgeflogen, wie Werkzeug vom Tisch.",
-        		    "maythe4th": "😢 Verbindung zur guten Seite verloren D: {notis} Notis gehen dabei verloren im ihneren der weiten Galaxie..."
-        		},
-        		"nothing": {
-        		    "normal": "Fail! Verbindung fehlgeschlagen.",
-        		    "christmas": "📶 Der Weihnachtsrouter ist offline Rudolph hat das Kabel durchgekaut!",
-        		    "halloween": "🕸️ Verbindung hängt in einem Spinnennetz fest!",
-        		    "easter": "🐇 Der Netzwerk-Token ist weggehoppelt.",
-        		    "birthday": "🎈 Heute gibt’s nur Party-Netzwerk. Kein Ping.",
-        		    "mothersday": "📞 Mama hat bessere Verbindung als dein Debugger.",
-        		    "fathersday": "🧰 Vater hat LAN auf WLAN umgelötet. Magisch.",
-        		    "maythe4th": "📡 Keine Verbindung zur Jedi-Basis Störung durch Imperium!"
-        		},
-        		"cooldown": {
-        		    "normal": "⏳ Kleine Pause gefällig? Sammle dich kurz, die nächste Aktion startet in: {message}.",
-        		    "christmas": "🌟 Besinnliche Zeit! Genieße die Ruhe und lade deine Energie auf. Wir sind in: {message} wieder für dich da.",
-        		    "halloween": "👻 Gruselpause! Auch Geister brauchen mal eine Auszeit. Sei bereit in: {message}, wenn der Spuk vorbei ist!",
-        		    "easter": "🌷 Frühlingshafte Entspannung! Zwischen den Feiertagen kannst du neue Kraft schöpfen. Bald geht's weiter in: {message}!",
-        		    "birthday": "🎉 Glückwunsch und eine kleine Auszeit! Feier schön und komm dann erholt zurück in: {message}.",
-        		    "mothersday": "💖 Ein Moment der Ruhe! Verwöhn dich und tanke Liebe auf. Wir freuen uns auf dich in: {message}!",
-        		    "fathersday": "💪 Zeit für eine Pause! Genieß den Tag und sei bereit für neue Taten in: {message}.",
-        		    "maythe4th": "🚀 Bereit für den nächsten Sprung? Atme tief durch, die Macht wird mit dir sein, sobald die Wartezeit von: {message} vorbei ist."
-        		},
-        		"ping": {
-        		    "normal": "{user} Deine Pause ist vorbei. ✅ Du bist wieder bereit! Hol dir deine Notis mit {prefix}notis",
-        		    "christmas": "{user} Die besinnliche Zeit ist um. 🎅 Deine Energie ist wieder da! Deine Notis warten mit {prefix}notis",
-        		    "halloween": "{user} Der Spuk ist vorbei, du bist bereit zum Weitermachen! 🎃 Deine Notis sind hier mit {prefix}notis",
-        		    "easter": "{user} Die frühlingshafte Entspannung hat dir gutgetan! 🐰 Deine Notis sind bereit mit {prefix}notis",
-        		    "birthday": "{user} Die Feier war toll, jetzt bist du erholt! 🎂 Deine Notis warten mit {prefix}notis",
-        		    "mothersday": "{user} Der Moment der Ruhe ist vorbei! 💐 Du bist voller Liebe und Energie. Deine Notis sind bereit mit {prefix}notis",
-        		    "fathersday": "{user} Die Pause ist vorbei, bereit für neue Taten! 💪 Deine Notis sind da mit {prefix}notis",
-        		    "maythe4th": "{user} Der Sprung ist nah! ✨ Die Macht ist mit dir. Deine Notis warten mit {prefix}notis"
-        		}
+				"start": "🐞 [{time}] {user|antiping} geht systematisch durch den Code und bringt Ordnung ins Chaos...",
+				"chest": {
+				    "normal": "🔧~💰 Debugging erfolgreich! Dein Code ist jetzt fehlerfrei und du bekommst {notis} Notis dafür",
+				    "christmas": "🎄~💰 Weihnachtsdebugging! Zwischen Lichtern und Plätzchen findest du {notis} festliche Notis",
+				    "halloween": "🎃~💰 Gruseliges Debugging! Dein Code jagt die Bugs Angst ein. Du bekommst {notis} spooky Notis",
+				    "easter": "🐣~💰 Osterei im Debugging entdeckt! Dein Code bringt {notis} Notis voller Überraschungen",
+				    "birthday": "🎉~💰 Geburtstagsdebugging erfolgreich! Du erhältst {notis} Notis für deinen feierlichen Code",
+				    "mothersday": "💐~💰 Mama lobt dein Debugging! Du bekommst {notis} sichere Notis",
+				    "fathersday": "🛠️~💰 Papa genehmigt das Debugging! Du erhältst {notis} stabile Notis",
+				    "maythe4th": "🌌~💰 Die Macht ist stark in deinem Debugging! Du bekommst {notis} galaktische Notis"
+				},
+				"win": {
+				    "normal": "🏆 Debugging erfolgreich! Dein Code ist jetzt fehlerfrei. Du bekommst {notis} Notis",
+				    "christmas": "🎄 Frohe Weihnachten! Dein Weihnachtsdebugging war erfolgreich, du erhältst {notis} festliche Notis",
+				    "halloween": "🎃 Boo! Gruseliges Debugging erfolgreich! Du bekommst {notis} spooky Notis",
+				    "easter": "🐣 Hurra! Dein Osterei-Debugging war erfolgreich. Du erhältst {notis} Notis voller Überraschungen",
+				    "birthday": "🎉 Happy Birthday! Dein Geburtstagsdebugging ist ein Hit, du bekommst {notis} Notis zum Feiern",
+				    "mothersday": "💐 Mama ist stolz! Dein Debugging war erfolgreich, du bekommst {notis} sichere Notis",
+				    "fathersday": "🛠️ Papa genehmigt! Dein Debugging war super, du erhältst {notis} stabile Notis",
+				    "maythe4th": "🌌 Die Sternenflotte staunt! Dein Debugging war erfolgreich, du bekommst {notis} galaktische Notis"
+				},
+				"lose": {
+    				"normal": "💥 Du hat tapfer gekämpft, aber der Bug war stärker! Minus {notis} Notis",
+    				"christmas": "🎁 Du hat den Weihnachts-Bug geweckt! Minus {notis} festliche Notis",
+    				"halloween": "👻 Der Spukcode schlägt zurück! Minus {notis} gruselige Notis",
+    				"easter": "🥚 Du fand den falschen Bug im Nest! Minus {notis} Debug-Punkte",
+    				"birthday": "🎉 Du wollte feiern, aber der Bug hat die Torte geklaut! Minus {notis} Notis",
+    				"mothersday": "💐 Mama sagt: `Ich hab’s dir gesagt` Bug hat gewonnen minus {notis} Notis",
+    				"fathersday": "🧰 Papa runzelt die Stirn Debugging misslungen! Minus {notis} Notis",
+				    "maythe4th": "🌌 Imperiale Codes stoppen dich bei deiner Mission! Minus {notis} galaktische Notis"
+				},
+				"nothing": {
+				    "normal": "🤔 Du hat jeden Codeblock geprüft aber nichts Verdächtiges gefunden!",
+				    "christmas": "🎅 Du hat alle Logs unter dem Weihnachtsbaum gecheckt alles sauber!",
+				    "halloween": "👻 Du jagte Bugs durch die Dunkelheit aber keiner wagte sich zu zeigen!",
+				    "easter": "🐰 Du suchte fleißig nach versteckten Bugs aber kein einziges gefunden!",
+				    "birthday": "🎂 Du gönnt sich Code und Kuchen keine Bugs weit und breit!",
+				    "mothersday": "💐 Du hat gründlich aufgeräumt Mama wäre stolz, kein Fehler im Sichtfeld!",
+				    "fathersday": "🛠️ Du prüfte die Systeme wie ein Profi alles stabil und bugfrei!",
+				    "maythe4th": "🌌 Du suchte im ganzen Universum aber selbst die Macht fand keinen Bug!"
+				},
+				"cooldown": {
+				    "normal": "⏳ Der Code braucht Luft! Warte {message}, bis du wieder optimieren kannst",
+				    "christmas": "🎅 Der Weihnachtsserver kühlt ab warte {message}, bevor du weiter coden darfst",
+				    "halloween": "🧛‍♂️ Dein Compiler schläft im Schatten warte {message}, bevor du ihn wieder weckst",
+				    "easter": "🐰 Kleine Codepause! Nach {message} kannst du wieder loslegen",
+				    "birthday": "🎉 Geburtstags-Cooldown! Nach {message} kannst du den nächsten Commit pushen",
+				    "mothersday": "💐 Mama sagt: Pause! Nach {message} darfst du weiter optimieren",
+				    "fathersday": "🛠️ Papa prüft noch die Logs in {message} kannst du wieder starten",
+				    "maythe4th": "🌌 Die Macht lädt sich auf in {message} darfst du wieder am Code werkeln"
+				},
+				"ping": {
+				    "normal": "⏰ {user} Zeit fürs Debugging! Starte mit {prefix}notis und bring Ordnung in den Code",
+				    "christmas": "🎄 {user} Debugging-Alarm! Lade {prefix}notis und bring die Weihnachtscodes in Form",
+				    "halloween": "🎃 Bugs lauern! {user} starte {prefix}notis und vertreibe die gruseligen Fehler",
+				    "easter": "🐣 {user} Zeit für Osterei-Debugging! Nutze {prefix}notis und finde die versteckten Bugs",
+				    "birthday": "🎉 {user} Party im Code! Starte mit {prefix}notis und räume alles auf",
+				    "mothersday": "💐 Mama will Ordnung! Starte {prefix}notis und bring den Code in Form, {user}",
+				    "fathersday": "🛠️ Papa checkt den Code! {user} Starte {prefix}notis und mach alles sauber",
+				    "maythe4th": "🌌 Die Macht hilft beim Debugging! Nutze {prefix}notis und bring den Code galaktisch in Ordnung, {user}"
+				}
 			},
 			"5": {
-				"start": "🗄️ [{time}] {user|antiping} system:~{rootSymbole} db-sync --start",
-        		"chest": {
-        		    "normal": "🗄️~💰 Datenbank-System läuft auf {notis}% (Diese Menge bekommst du)",
-        		    "christmas": "🎅~💰 Das Datenbank-System ist festlich optimiert und läuft bei {notis}% Frohe Datenfesttage (Diese Menge bekommst du)",
-        		    "halloween": "🎃~💰 Das Datenbank-System läuft bei {notis}% aber da spukt noch ein Bug (Diese Menge bekommst du)",
-        		    "easter": "🐣~💰 Datenbank-System fröhlich am Ostereier-Suchen bei {notis}% (Diese Menge bekommst du)",
-        		    "birthday": "🎉~💰 Datenbank-System läuft bei {notis}% Geburtstags-Boost aktiviert (Diese Menge bekommst du)",
-        		    "mothersday": "💐~💰 Mama hat das Datenbank-System auf {notis}% gebracht läuft wie geschmiert (Diese Menge bekommst du)",
-        		    "fathersday": "🛠️~💰 Papa hat das Datenbank-System auf {notis}% repariert Vollgas (Diese Menge bekommst du)",
-        		    "maythe4th": "🛸~💰 May the Datenbank be with you läuft bei {notis}% (Diese Menge bekommst du)"
-        		},
-        		"win": {
-        		    "normal": "✅ Datenbank synchronisiert! Du bekommst {notis} Notis als Belohnung!",
-        		    "christmas": "🎄 Festliche Datenbanksynchronisation abgeschlossen! {notis} Notis für dich!",
-        		    "halloween": "🎃 Spooky Sync durch! {notis} gruselige Notis warten auf dich!",
-        		    "easter": "🐣 Datenbank-Osterei gefunden! {notis} süße Notis sind dein!",
-        		    "birthday": "🎉 Geburtstags-Sync vollendet! {notis} Party-Notis für dich!",
-        		    "mothersday": "💐 Mama hat die Datenbank geprüft! {notis} liebevolle Notis für dich!",
-        		    "fathersday": "🛠️ Papa hat die Datenbank repariert! {notis} starke Notis gibt’s!",
-        		    "maythe4th": "🌌 Datenbanksync mit Macht! Die Republik dankt dir mit {notis} Notis!"
-        		},
-        		"lose": {
-        		    "normal": "⚠️ Datenbankfehler! Du verlierst {notis} Notis, wie verlorene Datenpakete.",
-        		    "christmas": "🎄 Datenbanksync fehlgeschlagen! {notis} Notis sind weg, wie ein zerbrochenes Geschenk.",
-        		    "halloween": "👻 Datenbank spukt! {notis} Notis verschwinden im Datennebel.",
-        		    "easter": "🐰 Datenbank hängt! {notis} Notis sind verschwunden wie Ostereier im Gras.",
-        		    "birthday": "🎉 Datenbanksync abgestürzt! {notis} Notis sind futsch, wie eine leere Geburtstagsparty.",
-        		    "mothersday": "💐 Datenbank offline! {notis} Notis fehlen wie Blumen ohne Wasser.",
-        		    "fathersday": "🛠️ Datenbankfehler! {notis} Notis fallen raus, wie Werkzeug ohne Griff.",
-        		    "maythe4th": "😠 Datenbank von der dunklen Seite gehackt worden >:/ {notis} Notis verloren"
-        		},
-        		"nothing": {
-        		    "normal": "Fail! Synchronisation fehlgeschlagen. Deadge",
-        		    "christmas": "📚 Der Datenbankschlitten hat sich im Schnee festgefahren bitte nachstreuen!",
-        		    "halloween": "📖 Die DB wurde verflucht Synch nicht möglich.",
-        		    "easter": "🥚 Sync-Datei im Nest verschollen.",
-        		    "birthday": "🎁 Heute wird nur synchronisiert mit Geburtstagskuchen.",
-        		    "mothersday": "🧼 Mama hat die Datenbank vorher aufgeräumt. Sync läuft.",
-        		    "fathersday": "🛠️ Papa hat alle Einträge mit '1234' überschrieben. Perfekt.",
-        		    "maythe4th": "💫 Sync läuft nur mit Midi-Chlorianern... dauert."
-        		},
-        		"cooldown": {
-        		    "normal": "😌 Warte, erhol dich erstmal kurz, die nächste Runde kann warten! Lade erstmal deine Power auf, Dauer: {message}.",
-        		    "christmas": "🎄 Ruhige Tage stehen an! Gönn dir eine Auszeit und genieße die festliche Stimmung. Die nächste Aktion startet nach den Feiertagen. Dauer: {message}",
-        		    "halloween": "🎃 Vorsicht, es spukt! Aber keine Sorge, deine nächste Chance kommt nach dem Geistertreiben wieder. Erhol dich gut! Dauer: {message}",
-        		    "easter": "🐰 Frohe Ostern! Zwischen den Eiersuchen kannst du dich entspannen. Deine nächste Möglichkeit kommt nach den Feiertagen. Dauer: {message}",
-        		    "birthday": "🎂 Herzlichen Glückwunsch! Feier schön und ruh dich aus. Deine nächste Aktivität wartet, wenn die Party vorbei ist! Dauer: {message}",
-        		    "mothersday": "💐 Ein Tag der Wertschätzung! Nimm dir eine wohlverdiente Pause. Danach bist du wieder voller Energie! Dauer: {message}",
-        		    "fathersday": "👨‍👧‍👦 Ein Tag der Anerkennung! Genieße die Zeit und tanke Kraft. Deine nächste Chance kommt bestimmt! Dauer: {message}",
-        		    "maythe4th": "⭐ Für die Republik! Sammle deine Kräfte, Soldat. Die nächste Mission wartet schon! Dauer: {message}"
-        		},
-        		"ping": {
-        		    "normal": "{user} Deine Power ist aufgeladen! 🔋 Die nächste Runde kann starten. Hol deine Notis mit {prefix}notis",
-        		    "christmas": "{user} Die festliche Auszeit ist vorbei! 🎁 Zeit für neue Aktionen. Deine Notis warten mit {prefix}notis",
-        		    "halloween": "{user} Der Spuk hat sich gelegt, du bist wieder bereit! 👻 Sammel deine Notis mit {prefix}notis ein.",
-        		    "easter": "{user} Die Osterruhe hat dir gutgetan. 🌷 Deine Notis sind bereit für dich mit {prefix}notis",
-        		    "birthday": "{user} Die Party ist vorbei, aber die Energie ist da! 🎉 Hol deine Notis mit {prefix}notis",
-        		    "mothersday": "{user} Die Pause ist vorbei, du bist voller Energie! 💪 Deine Notis warten mit {prefix}notis",
-        		    "fathersday": "{user} Du hast Kraft getankt! 👨‍🔧 Deine Notis sind bereit für dich mit {prefix}notis",
-        		    "maythe4th": "{user} Deine Kräfte sind gesammelt, Soldat! 🚀 Die nächste Mission für deine Notis startet jetzt mit {prefix}notis"
-        		}
-			},
-			"6": {
-				"start": "✅ [{time}] {user|antiping} system:~{rootSymbole} db-sync --complete",
-        		"chest": {
-        		    "normal": "📦~💰 Bei der finalen Synchronisierung ploppte eine Kiste auf! Du öffnest sie und findest {notis} Notis!",
-        		    "christmas": "🎄~💰 Die Sync hat eine festlich verpackte Kiste geliefert {notis} Notis als Geschenk für dich!",
-        		    "halloween": "🎃~💰 Eine verfluchte Kiste ist aufgetaucht du öffnest sie mutig und bekommst {notis} Notis!",
-        		    "easter": "🐣~💰 Hinter der letzten Sync-Datei versteckte sich eine Kiste voller {notis} Notis!",
-        		    "birthday": "🎉~💰 Birthday-Sync erfolgreich! Du bekommst eine Geburtstagskiste mit {notis} Notis!",
-        		    "mothersday": "💐~💰 Mama hat 'ne Spezialkiste synchronisiert Inhalt: {notis} Notis nur für dich!",
-        		    "fathersday": "🛠️~💰 Papa hat 'ne Kiste mit Werkzeug-Sound gesynct {notis} Notis springen raus!",
-        		    "maythe4th": "🛰️~💰 Während der Hyperraum-Sync wurde eine Jedi-Kiste entdeckt {notis} Notis darin!"
-        		},
-        		"win": {
-        		    "normal": "📡 Synchronisierung erfolgreich! {notis} Notis wurden deinem Konto gutgeschrieben.",
-        		    "christmas": "🎄 Die Elfen haben alles perfekt synchronisiert! {notis} Notis als Geschenk!",
-        		    "halloween": "👻 Gruselig gute Sync {notis} Notis aus dem Daten-Nebel!",
-        		    "easter": "🥚 Alle Daten sind synchron und du findest {notis} Notis im Osternest!",
-        		    "birthday": "🎂 Die Daten tanzen auf deiner Geburtstagsparty {notis} Notis für dich!",
-        		    "mothersday": "💐 Mama hätte es nicht besser synchronisieren können! {notis} Notis für dich.",
-        		    "fathersday": "🔧 Papa hat die Sync mit 'nem Schraubenschlüssel optimiert {notis} Notis kassiert!",
-        		    "maythe4th": "🚀 Die Macht war bei der Synchronisation stark {notis} Notis für den Jedi!"
-        		},
-        		"lose": {
-        		    "normal": "❌ Synchronisierung fehlgeschlagen! Du verlierst {notis} Notis, wie verlorene Datenpakete.",
-        		    "christmas": "🎄 Synchronisierung unterbrochen! {notis} Notis sind verschwunden wie zerbrochene Kugeln.",
-        		    "halloween": "👻 Synchronisierung gescheitert! {notis} Notis verloren im Schattenreich.",
-        		    "easter": "🥚 Synchronisierung gestört! {notis} Notis verschwunden wie zerbrochene Eier.",
-        		    "birthday": "🎉 Synchronisierung abgestürzt! {notis} Notis ausgeblasen wie Geburtstagskerzen.",
-        		    "mothersday": "🌷 Synchronisierung unterbrochen! {notis} Notis vertrocknet wie verwelkte Blumen.",
-        		    "fathersday": "🔧 Synchronisierung fehlgeschlagen! {notis} Notis gefallen wie lose Werkzeuge.",
-        		    "maythe4th": "⚔️ Synchronisierungsanomalie! {notis} Notis verloren in einer weit, weit entfernten Galaxie."
-        		},
-        		"nothing": {
-        		    "normal": "❌ Die Synchronisierung wurde gestoppt Grund: Notis is not defined. Schere",
-        		    "christmas": "🧝‍♂️ Ein Weihnachtself hat versehentlich alle Variablen in Geschenkpapier eingewickelt.",
-        		    "halloween": "💀 Die letzten Daten wurden vom Bug verschlungen.",
-        		    "easter": "🐣 Letzter Sync-Schritt ist im Schokoei festgeklebt.",
-        		    "birthday": "🎉 Abschluss-Sync wurde durch Party unterbrochen.",
-        		    "mothersday": "👑 Mama sagt: 'Speichern nicht vergessen!'",
-        		    "fathersday": "📀 Vater hat das Backup auf Diskette gemacht.",
-        		    "maythe4th": "🛰️ Abschlussbericht wurde von R2-D2 gestört."
-        		},
-        		"cooldown": {
-        		    "normal": "🌃 Die Arbeit ist schon zu Ende – geh lieber nach Hause und gönn dir ein bisschen Schlaf, Dauer: {message}",
-        		    "christmas": "🎄 Die Weihnachtslichter gehen aus – Zeit für ’ne Pause und ’nen warmen Kakao. Schlaf gut für {message}!",
-        		    "halloween": "🕸️ Die Geister ruhen sich aus, Zeit für dich auch! Gönn dir {message} Erholung vom Spuk.",
-        		    "easter": "🐣 Das Nest ist leer, Zeit für ein Schläfchen! Ruh dich aus für {message}.",
-        		    "birthday": "🎉 Die Party ist vorbei, jetzt wird ausgeschlafen! Erhol dich für {message}.",
-        		    "mothersday": "💐 Mama sagt: Zeit für Ruhe! Schlaf dich aus für {message}.",
-        		    "fathersday": "🔧 Papa macht Feierabend, du auch! Gönn dir {message} Pause.",
-        		    "maythe4th": "🧉 Die Truppler brauchen auch eine Pause! dauer für die Pause lautet: {message}"
-        		},
-        		"ping": {
-        		    "normal": "{user} Dein Schlaf hat sich ausgezahlt! 😴 Du bist wieder fit für deine Notis mit {prefix}notis",
-        		    "christmas": "{user} Der Winterschlaf ist vorbei, die Geschenke warten! 🎁 Hol deine Notis mit {prefix}notis",
-        		    "halloween": "{user} Der Spuk ist verflogen, die Energie ist zurück! 🦇 Deine Notis sind bereit mit {prefix}notis",
-        		    "easter": "{user} Ausgeruht und bereit zum Eiersammeln! 🌻 Deine Notis warten mit {prefix}notis",
-        		    "birthday": "{user} Die Geburtstagspause ist vorbei, die Geschenke warten! 🥳 Deine Notis sind da mit {prefix}notis",
-        		    "mothersday": "{user} Mamas Ruhezeit hat dir gutgetan! 💖 Hol deine Notis jetzt mit {prefix}notis",
-        		    "fathersday": "{user} Die Pause ist vorbei, Papa ist stolz! 👍 Deine Notis sind bereit mit {prefix}notis",
-        		    "maythe4th": "{user} Die Truppler sind wieder auf den Beinen! 🌟 Deine Notis sind bereit für die nächste Mission mit {prefix}notis"
-        		}
-			},
-			"7": {
-				"start": "🔎 [{time}] {user|antiping} system:~{rootSymbole} log-analyze --run",
-        		"chest": {
-        		    "normal": "📁~💰 Zwischen alten Logs findest du geheime Infos über einen Verräter! Dein Boss belohnt dich mit {notis} Notis!",
-        		    "christmas": "🎄~💰 Im Log-Archiv liegt eine festlich blinkende Datei... du öffnest sie und bekommst {notis} Notis!",
-        		    "halloween": "👻~💰 Du findest eine verfluchte Log-Datei... beim Öffnen springt dir eine Chest mit {notis} Notis entgegen!",
-        		    "easter": "🐰~💰 Zwischen den Logfiles liegt ein buntes Daten-Ei mit {notis} Notis drin!",
-        		    "birthday": "🎉~💰 Geburtstagslog gefunden! Enthält eine Überraschungskiste mit {notis} Notis!",
-        		    "mothersday": "💐~💰 In den Logs findest du eine Nachricht deiner Mutter sie hat dir {notis} Notis hinterlassen!",
-        		    "fathersday": "🛠️~💰 Papas Debug-Logs enthalten 'ne versteckte Chest {notis} Notis warten auf dich!",
-        		    "maythe4th": "🛰️~💰 Du hast wichtige Infos über den nächsten Angriff der Separatisten gefunden! Dein Flottenadmiral belohnt dich mit {notis} Notis!"
-        		},
-        		"win": {
-        		    "normal": "✅ Logs gecheckt und Keine Fehler gefunden! Du bekommst {notis} Notis",
-        		    "christmas": "🎄 Weihnachts-Logs durchforstet! {notis} festliche Notis landen in deinem Hangar!",
-        		    "halloween": "🎃 Grusel-Logs analysiert! {notis} schaurige Notis schleichen sich zu dir wie ein Sith im Schatten!",
-        		    "easter": "🐣 Debug-Logs durchsucht! {notis} süße Notis verstecken sich in den Daten!",
-        		    "birthday": "🎉 Logs geburtstagsgeprüft! {notis} Party-Notis tanzen im System wie Ewoks im Wald!",
-        		    "mothersday": "💐 Mama’s Logs sind makellos! {notis} liebevolle Notis für deinen Code!",
-        		    "fathersday": "🛠️ Papa hat die Logs gefixt! {notis} starke Notis rollen wie ein AT-AT über das Schlachtfeld!",
-        		    "maythe4th": "⭐ Deine Debug-Mission war erfolgreicher die Daten vom Todesstern sind jetzt deine. {notis} als Belohnung"
-        		},
-        		"lose": {
-        		    "normal": "❌ Log-Analyse fehlgeschlagen! Du verlierst {notis} Notis wie kaputte Datenpakete.",
-        		    "christmas": "🎄 Log-Fehler entdeckt! {notis} Notis verschwunden wie verlorene Weihnachtsdateien.",
-        		    "halloween": "👻 Logs spuken! {notis} Notis verloren in den Schatten.",
-        		    "easter": "🥚 Log-Fehler! {notis} Notis zerbrochen wie empfindliche Eier.",
-        		    "birthday": "🎉 Log-Absturz! {notis} Notis verloren wie geplatze Ballons.",
-        		    "mothersday": "🌷 Mama hat den Kaffee über die Logs gekippt! {notis} Notis verwelkt wie vertrocknete Blumen.",
-        		    "fathersday": "🔧 Papa hat seinen Kaffee über die Logs gekippt! {notis} Notis gefallen wie kaputte Werkzeuge.",
-        		    "maythe4th": "⚔️ Log-Verletzung! {notis} Notis verloren in einer weit, weit entfernten Galaxie."
-        		},
-        		"nothing": {
-        		    "normal": "Fail! Analyse fehlgeschlagen du musst länger arbeiten.",
-        		    "christmas": "🔔 Die Logs singen Weihnachtslieder statt Fehlercodes Analyse abgebrochen!",
-        		    "halloween": "📜 Das Log spricht in alten Zauberformeln...",
-        		    "easter": "🥚 Log ist leer nur ein Ei drin!",
-        		    "birthday": "🎂 Analyse pausiert es ist Zeit zu feiern!",
-        		    "mothersday": "💌 Mama hat den Log kommentiert. Fehler gefunden!",
-        		    "fathersday": "🪓 Vater hat das Log gelöscht. 'War eh Mist.'",
-        		    "maythe4th": "📓 Log enthält nur Lichtschwert-Sounds."
-        		},
-        		"cooldown": {
-        		    "normal": "🖥️ Fehler: Prozessor-Temperatur ist zu heiß, bitte warte bis sie wieder sinkt. Der Prozessor sollte in etwa {message} wieder auf normalen Temperaturen sein.",
-        		    "christmas": "🎄 CPU glüht wie der Ofen im Weihnachtsbacken – gib ihr {message} zum Abkühlen!",
-        		    "halloween": "🕸️ Prozessor spukt und kocht… braucht {message} zum Abkühlen, sonst gibt’s Systemgespenster!",
-        		    "easter": "🐣 CPU ist versteckt im Nest und wärmt sich auf – in {message} ist sie wieder fit.",
-        		    "birthday": "🎉 Prozessor feiert Geburtstagsparty – gib ihm {message} zum Runterkommen!",
-        		    "mothersday": "💐 Mama sagt: ‘Lass den Prozessor entspannen!’ Noch {message} Geduld bitte.",
-        		    "fathersday": "🔧 Papa schraubt am Kühler – dein Prozessor kühlt in {message} ab.",
-        		    "maythe4th": "🌌 Prozessor wurde vom Hitzestrahl der Droiden getroffen – kühlt in {message} ab"
-        		},
-        		"ping": {
-        		    "normal": "{user} Deine CPU hat sich abgekühlt. 🌡️ Du kannst deine Notis jetzt mit {prefix}notis abrufen.",
-        		    "christmas": "{user} Die CPU ist wieder eisgekühlt! ❄️ Deine Notis sind bereit für die Bescherung mit {prefix}notis",
-        		    "halloween": "{user} Der Spuk ist vorbei, die CPU ist wieder auf Normaltemperatur. 👻 Hol deine Notis mit {prefix}notis",
-        		    "easter": "{user} Die CPU ist aus ihrem Nest gekrabbelt und topfit. 🥚 Deine Notis warten mit {prefix}notis",
-        		    "birthday": "{user} Die Party ist vorbei, die CPU ist runtergekommen. 🥳 Deine Notis sind bereit zum Feiern mit {prefix}notis",
-        		    "mothersday": "{user} Die CPU hat sich entspannt. 💖 Mama sagt, deine Notis sind jetzt bereit mit {prefix}notis",
-        		    "fathersday": "{user} Papa hat den Kühler festgezogen. 💪 Deine CPU ist cool, deine Notis warten mit {prefix}notis",
-        		    "maythe4th": "{user} Der Prozessor hat sich vom Hitzestrahl erholt. ✨ Deine Notis sind wieder voll im Saft mit {prefix}notis"
-        		}
-			},
-			"8": {
-				"start": "🧮 [{time}] {user|antiping} system:~{rootSymbole} calc-resources --run",
-        		"chest": {
-        		    "normal": "📊~💰 Deine Ressourcenanalyse war erfolgreich! Du hast eine Belohnungskiste mit {notis} Notis gefunden.",
-        		    "christmas": "🎄~💰 Beim Ressourcencheck wurde eine festlich verpackte Kiste entdeckt du bekommst {notis} Notis!",
-        		    "halloween": "🕸️~💰 Zwischen den Daten spukte eine gruselige Truhe herum… du öffnest sie und findest {notis} Notis!",
-        		    "easter": "🐣~💰 Deine Analyse hat ein verstecktes Oster-Ei mit {notis} Notis zum Vorschein gebracht!",
-        		    "birthday": "🎉~💰 Geburtstagsanalyse abgeschlossen! Du erhältst {notis} Notis als Geschenk aus deiner Belohnungskiste!",
-        		    "mothersday": "💐~💰 Mama hat dir beim Rechnen geholfen zur Belohnung gibt’s {notis} Notis aus einer edlen Truhe!",
-        		    "fathersday": "🛠️~💰 Papa hat alles durchgerechnet in der Werkzeugkiste steckt eine Belohnung von {notis} Notis!",
-        		    "maythe4th": "🚀~💰 Deine Analyse entdeckt eine versteckte Versorgungskiste des Imperiums du erhältst {notis} Notis als Belohnung!"
-        		},
-        		"win": {
-        		    "normal": "🔥 Mission abgeschlossen! Du erhältst {notis} leuchtende Notis als Belohnung! heCrazy",
-        		    "christmas": "🎄 Festliche Mission erfolgreich! {notis} Notis wurden in deinen Geschenkesack gelegt!",
-        		    "halloween": "🎃 Der Gruselcode wurde bezwungen! Du verdienst {notis} schaurige Notis!",
-        		    "easter": "🐣 Osterei gefunden! {notis} süße Notis gehören dir!",
-        		    "birthday": "🎉 Geburtstagsspecial erledigt! {notis} Party-Notis regnen auf dich herab!",
-        		    "mothersday": "💐 Mama hat ihren Segen gegeben! {notis} liebevolle Notis sind dein Lohn!",
-        		    "fathersday": "🛠️ Papa hat den Code geschweißt! {notis} starke Notis für dich!",
-        		    "maythe4th": "🌌 Die Schlacht um die Republik war hart, doch dein Mut wurde belohnt. Du erhältst {notis} Notis möge dein Licht niemals erlöschen!"
-        		},
-        		"lose": {
-        		    "normal": "❌ Ressourcenberechnung fehlgeschlagen! Du verlierst {notis} Notis wie falsche Zahlen im Code.",
-        		    "christmas": "🎄 Rechenfehler entdeckt! {notis} Notis verschwunden wie verlorene Weihnachtsgeschenke.",
-        		    "halloween": "👻 Berechnung spukt! {notis} Notis verloren im Nebel der Fehler.",
-        		    "easter": "🥚 Berechnungsfehler! {notis} Notis zerbrochen wie Ostereier.",
-        		    "birthday": "🎉 Berechnung abgestürzt! {notis} Notis ausgeblasen wie Geburtstagskerzen.",
-        		    "mothersday": "🌷 Mama hat den Taschenrechner fallen lassen! {notis} Notis vertrocknet wie Blumen.",
-        		    "fathersday": "🔧 Papa hat den Taschenrechner zerlegt! {notis} Notis gefallen wie kaputte Werkzeuge.",
-        		    "maythe4th": "⚔️ Berechnungsanomalie! {notis} Notis verloren in einer weit, weit entfernten Galaxie."
-        		}, 
-        		"nothing": {
-        		    "normal": "Fail! Berechnung fehlgeschlagen, du musst länger arbeiten",
-        		    "christmas": "❄️ Berechnung pausiert alle CPU-Kerne machen Schneeballschlacht.",
-        		    "halloween": "🧠 CPU denkt, sie wäre ein Zombie.",
-        		    "easter": "🐣 RAM ist im Nest geblieben. Kein Zugriff.",
-        		    "birthday": "🎉 Ressourcen? Heute wird gechillt!",
-        		    "mothersday": "🧮 Mama hat das besser im Kopf berechnet.",
-        		    "fathersday": "⚙️ Vater benutzt Taschenrechner von 1985. Funktioniert!",
-        		    "maythe4th": "🧘‍♂️ Ressourcen-Berechnung durch die Macht... dauert ewig."
-        		},
-        		"cooldown": {
-        		    "normal": "💡 Der Server bearbeitet dein Request, dies dauert aber: {message} – bitte warte bis der Vorgang abgeschlossen ist.",
-        		    "christmas": "🎄 Der Server ist gerade damit beschäftigt, Wunschlisten zu verarbeiten – deine Anfrage kommt dran in {message}!",
-        		    "halloween": "🕸️ Der Server kämpft sich durch Spinnweben und Geisterprozesse… dein Request wird in {message} bearbeitet!",
-        		    "easter": "🐣 Der Server sucht noch nach dem passenden Osterei… Bearbeitung in {message} abgeschlossen!",
-        		    "birthday": "🎉 Der Server pustet kurz die Geburtstagskerzen aus… deine Anfrage wird in {message} erledigt!",
-        		    "mothersday": "💐 Mama optimiert grad die Antwortzeit – dein Request wird liebevoll in {message} bearbeitet!",
-        		    "fathersday": "🔧 Papa schaut kurz auf den Code und sagt: 'Läuft gleich!' Noch {message} Geduld!",
-        		    "maythe4th": "🤖 Die Droiden haben den Transmitter verstört die Reperatur dauert {message}"
-        		},
-        		"ping": {
-        		    "normal": "{user} Dein Request wurde bearbeitet. ✅ Du kannst deine Notis mit {prefix}notis abrufen.",
-        		    "christmas": "{user} Deine Wunschlisten-Anfrage ist durch! 🎅 Deine Notis warten mit {prefix}notis",
-        		    "halloween": "{user} Die Spinnweben sind weg, dein Request ist fertig. 🎃 Hol dir deine Notis mit {prefix}notis",
-        		    "easter": "{user} Das Osterei ist gefunden, dein Request ist abgeschlossen. 🥚 Deine Notis sind bereit mit {prefix}notis",
-        		    "birthday": "{user} Die Kerzen sind aus, der Kuchen ist gegessen. 🥳 Deine Notis sind da mit {prefix}notis",
-        		    "mothersday": "{user} Mamas Optimierung ist fertig! 💖 Deine Notis warten liebevoll auf dich: {prefix}notis",
-        		    "fathersday": "{user} Papa hat's gerichtet! 💪 Dein Request ist durch, hol deine Notis mit {prefix}notis",
-        		    "maythe4th": "{user} Der Transmitter ist repariert! 🚀 Deine Notis sind bereit für den Hypersprung mit {prefix}notis"
-        		}
-			},
-			"9": {
-				"start": "💼 [{time}] {user|antiping} system:~{rootSymbole} analyze-resources --init",
-        		"chest": {
-        		    "normal": "💼~💰 Deine Berechnung war erfolgreich! Du findest eine schwere Belohnungskiste mit {notis} Notis darin.",
-        		    "christmas": "🎁~💰 Eine festliche Ressourcenkiste erscheint sie enthält {notis} Notis für dich!",
-        		    "halloween": "🎃~💰 Deine Kalkulation beschwört eine verfluchte Kiste… drinnen rascheln {notis} Notis!",
-        		    "easter": "🥚~💰 Zwischen den Formeln lag ein Oster-Nest mit {notis} Notis versteckt!",
-        		    "birthday": "🎉~💰 Geburtstagsbonus entdeckt! Die Rechenarbeit zahlt sich mit {notis} Notis aus!",
-        		    "mothersday": "💐~💰 Mama hilft bei der Buchhaltung eine Truhe mit {notis} Notis taucht auf!",
-        		    "fathersday": "🔧~💰 Papas Taschenrechner war on fire zur Belohnung gibt’s {notis} Notis!",
-        		    "maythe4th": "🛰️~💰 Die Berechnung deckt einen Versorgungspunkt des Imperiums auf {notis} Notis warten auf dich!"
-        		},
-        		"win": {
-        		    "normal": "✅ Ressourcen erfolgreich eingesammelt! Du bekommst {notis} Notis!",
-        		    "christmas": "🎄 Frohe Weihnachten! Deine Ressourcen wurden belohnt mit {notis} Notis!",
-        		    "halloween": "🎃 Gruselige Ressourcen geborgen! Hier sind {notis} Notis für dich!",
-        		    "easter": "🐣 Oster-Ressourcen gefunden! Du erhältst {notis} süße Notis!",
-        		    "birthday": "🎉 Geburtstagsressourcen abgeschlossen! {notis} Notis für die Party!",
-        		    "mothersday": "💐 Mama schickt dir Ressourcen-Segen! {notis} liebe Notis gehören dir!",
-        		    "fathersday": "🛠️ Papa hat die Ressourcen optimiert! Hier sind {notis} starke Notis!",
-        		    "maythe4th": "🌌 Deine Ressourcen glänzen wie ein Jedi-Kristall! {notis} Notis für deinen Mut!"
-        		},
-        		"lose": {
-        		    "normal": "💥 Boom! Ressourcen-Check explodiert {notis} Notis sind futsch",
-        		    "christmas": "🎄 Weihnachtschaos! Die Rentiere haben die Ressourcen geklaut {notis} Notis sind weg wie Geschenke unterm Baum!",
-        		    "halloween": "👻 Gruselalarm! Die Ressourcen spuken weg {notis} Notis verschwunden wie ein Phantom im Nebel!",
-        		    "easter": "🥚 Eier-Notfall! Die Ressourcen sind geplatzt wie Ostereier {notis} Notis fliegen in alle Richtungen!",
-        		    "birthday": "🎉 Partycrash! Die Ressourcen feiern zu hart {notis} Notis sind weg wie weggeblasen Kerzen!",
-        		    "mothersday": "🌷 Mama war am Werk und hat aus Versehen {notis} Notis in den Kuchen geschmissen Ressourcen futsch!",
-        		    "fathersday": "🔧 Papa hat den Schraubenschlüssel fallen lassen {notis} Notis zerlegt!",
-        		    "maythe4th": "⚔️ Möge die Macht fehlgeschlagen sein {notis} Notis verschwinden in einer weit, weit entfernten Galaxie!"
-        		},
-        		"nothing": {
-        		    "normal": "📉 Elon Musk hat ein Schlechten Tweet über dein Code gemacht du musst länger arbeiten.",
-        		    "christmas": "🎅 Elon hat dich auf die Naughty-Liste gesetzt keine Ressourcen mehr bis Neujahr!",
-        		    "halloween": "🎭 Elon ist heute als Bug verkleidet. Chaos!",
-        		    "easter": "🐇 Elon hat die Ressourcen im Garten vergraben.",
-        		    "birthday": "🎈 Heute wird nichts berechnet nur gefeiert!",
-        		    "mothersday": "🧡 Mama hat dir zusätzliche Ressourcen gegönnt.",
-        		    "fathersday": "🔋 Vater hat dir neue Batterien eingebaut. Läuft!",
-        		    "maythe4th": "🛠️ Elon duelliert sich mit Darth Vader Ressourcen fallen aus."
-        		},
-        		"cooldown": {
-        		    "normal": "🔧 Hardware-Wartung läuft! Die Effizienz wird optimiert um bessere Leistung zu leisten, dies dauert noch {message}",
-        		    "christmas": "🎄 Die Werkstatt der Elfen optimiert gerade dein System für festliche Höchstleistung – noch {message} Geduld!",
-        		    "halloween": "🕸️ Ein Update schleicht durch die Schatten… Deine Hardware wird gepatcht – warte {message}!",
-        		    "easter": "🐣 Die Recheneier werden sortiert und geboostet – Upgrade in Arbeit! Noch {message}.",
-        		    "birthday": "🎁 Geburtstags-Booster wird installiert! Für maximale Party-Leistung brauchst du noch {message} Geduld!",
-        		    "mothersday": "💐 Mama optimiert das System mit Liebe und Effizienz – bitte warte noch {message}.",
-        		    "fathersday": "🔩 Papa zieht die Schrauben fester – dein System wird gepimpt! Fertig in {message}.",
-        		    "maythe4th": "🌌 Droiden führen ein Hyperraum-Upgrade durch… bereit in {message}, möge die Power mit dir sein!"
-        		},
-        		"ping": {
-        		    "normal": "{user} Dein System ist wieder auf Höchstleistung. ✅ Hol dir deine Notis mit {prefix}notis",
-        		    "christmas": "{user} Die Elfen haben ihr Werk vollbracht. 🎁 Deine festlichen Notis warten mit {prefix}notis",
-        		    "halloween": "{user} Der Spuk ist vorbei, das Update ist durch. 👻 Sammel deine Notis mit {prefix}notis ein",
-        		    "easter": "{user} Das System ist frisch wie ein Frühlingsmorgen. 🌸 Deine geboosteten Notis sind mit {prefix}notis bereit.",
-        		    "birthday": "{user} Der Geburtstags-Booster ist aktiv! 🥳 Deine Notis sind bereit für die Party mit {prefix}notis",
-        		    "mothersday": "{user} Die Optimierung ist abgeschlossen. 💖 Mama sagt, deine Notis sind jetzt bereit mit {prefix}notis",
-        		    "fathersday": "{user} Papa hat ganze Arbeit geleistet. 💪 Deine Notis sind jetzt super-gepimpt, hol sie dir mit {prefix}notis",
-        		    "maythe4th": "{user} Das Hyperraum-Upgrade ist vollendet. ✨ Möge die Macht der Notis mit dir sein: {prefix}notis"
-        		}
-			},
-			"10": {
-				"start": "🚀 [{time}] {user|antiping} system:~{rootSymbole} load-final-status --run",
-        		"chest": {
-        		    "normal": "🚀~💰 Der finale Status ist geladen! Du öffnest die Endkiste und findest {notis} Notis als Belohnung.",
-        		    "christmas": "🎄~💰 Der finale Status glänzt festlich eine Geschenkekiste mit {notis} Notis wartet auf dich!",
-        		    "halloween": "👻~💰 Finale Ladung mit Spukfaktor! Eine gruselige Kiste gibt dir {notis} Notis.",
-        		    "easter": "🐰~💰 Der finale Status bringt ein buntes Osterei mit {notis} Notis zum Vorschein!",
-        		    "birthday": "🎉~💰 Die finale Statusmeldung kommt mit einem Geschenk: {notis} Notis aus der Kiste!",
-        		    "mothersday": "💐~💰 Mama’s finale Unterstützung bringt eine Kiste mit {notis} Notis für dich.",
-        		    "fathersday": "🛠️~💰 Papas finale Checkliste endet mit {notis} Notis aus der Werkzeugkiste!",
-        		    "maythe4th": "🌌~💰 finale hast du nach langer suche Anikans Lichtschwert auf Mustafar gefunden und bekommst {notis} Notis als Belohnung!"
-        		},
-        		"win": {
-        		    "normal": "🔥 Du hast gewonnen! {notis} Notis sind jetzt deine Belohnung!",
-        		    "christmas": "🎅 Frohe Weihnachten! Dein Sieg bringt dir {notis} Notis, so festlich wie ein Geschenk unterm Baum!",
-        		    "halloween": "🎃 Geisterhaft gut! Dein Sieg spukt dir {notis} Notis zu, gruseliger geht’s nicht!",
-        		    "easter": "🥚 Du hast das Osterei gefunden! {notis} Notis springen dir als Belohnung entgegen!",
-        		    "birthday": "🎂 Happy Win! {notis} Notis feiern mit dir deinen Ehrentag Siegessüßigkeiten pur!",
-        		    "mothersday": "🌷 Ein Sieg für Mama! {notis} Notis als Dankeschön, wie ein liebevoller Blumenstrauß!",
-        		    "fathersday": "🔧 Papa würde stolz sein! {notis} Notis sind deine Belohnung, wie Werkzeug für den Sieg!",
-        		    "maythe4th": "⚔️ Möge der Sieg mit dir sein! {notis} Notis als Belohnung direkt aus einer Galaxie weit, weit entfernt!"
-        		},
-        		"lose": {
-        		    "normal": "💥 Boom! Der finale Status hat versagt {notis} Notis sind weg",
-        		    "christmas": "🎄 Weihnachtschaos! Die Rentiere haben {notis} Notis geklaut, weg wie Geschenke unterm Baum!",
-        		    "halloween": "👻 Gruselalarm! Der finale Status spukt {notis} Notis verschwunden im Nebel!",
-        		    "easter": "🥚 Eier-Notfall! Der finale Status ist geplatzt {notis} Notis fliegen davon!",
-        		    "birthday": "🎉 Partycrash! Der finale Status feiert zu hart {notis} Notis ausgeblasen wie Kerzen!",
-        		    "mothersday": "🌷 Mama hat den finalen Status mit Kaffee sabotiert {notis} Notis verblasst!",
-        		    "fathersday": "🔧 Papa hat den finalen Status zerlegt {notis} Notis!",
-        		    "maythe4th": "⚔️ Möge die Macht nicht mit dir sein {notis} Notis verschwinden in einer weit, weit entfernten Galaxie!"
-        		},
-        		"nothing": {
-        		    "normal": "Fail! Ladefehler, Error im Code . o O ( MrDestructoid Clap gpt ) Angry",
-        		    "christmas": "🎆 Ladefehler der finale Status wurde vom Weihnachtsstern überstrahlt.",
-        		    "halloween": "🌕 Vollmond finaler Status verwandelt sich in Werbug!",
-        		    "easter": "🥕 Status steckt im Ostergras fest.",
-        		    "birthday": "🎉 Kein finaler Status nur Party-Modus aktiviert!",
-        		    "mothersday": "💝 Mama sagt: 'Status ist okay, vertrau mir.'",
-        		    "fathersday": "🔧 Vater hat einfach OK draufgeschrieben.",
-        		    "maythe4th": "🛸 Status vom Todesstern empfangen kritisch!"
-        		},
-        		"cooldown": {
-        		    "normal": "❗ Fehler: Es konnte keine Verbindung zum Server aufgebaut werden. Response ➜ Code: 503, Grund: Service Unavailable, Retry-After: {message}",
-        		    "christmas": "🎄 Server überlastet durch zu viele Wunschzettel! Response ➜ Code: 503, Grund: Santa's Workshop Busy, Retry-After: {message}",
-        		    "halloween": "🎃 Verbindung getrennt – Server wurde von Geistern übernommen! Response ➜ Code: 503, Grund: Haunted Network, Retry-After: {message}",
-        		    "easter": "🐣 Der Server sucht noch nach seinem Osterei-Update. Response ➜ Code: 503, Grund: Egg Timeout, Retry-After: {message}",
-        		    "birthday": "🎉 Server feiert gerade Geburtstag… keine Antwort! Response ➜ Code: 503, Grund: Party Mode Enabled, Retry-After: {message}",
-        		    "mothersday": "💐 Mama hat den Server aus Höflichkeit schlafen gelegt. Response ➜ Code: 503, Grund: Family Time, Retry-After: {message}",
-        		    "fathersday": "🛠️ Papa repariert gerade den Server mit Gaffa-Tape. Response ➜ Code: 503, Grund: Maintenance in Progress, Retry-After: {message}",
-        		    "maythe4th": "🌌 Der Holonet-Kanal ist gestört – Geduld, junger Padawan. Response ➜ Code: 503, Grund: Disturbance in the Force, Retry-After: {message}"
-        		},
-        		"ping": {
-        		    "normal": "✅ Server ist wieder erreichbar, {user} Du kannst deine Notis mit {prefix}notis abrufen.",
-        		    "christmas": "🎅 Hohoho, der Server ist wieder da, {user} Deine Wunschzettel-Notis warten mit {prefix}notis",
-        		    "halloween": "👻 Die Geister wurden vertrieben, {user} Der Server ist wieder online. Hol deine Notis mit {prefix}notis",
-        		    "easter": "🥚 Das Osterei-Update ist gefunden, {user} Der Server ist bereit. Deine Notis sind mit {prefix}notis abholbereit.",
-        		    "birthday": "🥳 Die Party ist vorbei, {user} Der Server ist wieder aus dem Party-Modus. Sammel deine Notis mit {prefix}notis ein.",
-        		    "mothersday": "💐 {user} Mama sagt, du hast es verdient, Deine Notis einzusammeln Nutz {prefix}notis",
-        		    "fathersday": "{user} Papa Schreibt: Hier ist dein Spezial auftrag sammel deine Notis mit {prefix}notis",
-        		    "maythe4th": "{user} Mögen die Notis mit dir sein Nutz bitte {prefix}notis um sie einzusammeln."
-        		}
+				"start": "🚀 [{time}] {user|antiping} veröffentlicht das Projekt, die Programmierwelt wartet...",
+				"chest": {
+				    "normal": "🌐~💰 Veröffentlichung erfolgreich! Dein Projekt ist live und du bekommst {notis} Notis dafür",
+				    "christmas": "🎄~💰 Weihnachtsveröffentlichung! Zwischen Lichtern und Plätzchen findest du {notis} festliche Notis",
+				    "halloween": "🎃~💰 Gruselige Veröffentlichung! Dein Projekt jagt die Bugs Angst ein. Du bekommst {notis} spooky Notis",
+				    "easter": "🐣~💰 Osterei-Projekt entdeckt! Dein Projekt bringt {notis} Notis voller Überraschungen",
+				    "birthday": "🎉~💰 Geburtstagsveröffentlichung erfolgreich! Du erhältst {notis} Notis für dein feierliches Projekt",
+				    "mothersday": "💐~💰 Mama lobt dein Projekt! Du bekommst {notis} sichere Notis",
+				    "fathersday": "🛠️~💰 Papa genehmigt das Projekt! Du erhältst {notis} stabile Notis",
+				    "maythe4th": "🌌~💰 Die Macht ist stark in deinem Projekt! Du bekommst {notis} galaktische Notis"
+				},
+				"win": {
+					"normal": "🏆 Veröffentlichung erfolgreich! Dein Projekt ist live. Du bekommst {notis} Notis",
+					"christmas": "🎄 Frohe Weihnachten! Dein Weihnachtsprojekt ist live, du erhältst {notis} festliche Notis",
+				    "halloween": "🎃 Boo! Gruselige Veröffentlichung erfolgreich! Du bekommst {notis} spooky Notis",
+				    "easter": "🐣 Hurra! Dein Osterei-Projekt ist live. Du erhältst {notis} Notis voller Überraschungen",
+				    "birthday": "🎉 Happy Birthday! Dein Geburtstagsprojekt ist ein Hit, du bekommst {notis} Notis zum Feiern",
+				    "mothersday": "💐 Mama ist stolz! Dein Projekt ist live, du bekommst {notis} sichere Notis",
+				    "fathersday": "🛠️ Papa genehmigt! Dein Projekt ist super, du erhältst {notis} Notis",
+				    "maythe4th": "🌌 Die Sternenflotte ist Stolz auf dich! Dein Projekt ist live, du bekommst {notis} galaktische Notis"
+				},
+				"lose": {
+    				"normal": "💥 Projektabsturz! Der Launch ist fehlgeschlagen, minus {notis} Notis.",
+    				"christmas": "🎄 Weihnachts-Deployment gescheitert! Der Server blieb im Schnee stecken, minus {notis} Notis.",
+    				"halloween": "🎃 Der Code wurde verflucht! Deployment gescheitert, minus {notis} spooky Notis.",
+    				"easter": "🐣 Das Osterei-Release hat einen Bug gelegt! Minus {notis} Notis.",
+    				"birthday": "🎉 Party zu wild! Dein Geburtstagsprojekt ist explodiert, minus {notis} Notis.",
+    				"mothersday": "💐 Mama ruft: `Ich hab dir gesagt, du sollst testen` Minus {notis} Notis.",
+    				"fathersday": "🛠️ Papa murmelt: `Zu früh gelauncht` Minus {notis} Notis.",
+				    "maythe4th": "🌌 Imperiale Codes sabotieren dein Projekt! Minus {notis} galaktische Notis"
+				},
+				"nothing": {
+				    "normal": "⚠️ Kein Projekt veröffentlicht. Die Programmierwelt wartet noch auf deinen nächsten Launch!",
+				    "christmas": "🎄 Keine Weihnachtsversion hochgeladen. Die Elfen warten auf deinen Code!",
+				    "halloween": "🎃 Kein gruseliges Update veröffentlicht. Die Geister des Codes schlafen weiter!",
+				    "easter": "🐣 Kein Osterei-Projekt veröffentlicht. Vielleicht liegt es noch gut versteckt im Repo?",
+				    "birthday": "🎉 Heute keine Veröffentlichung, gönn dir Kuchen statt Code!",
+				    "mothersday": "💐 Mama sagt, du sollst erst aufräumen, bevor du wieder was hochlädst!",
+				    "fathersday": "🛠️ Papa meint, du sollst’s nochmal durchtesten, bevor du’s online stellst!",
+				    "maythe4th": "🌌 Die Galaxis bleibt ruhig. Kein neues Projekt in Sicht, Padawan."
+				},
+				"cooldown": {
+				    "normal": "🕛 Stop! Nimm dir {message} Zeit für neue Veröffentlichungen.",
+				    "christmas": "🔔 Nimm dir erst mal eine kalte Milch und veröffentliche dann dein Projekt. Dauer: {message}.",
+				    "halloween": "👻 Gruselpause! Warte {message}, bevor du neue Veröffentlichungen ausprobierst.",
+				    "halloween2": "🕷️ Achtung! Spooky Pause! {message} warten, bevor du wieder etwas online stellst.",
+				    "easter": "🐇 Eierpause! Sammle zuerst ein paar Eier, bevor du dein Projekt veröffentlichst. Dauer: {message}.",
+				    "birthday": "🎂 Geburtstagsruhe! Die Veröffentlichung kann warten. Dauer: {message}.",
+				    "mothersday": "💐 Mama sagt: Stopp! Bring zuerst den Müll raus. Dauer: {message}.",
+				    "fathersday": "🛠️ Papa empfiehlt, zu warten, bevor du es veröffentlichst. Dauer: {message}.",
+				    "maythe4th": "🌌 Die Sternenflotte ordnet alles! {message} warten, bevor du wieder starten kannst."
+				},
+				"ping": {
+				    "normal": "⏰ Zeit, dein Projekt zu starten! {user} nutze {prefix}notis und bring die Veröffentlichung live",
+				    "christmas": "🎄 Starte dein festliches Projekt mit {prefix}notis, {user} und lass es unter den Lichtern leuchten",
+				    "halloween": "🎃 Veröffentliche dein gruseliges Projekt mit {prefix}notis! {user} erschrecke die Bugs",
+				    "easter": "🐣 {user} es ist Zeit für dein Osterprojekt! Lade es mit {prefix}notis hoch und bring die Ideen ins Nest",
+				    "birthday": "🎉 Nutze {prefix}notis und feiere die Veröffentlichung, {user} Dein Projekt ist bereit",
+				    "mothersday": "💐 Dein Projekt wartet, {user} Lade es mit {prefix}notis hoch und zeig Mama deine Arbeit",
+				    "fathersday": "🛠️ {user} Papa sagt los geht’s! Veröffentliche dein Projekt mit {prefix}notis",
+				    "maythe4th": "🌌 Nutze {prefix}notis, {user} die Galaxis wartet auf dein Star-Wars-inspiriertes Projekt"
+				}
 			}
 		}
 	}
