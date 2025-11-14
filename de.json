@@ -167,6 +167,7 @@
 			"afk": "➜ {user} ist jetzt afk {message} ⏱️",
 			"bedge": "GuNa ➜ {user} geht jetzt schlafen {message} 💤",
 			"food": "Tasty ➜ {user} geht jetzt essen {message} 🍕",
+			"work": "➜ {user} geht jetzt Arbeiten {message} 💼",
 			"shower": "➜ {user} geht jetzt duschen {message} 🚿",
 			"goon": "uuh ➜ {user} geht jetzt goonen {message} 🥛",
 			"resume": {
@@ -291,8 +292,8 @@
 			"suggest": {
 				"usage": {
 					"usage": "{🫠 TeaTime|wydiosHacker} ➜ Bitte schreibe {usage} suggest <finish • delete • list>",
-					"finish": "{🫠 TeaTime|wydiosHacker} ➜ Bitte schreibe {usage} suggest finish <ID>",
-					"delete": "{🫠 TeaTime|wydiosHacker} ➜ Bitte schreibe {usage} suggest delete <ID>"
+					"finish": "{🫠 TeaTime|wydiosHacker} ➜ Bitte schreibe {usage} suggest finish <ID> <Optional: Message> – Makiere ein Suggest als Erledigt",
+					"delete": "{🫠 TeaTime|wydiosHacker} ➜ Bitte schreibe {usage} suggest delete <ID> – Lösche einen Suggest"
 				},
 				"error": "⚠️ ➜ Vorschlag/Report mit der ID: {id} nicht gefunden",
 				"finish": "{FeelsOkayMan 👍|wydiosOk} Vorschlag/Report mit ID {id} wurde erfolgreich erledigt",
@@ -321,7 +322,7 @@
 					"final": "{FeelsOkayMan|wydiosBased} ➜ Scraper beendet. {users} Users geupdatet • {newPaints} neue Paints • {newBadges} neue Badges • Dauer: {duration}"
 				},
 				"check": {
-					"usage": "{🫠 TeaTime|wydiosHacker} ➜ Bitte schreibe {usage} scraper check <username>",
+					"usage": "{🫠 TeaTime|wydiosHacker} ➜ Bitte schreibe {usage} scraper check <username> – Checke ob ein User schon in der Scraper Datenbank ist",
 					"notFound": "{FeelsBadMan|wydiosSad} ➜ Acc ` {user} ` ist nicht ihn der Scraper Datenbank",
 					"found": "{FeelsDankMan|wydiosOk} ➜ Acc ` {user} ` ist in der Scraper Datenbank Infos • Active Paint: {activePaint} • Paint Count {paintCount} • Active Badge: {activeBadge} • Badge Count {badgeCount}"
 				}
@@ -333,13 +334,13 @@
 		},
 		"customcmd": {
 			"add": {
-				"usage": "{FeelsDankMan|wydiosStop} ➜ Bitte schreibe {usage} <trigger> <Nachricht> • Cooldown: 5 Sekunden • Variablen: {variablen} ⚠️ Maximal 480 Zeichen",
+				"usage": "{FeelsDankMan|wydiosStop} ➜ Bitte schreibe {usage} <trigger> <Nachricht> • Cooldown: 5 Sekunden • Variablen: {variablen} ⚠️ Maximal 480 Zeichen – Erstelle einen Custom Command",
 				"tooLang": "⛔ ➜ Die Nachricht darf nicht länger als 480 Zeichen sein",
 				"existing": "🚫 ➜ Es gibt schon einen Command mit dem Trigger: {trigger}",
 				"added": "{FeelsOkayMan 👍|wydiosOk} Deine Custom Command ` {trigger} ` wurde erfolgreich hinzugefügt (Antwort: ` {content} `)"
 			},
 			"remove": {
-				"usage": "{FeelsDankMan|wydiosStop} ➜ Bitte schreibe {usage} <trigger> • Wenn du ein Command vergessen hast mach {prefix}cc list",
+				"usage": "{FeelsDankMan|wydiosStop} ➜ Bitte schreibe {usage} <trigger> • Wenn du ein Command vergessen hast mach {prefix}cc list – Entferne einen Custom Command",
 				"notExisting": "⚠️ ➜ Kein Custom Command mit dem Trigger ` {trigger} ` gefunden",
 				"removed": "{FeelsOkayMan 👍|wydiosOk} Deine Custom Command ` {trigger} ` wurde gelöscht"
 			},
@@ -520,13 +521,7 @@
    			"twitch": "{FeelsOkayMan 👍|wydiosOk} imGlitch Global ` {value} ` Nachricht wurde {mode}",
    			"stv": "{FeelsOkayMan 👍|wydiosOk} (7TV) Global Notification ` Badge/Paint ` wurde {mode}",
    			"allFeaturesMe": "{FeelsOkayMan 👍|wydiosOk} ➜ ` /me ` für alle Features wurde {mode}",
-   			"featureMe": "{FeelsOkayMan 👍|wydiosOk} ➜ ` /me ` für ` {value} ` wurde {mode}",
-			"pingMsg": {
-				"noUsers": "{FeelsDankMan|wydiosStop} ➜ Momentan sind keine User in einem Global Announce Ping. Du kannst dich mit {prefix}globalping <emote • badge • 7tv> hinzufügen lassen",
-				"global": "{FeelsOkayMan 👍|wydiosOk} ➜ Global Ping-Nachricht von ` {oldMessage} ` auf ` {newMessage} ` geändert",
-				"noUser": "{FeelsDankMan|wydiosStop} ➜ Für {feature} sind aktuell keine User im Global Ping. Du kannst dich mit {prefix}globalping {feature} hinzufügen lassen",
-				"single": "{FeelsOkayMan 👍|wydiosOk} ➜ Ping-Nachricht für {feature} von ` {oldMessage} ` auf ` {newMessage} ` geändert"
-			}
+   			"featureMe": "{FeelsOkayMan 👍|wydiosOk} ➜ ` /me ` für ` {value} ` wurde {mode}"
 		},
 		"globalping": {
 			"notEnabled": "{FeelsDankMan|wydiosStop} ➜ Es gibt keine Global Announce Message für {feature}. Ein Moderator kann mit {prefix}globalannounce {feature} es Aktivieren",
@@ -573,9 +568,9 @@
 		},
 		"link": {
 			"lastfm": {
-				"usage": "{FeelsDankMan|wydiosStop} ➜ bitte schreibe {prefix}{trigger} lastfm <add • set • remove • help> <lastFm Username>",
+				"usage": "{FeelsDankMan|wydiosStop} ➜ bitte schreibe {prefix}{trigger} lastfm <add • set • remove • help> <lastFm Username> – Account hinzufügen, ändern, entfernen oder Hilfe anzeigen",
 				"help": {
-					"usage": "{FeelsDankMan|wydiosStop} ➜ bitte schreibe {prefix}{trigger} lastfm help <acc • connection>",
+					"usage": "{FeelsDankMan|wydiosStop} ➜ bitte schreibe {prefix}{trigger} lastfm help <acc • connection> – kleine Infos zu Account & Verbindung",
 					"acc": "💡 ➜ Kein lastFM Account? Geh auf last.fm und Erstelle dort einen Account",
 					"service": "💡 ➜ Dein LastFM Account kannst du mit Spotify/Yt Music verbinden das kannst du hier machen https://www.last.fm/settings/applications"
 				},
@@ -867,7 +862,7 @@
 		},
 		"notification": {
 			"badge": {
-				"newBadge": "imGlitch Neues Global Badge ➜ {badgeName} (ID: {badgeId}, v{versionId})",
+				"newBadge": "imGlitch Neues Global Badge ➜ {badgeName}",
 				"removedBadge": "imGlitch Global Badge entfernt ➜ {badgeName}"
 			},
 			"emote": {
@@ -898,7 +893,7 @@
 				"pings": " • dinkDonk {users}"
 			},
 			"offline": "Saj @{user} ist jetzt {Offline|wydiosOffline}",
-			"ping": "• {ping_emoji} {pings}"
+			"noSubscribers": "• 🐌 Kein Subscribers für den Streamer"
 		},
 		"ban": {
 			"unban": "{peepoHappy|wydiosLove} Clap Willkommen zurück auf Twitch {user}"
@@ -915,6 +910,7 @@
 			"afk": "ist wieder da",
 			"bedge": "ist aus dem Bett gekommen",
     		"food": "hat zu ende gegessen",
+			"work": "ist zurück von der Arbeit",
     		"shower": "ist Fertig mit Duschen",
 			"goon": "hat den Tab endlich geschlossen"
 		}
