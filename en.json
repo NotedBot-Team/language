@@ -167,6 +167,7 @@
 			"afk": "➜ {user} is now Afk {message} ⏱️",
 			"bedge": "GuNa ➜ {user} is going to sleep {message} 💤",
 			"food": "Tasty ➜ {user} is going to eat {message} 🍕",
+			"work": "➜ {user} is going to work {message} 💼",
 			"shower": "➜ {user} is going to shower {message} 🚿",
 			"goon": "uuh ➜ {user} is going to goonen {message} 🥛",
 			"resume": {
@@ -291,8 +292,8 @@
 			"suggest": {
 				"usage": {
 					"usage": "{🫠 TeaTime|wydiosHacker} ➜ Please type {usage} suggest <finish • delete • list>",
-					"finish": "{🫠 TeaTime|wydiosHacker} ➜ Please type {usage} suggest finish <ID>",
-					"delete": "{🫠 TeaTime|wydiosHacker} ➜ Please type {usage} suggest delete <ID>"
+					"finish": "{🫠 TeaTime|wydiosHacker} ➜ Please type {usage} suggest finish <ID> <Optional: Message> – Mark a suggestion as Done",
+					"delete": "{🫠 TeaTime|wydiosHacker} ➜ Please type {usage} suggest delete <ID> – Delete a suggestion"
 				},
 				"error": "⚠️ ➜ Suggestion/Report not found with ID: {id}",
 				"finish": "{FeelsOkayMan 👍|wydiosOk} Suggestion/Report with ID {id} was successfully completed",
@@ -321,7 +322,7 @@
 				    "final": "{FeelsOkayMan|wydiosBased} ➜ Scraper finished. {users} users updated • {newPaints} new Paints • {newBadges} new Badges • Duration: {duration}"
 				},
 			    "check": {
-			        "usage": "{🫠 TeaTime|wydiosHacker} ➜ Please type {usage} scraper check <username>",
+			        "usage": "{🫠 TeaTime|wydiosHacker} ➜ Please type {usage} scraper check <username> – Check whether a user is already in the scraper database",
 			        "notFound": "{FeelsBadMan|wydiosSad} ➜ Account ` {user} ` is not in the Scraper database",
 			        "found": "{FeelsDankMan|wydiosOk} ➜ Account ` {user} ` is in the Scraper database Info • Active Paint: {activePaint} • Paint Count {paintCount} • Active Badge: {activeBadge} • Badge Count {badgeCount}"
 			    }
@@ -333,13 +334,13 @@
 		},
 		"customcmd": {
 		    "add": {
-		        "usage": "{FeelsDankMan|wydiosStop} ➜ Please type {usage} <trigger> <message> • Cooldown: 5 seconds • Variables: {variablen} ⚠️ Max 480 characters",
+		        "usage": "{FeelsDankMan|wydiosStop} ➜ Please type {usage} <trigger> <message> • Cooldown: 5 seconds • Variables: {variablen} ⚠️ Max 480 characters – Create a custom command",
 		        "tooLang": "⛔ ➜ The message cannot be longer than 480 characters",
 		        "existing": "🚫 ➜ There’s already a command with the trigger: {trigger}",
 		        "added": "{FeelsOkayMan 👍|wydiosOk} Your custom command `{trigger}` was successfully added (Response: `{content}`)"
 		    },
 		    "remove": {
-		        "usage": "{FeelsDankMan|wydiosStop} ➜ Please type {usage} <trigger> • If you forgot a command use {prefix}cc list",
+		        "usage": "{FeelsDankMan|wydiosStop} ➜ Please type {usage} <trigger> • If you forgot a command use {prefix}cc list – Remove a Custom Command",
 		        "notExisting": "⚠️ ➜ No custom command found with the trigger `{trigger}`",
 		        "removed": "{FeelsOkayMan 👍|wydiosOk} Your custom command `{trigger}` was removed"
 		    },
@@ -520,13 +521,7 @@
 		    "twitch": "{FeelsOkayMan 👍|wydiosOk} imGlitch Global ` {value} ` message has been {mode}",
 		    "stv": "{FeelsOkayMan 👍|wydiosOk} (7TV) Global Notification `Badge/Paint` has been {mode}",
 		    "allFeaturesMe": "{FeelsOkayMan 👍|wydiosOk} ➜ ` /me ` for all features has been {mode}",
-		    "featureMe": "{FeelsOkayMan 👍|wydiosOk} ➜ ` /me ` for ` {value} ` has been {mode}",
-			"pingMsg": {
-				"noUsers": "{FeelsDankMan|wydiosStop} ➜ Currently there are no users in any Global Announce Ping. You can add yourself with {prefix}globalping <emote • badge • 7tv>",
-    			"global": "{FeelsOkayMan 👍|wydiosOk} ➜ Changed global ping message from ` {oldMessage} ` to ` {newMessage} `",
-				"noUser": "{FeelsDankMan|wydiosStop} ➜ There are currently no users in the Global Ping for {feature}. You can add yourself with {prefix}globalping {feature}",
-    			"single": "{FeelsOkayMan 👍|wydiosOk} ➜ Changed {feature} ping message from ` {oldMessage} ` to ` {newMessage} `"
-			}
+		    "featureMe": "{FeelsOkayMan 👍|wydiosOk} ➜ ` /me ` for ` {value} ` has been {mode}"
 		},
 		"globalping": {
 			"notEnabled": "{FeelsDankMan|wydiosStop} ➜ There is no Global Announce Message for {feature}. A moderator can activate it with {prefix}globalannounce {feature}.",
@@ -573,9 +568,9 @@
 		},
 		"link": {
   			"lastfm": {
-				"usage": "{FeelsDankMan|wydiosStop} ➜ please type {prefix}{trigger} lastfm <add • set • remove • help> <lastFm Username>",
+				"usage": "{FeelsDankMan|wydiosStop} ➜ please type {prefix}{trigger} lastfm <add • set • remove • help> <lastFm Username> – add, change, remove your account or show help",
 				"help": {
-    				"usage": "{FeelsDankMan|wydiosStop} ➜ please type {prefix}{trigger} lastfm help <acc • connection>",
+    				"usage": "{FeelsDankMan|wydiosStop} ➜ please type {prefix}{trigger} lastfm help <acc • connection> – shows info about your account and connection",
     				"acc": "💡 ➜ No LastFM account? Go to last.fm and create an account there",
     				"service": "💡 ➜ You can connect your LastFM account to Spotify/YT Music here: https://www.last.fm/settings/applications"
 				},
@@ -867,7 +862,7 @@
 		},
 		"notification": {
 			"badge": {
-				"newBadge": "imGlitch New Global Badge ➜ {badgeName} (id: {badgeId}, v{versionId})",
+				"newBadge": "imGlitch New Global Badge ➜ {badgeName}",
 				"removedBadge": "imGlitch Global Badge removed ➜ {badgeName}"
 			},
 			"emote": {
@@ -898,7 +893,7 @@
 				"pings": " • dinkDonk {users}"
 			},
 			"offline": "Saj @{user} is now {offline|wydiosOffline}",
-			"ping": "• {ping_emoji} {pings}"
+			"noSubscribers": "• 🐌 No subscribers for the streamer"
 		},
 		"ban": {
 			"unban": "{peepoHappy|wydiosLove} Clap Welcome back to Twitch {user}"
@@ -915,6 +910,7 @@
 			"afk": "is back again",
 			"bedge": "just got out of bed",
 			"food": "finished eating",
+			"work": "is back from work",
 			"shower": "is done showering",
 			"goon": "finally closed the tab"
 		}
